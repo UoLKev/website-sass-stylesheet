@@ -30,7 +30,11 @@ h3, .h3, .uol-h3, h2, .h2, .uol-h2, h1, .h1, .uol-h1 {
 .uol-pullquote_copy--accent-primary .uol-h2,
 .uol-pullquote_copy--accent-secondary .uol-h2, .uol-homepage-hero_btn-container > a, .uol-homepage-hero_content-container-inner .tag, .uol-homepage-hero_content-container-inner h1, .uol-homepage-hero, #uol-course-key-info p, #uol-course-key-info h3, #uol-course-key-info h2, #uol-course-key-info, .uol-course-header-container-inner-btn--accent-secondary > a:hover, .uol-course-header-container-inner-btn--accent-primary > a:hover, .uol-course-header-container-inner-btn--secondary > a:hover, .uol-course-header-container-inner-btn--primary > a:hover, .uol-course-header-container-inner-btn > a, .uol-course-header-container h1, #uol-breadcrumbs a, #uol-breadcrumbs, .uol-blockquote[class*=uol-blockquote--] .uol-blockquote_text, .uol-blockquote[class*=uol-blockquote--] .uol-body-prominent, .uol-blockquote[class*=uol-blockquote--] .uol-body, .uol-spotlight-item-frame .uol-h3,
 .uol-spotlight-item-frame h3,
-.uol-spotlight-item-frame p, .uol-basic-video #iframe-video #play-video:before, .bg-image-only, .spotlight-wrapper .spotlight-item p, #sdgGroupContent .whiteText, #sdgGroupContentTitle, .mockButton .hoverOverlay span, .mockButton .hoverOverlay, blockquote p, blockquote, .uol-btn--accent-secondary, .uol-btn--accent-primary, .uol-btn--secondary, .uol-btn--primary, .uol-section--accent-secondary .uol-t2, .uol-section--accent-secondary .uol-t1, .uol-section--accent-secondary .uol-label, .uol-section--accent-secondary .uol-h2, .uol-section--accent-secondary .uol-h1, .uol-section--accent-primary .uol-t2, .uol-section--accent-primary .uol-t1, .uol-section--accent-primary .uol-label, .uol-section--accent-primary .uol-h2, .uol-section--accent-primary .uol-h1, .uol-section--secondary .uol-t2, .uol-section--secondary .uol-t1, .uol-section--secondary .uol-label, .uol-section--secondary .uol-h2, .uol-section--secondary .uol-h1, .uol-section--primary .uol-t2, .uol-section--primary .uol-t1, .uol-section--primary .uol-label, .uol-section--primary .uol-h2, .uol-section--primary .uol-h1 {
+.uol-spotlight-item-frame p, .uol-basic-video #iframe-video #play-video:before, .bg-image-only, .spotlight-wrapper .spotlight-item p, #sdgGroupContent .whiteText, #sdgGroupContentTitle, .mockButton .hoverOverlay span, .mockButton .hoverOverlay, blockquote p, blockquote, .uol-btn--accent-secondary,
+.uol-button--accent-secondary, .uol-btn--accent-primary,
+.uol-button--accent-primary, .uol-btn--secondary,
+.uol-button--secondary, .uol-btn--primary,
+.uol-button--primary, .uol-section--accent-secondary .uol-t2, .uol-section--accent-secondary .uol-t1, .uol-section--accent-secondary .uol-label, .uol-section--accent-secondary .uol-h2, .uol-section--accent-secondary .uol-h1, .uol-section--accent-primary .uol-t2, .uol-section--accent-primary .uol-t1, .uol-section--accent-primary .uol-label, .uol-section--accent-primary .uol-h2, .uol-section--accent-primary .uol-h1, .uol-section--secondary .uol-t2, .uol-section--secondary .uol-t1, .uol-section--secondary .uol-label, .uol-section--secondary .uol-h2, .uol-section--secondary .uol-h1, .uol-section--primary .uol-t2, .uol-section--primary .uol-t1, .uol-section--primary .uol-label, .uol-section--primary .uol-h2, .uol-section--primary .uol-h1 {
   color: #fff;
 }
 
@@ -58,11 +62,13 @@ h3, .h3, .uol-h3, h2, .h2, .uol-h2, h1, .h1, .uol-h1 {
   background-color: #002147;
 }
 
-.uol-spotlight-wrapper--primary .uol-spotlight-item--link:hover, .uol-btn:hover {
+.uol-spotlight-wrapper--primary .uol-spotlight-item--link:hover, .uol-btn:hover,
+.uol-button:hover {
   background-color: #002b5c;
 }
 
-.uol-homepage-hero_btn-container--primary > a:hover, .uol-homepage-hero_btn-container--primary > a:nth-of-type(1), .uol-course-header-container-inner-btn--primary > a:nth-of-type(1), .uol-course-header-container-inner-btn--primary > a:hover, .btn-primary, .uol-btn--primary {
+.uol-homepage-hero_btn-container--primary > a:hover, .uol-homepage-hero_btn-container--primary > a:nth-of-type(1), .uol-course-header-container-inner-btn--primary > a:nth-of-type(1), .uol-course-header-container-inner-btn--primary > a:hover, .btn-primary, .uol-btn--primary,
+.uol-button--primary {
   background-color: #047e8b;
 }
 
@@ -70,7 +76,8 @@ h3, .h3, .uol-h3, h2, .h2, .uol-h2, h1, .h1, .uol-h1 {
 .btn-primary.focus,
 .btn-primary:hover,
 .btn-primary:active,
-.btn-primary.active, .uol-btn--primary:hover {
+.btn-primary.active, .uol-btn--primary:hover,
+.uol-button--primary:hover {
   background-color: #036873;
 }
 
@@ -82,7 +89,8 @@ h3, .h3, .uol-h3, h2, .h2, .uol-h2, h1, .h1, .uol-h1 {
   background-color: #036873;
 }
 
-.uol-homepage-hero_btn-container--secondary > a:hover, .uol-homepage-hero_btn-container--secondary > a:nth-of-type(1), .uol-course-header-container-inner-btn--secondary > a:nth-of-type(1), .uol-course-header-container-inner-btn--secondary > a:hover, .btn-secondary, .uol-btn--secondary {
+.uol-homepage-hero_btn-container--secondary > a:hover, .uol-homepage-hero_btn-container--secondary > a:nth-of-type(1), .uol-course-header-container-inner-btn--secondary > a:nth-of-type(1), .uol-course-header-container-inner-btn--secondary > a:hover, .btn-secondary, .uol-btn--secondary,
+.uol-button--secondary {
   background-color: #002147;
 }
 
@@ -90,7 +98,8 @@ h3, .h3, .uol-h3, h2, .h2, .uol-h2, h1, .h1, .uol-h1 {
 .btn-secondary.focus,
 .btn-secondary:hover,
 .btn-secondary:active,
-.btn-secondary.active, .uol-btn--secondary:hover {
+.btn-secondary.active, .uol-btn--secondary:hover,
+.uol-button--secondary:hover {
   background-color: #002b5c;
 }
 
@@ -102,7 +111,8 @@ h3, .h3, .uol-h3, h2, .h2, .uol-h2, h1, .h1, .uol-h1 {
   background-color: #ad1459;
 }
 
-.uol-homepage-hero_btn-container--accent-primary > a:hover, .uol-homepage-hero_btn-container--accent-primary > a:nth-of-type(1), .uol-course-header-container-inner-btn--accent-primary > a:nth-of-type(1), .uol-course-header-container-inner-btn--accent-primary > a:hover, .btn-accent-primary, .uol-btn--accent-primary {
+.uol-homepage-hero_btn-container--accent-primary > a:hover, .uol-homepage-hero_btn-container--accent-primary > a:nth-of-type(1), .uol-course-header-container-inner-btn--accent-primary > a:nth-of-type(1), .uol-course-header-container-inner-btn--accent-primary > a:hover, .btn-accent-primary, .uol-btn--accent-primary,
+.uol-button--accent-primary {
   background-color: #db1a72;
 }
 
@@ -110,7 +120,8 @@ h3, .h3, .uol-h3, h2, .h2, .uol-h2, h1, .h1, .uol-h1 {
 .btn-accent-primary.focus,
 .btn-accent-primary:hover,
 .btn-accent-primary:active,
-.btn-accent-primary.active, .uol-btn--accent-primary:hover {
+.btn-accent-primary.active, .uol-btn--accent-primary:hover,
+.uol-button--accent-primary:hover {
   background-color: #ad1459;
 }
 
@@ -122,7 +133,8 @@ h3, .h3, .uol-h3, h2, .h2, .uol-h2, h1, .h1, .uol-h1 {
   background-color: #595c5f;
 }
 
-.uol-homepage-hero_btn-container--accent-secondary > a:hover, .uol-homepage-hero_btn-container--accent-secondary > a:nth-of-type(1), .uol-course-header-container-inner-btn--accent-secondary > a:nth-of-type(1), .uol-course-header-container-inner-btn--accent-secondary > a:hover, .btn-accent-secondary, .uol-btn--accent-secondary {
+.uol-homepage-hero_btn-container--accent-secondary > a:hover, .uol-homepage-hero_btn-container--accent-secondary > a:nth-of-type(1), .uol-course-header-container-inner-btn--accent-secondary > a:nth-of-type(1), .uol-course-header-container-inner-btn--accent-secondary > a:hover, .btn-accent-secondary, .uol-btn--accent-secondary,
+.uol-button--accent-secondary {
   background-color: #747678;
 }
 
@@ -130,7 +142,8 @@ h3, .h3, .uol-h3, h2, .h2, .uol-h2, h1, .h1, .uol-h1 {
 .btn-accent-secondary.focus,
 .btn-accent-secondary:hover,
 .btn-accent-secondary:active,
-.btn-accent-secondary.active, .uol-btn--accent-secondary:hover {
+.btn-accent-secondary.active, .uol-btn--accent-secondary:hover,
+.uol-button--accent-secondary:hover {
   background-color: #595c5f;
 }
 
@@ -138,11 +151,13 @@ h3, .h3, .uol-h3, h2, .h2, .uol-h2, h1, .h1, .uol-h1 {
   background-color: #fff;
 }
 
-.uol-btn--white {
+.uol-btn--white,
+.uol-button--white {
   background-color: #fafafa;
 }
 
-.uol-btn--white:hover {
+.uol-btn--white:hover,
+.uol-button--white:hover {
   background-color: #e5e5e5;
 }
 
@@ -690,7 +705,8 @@ hr.margin {
     width: 25.5rem;
   }
 }
-.uol-btn {
+.uol-btn,
+.uol-button {
   background-image: none;
   border: 1px solid transparent;
   border-radius: 4px;
@@ -711,42 +727,51 @@ hr.margin {
   white-space: nowrap;
 }
 
-.uol-btn:hover {
+.uol-btn:hover,
+.uol-button:hover {
   color: #fafafa;
   transition: background-color 0.3s ease;
 }
 
-.uol-btn--primary:hover {
+.uol-btn--primary:hover,
+.uol-button--primary:hover {
   transition: background-color 0.3s ease;
 }
 
-.uol-btn--secondary:hover {
+.uol-btn--secondary:hover,
+.uol-button--secondary:hover {
   transition: background-color 0.3s ease;
 }
 
-.uol-btn--accent-primary:hover {
+.uol-btn--accent-primary:hover,
+.uol-button--accent-primary:hover {
   transition: background-color 0.3s ease;
 }
 
-.uol-btn--accent-secondary:hover {
+.uol-btn--accent-secondary:hover,
+.uol-button--accent-secondary:hover {
   transition: background-color 0.3s ease;
 }
 
-.uol-btn--white {
+.uol-btn--white,
+.uol-button--white {
   color: currentcolor;
 }
 
-.uol-btn--white:hover {
+.uol-btn--white:hover,
+.uol-button--white:hover {
   color: #171717;
   transition: background-color 0.3s ease;
 }
 
-.uol-btn--transparent {
+.uol-btn--transparent,
+.uol-button--transparent {
   color: currentcolor;
   background-color: transparent;
 }
 
-.uol-btn-l {
+.uol-btn-l,
+.uol-button-l {
   padding: 0.8rem 1.2rem;
 }
 
@@ -770,7 +795,20 @@ hr.margin {
 }
 .uol-d-none {
   display: none !important;
-} /*
+}
+
+.uol-visually-hidden {
+  width: 0;
+  height: 0;
+  clip: rect(0, 0, 0, 0);
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+}
+
+/*
 This file is used to contain all component imports.
 Files inside this folder should contain all styles relating to a reusable component.
 */

@@ -1,4 +1,5 @@
-.uol-btn {
+.uol-btn,
+.uol-button {
   background-image: none; 
   border: 1px solid transparent;
   border-radius: 4px;
@@ -19,7 +20,8 @@
   white-space: nowrap;  
 }
 
-.uol-btn:hover {
+.uol-btn:hover,
+.uol-button:hover {
   @extend %bg-color-primary-hover;
   color: $uol-white-100;
   transition: background-color 0.3s ease;
@@ -29,12 +31,14 @@ $btnTypes: ( 'primary', 'secondary', 'accent-primary', 'accent-secondary');
 
 @each $btnType in $btnTypes {
   // Uol Buttons
-  .uol-btn--#{$btnType} {
+  .uol-btn--#{$btnType},
+  .uol-button--#{$btnType} {
     @extend %bg-color-#{$btnType}-btn;
     @extend %uol-white-font-default;
   }
 
-  .uol-btn--#{$btnType}:hover {
+  .uol-btn--#{$btnType}:hover,
+  .uol-button--#{$btnType}:hover {
     @extend %bg-color-#{$btnType}-btn-hover;
     transition: background-color 0.3s ease;
   }
@@ -55,22 +59,26 @@ $btnTypes: ( 'primary', 'secondary', 'accent-primary', 'accent-secondary');
 
 }
 
-.uol-btn--white {
+.uol-btn--white,
+.uol-button--white {
   @extend %bg-color-white-100;
   color: currentcolor;
 }
 
-.uol-btn--white:hover {
+.uol-btn--white:hover,
+.uol-button--white:hover {
   @extend %bg-color-white-300;
   color: $uol-black-100;
   transition: background-color 0.3s ease;
 }
 
-.uol-btn--transparent {
+.uol-btn--transparent,
+.uol-button--transparent {
   color: currentcolor;
   background-color: transparent;
 }
 
-.uol-btn-l {
+.uol-btn-l,
+.uol-button-l {
   padding: .8rem 1.2rem;
 }
