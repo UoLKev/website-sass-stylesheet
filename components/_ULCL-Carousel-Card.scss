@@ -1,0 +1,65 @@
+// ============== 
+// START ULCL - CAROUSEL - CARD
+
+.uol-carousel-card .uol-standfirst--full-width,
+.uol-carousel-card .uol-standfirst--full-width p {
+  max-width: 100%;
+}
+
+/*
+.uol-carousel-card .uol-standfirst p {
+  font-size: 1rem;
+  line-height: 2.4rem;
+  color: #666;
+}
+*/
+  
+.uol-carousel-card .tile_caption {
+  box-shadow: none;
+  padding: 2rem 2rem .5rem;
+}
+  
+.uol-carousel-card .tile_caption--center {
+  text-align: center;
+}
+
+.tile_title {
+	margin: 0;
+	font-size: 2rem;
+	line-height: 2.4rem;
+	color: #333;
+	font-family: Georgia, serif;
+	font-weight: 400;
+}
+
+
+.uol-carousel-card .slick-track { 	
+  @extend %displayFlex; 
+}
+
+.uol-carousel-card .slick-slide { 	
+  @extend %displayFlex; 
+  height: inherit !important; 	
+}
+
+.uol-carousel-card .slick-slide .tile {
+  @extend %displayFlex; 
+  flex: 1; 
+  flex-direction: column;
+  height:	100%;  
+}
+
+.uol-carousel-card .slick-slide {
+  margin: 1rem;
+}
+  
+.uol-carousel-card .slick-slide > div { 
+  width : 100%; 
+}
+
+.uol-carousel-card .uol-btn {
+  margin-bottom: .5rem;
+}
+
+// END ULCL - CAROUSEL - CARD 
+// ============== 

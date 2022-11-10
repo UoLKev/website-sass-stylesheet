@@ -1,0 +1,53 @@
+/* 
+============== 
+ START ULCL - LINCOLN ON DEMAND
+*/
+.lincoln-on-demand{
+  padding-bottom:50px;
+  background-color:#f6f6f6
+}
+.lincoln-on-demand.centered .uol-body,
+.lincoln-on-demand.centered .uol-h1,
+.lincoln-on-demand.centered .uol-h2,
+.lincoln-on-demand.centered .uol-h3,
+.lincoln-on-demand.centered .uol-standfirst{
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto
+}
+.lincoln-on-demand.centered .uol-billboard .uol-body,.lincoln-on-demand.centered .uol-billboard .uol-h3{
+  text-align:left
+}
+.lincoln-on-demand.centered .grid{
+  justify-content:center
+}
+.lincoln-on-demand.centered .btn-group{
+  float:none;
+  margin:5px
+}
+@media (max-width:620px){
+  .lincoln-on-demand .embed-responsive-21by9{
+      padding-bottom:100%
+  }
+  .lincoln-on-demand.centered .btn-group,.lincoln-on-demand.centered .btn-group a{
+      width:100%
+  }
+}
+
+
+.lincoln-on-demand .tile{
+  background-color:#fff
+}
+
+.lincoln-on-demand .uol-section{
+  margin-bottom:0
+}
+
+.lincoln-on-demand .video_caption{
+  box-shadow:none
+}
+
+/*
+END ULCL - LINCOLN ON DEMAND
+============== 
+*/

@@ -1,0 +1,17 @@
+.no-gutters {
+  padding: 0;
+}
+.no-gutters .col-xs-6 {
+  margin-left: 0;
+}
+@media screen and (min-width: $uol-breakpoint-sm) {
+  .no-gutters .col-xs-6 {
+    margin-left: -3rem;
+  }
+
+}
+@media screen and (min-width: $uol-breakpoint-m) {
+  .no-gutters .col-xs-6 {
+    margin-left: 0;
+  }
+}

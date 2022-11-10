@@ -1,0 +1,25 @@
+.grid{
+  list-style:none;
+  display:grid;
+  grid-auto-flow:column;
+  grid-template-columns:unset;
+  grid-gap:16px;
+  padding:0 0 4px;
+  scroll-snap-type:y mandatory;
+  grid-template-rows:unset;
+  scroll-margin-right:45px;
+  overflow-x:auto;
+  justify-content:start;
+}
+
+@media (min-width:$uol-breakpoint-sm){
+  .grid{
+    grid-template-columns:1fr 1fr;
+  } 
+}
+
+@media (min-width:$uol-breakpoint-m){
+  .grid{
+    grid-template-columns:repeat(4,min-content);
+  }
+}

@@ -1,0 +1,51 @@
+//Colours
+
+
+//Core Pallette
+//Gradiant colours are taken from https://paletton.com/ (Monochromatic)
+
+//Uni Blue (Dark Blue)
+$uol-uni-blue: #002147;
+$uol-uni-blue-hover: #002b5c;
+$uol-uni-blue-gradiant-1: #5a6d98; // Blue Grey 
+$uol-uni-blue-gradiant-2: #a7b0Cb; // Ice Blue 
+
+// Uni Grey
+$uol-cool-grey: #747678;
+$uol-cool-grey-hover: #595c5f;
+$uol-cool-grey-gradiant-1: #929394;
+$uol-cool-grey-gradiant-2: #c4c4c5;
+
+//Uni Teal
+$uol-teal: #047e8b; 
+$uol-teal-link: #047986; // Added as #047e8b failed contrast checks on light grey background 
+$uol-teal-hover: #036873; 
+$uol-teal-gradiant-1: #7fc0c0;
+$uol-teal-gradiant-2: #a9d2d3; //Aqua 
+
+// Uni Magenta
+$uol-magenta: #db1a72;
+$uol-magenta-hover: #ad1459;
+$uol-magenta-visited: #ae1459;
+$uol-magenta-gradiant-1: #e04089;
+$uol-magenta-gradiant-2: #e969a3;
+
+/* Set Focus Colours */   
+$uol-focus-yellow: #fd0;
+$uol-focus-black: #0b0c0c; 
+
+/* Set font colours */
+$uol-black-default: #333;
+$uol-black-100: #171717;
+$uol-black-200: #404040;
+$uol-black-300: #5e5e5e;
+$uol-black-400: #d4d4d4;
+
+$uol-white-default: #fff;
+$uol-white-100: #fafafa;
+$uol-white-200: #f5f5f5;
+$uol-white-300: #e5e5e5;
+$uol-white-400: $uol-black-400; 
+
+
+

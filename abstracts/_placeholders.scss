@@ -1,0 +1,115 @@
+  //Placeholders 
+
+  @import "placeholders-font";
+  @import "placeholders-font-colour";
+  @import "placeholders-background-colour";
+
+  %uol-padding-y-default { padding: $uol-componant-padding-default 0; }
+
+  // Border Colours
+  %border-color-primary { border-color: $uol-primary; }
+  %border-color-secondary { border-color: $uol-primary; }
+  %border-color-accent-primary { border-color: $uol-primary; }
+  %border-color-accent-secondary  { border-color: $uol-primary; }
+  %border-color-white-default { border-color: $uol-white-default;}
+
+  // Border Colours for Buttons
+  %border-color-primary-btn { border-color: $uol-primary-btn; }
+  %border-color-secondary-btn { border-color: $uol-secondary-btn; }
+  %border-color-accent-primary-btn { border-color: $uol-accent-primary-btn; }
+  %border-color-accent-secondary-btn { border-color: $uol-accent-secondary-btn; }
+
+
+  // Margins
+  %mt-0 { margin-top: $uol-mt-0; }
+  %mt-1 { margin-top: $uol-mt-1; }
+  %mt-2 { margin-top: $uol-mt-2; }
+  %mt-3 { margin-top: $uol-mt-3; }
+  %mt-4 { margin-top: $uol-mt-4; }
+  %mt-5 { margin-top: $uol-mt-5; }
+
+  %container-constraint {
+    max-width: $uol-container-constraint;
+  }
+
+  %wrapper-constraint {
+    max-width: $uol-container-constraint;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 1.5rem;
+  }
+
+  %uol-large-heading-common {
+    @extend %uol-font-family-headings;
+    color: $uol-black-default;   
+    font-weight: 400;
+    margin-bottom: 1.2rem;
+  }
+
+  %hoverState {
+    background-color:rgba(0,33,71,.1);
+    transition:background-color .6s ease;
+  }
+
+  %hoverStateBtn {
+    -webkit-backface-visibility:hidden;
+    backface-visibility:hidden;
+    opacity:0;
+    background-color:transparent;
+    transition:opacity .3s ease,background-color .3s ease;
+  }
+
+  //Flex
+  %displayFlex {
+    display: flex !important; 
+  }
+
+
+  //Image Container
+
+  %imgBackgroundSize {
+    background-size:cover;
+  }
+
+  %imgContainer {
+    @extend %imgBackgroundSize;
+    background-position:center;
+    background-repeat:no-repeat
+  }
+
+  // Overlay
+  %overlay {
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 0;
+  }
+
+  %overlay-dark {
+    background: $uol-overlay-dark;
+  }
+
+  %overlay-medium {
+    background: $uol-overlay-medium;
+  }
+
+  %overlay-light {
+    background: $uol-overlay-light;
+  }
+
+  //Clip Path
+
+  %clip-path {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+  }
+
+  %clip-path--reversed {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  }
+
+
+
+

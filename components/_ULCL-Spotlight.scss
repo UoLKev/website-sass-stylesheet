@@ -1,0 +1,124 @@
+// ============== 
+// START ULCL - SPOTLIGHT 
+
+.uol-spotlight-wrapper {
+  flex-wrap: wrap;
+}
+
+.uol-spotlight-item-wrapper,
+.uol-spotlight-item-frame {
+  @extend  %displayFlex;
+}
+
+.uol-spotlight-item-frame p {   
+    padding: 0 1rem 1.5rem;
+}
+  
+
+@each $backgroundColourSetting in  $backgroundColourSettings { // primary/secondary/accent-primary etc.
+  // Spotlight Colour
+  .uol-spotlight-wrapper--#{$backgroundColourSetting} .uol-spotlight-item {
+    @extend %bg-color-#{$backgroundColourSetting};
+  }
+  // Spotlight Hover Colour
+  .uol-spotlight-wrapper--#{$backgroundColourSetting} .uol-spotlight-item--link:hover {
+    @extend %bg-color-#{$backgroundColourSetting}-hover;
+  }
+}
+
+.uol-spotlight-item {  
+  transition: all 0.2s ease;
+  margin-top: 2.5rem;
+}
+
+// Set margin-top to the first spotlight item to 0 in mobile view
+.uol-spotlight-item-frame:nth-child(-n+1) .uol-spotlight-item {
+  @extend %mt-0;
+}
+
+.uol-spotlight-item img {
+  object-fit: fill;
+  width: 100%;
+}
+
+.uol-spotlight-item--link {
+  position: relative;
+  padding-bottom: 6rem;
+}
+
+.uol-spotlight-item-frame h3 {
+  font-size: 2.2rem;
+  padding: 1.5rem 1rem 0.5rem !important;
+}
+
+.uol-spotlight-item-frame .uol-h3,
+.uol-spotlight-item-frame h3,
+.uol-spotlight-item-frame p {
+  @extend  %uol-white-font-default;
+}
+
+
+.uol-spotlight-item--link a {
+  text-decoration: none;   
+}
+
+.uol-spotlight-item--link:hover {
+    box-shadow: 5px 6px 6px 2px $uol-black-400;
+    /*transform: scale(1.2);*/       
+}
+
+.uol-spotlight-item--link:hover img {
+  opacity: 0.8;
+}
+
+.uol-spotlight-item--link a div {
+  height: 100%;
+}
+
+.uol-spotlight-item-button {
+  bottom: 1rem;
+  color: #333 !important;
+  line-height: 3.2rem;
+  margin-left: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0 !important; 
+  position: absolute;
+  width: 60%; 
+}
+
+.uol-spotlight-copy-frame {
+  padding: 0 1rem;
+}
+
+
+
+// Breakpoints 
+
+@media (min-width: $uol-breakpoint-sm) {
+  // Set margin-top to the first two spotlight items to 0 in small device view
+  .uol-spotlight-item-frame:nth-child(-n+2) .uol-spotlight-item {
+    margin-top: $uol-mt-0;
+  }
+
+  .uol-spotlight-wrapper:not(.uol-spotlight-wrapper--twos) > .uol-spotlight-item-frame:last-child {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $uol-breakpoint-m) {
+  // Set margin-top to the first three spotlight items to 0 in medium device view upwards
+  .uol-spotlight-item-frame:nth-child(-n+3) .uol-spotlight-item {
+    margin-top: $uol-mt-0;
+  }
+
+  .uol-spotlight-wrapper--twos > .uol-spotlight-item-frame {
+    width: 50% !important;
+  }
+
+  .uol-spotlight-wrapper:not(.uol-spotlight-wrapper--twos) > .uol-spotlight-item-frame:last-child {
+    margin: 0;
+  }
+}
+
+// END ULCL - SPOTLIGHT 
+// ============== 

@@ -1,0 +1,14 @@
+ //Mixins
+
+@mixin componantMarginPadding-y( $mt, $mb, $py ) {
+  margin: $mt auto $mb;
+  padding: $py 0;
+}
+
+@mixin horizLineMargin( $mt, $mb, $mHoriz, $width ) {
+  margin: $mt $mHoriz $mb; 
+  width: $width; 
+}
+
+
+

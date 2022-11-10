@@ -1,0 +1,72 @@
+.tile {
+  background-color:#f6f6f6;
+  box-shadow:0 2px 4px 0 rgba(0,0,0,.094);
+  cursor:pointer;
+  margin-bottom:4px;
+  max-width:100%;
+  width: 25.5rem;
+  position:relative;
+  z-index:0; 
+}
+
+.tile:nth-last-child(n+4),.tile:nth-last-child(n+4)~.tile{
+  margin-bottom:.4rem;
+  width: 27.3rem;
+}
+.tile:nth-last-child(n+5),.tile:nth-last-child(n+5)~.tile{
+  width: 25.5rem;
+}
+
+.tile .tile_cnt,
+.tile .video_cnt, 
+.uol-hero_imgCnt {
+  @extend %imgContainer;
+}
+
+.tile_cnt,
+.video_cnt {
+	overflow: hidden;
+	max-height: 385px;
+	padding-bottom: calc((150 / 270) * 100%);
+	background-color: #000;
+}
+
+
+.tile-half .tile_cnt,
+.tile-half .video_cnt {
+  @extend %imgBackgroundSize;
+}
+
+.tile:hover {
+  @extend %hoverState;
+}
+
+.tile:hover .tile_btn,
+.tile:hover .video_btn {
+  @extend %hoverStateBtn;
+}
+
+
+.tile:hover .tile_cnt:after,
+.tile:hover .video_cnt:after {
+  background-color:rgba(0,33,71,.1);
+    transition:background-color .6s ease;
+}
+
+
+
+@media (min-width: $uol-breakpoint-sm){
+  .tile {
+    max-width:100%;
+  }
+}
+
+@media (min-width: $uol-breakpoint-m){
+  .tile:nth-last-child(n+5),.tile:nth-last-child(n+5)~.tile{
+      margin-bottom: .4rem;
+  }
+  .tile{
+      scroll-snap-align:start;
+      width: 25.5rem;
+  }
+}

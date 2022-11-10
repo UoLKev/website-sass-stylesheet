@@ -1,0 +1,67 @@
+// ============== 
+// START ULCL - ACCOMMODATION INTRO/USP 
+
+#uol-accommodation-intro-title {
+  margin-bottom: 2rem;
+}
+
+#uol-accommodation-usp {
+  @extend %uol-white-font-default;
+  height: 100%;
+  margin-top: 1rem;
+  padding: 1.5rem;
+}
+
+#uol-accommodation-usp div[class^="col-"] {
+  display: table;   
+  height: 4em;
+}
+
+#uol-accommodation-usp div[class^="col-"] p,
+#uol-accommodation-usp div[class^="col-"] i {
+  display: table-cell; 
+  vertical-align: middle;
+}
+
+#uol-accommodation-usp p {
+  @extend %uol-white-font-default;
+}
+
+.uol-accommodation-aligned-row {
+  display: flex;
+  flex-flow: row wrap;
+
+  &::before {
+      display: block;
+  }
+}
+
+.uol-accommodation-usp-btn {
+  display: block;
+  white-space: normal;
+  width: 100%;
+}
+
+.uol-accommodation-usp--primary { 
+  @extend %bg-color-primary;
+}
+.uol-accommodation-usp--secondary { 
+  @extend %bg-color-secondary;
+}
+.uol-accommodation-usp--accent-primary { 
+  @extend %bg-color-accent-primary; ; 
+}
+.uol-accommodation-usp--accent-secondary { 
+  @extend %bg-color-accent-secondary;
+}
+
+@media (min-width: $uol-breakpoint-l) {
+        
+  #uol-accommodation-usp {
+    margin-top: 0;
+    padding: 3rem;
+  }
+  
+}
+// END ULCL - ACCOMMODATION INTRO/USP 
+// ============== 

@@ -1,0 +1,93 @@
+.uol-blockquote {
+  //@extend %container-constraint;
+  padding: 3rem 2rem;
+  //margin: 0 2rem 2rem;
+}
+
+blockquote.uol-blockquote p:before,
+blockquote.uol-blockquote p:after {
+  content: none;
+  display: none;
+}
+
+
+@each $backgroundColourSetting in  $backgroundColourSettings {
+  .uol-blockquote--#{$backgroundColourSetting} {
+    @extend %bg-color-#{$backgroundColourSetting};
+  }
+}
+
+
+.uol-blockquote[class*="uol-blockquote--"] {
+  padding-bottom: 5rem;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+}
+.uol-blockquote[class*="uol-blockquote--"] .uol-body {
+  @extend %uol-white-font-default;
+}
+.uol-blockquote[class*="uol-blockquote--"] .uol-body-prominent {
+  @extend %uol-white-font-default;
+}
+.uol-blockquote[class*="uol-blockquote--"] .uol-blockquote_text {
+  @extend %uol-white-font-default;
+}
+.uol-blockquote[class*="uol-blockquote--"] .uol-blockquote_mark {
+  color: $uol-white-100;
+  opacity: 0.5;
+}
+.uol-blockquote_inner {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.uol-blockquote_text {
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  font-family: $uol-font-headings;
+  margin-bottom: 1rem;;
+  color: var(--uol-black-100);
+}
+.uol-blockquote_quote {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.uol-blockquote_mark {
+  @extend %uol-font-color-primary;
+  display: block;
+  max-width: 2.5rem;  
+  opacity: 0.25;
+}
+.uol-blockquote_mark:first-of-type {
+  margin-right: auto;
+  margin-bottom: 1rem;
+}
+.uol-blockquote_mark:last-of-type {
+  margin-left: auto;
+}
+
+
+
+@media (min-width: $uol-breakpoint-sm) {
+  .uol-blockquote_inner {
+    max-width: 75rem;
+  }
+}
+@media (min-width: $uol-breakpoint-m) {
+  .uol-blockquote_inner {
+    max-width: 97rem;
+  }
+}
+@media (min-width: $uol-breakpoint-l) {
+  .uol-blockquote_inner {
+    max-width: $uol-container-constraint;
+  }
+}
+
+
+@media (min-width: 756px) {
+  .uol-blockquote_text {
+    margin: 0 25px;
+    font-size: 28px;
+    line-height: 32px;
+  }
+}

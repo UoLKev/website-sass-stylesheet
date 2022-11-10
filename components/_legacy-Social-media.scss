@@ -1,0 +1,140 @@
+.social-media {
+  padding: 1rem 0 2rem 0;
+}
+.social-media .icon-list {
+  display: table;
+  margin: 0 auto;
+}
+.social-media .icon-list ul {
+  min-width: 100%;
+  list-style: none;
+  text-align: center;
+  display: block;
+  margin-left: -1rem;
+}
+@media screen and (min-width: 450px) {
+  .social-media .icon-list ul {
+    margin-left: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .social-media .icon-list ul {
+    margin-left: -2rem;
+  }
+}
+.social-media .icon-list ul li {
+  float: left;
+  padding: 1rem;
+}
+.social-media .icon-list ul li a {
+  display: block;
+  width: 5rem;
+  margin: 0 auto;
+}
+.social-media .icon-list ul li a img {
+  height: 5rem;
+}
+
+.social-media-wrapper {
+  text-align: left;
+}
+.social-media-wrapper .h2 {
+  text-align: center;
+}
+.social-media-wrapper ul {
+  display: inline-block;
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+.social-media-wrapper ul li {
+  float: left;
+  width: 100%;
+  margin: 0 0.5rem 0.5rem 0;
+  border-radius: 0.3rem;
+  padding: 0.5rem 0.5rem;
+}
+.social-media-wrapper ul li:hover {
+  background-color: #666;
+}
+@media screen and (min-width: 768px) {
+  .social-media-wrapper ul li {
+    width: 49%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .social-media-wrapper ul li {
+    width: 32.5%;
+  }
+}
+.social-media-wrapper ul li a {
+  display: inline-block;
+  color: #fff;
+  width: 100%;
+  font-size: 1.7rem;
+  vertical-align: middle;
+}
+.social-media-wrapper ul li a:hover {
+  background-color: #666;
+}
+.social-media-wrapper ul li a span.fa {
+  font-size: 3rem;
+  color: #fff;
+  margin: 0 1rem;
+}
+
+.facebook {
+  background: #3b5998;
+}
+
+.twitter {
+  background: #0A78C2;
+}
+
+.linkedin {
+  background: #0976b4;
+}
+
+.youtube {
+  background: #cd201f;
+}
+
+.googlePlus {
+  background: #CC3732;
+}
+
+.instagram {
+  background: #3F729B;
+}
+
+.flickr {
+  background: #FF0084;
+}
+
+.vine {
+  background: #00B489;
+}
+
+.weibo {
+  background: #E6162D;
+}
+
+.pinterest {
+  background: #cb2027;
+}
+
+.blogger {
+  background: #f57d00;
+}
+
+.wordpress {
+  background: #1e8cbe;
+}
+
+.vimeo {
+  background: #1ab7ea;
+}
+
+.globe {
+  background: #002147;
+}

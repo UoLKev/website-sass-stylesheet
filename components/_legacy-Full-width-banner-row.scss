@@ -1,0 +1,46 @@
+/* Full Width - Banner Row - No Min Height B3/B4 */
+.uol-course-full-width-banner  {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: initial;
+  overflow: hidden;
+  position: relative;
+  width: 100%;   
+}
+
+.uol-course-full-width-banner img  {
+	overflow: hidden; 
+	margin-left: -20%;
+	max-width: 140%; 
+}
+
+.uol-course-full-width-banner .overlay-image .uol-banner-content {
+	color: #333;
+}
+
+.uol-course-full-width-banner .overlay-image .uol-banner-content .cta-header {
+  color: #888;
+}
+
+
+@media screen and (max-width: 992px) {
+	.uol-course-full-width-banner  {
+    background-image: none !important;	
+  }
+}
+
+
+@media screen and (min-width: 992px) {	
+	.uol-course-full-width-banner  {
+   background-color: transparent;
+  }
+	
+	.uol-course-full-width-banner .overlay-image .uol-banner-content,
+	.uol-course-full-width-banner .overlay-image .uol-banner-content .cta-header {
+		color: #fff;
+	}	
+}
+/* END Full Width - Banner Row - No Min Height B3/B4 */

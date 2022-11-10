@@ -1,0 +1,56 @@
+/* Research Theme Primary Colours */
+
+.sdg-tag-wrapper { 
+	padding: 20px 0; 
+}
+
+.sdgIcon,
+.sdgIconSmall { 
+	display: block; 
+    margin-right: 10px;
+}
+
+.sdgIconSmall {
+	width: 85px;
+}
+
+.sdg-badge-container { 
+	padding: 0 7px;
+}
+
+.research-theme-container { 
+	padding-right: 7px;
+}
+
+.research-theme { 
+  border-radius: 5px;
+	display: block;
+  margin-bottom: 10px;
+  padding: 10px 15px; 
+}
+
+.research-theme-container:last-of-type .research-theme { 
+	margin-bottom: 0px;
+}
+
+.research-theme-container:first-of-type .research-theme { 
+	margin-top: 10px;
+}
+
+.research-color { 
+    transition: .4s all;
+    color: #fff;
+}
+
+.research-color:hover { 
+	color: white;
+    filter: brightness(120%)
+}
+
+.research-dark-blue { background-color: #407086; }
+.research-light-blue { background-color: #c0c9d1; }
+.research-pink { background-color: #d55985; }
+.research-light-pink { background-color: #c7a8bf; }
+.research-navy-blue { background-color: #2a2e47; }
+
+/* END Research Theme Primary Colours */

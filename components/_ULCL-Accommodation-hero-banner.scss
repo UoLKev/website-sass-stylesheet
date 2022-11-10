@@ -1,0 +1,42 @@
+// ============== 
+// START ULCL - ACCOMMODATION HERO BANNER 
+#uol-accomm-hero-banner-full-width img { 
+  height: auto;  
+}
+
+#uol-accomm-hero-banner-title {
+  opacity: 1;
+  position: static;                
+}
+
+#uol-accomm-hero-banner-title h1 {
+  color: $uol-white-default;
+  margin: 10px 0;
+  text-align: center;
+}
+
+#uol-accomm-hero-banner-full-width img,
+#uol-accomm-hero-banner-title,
+#uol-accomm-hero-banner-title h1 {
+  width: 100%;
+}
+
+@media (min-width: $uol-breakpoint-l) {
+  #uol-accomm-hero-banner-title {
+    position: absolute;
+    opacity: 0.9;
+    /*top: 0;*/
+    bottom: 0;
+  }
+
+  #uol-accomm-hero-banner-title h1 {
+    margin: 20px 0;
+  }
+}
+
+.uol-accomm-hero-banner-title--primary { background-color: $uol-primary; }
+.uol-accomm-hero-banner-title--secondary { background-color: $uol-secondary; }
+.uol-accomm-hero-banner-title--accent-primary { background-color: $uol-accent-primary; }
+.uol-accomm-hero-banner-title--accent-secondary { background-color: $uol-accent-secondary; }
+// END ULCL - ACCOMMODATION HERO BANNER 
+// ==============

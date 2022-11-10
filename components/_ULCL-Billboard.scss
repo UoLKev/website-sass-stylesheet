@@ -1,0 +1,129 @@
+ /*
+    ULCL Billboard
+    Added: 12/06/22
+    Author: Matthew Fung
+  */
+  .uol-billboard {
+    cursor: initial;
+    display: block;
+    margin-bottom: 1rem;
+    position: relative;    
+    width: 100%;
+  }
+
+  .uol-billboard_imgCnt {
+    @extend %imgContainer;
+  }
+  
+  .uol-billboard_media {
+    object-fit: cover;
+    width: 100%;
+    height: 18rem;
+    min-height: 18rem;
+    margin-bottom: 3rem;
+    background-color: var(--uol-black-300);
+    border-bottom: 1px solid var(--uol-black-400);
+  }
+
+  .uol-billboard_media-has-people {
+    object-position: top center;
+  }
+
+  .uol-billboard_textContainer {
+    padding: 0 15px;
+  }
+
+  .uol-billboard_textContainer .uol-h1 {
+    color: var(--uol-black-100);
+    margin-bottom: 10px;
+  }
+
+  .uol-billboard_textContainer .uol-t2 {
+    color: var(--uol-black-200);
+  }
+
+  .uol-billboard--top-level .uuol-billboard_textContainer {
+    margin-left: 0;
+  }
+
+
+
+
+  @media (min-width: $uol-breakpoint-sm) {
+    .uol-billboard {
+      margin-bottom: 3rem;
+    }
+    .uol-billboard--sub-level,
+    .uol-billboard_media {
+      min-height: 48rem;
+      height: 48rem;
+    }
+    .uol-billboard--top-level .uol-billboard_textContainer {
+      max-width: var(--constraint);
+      margin: 0 auto;
+    }
+    .uol-billboard--top-level .uol-billboard_text {
+      padding: 2rem;
+      display: inline-block;
+      margin-top: -100px;
+      width: auto;
+      max-width: 58.5rem;
+      background-color: var(--uol-primary);
+    }
+    .uol-billboard--top-level .uol-section {
+      padding: 0 4rem;
+    }
+  
+    .uol-billboard--top-level .uol-billboard_textContainer .uol-h1 {
+      color: var(--uol-white-100);
+    }
+    .uol-billboard--top-level .uol-billboard_textContainer .uol-t2 {
+      color: var(--uol-white-300);
+    }
+  
+    .uol-billboard--sub-level .uol-billboard_media {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      margin-bottom: 0;
+    }
+    .uol-billboard--sub-level .uol-billboard_textContainer{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      max-width: var(--constraint);
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    .uol-billboard--sub-level .uol-billboard_text {
+      position: absolute;
+      left: 15px;
+      bottom: 20px;
+      z-index: 1;
+      padding: 0;
+    }
+    .uol-billboard--sub-level:after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      content: "";
+      height: 100%;
+      width: 100%;
+      z-index: 0;
+      background: linear-gradient(
+        0deg,
+        rgba(35, 31, 32, 0.4),
+        rgba(35, 31, 32, 0.1),
+        rgba(196, 196, 196, 0)
+      );
+    }
+    .uol-billboard--sub-level .uol-billboard_textContainer .uol-h1,
+    .uol-billboard--sub-level .uol-billboard_textContainer .uol-h2 {
+      color: var(--uol-white-default);
+    }
+    .uol-billboard--sub-level .uol-billboard_textContainer .uol-t2 {
+      color: var(--uol-white-default);
+    }
+  }

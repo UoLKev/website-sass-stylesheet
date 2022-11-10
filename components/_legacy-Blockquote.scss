@@ -1,0 +1,75 @@
+blockquote {
+  @extend %uol-font-family-primary;
+  @extend %uol-white-font-default;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 2rem;
+  border: none;
+  position: relative;
+  margin-top: 4rem;
+  padding-left: 0;
+}
+
+blockquote p {
+  @extend %uol-white-font-default;
+  font-size: 1.2rem;
+}
+
+
+blockquote p:before,
+blockquote p:after {
+  font-family: Georgia, Times, "Times New Roman", serif;
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  margin: 0 1rem;
+  font-size: 6rem;
+  line-height: 1.5;
+}
+
+blockquote p:before {
+  top: -2rem;
+  left: -2rem;
+  content: "\201C";
+}
+
+blockquote p:after {
+  bottom: 2rem;
+  right: -1rem;
+  content: "\201D";
+}
+
+
+
+@media screen and (min-width: $uol-breakpoint-sm) {
+  blockquote {
+    line-height: 2.4rem;
+  }
+
+  blockquote p {
+    font-size: 1.6rem;
+  }
+}
+
+
+
+@media screen and (min-width: $uol-breakpoint-m) {
+  blockquote p {
+    font-size: 2rem;
+  }
+
+  blockquote p:before,
+  blockquote p:after {
+    margin: 0 2rem;
+  }
+
+  blockquote p:before {
+    left: -4rem;
+  }
+
+  blockquote p:after {
+    right: -2rem;
+  }
+}

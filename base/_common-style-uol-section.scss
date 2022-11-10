@@ -1,0 +1,91 @@
+.uol-section {
+  @include componantMarginPadding-y( $uol-componant-margin-top-default, $uol-componant-margin-bottom-default, 0 );
+  margin-left: 1.2rem;
+  margin-right: 1.2rem;
+}
+
+.uol-section[data-type="results"] {
+  display: none;
+}
+.uol-section[data-type="results"] .grid {
+  grid-auto-flow: row;
+}
+
+// Start Primary
+.uol-section--primary {
+  @extend %uol-padding-y-default;
+  @extend %bg-color-primary;
+  padding: $uol-py-2 0;
+}
+
+.uol-section--primary .uol-h1 { @extend %uol-white-font-default; }
+.uol-section--primary .uol-h2 { @extend %uol-white-font-default; }
+.uol-section--primary .uol-label { @extend %uol-white-font-default; }
+.uol-section--primary .uol-t1 { @extend %uol-white-font-default; }
+.uol-section--primary .uol-t2 { @extend %uol-white-font-default; }
+
+// Start Secondary
+.uol-section--secondary {
+  @extend %uol-padding-y-default;
+  @extend %bg-color-secondary;
+  padding: $uol-py-2 0;
+}
+
+.uol-section--secondary .uol-h1 { @extend %uol-white-font-default; }
+.uol-section--secondary .uol-h2 { @extend %uol-white-font-default; }
+.uol-section--secondary .uol-label { @extend %uol-white-font-default; }
+.uol-section--secondary .uol-t1 { @extend %uol-white-font-default; }
+.uol-section--secondary .uol-t2 { @extend %uol-white-font-default; }
+
+// Start Accent Primary
+.uol-section--accent-primary {
+  @extend %uol-padding-y-default;
+  @extend %bg-color-accent-primary;
+  padding: $uol-py-2 0;
+}
+
+.uol-section--accent-primary .uol-h1 { @extend %uol-white-font-default; }
+.uol-section--accent-primary .uol-h2 { @extend %uol-white-font-default; }
+.uol-section--accent-primary .uol-label { @extend %uol-white-font-default; }
+.uol-section--accent-primary .uol-t1 { @extend %uol-white-font-default; }
+.uol-section--accent-primary .uol-t2 { @extend %uol-white-font-default; }
+
+// Start Accent Secondary
+.uol-section--accent-secondary {
+  @extend %uol-padding-y-default;
+  @extend %bg-color-accent-secondary;
+  padding: $uol-py-2 0;
+}
+
+.uol-section--accent-secondary .uol-h1 { @extend %uol-white-font-default; }
+.uol-section--accent-secondary .uol-h2 { @extend %uol-white-font-default; }
+.uol-section--accent-secondary .uol-label { @extend %uol-white-font-default; }
+.uol-section--accent-secondary .uol-t1 { @extend %uol-white-font-default; }
+.uol-section--accent-secondary .uol-t2 { @extend %uol-white-font-default; }
+
+
+// Start light Grey
+.uol-section--grey {
+  @extend %uol-padding-y-default;
+  background-color: #efefef;
+  padding: $uol-py-2 0;
+}
+
+
+.uol-section--primary .uol-body strong {
+  color: #f6f6f6;
+}
+
+
+.uol-section--primary .uol-standfirst {
+  color: #f6f6f6;
+}
+
+.uol-section--primary .uol-body,
+.uol-section--primary .uol-body p {
+  color: #dedede;
+}
+
+.uol-section--primary .video_cnt:after {
+  background-color: rgba(255, 255%, 255%, 20%);
+}

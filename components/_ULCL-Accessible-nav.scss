@@ -1,0 +1,273 @@
+/* Highlight when the menu is open */
+.js-menu-open {
+  @extend %bg-color-secondary;
+}
+/* Style the button colour when the menu is open */
+.js-menu-open [aria-controls] {
+  @extend %uol-white-font-default;
+}
+
+
+/* Style links that appear when user tabs at the start of the page to help */
+.skip-links {
+  list-style: none;
+  padding: 0;
+}
+
+.skip-link {
+  left: 0;
+  position: fixed;
+  top: -4.5rem;  
+}
+
+.skip-link:focus {
+  @extend %uol-white-font-default;
+  @extend %bg-color-secondary;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  visibility: visible;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  vertical-align: middle;
+  display: inline-block;
+  outline: 0;
+  z-index: 2;
+}
+
+/* If the user has no reduced motion set for animations etc */
+@media (prefers-reduced-motion: no-preference) {
+  .skip-link:focus {
+    transition: top 0.3s ease;
+  }
+}
+
+/* 
+The rest of the styles are either resets, or unique styling for buttons.
+
+In these case it's usually scenarios where the styles were applied to anchors by element selector.
+
+The reason why it wasn't just bolted onto existing styling is so certain parts weren't modified or leaking through from the current styling.
+*/
+.uol-nav .main-nav .mega-me a span {
+  display: inline-block;
+  outline: 0;
+}
+
+.uol-nav .main-nav .mega-me a:focus {
+  outline: 0;
+  text-decoration: none;
+}
+
+.uol-nav .main-nav.navbar-nav li ul li.menu-heading ul li a:hover {
+  color: $uol-black-100 !important;
+}
+
+.uol-nav .main-nav.navbar-nav li ul li.menu-heading ul li a:hover span {
+  text-decoration: underline;
+}
+.uol-nav .main-nav .mega-me a:focus span {
+  color: $uol-focus-black !important;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.uol-nav .navbar-default .navbar-nav > li > button[aria-expanded] span {
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  display: block;
+  transition: border-bottom-color .3s ease;
+}
+
+.uol-nav .main-nav > li > button:after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 2px;
+  width: 0px;
+  background: transparent;
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+
+.uol-nav .nav > li > a,
+.uol-nav .nav > li > button {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+}
+.uol-nav .nav > li > button:hover,
+.uol-nav .nav > li > button:focus {
+  text-decoration: none;
+  background-color: #eee;
+}
+.uol-nav .navbar-default .navbar-nav > li > button {
+  color: #777;
+  width: 100%;
+  text-align: left;
+}
+.uol-nav .navbar-default .navbar-nav > li > button[aria-expanded^="true"] {
+  background-color: $uol-primary !important;
+  color: #fff !important;
+}
+.uol-nav .navbar-default .navbar-nav button[aria-expanded^="true"] + .glyphicon {
+  color: #fff !important;
+}
+.uol-nav .navbar-default .navbar-nav > li > button:hover {
+  color: #333;
+  background-color: transparent;
+}
+.uol-nav .navbar-default .navbar-nav > li > button:focus {
+  background-color: #002147;
+  color: #fff !important;
+}
+.uol-nav .navbar-default .navbar-nav > li > button:focus + .glyphicon {
+  color: #fff !important;
+}
+.uol-nav .navbar-nav > li > button {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  line-height: 2rem;
+}
+
+.uol-nav .main-nav {
+  min-width: 100vw;
+  position: absolute;
+  z-index: 30;
+  background-color: #fff;
+  left: 0;
+}
+
+.uol-nav .main-nav li {
+  padding: 0 2rem;
+  float: none;
+}
+
+.uol-nav .main-nav li button,
+.uol-nav .main-nav li a {
+  display: block;
+}
+.uol-nav .main-nav li button {
+  /*
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  */
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  color: #072249 !important;
+  font-size: 1.6rem;
+  vertical-align: middle;
+  display: inline-block;
+}
+.uol-nav .main-nav li em {
+  float: right;
+  padding-top: 0;
+  margin-right: 1rem;
+  display: block;
+  padding: 0 1rem;
+  margin-top: 0;
+  /*! padding-top: 0px; */
+}
+.uol-nav .main-nav li > a {
+  font-size: 1.6rem;
+}
+.uol-nav {
+  position: relative;
+}
+
+
+@media screen and (min-width: $uol-breakpoint-sm) {
+
+  .uol-nav .navbar-nav > li > button {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  .uol-nav .main-nav {
+    min-width: 400%;
+    max-width: 400%;
+  }
+
+}
+
+
+
+@media screen and (min-width: $uol-breakpoint-m) {
+
+  .uol-nav .navbar-default .navbar-nav > li > button[aria-expanded]:hover:not(button[aria-expanded].kb) span {
+    border-bottom-color: var(--uol-black-200);
+    background-color: initial;
+    transition: border-bottom-color .3s ease;
+  }
+
+  .uol-nav .navbar-default .navbar-nav > li > button[aria-expanded].click span  {
+    border-bottom-color: var(--uol-black-200);
+  }
+
+  .uol-nav .navbar-default .navbar-nav > li > button[aria-expanded].click:focus {
+    background-color: transparent;
+  }
+
+  .uol-nav .main-nav > li > button:hover:after {
+    width: 100%;
+    background: var(--uol-white-300);
+  }
+
+  .uol-nav .main-nav {
+    /*min-width: auto;/*  /* Replaced with min-width: 0 as auto not working with safari (KT - 05 Feb 18) */
+    min-width: 0;
+    max-width: auto;
+    position: static;
+    margin-top: 0;
+  }
+
+  .uol-nav .main-nav.no-js li > ul {
+    display: none;
+  }
+  .uol-nav .main-nav.no-js li:last-of-type {
+    display: none;
+  }
+
+  .uol-nav .main-nav li {
+    float: left;
+    min-height: 7rem;
+    padding: 0;
+  }
+
+  .uol-nav .main-nav .mega-me {
+    position: absolute;
+  }
+  .uol-nav .navbar,
+.uol-nav .main-nav li {
+  position:static;
+}
+  .uol-nav .main-nav li em {
+    display: none;
+  }
+  .navbar-default .navbar-nav > li > button {
+    color: #072249;
+    font-size: 1.12rem;
+  }
+
+  .main-nav > li:hover .mega-me:not(.uol-nav .mega-me) {
+    display: block !important;
+  }
+
+}
+
+@media screen and (min-width: $uol-breakpoint-l) {
+    
+  .uol-nav .nav ul#main-nav {
+    margin-top: .5rem;
+    padding-right: 2.75rem;
+  }
+
+  .navbar-default .navbar-nav > li > button {
+    color: #072249;
+    font-size: 1.4rem;
+  }
+
+}

@@ -1,0 +1,28 @@
+//============== 
+//START ULCL - BREADCRUMBS
+
+#uol-breadcrumbs {
+  @extend %uol-white-font-default;
+}
+
+#uol-breadcrumbs a { 
+  @extend %uol-white-font-default;
+}
+
+#uol-breadcrumbs a:hover { 
+  @extend %uol-white-font-default-hover; 
+}
+
+
+@each $backgroundColourSetting in  $backgroundColourSettings {
+  .uol-breadcrumbs--#{$backgroundColourSetting} {
+    @extend %bg-color-#{$backgroundColourSetting};
+  }
+}
+
+.breadcrumbs {
+  margin: 1rem 0;
+}
+
+//END ULCL - BREADCRUMBS 
+//============== 

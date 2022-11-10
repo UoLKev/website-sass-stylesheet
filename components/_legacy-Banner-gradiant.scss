@@ -1,0 +1,106 @@
+.banner-gradient {
+  background: #072249;
+}
+.banner-gradient:before, 
+.banner-gradient:after {
+  content: " ";
+  display: table;
+}
+.banner-gradient:after {
+  clear: both;
+}
+.banner-gradient .blue-gradient {
+  position: relative;
+}
+
+.banner-gradient .blue-gradient img {
+  width: 100%;
+}
+.banner-gradient .quote-container {
+  padding: 1rem;
+  text-align: left;
+}
+.banner-gradient .quote-container blockquote {
+  line-height: 1.8rem;
+  margin-top: 2rem;
+}
+
+.banner-gradient .quote-container blockquote p {
+  padding: 0;
+  font-size: 1.3rem;
+}
+
+.banner-gradient .quote-container blockquote p:before {
+  left: -3rem;
+}
+
+.banner-gradient .quote-container cite {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  padding-left: 0;
+}
+
+
+
+@media all and (min-width: $uol-breakpoint-sm) {
+  .banner-gradient .quote-container blockquote p {
+    font-size: 1.6rem;
+  }
+}
+
+@media all and (min-width: $uol-breakpoint-m) {
+  .banner-gradient .blue-gradient {
+    width: 40%;
+    float: left;
+  }
+
+  .banner-gradient .blue-gradient:before {
+    content: '';
+    position: absolute;
+    width: 10rem;
+    right: 0;
+    height: 100%;
+    background: #072249;
+    background: -moz-linear-gradient(left, rgba(7, 34, 73, 0) 0%, #072249 100%);
+    background: -webkit-linear-gradient(left, rgba(7, 34, 73, 0) 0%, #072249 100%);
+    background: linear-gradient(to right, rgba(7, 34, 73, 0) 0%, #072249 100%);
+  }
+
+  .banner-gradient .quote-container blockquote {
+    line-height: 1.8rem;
+    margin-top: 3rem;
+  }
+
+  .banner-gradient .quote-container blockquote p:before {
+    left: -6rem;
+  }
+
+  .banner-gradient .quote-container {
+    float: left;
+    padding: 0 0 0 6rem;
+    width: 60%;   
+  }
+}
+
+
+@media all and (min-width: $uol-breakpoint-l) {
+  .banner-gradient .quote-container blockquote {
+    line-height: 2rem;
+    margin-top: 7rem;
+  }
+
+  .banner-gradient .quote-container blockquote p {
+    padding: 0 3rem;
+  }
+
+  .banner-gradient .quote-container cite {
+    padding-left: 3rem;
+  }
+}
+
+
+@media all and (min-width: 1500px) {
+  .banner-gradient .quote-container blockquote {
+    margin-top: 10rem;
+  }
+}

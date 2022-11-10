@@ -1,0 +1,73 @@
+// ============== 
+// START ULCL - ACCOMMODATION PRICE ACCORDION AND PRICE TABLES
+
+
+#uol-acommodation-prices-section {
+  margin-bottom: 50px; 
+  padding: 0 0 25px;
+}
+
+.uol-accordion {
+  margin-top: 0;
+  max-width: var(--constraint);
+}
+
+.uol-accordion-accommodation--primary { 
+  @extend %bg-color-primary;
+}
+
+.uol-accordion-accommodation--secondary { 
+  @extend %bg-color-secondary;
+}
+
+.uol-accordion-accommodation--accent-primary { 
+  @extend %bg-color-accent-primary;
+}
+
+.uol-accordion-accommodation--accent-secondary { 
+  @extend %bg-color-accent-secondary;
+}
+ 
+.uol-accordion-accommodation-title-light { 
+  @extend %uol-white-font-default;
+}
+
+.uol-accordion-accommodation-content-light {
+  background-color: $uol-white-default;
+}
+
+.uol-accommodation-price-table,
+.uol-accommodation-price-table > thead > tr > th,
+.uol-accommodation-price-table > tbody > tr > td { 
+  border: 2px solid;
+    text-align: center;
+    @extend %uol-white-font-default;
+  }
+
+.uol-accommodation-price-table {
+  @extend %bg-color-accent-secondary;
+}
+
+.uol-accommodation-price-table td:first-child {
+  @extend %bg-color-primary;
+}
+
+.uol-accommodation-price-table th {
+  @extend %bg-color-primary;
+}
+
+.uol-accommodation-price-table-header { display: none; }
+
+.uol-accordion-full-width-frame + .uol-accordion-full-width-frame .uol-accordion{
+  margin-top: -5rem;
+}
+
+.uol-acommodation-prices-section--fullWidth-colour,  
+.uol-acommodation-prices-section--fullWidth-colour details,
+.uol-acommodation-prices-section--fullWidth-colour .uol-accordion[open] > .uol-accordion_title { background-color: #f1f1f1; }
+
+.uol-acommodation-prices-section--fullWidth-colour:not(div.uol-acommodation-prices-section--fullWidth-colour:last-child) .uol-accordion_title { border-bottom: none;} 
+
+
+// START ULCL - ACCOMMODATION PRICE ACCORDION AND PRICE TABLES
+// ============== 

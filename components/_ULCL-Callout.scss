@@ -1,0 +1,46 @@
+
+// START ULCL - Callout 
+
+.uol-callout {
+  @extend %container-constraint;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.uol-callout .uol-t2 {
+  margin-bottom: 0;
+}
+
+.uol-callout .uol-t2 + .uol-button {
+  @extend %mt-2;
+}
+
+.uol-callout .uol-h2 {
+  width: 100%;
+}
+
+
+@media (min-width: $uol-breakpoint-sm) {
+  .uol-callout .uol-h2 {
+    width: 11ch;
+  }
+  .uol-callout {
+    gap: 6rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .uol-callout_copy {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: $uol-breakpoint-l) {
+  .uol-callout {
+    padding: 2rem 0;
+  }
+}
+
+// END ULCL - Callout 

@@ -1,0 +1,76 @@
+.uol-btn {
+  background-image: none; 
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: $uol-white-100;
+  cursor: pointer;
+  display: inline-block; 
+  font-family: $uol-font-primary;
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 2.4rem;
+  margin-bottom: 0;
+  padding: .4rem .8rem;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: background-color 0.3s ease; 
+  vertical-align: middle;
+  white-space: nowrap;  
+}
+
+.uol-btn:hover {
+  @extend %bg-color-primary-hover;
+  color: $uol-white-100;
+  transition: background-color 0.3s ease;
+}
+
+$btnTypes: ( 'primary', 'secondary', 'accent-primary', 'accent-secondary');
+
+@each $btnType in $btnTypes {
+  // Uol Buttons
+  .uol-btn--#{$btnType} {
+    @extend %bg-color-#{$btnType}-btn;
+    @extend %uol-white-font-default;
+  }
+
+  .uol-btn--#{$btnType}:hover {
+    @extend %bg-color-#{$btnType}-btn-hover;
+    transition: background-color 0.3s ease;
+  }
+
+  // Start Bootstrap Button Overrides
+  .btn-#{$btnType} {
+    @extend %bg-color-#{$btnType}-btn;
+  }
+
+  .btn-#{$btnType}:focus,
+  .btn-#{$btnType}.focus,
+  .btn-#{$btnType}:hover,
+  .btn-#{$btnType}:active,
+  .btn-#{$btnType}.active {
+    @extend %bg-color-#{$btnType}-btn-hover;
+  }
+  // End Bootstrap Button Overrides
+
+}
+
+.uol-btn--white {
+  @extend %bg-color-white-100;
+  color: currentcolor;
+}
+
+.uol-btn--white:hover {
+  @extend %bg-color-white-300;
+  color: $uol-black-100;
+  transition: background-color 0.3s ease;
+}
+
+.uol-btn--transparent {
+  color: currentcolor;
+  background-color: transparent;
+}
+
+.uol-btn-l {
+  padding: .8rem 1.2rem;
+}
