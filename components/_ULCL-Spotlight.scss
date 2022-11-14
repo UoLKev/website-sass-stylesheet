@@ -1,13 +1,10 @@
-// ============== 
-// START ULCL - SPOTLIGHT 
-
 .uol-spotlight-wrapper {
   flex-wrap: wrap;
 }
 
 .uol-spotlight-item-wrapper,
 .uol-spotlight-item-frame {
-  @extend  %displayFlex;
+  display: $uol-display-flex-imp;
 }
 
 .uol-spotlight-item-frame p {   
@@ -33,12 +30,12 @@
 
 // Set margin-top to the first spotlight item to 0 in mobile view
 .uol-spotlight-item-frame:nth-child(-n+1) .uol-spotlight-item {
-  @extend %mt-0;
+  margin-top: $uol-mt-0;
 }
 
 .uol-spotlight-item img {
+  @extend %width-100;
   object-fit: fill;
-  width: 100%;
 }
 
 .uol-spotlight-item--link {
@@ -119,6 +116,3 @@
     margin: 0;
   }
 }
-
-// END ULCL - SPOTLIGHT 
-// ============== 

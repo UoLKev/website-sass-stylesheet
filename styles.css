@@ -7,264 +7,8 @@ This file is used to contain all vendor imports.
 /* Additonal Vendor Tools */
 /* Set Focus Colours */
 /* Set font colours */
-.uol-homepage-hero_content-container-inner .tag, .uol-homepage-hero_content-container-inner h1, .uol-homepage-hero, #uol-course-key-info .key-info .h4, #uol-course-key-info h3, #uol-course-key-info h2, .uol-course-header-container h1, blockquote {
-  font-family: Verdana, Arial, sans-serif;
-}
-
-h3, .h3, .uol-h3, h2, .h2, .uol-h2, h1, .h1, .uol-h1 {
-  font-family: Georgia, serif;
-}
-
-.uol-t2, p, h4, .h4, .uol-h4 {
-  font-size: 1.6rem;
-}
-
-.skip-link:focus, .js-menu-open [aria-controls], .uol-pullquote_copy--primary .uol-t2,
-.uol-pullquote_copy--secondary .uol-t2,
-.uol-pullquote_copy--accent-primary .uol-t2,
-.uol-pullquote_copy--accent-secondary .uol-t2, .uol-pullquote_copy--primary .uol-standfirst,
-.uol-pullquote_copy--secondary .uol-standfirst,
-.uol-pullquote_copy--accent-primary .uol-standfirst,
-.uol-pullquote_copy--accent-secondary .uol-standfirst, .uol-pullquote_copy--primary .uol-h2,
-.uol-pullquote_copy--secondary .uol-h2,
-.uol-pullquote_copy--accent-primary .uol-h2,
-.uol-pullquote_copy--accent-secondary .uol-h2, .uol-homepage-hero_btn-container > a, .uol-homepage-hero_content-container-inner .tag, .uol-homepage-hero_content-container-inner h1, .uol-homepage-hero, #uol-course-key-info p, #uol-course-key-info h3, #uol-course-key-info h2, #uol-course-key-info, .uol-course-header-container-inner-btn--accent-secondary > a:hover, .uol-course-header-container-inner-btn--accent-primary > a:hover, .uol-course-header-container-inner-btn--secondary > a:hover, .uol-course-header-container-inner-btn--primary > a:hover, .uol-course-header-container-inner-btn > a, .uol-course-header-container h1, #uol-breadcrumbs a, #uol-breadcrumbs, .uol-blockquote[class*=uol-blockquote--] .uol-blockquote_text, .uol-blockquote[class*=uol-blockquote--] .uol-body-prominent, .uol-blockquote[class*=uol-blockquote--] .uol-body, .uol-spotlight-item-frame .uol-h3,
-.uol-spotlight-item-frame h3,
-.uol-spotlight-item-frame p, .uol-basic-video #iframe-video #play-video:before, .bg-image-only, .spotlight-wrapper .spotlight-item p, #sdgGroupContent .whiteText, #sdgGroupContentTitle, .mockButton .hoverOverlay span, .mockButton .hoverOverlay, blockquote p, blockquote, .uol-btn--accent-secondary,
-.uol-button--accent-secondary, .uol-btn--accent-primary,
-.uol-button--accent-primary, .uol-btn--secondary,
-.uol-button--secondary, .uol-btn--primary,
-.uol-button--primary, .uol-section--accent-secondary .uol-t2, .uol-section--accent-secondary .uol-t1, .uol-section--accent-secondary .uol-label, .uol-section--accent-secondary .uol-h2, .uol-section--accent-secondary .uol-h1, .uol-section--accent-primary .uol-t2, .uol-section--accent-primary .uol-t1, .uol-section--accent-primary .uol-label, .uol-section--accent-primary .uol-h2, .uol-section--accent-primary .uol-h1, .uol-section--secondary .uol-t2, .uol-section--secondary .uol-t1, .uol-section--secondary .uol-label, .uol-section--secondary .uol-h2, .uol-section--secondary .uol-h1, .uol-section--primary .uol-t2, .uol-section--primary .uol-t1, .uol-section--primary .uol-label, .uol-section--primary .uol-h2, .uol-section--primary .uol-h1 {
-  color: #fff;
-}
-
-#uol-breadcrumbs a:hover {
-  color: #d4d4d4;
-}
-
-.uol-homepage-hero_btn-container--primary > a:nth-of-type(1):hover, .uol-course-header-container-inner-btn--primary > a:nth-of-type(1):hover, .uol-blockquote_mark {
-  color: #002147;
-}
-
-.uol-homepage-hero_btn-container--secondary > a:nth-of-type(1):hover, .uol-course-header-container-inner-btn--secondary > a:nth-of-type(1):hover {
-  color: #002147;
-}
-
-.uol-homepage-hero_btn-container--accent-primary > a:nth-of-type(1):hover, .uol-course-header-container-inner-btn--accent-primary > a:nth-of-type(1):hover {
-  color: #002147;
-}
-
-.uol-homepage-hero_btn-container--accent-secondary > a:nth-of-type(1):hover, .uol-course-header-container-inner-btn--accent-secondary > a:nth-of-type(1):hover {
-  color: #002147;
-}
-
-.uol-pullquote_copy--primary:after, .uol-radio-btn-container input:checked ~ .checkmark:after, .uol-breadcrumbs--primary, .uol-blockquote--primary, .uol-spotlight-wrapper--primary .uol-spotlight-item, .uol-section--primary {
-  background-color: #002147;
-}
-
-.uol-spotlight-wrapper--primary .uol-spotlight-item--link:hover, .uol-btn:hover,
-.uol-button:hover {
-  background-color: #002b5c;
-}
-
-.uol-homepage-hero_btn-container--primary > a:hover, .uol-homepage-hero_btn-container--primary > a:nth-of-type(1), .uol-course-header-container-inner-btn--primary > a:nth-of-type(1), .uol-course-header-container-inner-btn--primary > a:hover, .btn-primary, .uol-btn--primary,
-.uol-button--primary {
-  background-color: #047e8b;
-}
-
-.btn-primary:focus,
-.btn-primary.focus,
-.btn-primary:hover,
-.btn-primary:active,
-.btn-primary.active, .uol-btn--primary:hover,
-.uol-button--primary:hover {
-  background-color: #036873;
-}
-
-.skip-link:focus, .js-menu-open, .uol-pullquote_copy--secondary:after, #uol-course-key-info, .uol-breadcrumbs--secondary, .uol-blockquote--secondary, .uol-spotlight-wrapper--secondary .uol-spotlight-item, .uol-section--secondary {
-  background-color: #047e8b;
-}
-
-.uol-spotlight-wrapper--secondary .uol-spotlight-item--link:hover {
-  background-color: #036873;
-}
-
-.uol-homepage-hero_btn-container--secondary > a:hover, .uol-homepage-hero_btn-container--secondary > a:nth-of-type(1), .uol-course-header-container-inner-btn--secondary > a:nth-of-type(1), .uol-course-header-container-inner-btn--secondary > a:hover, .btn-secondary, .uol-btn--secondary,
-.uol-button--secondary {
-  background-color: #002147;
-}
-
-.btn-secondary:focus,
-.btn-secondary.focus,
-.btn-secondary:hover,
-.btn-secondary:active,
-.btn-secondary.active, .uol-btn--secondary:hover,
-.uol-button--secondary:hover {
-  background-color: #002b5c;
-}
-
-.uol-pullquote_copy--accent-primary:after, .uol-breadcrumbs--accent-primary, .uol-blockquote--accent-primary, .uol-spotlight-wrapper--accent-primary .uol-spotlight-item, .uol-section--accent-primary {
-  background-color: #db1a72;
-}
-
-.uol-spotlight-wrapper--accent-primary .uol-spotlight-item--link:hover {
-  background-color: #ad1459;
-}
-
-.uol-homepage-hero_btn-container--accent-primary > a:hover, .uol-homepage-hero_btn-container--accent-primary > a:nth-of-type(1), .uol-course-header-container-inner-btn--accent-primary > a:nth-of-type(1), .uol-course-header-container-inner-btn--accent-primary > a:hover, .btn-accent-primary, .uol-btn--accent-primary,
-.uol-button--accent-primary {
-  background-color: #db1a72;
-}
-
-.btn-accent-primary:focus,
-.btn-accent-primary.focus,
-.btn-accent-primary:hover,
-.btn-accent-primary:active,
-.btn-accent-primary.active, .uol-btn--accent-primary:hover,
-.uol-button--accent-primary:hover {
-  background-color: #ad1459;
-}
-
-.uol-pullquote_copy--accent-secondary:after, .uol-homepage-hero_img-container, .uol-breadcrumbs--accent-secondary, .uol-blockquote--accent-secondary, .uol-spotlight-wrapper--accent-secondary .uol-spotlight-item, .uol-section--accent-secondary {
-  background-color: #747678;
-}
-
-.uol-spotlight-wrapper--accent-secondary .uol-spotlight-item--link:hover {
-  background-color: #595c5f;
-}
-
-.uol-homepage-hero_btn-container--accent-secondary > a:hover, .uol-homepage-hero_btn-container--accent-secondary > a:nth-of-type(1), .uol-course-header-container-inner-btn--accent-secondary > a:nth-of-type(1), .uol-course-header-container-inner-btn--accent-secondary > a:hover, .btn-accent-secondary, .uol-btn--accent-secondary,
-.uol-button--accent-secondary {
-  background-color: #747678;
-}
-
-.btn-accent-secondary:focus,
-.btn-accent-secondary.focus,
-.btn-accent-secondary:hover,
-.btn-accent-secondary:active,
-.btn-accent-secondary.active, .uol-btn--accent-secondary:hover,
-.uol-button--accent-secondary:hover {
-  background-color: #595c5f;
-}
-
-.uol-homepage-hero_btn-container--accent-secondary > a:nth-of-type(1):hover, .uol-homepage-hero_btn-container--accent-primary > a:nth-of-type(1):hover, .uol-homepage-hero_btn-container--secondary > a:nth-of-type(1):hover, .uol-homepage-hero_btn-container--primary > a:nth-of-type(1):hover, .uol-course-header-container-inner-btn--accent-secondary > a:nth-of-type(1):hover, .uol-course-header-container-inner-btn--accent-primary > a:nth-of-type(1):hover, .uol-course-header-container-inner-btn--secondary > a:nth-of-type(1):hover, .uol-course-header-container-inner-btn--primary > a:nth-of-type(1):hover {
-  background-color: #fff;
-}
-
-.uol-btn--white,
-.uol-button--white {
-  background-color: #fafafa;
-}
-
-.uol-btn--white:hover,
-.uol-button--white:hover {
-  background-color: #e5e5e5;
-}
-
-.uol-section--grey, .uol-section--accent-secondary, .uol-section--accent-primary, .uol-section--secondary, .uol-section--primary {
-  padding: 2.5rem 0;
-}
-
-.uol-homepage-hero_btn-container--primary > a:hover, .uol-homepage-hero_btn-container--primary > a:nth-of-type(1) {
-  border-color: #047e8b;
-}
-
-.uol-homepage-hero_btn-container--secondary > a:hover, .uol-homepage-hero_btn-container--secondary > a:nth-of-type(1) {
-  border-color: #002147;
-}
-
-.uol-homepage-hero_btn-container--accent-primary > a:hover, .uol-homepage-hero_btn-container--accent-primary > a:nth-of-type(1) {
-  border-color: #db1a72;
-}
-
-.uol-homepage-hero_btn-container--accent-secondary > a:hover, .uol-homepage-hero_btn-container--accent-secondary > a:nth-of-type(1) {
-  border-color: #747678;
-}
-
-.uol-spotlight-item-frame:nth-child(-n+1) .uol-spotlight-item {
-  margin-top: 0;
-}
-
-.uol-homepage-hero_content-container-inner {
-  max-width: 117rem;
-}
-
-.uol-wrapper, .uol-container {
-  max-width: 117rem;
-  margin: 0 auto;
-  width: 100%;
-  padding: 0 1.5rem;
-}
-
-h3, .h3, .uol-h3, h2, .h2, .uol-h2, h1, .h1, .uol-h1 {
-  color: #333;
-  font-weight: 400;
-  margin-bottom: 1.2rem;
-}
-
-.tile:hover {
-  background-color: rgba(0, 33, 71, 0.1);
-  transition: background-color 0.6s ease;
-}
-
-.tile:hover .tile_btn,
-.tile:hover .video_btn {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  opacity: 0;
-  background-color: transparent;
-  transition: opacity 0.3s ease, background-color 0.3s ease;
-}
-
-.uol-pullquote, .uol-homepage-hero, .key-info-container, #uol-course-key-info, #uol-course-header, .uol-carousel-card .slick-slide .tile, .uol-carousel-card .slick-slide, .uol-carousel-card .slick-track, .uol-spotlight-item-wrapper,
-.uol-spotlight-item-frame {
-  display: flex !important;
-}
-
-.tile-half .tile_cnt,
-.tile-half .video_cnt, .uol-billboard_imgCnt, .tile .tile_cnt,
-.tile .video_cnt,
-.uol-hero_imgCnt {
-  background-size: cover;
-}
-
-.uol-billboard_imgCnt, .tile .tile_cnt,
-.tile .video_cnt,
-.uol-hero_imgCnt {
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.uol-course-banner-overlay {
-  height: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  z-index: 0;
-}
-
-.uol-course-banner-overlay--medium {
-  background: rgba(0, 0, 0, 0.3);
-}
-
-.uol-course-banner1-overlay--light {
-  background: rgba(0, 0, 0, 0.2);
-}
-
-.uol-pullquote_copy:after {
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
-}
-
-.uol-pullquote--reversed .uol-pullquote_copy:after {
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-}
-
 /*
-This .scss loop will create "margin helpers" and "padding helpers" for use in your web projects.
+This .scss loop will create "margin helpers" and "padding helpers" .
 It will generate several classes such as:
 .uol-m-r-1 which gives margin-right 1rem.
 .uol-m-r-2 gives MARGIN to the RIGHT 2rem.
@@ -273,8 +17,60 @@ It will generate several classes such as:
 .uol-p-l-4 gives PADDING to the LEFT of 4 rem
 The first letter is "m" or "p" for MARGIN or PADDING
 Second letter is "t", "b", "l", or "r" for TOP, BOTTOM, LEFT, or RIGHT
-Third letter is the number of spacing in pixels. Adjust the amounts generated by editing the $spaceamounts variable below.
+Third letter is the number of spacing in rem. Adjust the amounts generated by editing the $spaceamounts variable below.
 */
+.uol-m-t-0 {
+  margin-top: 0rem !important;
+}
+
+.uol-p-t-0 {
+  padding-top: 0rem !important;
+}
+
+.uol-m-b-0 {
+  margin-bottom: 0rem !important;
+}
+
+.uol-p-b-0 {
+  padding-bottom: 0rem !important;
+}
+
+.uol-m-l-0 {
+  margin-left: 0rem !important;
+}
+
+.uol-p-l-0 {
+  padding-left: 0rem !important;
+}
+
+.uol-m-r-0 {
+  margin-right: 0rem !important;
+}
+
+.uol-p-r-0 {
+  padding-right: 0rem !important;
+}
+
+.uol-m-x-0 {
+  margin-left: 0rem !important;
+  margin-right: 0rem !important;
+}
+
+.uol-p-x-0 {
+  padding-left: 0rem !important;
+  padding-right: 0rem !important;
+}
+
+.uol-m-y-0 {
+  margin-top: 0rem !important;
+  margin-bottom: 0rem !important;
+}
+
+.uol-p-y-0 {
+  padding-top: 0rem !important;
+  padding-bottom: 0rem !important;
+}
+
 .uol-m-t-1 {
   margin-top: 1rem !important;
 }
@@ -533,6 +329,240 @@ Third letter is the number of spacing in pixels. Adjust the amounts generated by
 .uol-p-y-5 {
   padding-top: 5rem !important;
   padding-bottom: 5rem !important;
+}
+
+.uol-homepage-hero_content-container-inner .tag, .uol-homepage-hero_content-container-inner h1, .uol-homepage-hero, #uol-course-key-info .key-info .h4, #uol-course-key-info h3, #uol-course-key-info h2, blockquote {
+  font-family: Verdana, Arial, sans-serif;
+}
+
+h3, .h3, .uol-h3, h2, .h2, .uol-h2, h1, .h1, .uol-h1 {
+  font-family: Georgia, serif;
+}
+
+.uol-t2, p, h4, .h4, .uol-h4 {
+  font-size: 1.6rem;
+}
+
+.skip-link:focus, .js-menu-open [aria-controls], .uol-homepage-hero_btn-container > a, .uol-homepage-hero_content-container-inner .tag, .uol-homepage-hero_content-container-inner h1, .uol-homepage-hero, .uol-carousel_caption .uol-body, .uol-carousel_caption .uol-h2, #uol-breadcrumbs a, #uol-breadcrumbs, .uol-blockquote[class*=uol-blockquote--] .uol-blockquote_text, .uol-blockquote[class*=uol-blockquote--] .uol-body-prominent, .uol-blockquote[class*=uol-blockquote--] .uol-body, .uol-spotlight-item-frame .uol-h3,
+.uol-spotlight-item-frame h3,
+.uol-spotlight-item-frame p, .uol-basic-video #iframe-video #play-video:before, .bg-image-only, .spotlight-wrapper .spotlight-item p, #sdgGroupContent .whiteText, #sdgGroupContentTitle, .mockButton .hoverOverlay span, .mockButton .hoverOverlay, blockquote p, blockquote, .uol-btn--accent-secondary,
+.uol-button--accent-secondary, .uol-btn--accent-primary,
+.uol-button--accent-primary, .uol-btn--secondary,
+.uol-button--secondary, .uol-btn--primary,
+.uol-button--primary, .uol-section--accent-secondary .uol-t2, .uol-section--accent-secondary .uol-t1, .uol-section--accent-secondary .uol-label, .uol-section--accent-secondary .uol-h2, .uol-section--accent-secondary .uol-h1, .uol-section--accent-primary .uol-t2, .uol-section--accent-primary .uol-t1, .uol-section--accent-primary .uol-label, .uol-section--accent-primary .uol-h2, .uol-section--accent-primary .uol-h1, .uol-section--secondary .uol-t2, .uol-section--secondary .uol-t1, .uol-section--secondary .uol-label, .uol-section--secondary .uol-h2, .uol-section--secondary .uol-h1, .uol-section--primary .uol-t2, .uol-section--primary .uol-t1, .uol-section--primary .uol-label, .uol-section--primary .uol-h2, .uol-section--primary .uol-h1 {
+  color: #fff;
+}
+
+#uol-breadcrumbs a:hover {
+  color: #d4d4d4;
+}
+
+.uol-homepage-hero_btn-container--primary > a:nth-of-type(1):hover, .uol-course-header-container-inner-btn--primary > a:nth-of-type(1):hover, .uol-blockquote_mark {
+  color: #002147;
+}
+
+.uol-homepage-hero_btn-container--secondary > a:nth-of-type(1):hover, .uol-course-module--accent-secondary ul.nav-tabs li a:hover, .uol-course-module--accent-primary ul.nav-tabs li a:hover, .uol-course-module--secondary ul.nav-tabs li a:hover, .uol-course-module--primary ul.nav-tabs li a:hover, .uol-course-header-container-inner-btn--secondary > a:nth-of-type(1):hover {
+  color: #002147;
+}
+
+.uol-homepage-hero_btn-container--accent-primary > a:nth-of-type(1):hover, .uol-course-header-container-inner-btn--accent-primary > a:nth-of-type(1):hover {
+  color: #002147;
+}
+
+.uol-homepage-hero_btn-container--accent-secondary > a:nth-of-type(1):hover, .uol-course-header-container-inner-btn--accent-secondary > a:nth-of-type(1):hover {
+  color: #002147;
+}
+
+.uol-course-module--primary ul.nav-tabs, .uol-carousel--primary .uol-carousel_caption, .uol-breadcrumbs--primary, .uol-blockquote--primary, .uol-spotlight-wrapper--primary .uol-spotlight-item, .uol-section--primary {
+  background-color: #002147;
+}
+
+.uol-spotlight-wrapper--primary .uol-spotlight-item--link:hover, .uol-btn:hover,
+.uol-button:hover {
+  background-color: #002b5c;
+}
+
+.uol-homepage-hero_btn-container--primary > a:hover, .uol-homepage-hero_btn-container--primary > a:nth-of-type(1), .uol-course-header-container-inner-btn--primary > a:nth-of-type(1), .uol-course-header-container-inner-btn--primary > a:hover, .btn-primary, .uol-btn--primary,
+.uol-button--primary {
+  background-color: #047e8b;
+}
+
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary.active, .uol-btn--primary:hover,
+.uol-button--primary:hover {
+  background-color: #036873;
+}
+
+.skip-link:focus, .js-menu-open, .uol-course-module--secondary ul.nav-tabs, .uol-radio-btn-container input:checked ~ .checkmark:after, .uol-radio-btn-container--horiz input:checked ~ .checkmark:after, .uol-radio-btn-container--vert input:checked ~ .checkmark:after, .uol-carousel--secondary .uol-carousel_caption, .uol-breadcrumbs--secondary, .uol-blockquote--secondary, .uol-spotlight-wrapper--secondary .uol-spotlight-item, .uol-section--secondary {
+  background-color: #047e8b;
+}
+
+.uol-spotlight-wrapper--secondary .uol-spotlight-item--link:hover {
+  background-color: #036873;
+}
+
+.uol-homepage-hero_btn-container--secondary > a:hover, .uol-homepage-hero_btn-container--secondary > a:nth-of-type(1), .uol-course-header-container-inner-btn--secondary > a:nth-of-type(1), .uol-course-header-container-inner-btn--secondary > a:hover, .btn-secondary, .uol-btn--secondary,
+.uol-button--secondary {
+  background-color: #002147;
+}
+
+.btn-secondary:focus,
+.btn-secondary.focus,
+.btn-secondary:hover,
+.btn-secondary:active,
+.btn-secondary.active, .uol-btn--secondary:hover,
+.uol-button--secondary:hover {
+  background-color: #002b5c;
+}
+
+.uol-course-module--accent-primary ul.nav-tabs, .uol-carousel--accent-primary .uol-carousel_caption, .uol-breadcrumbs--accent-primary, .uol-blockquote--accent-primary, .uol-spotlight-wrapper--accent-primary .uol-spotlight-item, .uol-section--accent-primary {
+  background-color: #db1a72;
+}
+
+.uol-spotlight-wrapper--accent-primary .uol-spotlight-item--link:hover {
+  background-color: #ad1459;
+}
+
+.uol-homepage-hero_btn-container--accent-primary > a:hover, .uol-homepage-hero_btn-container--accent-primary > a:nth-of-type(1), .uol-course-header-container-inner-btn--accent-primary > a:nth-of-type(1), .uol-course-header-container-inner-btn--accent-primary > a:hover, .btn-accent-primary, .uol-btn--accent-primary,
+.uol-button--accent-primary {
+  background-color: #db1a72;
+}
+
+.btn-accent-primary:focus,
+.btn-accent-primary.focus,
+.btn-accent-primary:hover,
+.btn-accent-primary:active,
+.btn-accent-primary.active, .uol-btn--accent-primary:hover,
+.uol-button--accent-primary:hover {
+  background-color: #ad1459;
+}
+
+.uol-homepage-hero_img-container, .uol-course-module--accent-secondary ul.nav-tabs, .uol-carousel--accent-secondary .uol-carousel_caption, .uol-breadcrumbs--accent-secondary, .uol-blockquote--accent-secondary, .uol-spotlight-wrapper--accent-secondary .uol-spotlight-item, .uol-section--accent-secondary {
+  background-color: #747678;
+}
+
+.uol-spotlight-wrapper--accent-secondary .uol-spotlight-item--link:hover {
+  background-color: #595c5f;
+}
+
+.uol-homepage-hero_btn-container--accent-secondary > a:hover, .uol-homepage-hero_btn-container--accent-secondary > a:nth-of-type(1), .uol-course-header-container-inner-btn--accent-secondary > a:nth-of-type(1), .uol-course-header-container-inner-btn--accent-secondary > a:hover, .btn-accent-secondary, .uol-btn--accent-secondary,
+.uol-button--accent-secondary {
+  background-color: #747678;
+}
+
+.btn-accent-secondary:focus,
+.btn-accent-secondary.focus,
+.btn-accent-secondary:hover,
+.btn-accent-secondary:active,
+.btn-accent-secondary.active, .uol-btn--accent-secondary:hover,
+.uol-button--accent-secondary:hover {
+  background-color: #595c5f;
+}
+
+.uol-homepage-hero_btn-container--accent-secondary > a:nth-of-type(1):hover, .uol-homepage-hero_btn-container--accent-primary > a:nth-of-type(1):hover, .uol-homepage-hero_btn-container--secondary > a:nth-of-type(1):hover, .uol-homepage-hero_btn-container--primary > a:nth-of-type(1):hover, .uol-radio-btn-container input:checked ~ .checkmark, .uol-radio-btn-container--horiz input:checked ~ .checkmark, .uol-radio-btn-container--vert input:checked ~ .checkmark {
+  background-color: #fff;
+}
+
+.uol-btn--white,
+.uol-button--white {
+  background-color: #fafafa;
+}
+
+.uol-btn--white:hover,
+.uol-button--white:hover {
+  background-color: #e5e5e5;
+}
+
+.uol-homepage-hero_btn-container--primary > a:hover, .uol-homepage-hero_btn-container--primary > a:nth-of-type(1) {
+  border-color: #047e8b;
+}
+
+.uol-homepage-hero_btn-container--secondary > a:hover, .uol-homepage-hero_btn-container--secondary > a:nth-of-type(1) {
+  border-color: #002147;
+}
+
+.uol-homepage-hero_btn-container--accent-primary > a:hover, .uol-homepage-hero_btn-container--accent-primary > a:nth-of-type(1) {
+  border-color: #db1a72;
+}
+
+.uol-homepage-hero_btn-container--accent-secondary > a:hover, .uol-homepage-hero_btn-container--accent-secondary > a:nth-of-type(1) {
+  border-color: #747678;
+}
+
+.uol-pullquote_copy-course-usp .uol-course-usp-title, .uol-spotlight-item img, .uol-basic-video #iframe-video iframe#video {
+  width: 100%;
+}
+
+.uol-section--grey, .uol-section--accent-secondary, .uol-section--accent-primary, .uol-section--secondary, .uol-section--primary {
+  padding: 2.5rem 0;
+}
+
+.uol-homepage-hero_content-container-inner {
+  max-width: 117rem;
+}
+
+.uol-wrapper, .uol-container {
+  max-width: 117rem;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 1.5rem;
+}
+
+h3, .h3, .uol-h3, h2, .h2, .uol-h2, h1, .h1, .uol-h1 {
+  color: #333;
+  font-weight: 400;
+  margin-bottom: 1.2rem;
+}
+
+.tile:hover {
+  background-color: rgba(0, 33, 71, 0.1);
+  transition: background-color 0.6s ease;
+}
+
+.tile:hover .tile_btn,
+.tile:hover .video_btn {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  opacity: 0;
+  background-color: transparent;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.tile-half .tile_cnt,
+.tile-half .video_cnt, .uol-billboard_imgCnt, .tile .tile_cnt,
+.tile .video_cnt,
+.uol-hero_imgCnt {
+  background-size: cover;
+}
+
+.uol-billboard_imgCnt, .tile .tile_cnt,
+.tile .video_cnt,
+.uol-hero_imgCnt {
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.uol-course-banner-overlay, .uol-course-banner-overlay--dark, .uol-course-banner-overlay--medium, .uol-course-banner-overlay--light {
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.uol-pullquote_copy:after, .uol-pullquote_copy--accent-secondary:after, .uol-pullquote_copy--accent-primary:after, .uol-pullquote_copy--secondary:after, .uol-pullquote_copy--primary:after {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+}
+
+.uol-pullquote--reversed .uol-pullquote_copy:after, .uol-pullquote--reversed .uol-pullquote_copy--primary:after, .uol-pullquote--reversed .uol-pullquote_copy--secondary:after, .uol-pullquote--reversed .uol-pullquote_copy--accent-primary:after, .uol-pullquote--reversed .uol-pullquote_copy--accent-secondary:after {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
 
 /*
@@ -6155,17 +6185,16 @@ a .event .info p .link:hover {
 .uol-basic-video #iframe-video {
   position: relative;
   display: inline-block;
-  width: 100%;
   min-height: 22rem;
+  width: 100%;
 }
 
 .uol-basic-video.no-gutters {
-  padding: 0;
   margin-left: auto;
+  padding: 0;
 }
 
 .uol-basic-video #iframe-video iframe#video {
-  width: 100%;
   border: none;
   min-height: 22rem;
 }
@@ -6174,8 +6203,8 @@ a .event .info p .link:hover {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   height: 100%;
+  width: 100%;
 }
 
 .uol-basic-video #iframe-video #play-video:before {
@@ -6233,6 +6262,11 @@ a .event .info p .link:hover {
   flex-wrap: wrap;
 }
 
+.uol-spotlight-item-wrapper,
+.uol-spotlight-item-frame {
+  display: flex !important;
+}
+
 .uol-spotlight-item-frame p {
   padding: 0 1rem 1.5rem;
 }
@@ -6242,10 +6276,13 @@ a .event .info p .link:hover {
   margin-top: 2.5rem;
 }
 
+.uol-spotlight-item-frame:nth-child(-n+1) .uol-spotlight-item {
+  margin-top: 0;
+}
+
 .uol-spotlight-item img {
   -o-object-fit: fill;
      object-fit: fill;
-  width: 100%;
 }
 
 .uol-spotlight-item--link {
@@ -6419,11 +6456,17 @@ blockquote.uol-blockquote p:after {
   font-weight: 400;
 }
 
+.uol-carousel-card .slick-track {
+  display: flex !important;
+}
+
 .uol-carousel-card .slick-slide {
+  display: flex !important;
   height: inherit !important;
 }
 
 .uol-carousel-card .slick-slide .tile {
+  display: flex !important;
   flex: 1;
   flex-direction: column;
   height: 100%;
@@ -6445,26 +6488,18 @@ blockquote.uol-blockquote p:after {
   position: relative;
 }
 
-/*
-@media (min-width: 1170px) {
-  .uol-carousel {
-    margin: 0 auto 50px;
-    padding: 0 15px;
-  }
-}
-*/
 .uol-carousel .carousel {
   height: 100%;
 }
 
 .uol-carousel .uol-carousel-prev,
 .uol-carousel .uol-carousel-next {
-  display: inline-block;
-  width: 6.4rem;
-  height: 6.4rem;
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: 100% 100%;
+  display: inline-block;
+  height: 6.4rem;
+  width: 6.4rem;
 }
 
 .uol-carousel .uol-carousel-prev {
@@ -6476,39 +6511,27 @@ blockquote.uol-blockquote p:after {
 }
 
 .uol-carousel_cta {
-  text-align: center;
   margin: 2rem auto 0;
+  text-align: center;
 }
 
 .uol-carousel_caption {
-  padding: 20px 20px;
-  background-color: var(--uol-primary);
+  padding: 2rem;
 }
 
 .uol-carousel_caption-inner {
   padding: 0;
 }
 
-@media (min-width: 756px) {
-  .uol-carousel_caption-inner {
-    padding: 0 15%;
-  }
-}
-.uol-carousel_caption .uol-h2 {
-  color: var(--uol-white-100);
-}
-
 .uol-carousel_caption .uol-body {
-  color: var(--uol-white-300);
-  margin-bottom: 30px;
+  margin-bottom: 3rem;
   max-width: 100%;
 }
 
 .uol-carousel-item img,
 .uol-carousel-item iframe {
-  width: 100%;
   display: block;
-  max-width: 1170px;
+  max-width: 117rem;
   height: auto;
 }
 
@@ -6518,10 +6541,10 @@ blockquote.uol-blockquote p:after {
 
 .uol-carousel_iframe:before {
   content: "";
+  width: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
   display: block;
@@ -6547,11 +6570,11 @@ blockquote.uol-blockquote p:after {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 600px;
+  max-width: 60rem;
 }
 
 .uol-carousel_call-to-actions {
-  display: flex;
+  display: flex !important;
   justify-content: flex-start;
   flex-direction: column;
   /* To ensure buttons are clickable and not covered by scrolly buttons */
@@ -6563,6 +6586,11 @@ blockquote.uol-blockquote p:after {
   margin-bottom: 12px;
 }
 
+@media (min-width: 768px) {
+  .uol-carousel_caption-inner {
+    padding: 0 15%;
+  }
+}
 @media (min-width: 504px) {
   .uol-carousel_call-to-actions {
     flex-direction: row;
@@ -6573,7 +6601,7 @@ blockquote.uol-blockquote p:after {
   }
 }
 .uol-carousel_actions {
-  display: flex;
+  display: flex !important;
   width: 100%;
   justify-content: space-between;
   position: absolute;
@@ -6582,17 +6610,17 @@ blockquote.uol-blockquote p:after {
 }
 
 .uol-carousel_actions button {
-  border-radius: 50px;
+  border-radius: 5rem;
   background-color: white;
   border: 0;
 }
 
 .uol-carousel-button-prev {
-  margin-left: 20px;
+  margin-left: 2rem;
 }
 
 .uol-carousel-button-next {
-  margin-right: 20px;
+  margin-right: 2rem;
 }
 
 .uol-carousel .carousel-control:hover {
@@ -6605,8 +6633,8 @@ blockquote.uol-blockquote p:after {
 }
 
 .uol-carousel_img {
-  max-height: 450px;
-  min-height: 450px;
+  max-height: 45rem;
+  min-height: 45rem;
   aspect-ratio: 16/9;
   -o-object-fit: cover;
      object-fit: cover;
@@ -6692,23 +6720,24 @@ blockquote.uol-blockquote p:after {
 
 @media (min-width: 756px) {
   .uol-carousel .carousel-indicators {
-    bottom: 10px;
+    bottom: 1rem;
   }
 }
 .uol-carousel .carousel-indicators li {
-  width: 15px;
-  height: 15px;
+  width: 1.5rem;
+  height: 1.5rem;
   margin: 1px 5px;
 }
 
 .uol-carousel .carousel-indicators .active {
-  width: 16px;
-  height: 16px;
+  width: 1.6rem;
+  height: 1.6rem;
   margin: 1px 5px;
 }
 
 #uol-course-header {
   align-items: stretch;
+  display: flex !important;
   flex-direction: column;
   position: relative;
   margin: 0 auto;
@@ -6723,13 +6752,15 @@ blockquote.uol-blockquote p:after {
 }
 
 .uol-course-header-container h1 {
+  color: #fff;
+  font-family: Verdana, Arial, sans-serif;
   letter-spacing: -0.3rem;
   text-align: center;
   width: 100%;
 }
 
 .uol-course-header-container-inner {
-  display: flex;
+  display: flex !important;
   flex-flow: column;
   height: 52.5rem;
 }
@@ -6742,16 +6773,49 @@ blockquote.uol-blockquote p:after {
 
 .uol-course-header-container-inner-btn > a {
   background: 0 0;
-  border: 4px solid #fff;
+  border: 0.4rem solid #fff;
+  color: #fff;
   display: inline-block;
   font-weight: 600;
   padding: 1.1rem 2.2rem;
   letter-spacing: 0.04em;
+  margin-top: 0;
+  min-width: 22.5rem;
   text-align: center;
   text-decoration: none;
   transition: background 0.3s ease-in-out 50ms, color 0.3s ease-in-out;
-  margin-top: 2rem;
-  min-width: 22.5rem;
+}
+
+.uol-course-header-container-inner-btn--primary > a:hover {
+  color: #fff;
+}
+
+.uol-course-header-container-inner-btn--primary > a:nth-of-type(1):hover {
+  color: #fff;
+}
+
+.uol-course-header-container-inner-btn--secondary > a:hover {
+  color: #fff;
+}
+
+.uol-course-header-container-inner-btn--secondary > a:nth-of-type(1):hover {
+  color: #fff;
+}
+
+.uol-course-header-container-inner-btn--accent-primary > a:hover {
+  color: #fff;
+}
+
+.uol-course-header-container-inner-btn--accent-primary > a:nth-of-type(1):hover {
+  color: #fff;
+}
+
+.uol-course-header-container-inner-btn--accent-secondary > a:hover {
+  color: #fff;
+}
+
+.uol-course-header-container-inner-btn--accent-secondary > a:nth-of-type(1):hover {
+  color: #fff;
 }
 
 #uol-course-header picture,
@@ -6773,22 +6837,46 @@ blockquote.uol-blockquote p:after {
   padding: 0;
 }
 
-.uol-course-banner-overlay {
+.uol-course-banner-overlay, .uol-course-banner-overlay--dark, .uol-course-banner-overlay--medium, .uol-course-banner-overlay--light {
   height: 52.5rem;
 }
 
+.uol-course-banner-overlay--light {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.uol-course-banner-overlay--medium {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.uol-course-banner-overlay--dark {
+  background: rgba(0, 0, 0, 0.4);
+}
+
 #uol-course-key-info {
-  /*clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);*/
+  background-color: #db1a72;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+  color: #fff;
+  display: flex !important;
   flex-flow: column;
   margin: -9rem auto 0;
-  border: 2px solid #fff;
-  padding: 0 1.5rem 2rem;
+  padding: 0 0 2.5rem;
   position: relative;
   text-align: center;
   width: 80%;
   z-index: 12;
+}
+
+#uol-course-key-info-frame {
+  background-color: #047e8b;
+  min-height: 40rem;
+}
+
+#uol-course-key-info .course-key-information-title,
+#uol-course-key-info .course-key-information {
+  background-color: #047e8b;
+  padding: 0 1.5rem;
 }
 
 #uol-course-key-info hr {
@@ -6802,11 +6890,24 @@ blockquote.uol-blockquote p:after {
   padding: 1rem 2rem 0;
 }
 
+#uol-course-key-info h2 {
+  color: #fff;
+}
+
+#uol-course-key-info h3 {
+  color: #fff;
+}
+
+#uol-course-key-info p {
+  color: #fff;
+}
+
 #uol-course-key-info .key-info .h4 {
   font-weight: 700;
 }
 
 .key-info-container {
+  display: flex !important;
   flex-direction: row;
   flex-wrap: wrap;
 }
@@ -6814,16 +6915,11 @@ blockquote.uol-blockquote p:after {
 #uol-course-year-select {
   margin-top: auto;
   width: 100%;
-  padding-bottom: 0.5rem;
+  padding: 0.5rem 1.5rem;
   text-align: center;
 }
 
-#uol-course-year-select hr {
-  margin: 0.6rem auto 0;
-  width: 50%;
-}
-
-.uol-radio-btn-container {
+.uol-radio-btn-container, .uol-radio-btn-container--vert, .uol-radio-btn-container--horiz {
   position: relative;
   padding-left: 3.5rem;
   margin-bottom: 1.2rem;
@@ -6846,7 +6942,7 @@ blockquote.uol-blockquote p:after {
 }
 
 /* Hide the browser's default radio button */
-.uol-radio-btn-container input {
+.uol-radio-btn-container input, .uol-radio-btn-container--horiz input, .uol-radio-btn-container--vert input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -6864,15 +6960,11 @@ blockquote.uol-blockquote p:after {
 }
 
 /* On mouse-over, add a grey background color */
-.uol-radio-btn-container:hover input ~ .checkmark {
+.uol-radio-btn-container:hover input ~ .checkmark, .uol-radio-btn-container--horiz:hover input ~ .checkmark, .uol-radio-btn-container--vert:hover input ~ .checkmark {
   background-color: #ccc;
 }
 
 /* When the radio button is checked, add a background colour*/
-.uol-radio-btn-container input:checked ~ .checkmark {
-  background-color: #fff;
-}
-
 /* Create the indicator (the dot/circle - hidden when not checked) */
 .checkmark:after {
   content: "";
@@ -6881,20 +6973,39 @@ blockquote.uol-blockquote p:after {
 }
 
 /* Show the indicator (dot/circle) when checked */
-.uol-radio-btn-container input:checked ~ .checkmark:after {
+.uol-radio-btn-container input:checked ~ .checkmark:after, .uol-radio-btn-container--horiz input:checked ~ .checkmark:after, .uol-radio-btn-container--vert input:checked ~ .checkmark:after {
   display: block;
 }
 
 /* Style the indicator (dot/circle) */
-.uol-radio-btn-container .checkmark:after {
-  top: 9px;
-  left: 9px;
-  width: 8px;
-  height: 8px;
+.uol-radio-btn-container .checkmark:after, .uol-radio-btn-container--horiz .checkmark:after, .uol-radio-btn-container--vert .checkmark:after {
+  top: 0.9rem;
+  left: 0.9rem;
+  width: 0.8rem;
+  height: 0.8rem;
   border-radius: 50%;
   background: white;
 }
 
+@media (min-width: 768px) {
+  #uol-course-key-info .key-info {
+    text-align: left;
+    width: 50%;
+  }
+  #uol-course-key-info {
+    height: 57rem;
+    padding-bottom: 0;
+    text-align: left;
+  }
+  #uol-course-key-info hr {
+    margin: 0 0 0.6rem;
+    width: 50%;
+  }
+  #uol-course-year-select {
+    padding-bottom: 5.5rem;
+    text-align: left;
+  }
+}
 @media (min-width: 1200px) {
   #uol-course-header {
     flex-direction: row;
@@ -6919,29 +7030,8 @@ blockquote.uol-blockquote p:after {
     width: 70%;
   }
   #uol-course-key-info {
-    border: none;
-    height: 57rem;
     margin-top: 0;
-    /*outline: 2px solid #fff;*/
-    padding-bottom: 0;
-    text-align: left;
     width: 30%;
-  }
-  #uol-course-key-info hr {
-    margin: 0 0 0.6rem;
-    width: 50%;
-  }
-  #uol-course-key-info .key-info {
-    text-align: left;
-    width: 50%;
-  }
-  #uol-course-year-select {
-    padding-bottom: 6.5rem;
-    text-align: left;
-  }
-  #uol-course-year-select hr {
-    margin: 0.6rem 0 0;
-    width: 50%;
   }
 }
 @media (min-width: 1400px) {
@@ -6952,44 +7042,61 @@ blockquote.uol-blockquote p:after {
     width: 26%;
   }
 }
-.uol-pillquote_copy-course-usp {
-  text-align: left;
+.uol-course-module ul.nav-tabs li a {
+  color: #fff;
 }
 
-.uol-pillquote_copy-course-usp .uol-course-usp-title {
-  text-align: center;
+.uol-pullquote_copy-course-usp {
+  text-align: left;
+  display: flex !important;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
+.uol-pullquote_copy-course-usp div {
+  margin-bottom: 1rem;
+  padding-right: 1rem;
   width: 100%;
 }
 
-.uol-pillquote_copy-course-usp .uol-course-usp-item {
-  display: flex;
+.uol-pullquote_copy-course-usp .uol-course-usp-title {
+  text-align: center;
 }
 
-.uol-pillquote_copy-course-usp .uol-course-usp-item p {
+.uol-pullquote_copy-course-usp .uol-course-usp-item {
+  display: flex !important;
+}
+
+.uol-pullquote_copy-course-usp .uol-course-usp-item p {
   align-items: center;
-  display: flex;
+  display: flex !important;
 }
 
-.uol-pillquote_copy-course-usp .uol-course-usp-item-icon {
+.uol-pullquote_copy-course-usp .uol-course-usp-item-icon {
   padding-right: 5rem;
   width: 10%;
 }
 
-.uol-pillquote_copy-course-usp hr {
+.uol-pullquote_copy-course-usp hr {
   margin: 0 auto 0.6rem;
   width: 50%;
 }
 
-@media (min-width: 1200px) {
-  .uol-pillquote_copy-course-usp {
-    width: calc(50% + 150px) !important;
-  }
-  .uol-pillquote_copy-course-usp .uol-course-usp-title {
+@media (min-width: 768px) {
+  .uol-pullquote_copy-course-usp .uol-course-usp-title {
     text-align: left;
   }
-  .uol-pillquote_copy-course-usp hr {
+  .uol-pullquote_copy-course-usp hr {
     margin: 0 0 0.6rem;
     width: 50%;
+  }
+  .uol-pullquote_copy-course-usp div {
+    width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .uol-pullquote_copy-course-usp {
+    max-width: calc(50% + 150px) !important;
   }
 }
 @media (min-width: 1200px) {
@@ -7027,7 +7134,7 @@ blockquote.uol-blockquote p:after {
 }
 
 .uol-billboard_textContainer {
-  padding: 0 15px;
+  padding: 0 1.5rem;
 }
 
 .uol-billboard_textContainer .uol-h1 {
@@ -7115,6 +7222,7 @@ blockquote.uol-blockquote p:after {
   }
 }
 .uol-homepage-hero {
+  display: flex !important;
   height: calc(100vh - 80px);
   min-height: 66rem;
   justify-content: center;
@@ -7248,9 +7356,71 @@ blockquote.uol-blockquote p:after {
 }
 .uol-pullquote {
   align-items: stretch;
+  display: flex !important;
   flex-direction: column-reverse;
   margin: 0 auto;
   width: 100%;
+}
+
+.uol-pullquote_copy, .uol-pullquote_copy--accent-secondary, .uol-pullquote_copy--accent-primary, .uol-pullquote_copy--secondary, .uol-pullquote_copy--primary {
+  max-width: 100%;
+  padding: 2rem 2rem 5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.uol-pullquote_copy:after, .uol-pullquote_copy--accent-secondary:after, .uol-pullquote_copy--accent-primary:after, .uol-pullquote_copy--secondary:after, .uol-pullquote_copy--primary:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  height: 100%;
+  min-height: -webkit-max-content;
+  min-height: -moz-max-content;
+  min-height: max-content;
+  width: 100%;
+  display: block;
+  left: 0;
+}
+
+.uol-pullquote_copy--primary:after {
+  background-color: #002147;
+}
+
+.uol-pullquote_copy--primary .uol-h2,
+.uol-pullquote_copy--primary .uol-standfirst,
+.uol-pullquote_copy--primary .uol-t2 {
+  color: #fff;
+}
+
+.uol-pullquote_copy--secondary:after {
+  background-color: #047e8b;
+}
+
+.uol-pullquote_copy--secondary .uol-h2,
+.uol-pullquote_copy--secondary .uol-standfirst,
+.uol-pullquote_copy--secondary .uol-t2 {
+  color: #fff;
+}
+
+.uol-pullquote_copy--accent-primary:after {
+  background-color: #db1a72;
+}
+
+.uol-pullquote_copy--accent-primary .uol-h2,
+.uol-pullquote_copy--accent-primary .uol-standfirst,
+.uol-pullquote_copy--accent-primary .uol-t2 {
+  color: #fff;
+}
+
+.uol-pullquote_copy--accent-secondary:after {
+  background-color: #747678;
+}
+
+.uol-pullquote_copy--accent-secondary .uol-h2,
+.uol-pullquote_copy--accent-secondary .uol-standfirst,
+.uol-pullquote_copy--accent-secondary .uol-t2 {
+  color: #fff;
 }
 
 .uol-pullquote .uol-h2 {
@@ -7282,41 +7452,24 @@ blockquote.uol-blockquote p:after {
 }
 
 .uol-pullquote_img {
+  max-width: 100%;
   position: relative;
   z-index: 0;
 }
 
-.uol-pullquote_copy,
-.uol-pullquote_img {
-  max-width: 100%;
-}
-
-.uol-pullquote_copy {
-  padding: 2rem 2rem 5rem;
-  position: relative;
-  z-index: 1;
-}
-
-.uol-pullquote_copy:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  z-index: -1;
-  height: 100%;
-  min-height: -webkit-max-content;
-  min-height: -moz-max-content;
-  min-height: max-content;
-  width: 100%;
-  display: block;
-  left: 0;
-}
-
 @media (min-width: 1200px) {
+  .uol-pullquote {
+    align-items: center;
+    flex-direction: row;
+    justify-content: end;
+    max-width: 100%;
+    position: relative;
+  }
   .uol-pullquote--reversed .uol-pullquote_img {
     transform: translateX(0px);
     max-width: calc(50% + 45px);
   }
-  .uol-pullquote_copy {
+  .uol-pullquote_copy, .uol-pullquote_copy--primary, .uol-pullquote_copy--secondary, .uol-pullquote_copy--accent-primary, .uol-pullquote_copy--accent-secondary {
     margin: 0;
     transform: translateX(0);
     max-width: calc(50% + 45px);
@@ -7328,17 +7481,10 @@ blockquote.uol-blockquote p:after {
     min-height: 42.6rem;
     max-height: 42.6rem;
   }
-  .uol-pullquote--reversed .uol-pullquote_copy {
+  .uol-pullquote--reversed .uol-pullquote_copy, .uol-pullquote--reversed .uol-pullquote_copy--primary, .uol-pullquote--reversed .uol-pullquote_copy--secondary, .uol-pullquote--reversed .uol-pullquote_copy--accent-primary, .uol-pullquote--reversed .uol-pullquote_copy--accent-secondary {
     position: absolute;
     left: calc(50% - 45px);
     max-width: calc(50% + 45px);
-  }
-  .uol-pullquote {
-    max-width: 100%;
-    flex-direction: row;
-    align-items: center;
-    justify-content: end;
-    position: relative;
   }
   .uol-pullquote--reversed {
     flex-direction: row-reverse;

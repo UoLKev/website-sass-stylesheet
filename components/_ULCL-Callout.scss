@@ -5,7 +5,7 @@
   @extend %container-constraint;
   margin: 0 auto;
   padding: 2rem;
-  display: flex;
+  display: $uol-display-flex-imp;
   flex-direction: column;
 }
 
@@ -18,7 +18,7 @@
 }
 
 .uol-callout .uol-h2 {
-  width: 100%;
+  @extend %width-100;
 }
 
 

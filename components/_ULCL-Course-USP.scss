@@ -1,44 +1,65 @@
-.uol-pillquote_copy-course-usp {
-  text-align: left; 
+.uol-pullquote_copy-course-usp {
+  text-align: left;
+  display: $uol-display-flex-imp;
+  max-width: 100%;  
+  flex-wrap: wrap;
 }
 
-.uol-pillquote_copy-course-usp .uol-course-usp-title {
-  text-align: center;
+
+.uol-pullquote_copy-course-usp div {
+  margin-bottom: $uol-mb-1;
+  padding-right: $uol-mr-1;
   width: 100%;
 }
 
-.uol-pillquote_copy-course-usp .uol-course-usp-item {
-  display: flex;
+.uol-pullquote_copy-course-usp .uol-course-usp-title {
+  @extend %width-100;
+  text-align: center;
 }
 
-.uol-pillquote_copy-course-usp .uol-course-usp-item p{
+.uol-pullquote_copy-course-usp .uol-course-usp-item {
+  display: $uol-display-flex-imp;
+}
+
+.uol-pullquote_copy-course-usp .uol-course-usp-item p {
   align-items: center;
-  display: flex;
+  display: $uol-display-flex-imp;
 }
 
-.uol-pillquote_copy-course-usp .uol-course-usp-item-icon {
-  padding-right: 5rem;
+.uol-pullquote_copy-course-usp .uol-course-usp-item-icon {
+  padding-right: $uol-pr-5;
   width: 10%;
 }
 
 
-.uol-pillquote_copy-course-usp hr {
+.uol-pullquote_copy-course-usp hr {
   @include horizLineMargin( 0, 0.6rem, auto,  50%);
+}
+
+
+
+
+
+@media (min-width: $uol-breakpoint-sm) {
+
+  .uol-pullquote_copy-course-usp .uol-course-usp-title {
+    text-align: left;
+  }
+  
+  .uol-pullquote_copy-course-usp hr {
+    @include horizLineMargin( 0, 0.6rem, 0,  50%);
+  }
+
+  .uol-pullquote_copy-course-usp div {
+    width: 50%;
+  }
 }
 
 
 @media (min-width: $uol-breakpoint-l) {
 
-  .uol-pillquote_copy-course-usp {
-    width: calc(50% + 150px) !important;
+  .uol-pullquote_copy-course-usp {
+    max-width: calc(50% + 150px) !important;
   }
 
-  .uol-pillquote_copy-course-usp .uol-course-usp-title {
-    text-align: left;
-  }
-  
-
-  .uol-pillquote_copy-course-usp hr {
-    @include horizLineMargin( 0, 0.6rem, 0,  50%);
-  }
 }

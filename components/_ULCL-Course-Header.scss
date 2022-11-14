@@ -1,6 +1,6 @@
 #uol-course-header {
-  @extend %displayFlex;
   align-items: stretch;
+  display: $uol-display-flex-imp;
   flex-direction: column;
   position: relative;
   margin: 0 auto;
@@ -15,16 +15,16 @@
   z-index: 11;
 }
 
-.uol-course-header-container h1 {
-  @extend %uol-white-font-default;
-  @extend %uol-font-family-primary;
+.uol-course-header-container h1 {  
+  color: $uol-white-default;
+  font-family: $uol-font-primary;
   letter-spacing: -0.3rem;
   text-align: center;
   width: 100%; 
 }
 
 .uol-course-header-container-inner {
-  display: flex;
+  display: $uol-display-flex-imp;
   flex-flow: column;
   height: 52.5rem;
 }
@@ -39,18 +39,19 @@
 }
 
 .uol-course-header-container-inner-btn > a {
-  @extend %uol-white-font-default;
   background: 0 0;
-  border: 4px solid #fff;
+  border: .4rem solid $uol-white-default;
+  color: $uol-white-default;
   display: inline-block;
   font-weight: 600;
   padding: 1.1rem 2.2rem;
   letter-spacing: 0.04em;
+  margin-top: $uol-mt-0;
+  min-width: 22.5rem;
   text-align: center;
   text-decoration: none;
   transition: background 0.3s ease-in-out 50ms, color 0.3s ease-in-out;
-  margin-top: 2rem;
-  min-width: 22.5rem;;
+   
 }
 
 
@@ -59,9 +60,8 @@
 @each $backgroundColourSetting in  $backgroundColourSettings {
 
   .uol-course-header-container-inner-btn--#{$backgroundColourSetting} > a:hover {
-    @extend %uol-white-font-default;
+    color: $uol-white-default;
     @extend %bg-color-#{$backgroundColourSetting}-btn;
-    //@extend %border-color-#{$backgroundColourSetting}-btn;
   }
 
 
@@ -70,16 +70,11 @@
   }
 
   .uol-course-header-container-inner-btn--#{$backgroundColourSetting} > a:nth-of-type(1):hover {
-    @extend %bg-color-white-default;
+    color: $uol-white-default;
     @extend %uol-font-color-#{$backgroundColourSetting};
   }
 
-
-
-
 }
-
-
 
 // EndCTA Buttons
 
@@ -110,30 +105,47 @@
   height: 52.5rem;
 }
 
-.uol-course-banner1-overlay--light {
-  @extend %overlay-light;
+.uol-course-banner-overlay--light {
+  @extend .uol-course-banner-overlay;
+  background: $uol-overlay-light;
 }
 
 .uol-course-banner-overlay--medium {
-  @extend %overlay-medium;
+  @extend .uol-course-banner-overlay;
+  background: $uol-overlay-medium;
+}
+
+.uol-course-banner-overlay--dark {
+  @extend .uol-course-banner-overlay;
+  background: $uol-overlay-dark;
 }
 
 
 #uol-course-key-info {
-  @extend %uol-white-font-default;
-  @extend %displayFlex;
-  @extend %bg-color-secondary;
-  /*clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);*/
+  background-color: $uol-accent-primary;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+  color: $uol-white-default;
+  display: $uol-display-flex-imp;
   flex-flow: column;
   margin: -9rem auto 0;
-  border: 2px solid #fff;
-  padding: 0 1.5rem 2rem;
+  padding: 0 0 2.5rem;;
   position: relative;
   text-align: center; 
   width: 80%;
   z-index: 12;
 }
+
+#uol-course-key-info-frame {
+  background-color: $uol-secondary;
+  min-height: 40rem;
+}
+
+#uol-course-key-info .course-key-information-title,
+  #uol-course-key-info .course-key-information
+  {
+  	background-color: #047e8b;
+    padding: 0 1.5rem;
+  }
 
 #uol-course-key-info hr {
   @include horizLineMargin( 0, 0.6rem, auto, 50% );
@@ -145,18 +157,18 @@
   padding: 1rem 2rem 0;
 }
 
-#uol-course-key-info h2 {
-  @extend %uol-white-font-default;
+#uol-course-key-info h2 { 
   @extend %uol-font-family-primary;
+  color: $uol-white-default;
 }
 
 #uol-course-key-info h3 {
-  @extend %uol-white-font-default;
   @extend %uol-font-family-primary;
+  color: $uol-white-default;
 }
 
 #uol-course-key-info p {
-  @extend %uol-white-font-default;
+  color: $uol-white-default;
 }
 
 #uol-course-key-info .key-info .h4 {
@@ -166,7 +178,7 @@
 
 
 .key-info-container {
-  @extend %displayFlex;
+  display: $uol-display-flex-imp;
   flex-direction:  row;
   flex-wrap: wrap;
 }
@@ -176,36 +188,33 @@
 #uol-course-year-select {
   margin-top: auto;
   width: 100%;
-   padding-bottom: .5rem;
+   padding: .5rem 1.5rem;
    text-align: center;
 }
    
-  #uol-course-year-select hr {
-  @include horizLineMargin( 0.6rem, 0, auto, 50% );   
- }
-
-
 
  .uol-radio-btn-container {
-  position: relative;
-  padding-left: 3.5rem;
-  margin-bottom: 1.2rem;
-  cursor: pointer;
-  font-size: 1.8rem;
-  font-weight: normal;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  margin-right: 1rem;
+    position: relative;
+    padding-left: 3.5rem;
+    margin-bottom: 1.2rem;
+    cursor: pointer;
+    font-size: 1.8rem;
+    font-weight: normal;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-right: 1rem;
 
  }
 
 .uol-radio-btn-container--horiz {
+  @extend .uol-radio-btn-container;
   display: inline-block;
 }
 
 .uol-radio-btn-container--vert {
+  @extend .uol-radio-btn-container;
   display: block;
 }
 
@@ -234,29 +243,28 @@
 
 /* When the radio button is checked, add a background colour*/
 .uol-radio-btn-container input:checked ~ .checkmark {
-  background-color: #fff;
+  @extend %bg-color-white-default;
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
 .checkmark:after {
   content: "";
   position: absolute;
-  display: none;
-  
+  display: none; 
 }
 
 /* Show the indicator (dot/circle) when checked */
 .uol-radio-btn-container input:checked ~ .checkmark:after {
   display: block;
-  @extend %bg-color-primary;
+  @extend %bg-color-secondary;
 }
 
 /* Style the indicator (dot/circle) */
 .uol-radio-btn-container .checkmark:after {
- 	top: 9px;
-	left: 9px;
-	width: 8px;
-	height: 8px;
+ 	top: .9rem;
+	left: .9rem;
+	width: .8rem;
+	height: .8rem;
 	border-radius: 50%;
 	background: white;
 }  
@@ -271,6 +279,31 @@
 
 
 
+
+@media (min-width: $uol-breakpoint-sm) {
+  #uol-course-key-info .key-info {
+    text-align: left;
+    width: 50%;
+  }
+
+  #uol-course-key-info {   
+    height: 57rem;
+    
+    padding-bottom: 0;
+    text-align: left;
+  }
+
+  #uol-course-key-info hr {
+    @include horizLineMargin( 0, 0.6rem, 0, 50% );
+  }
+
+  #uol-course-year-select {
+    padding-bottom: 5.5rem;
+    text-align: left;
+  }
+}
+
+
 @media (min-width: $uol-breakpoint-l) {
   #uol-course-header {
     flex-direction: row;
@@ -279,9 +312,8 @@
   .uol-course-header-container {
     align-self: auto;
   }
-    
-    
-    .uol-course-header-container-inner {
+       
+  .uol-course-header-container-inner {
     padding-right: 35rem;
   }
 
@@ -302,37 +334,13 @@
   }
 
   #uol-course-key-info {   
-    border: none;
-    height: 57rem;
     margin-top: 0;
-    /*outline: 2px solid #fff;*/
-    padding-bottom: 0;
-    text-align: left;
     width: 30%;
-  }
-
-  #uol-course-key-info hr {
-    @include horizLineMargin( 0, 0.6rem, 0, 50% );
-  }
-
-  #uol-course-key-info .key-info {
-    text-align: left;
-    width: 50%;
-  }
-
-  #uol-course-year-select {
-    padding-bottom: 6.5rem;
-    text-align: left;
-  }
-
-  #uol-course-year-select hr {
-    @include horizLineMargin( 0.6rem, 0, 0, 50%);
   }
 }
 
 
 @media (min-width: $uol-breakpoint-xl) {
-
   #uol-course-banner {
     width: 74%;
   }

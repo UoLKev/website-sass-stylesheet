@@ -3,8 +3,8 @@
 
 .uol-homepage-hero {
   @extend %uol-font-family-primary;
-  @extend %displayFlex;
   @extend %uol-white-font-default;
+  display: $uol-display-flex-imp;
   height: calc(100vh - 80px);
   min-height: 66rem;
   justify-content: center;

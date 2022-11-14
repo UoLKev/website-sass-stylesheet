@@ -3,30 +3,13 @@
   @import "placeholders-font";
   @import "placeholders-font-colour";
   @import "placeholders-background-colour";
+  @import "placeholders-border-colour";
+  @import "placeholders-widths";
 
   %uol-padding-y-default { padding: $uol-componant-padding-default 0; }
 
-  // Border Colours
-  %border-color-primary { border-color: $uol-primary; }
-  %border-color-secondary { border-color: $uol-primary; }
-  %border-color-accent-primary { border-color: $uol-primary; }
-  %border-color-accent-secondary  { border-color: $uol-primary; }
-  %border-color-white-default { border-color: $uol-white-default;}
-
-  // Border Colours for Buttons
-  %border-color-primary-btn { border-color: $uol-primary-btn; }
-  %border-color-secondary-btn { border-color: $uol-secondary-btn; }
-  %border-color-accent-primary-btn { border-color: $uol-accent-primary-btn; }
-  %border-color-accent-secondary-btn { border-color: $uol-accent-secondary-btn; }
 
 
-  // Margins
-  %mt-0 { margin-top: $uol-mt-0; }
-  %mt-1 { margin-top: $uol-mt-1; }
-  %mt-2 { margin-top: $uol-mt-2; }
-  %mt-3 { margin-top: $uol-mt-3; }
-  %mt-4 { margin-top: $uol-mt-4; }
-  %mt-5 { margin-top: $uol-mt-5; }
 
   %container-constraint {
     max-width: $uol-container-constraint;
@@ -59,11 +42,6 @@
     transition:opacity .3s ease,background-color .3s ease;
   }
 
-  //Flex
-  %displayFlex {
-    display: flex !important; 
-  }
-
 
   //Image Container
 
@@ -86,18 +64,6 @@
     right: 0;
     top: 0;
     z-index: 0;
-  }
-
-  %overlay-dark {
-    background: $uol-overlay-dark;
-  }
-
-  %overlay-medium {
-    background: $uol-overlay-medium;
-  }
-
-  %overlay-light {
-    background: $uol-overlay-light;
   }
 
   //Clip Path

@@ -1,0 +1,14 @@
+.uol-course-module ul.nav-tabs li a { 
+  color: $uol-white-default;
+}
+
+// Set the background colour class for the module
+@each $backgroundColour in $backgroundColourSettings {
+  .uol-course-module--#{$backgroundColour} ul.nav-tabs { @extend %bg-color-#{$backgroundColour}; }
+
+  .uol-course-module--#{$backgroundColour} ul.nav-tabs li a:hover  {
+    @extend %uol-font-color-secondary;
+  }
+
+}
+

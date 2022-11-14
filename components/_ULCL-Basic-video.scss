@@ -1,22 +1,21 @@
 .uol-basic-video {
   background-position: right center;
-  //margin-bottom: 3rem;
 }
 
 .uol-basic-video #iframe-video {
   position: relative;
   display: inline-block;
-  width: 100%;
   min-height: 22rem;
+  width: 100%;  
 }
 
-.uol-basic-video.no-gutters {
-  padding: 0;
+.uol-basic-video.no-gutters {  
   margin-left: auto;
+  padding: 0;
 }
 
 .uol-basic-video #iframe-video iframe#video {
-  width: 100%;
+  @extend %width-100;
   border: none;
   min-height: 22rem;
 }
@@ -25,8 +24,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   height: 100%;
+  width: 100%;
 }
 
 .uol-basic-video #iframe-video #play-video:before {
@@ -98,6 +97,3 @@
     min-height: 42rem;
   }
 }
-
-
-//@media screen and (min-width: 480px) {}

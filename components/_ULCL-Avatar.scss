@@ -8,7 +8,7 @@
   margin: 0 auto 2rem;  
 }
 
-.uol-avatar:not(.uol-avatar.has-image) {
+.uol-avatar:not( .uol-avatar.has-image ) {
   grid-template-rows: auto;
 }
 
@@ -46,7 +46,6 @@
   color: var(--uol-black-200);
 }
 .uol-avatar .uol-body.uol-body-prominent {
-  //color: var(--uol-black-100);
   font-family: $uol-font-headings;
   font-size: 2rem;
   line-height: 2.5rem;

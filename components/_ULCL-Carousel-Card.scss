@@ -34,16 +34,16 @@
 
 
 .uol-carousel-card .slick-track { 	
-  @extend %displayFlex; 
+  display: $uol-display-flex-imp;
 }
 
 .uol-carousel-card .slick-slide { 	
-  @extend %displayFlex; 
+  display: $uol-display-flex-imp;
   height: inherit !important; 	
 }
 
 .uol-carousel-card .slick-slide .tile {
-  @extend %displayFlex; 
+  display: $uol-display-flex-imp;
   flex: 1; 
   flex-direction: column;
   height:	100%;  
