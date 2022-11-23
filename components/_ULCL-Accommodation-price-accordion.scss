@@ -1,10 +1,6 @@
-// ============== 
-// START ULCL - ACCOMMODATION PRICE ACCORDION AND PRICE TABLES
-
-
 #uol-acommodation-prices-section {
-  margin-bottom: 50px; 
-  padding: 0 0 25px;
+  margin-bottom: 5rem; 
+  padding: 0 0 2.5rem;
 }
 
 .uol-accordion {
@@ -67,7 +63,3 @@
 .uol-acommodation-prices-section--fullWidth-colour .uol-accordion[open] > .uol-accordion_title { background-color: #f1f1f1; }
 
 .uol-acommodation-prices-section--fullWidth-colour:not(div.uol-acommodation-prices-section--fullWidth-colour:last-child) .uol-accordion_title { border-bottom: none;} 
-
-
-// START ULCL - ACCOMMODATION PRICE ACCORDION AND PRICE TABLES
-// ============== 

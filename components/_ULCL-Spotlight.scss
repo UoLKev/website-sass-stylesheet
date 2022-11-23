@@ -1,16 +1,21 @@
 .uol-spotlight-wrapper {
-  flex-wrap: wrap;
-}
-
-.uol-spotlight-item-wrapper,
-.uol-spotlight-item-frame {
   display: $uol-display-flex-imp;
+  flex-wrap: wrap;
+  
 }
 
-.uol-spotlight-item-frame p {   
-    padding: 0 1rem 1.5rem;
-}
+
+
+
+.uol-spotlight-item-frame {
   
+  p {   
+    padding: 0 1rem 1.5rem;
+  }
+
+}
+
+
 
 @each $backgroundColourSetting in  $backgroundColourSettings { // primary/secondary/accent-primary etc.
   // Spotlight Colour
@@ -26,6 +31,31 @@
 .uol-spotlight-item {  
   transition: all 0.2s ease;
   margin-top: 2.5rem;
+
+  img {
+    object-fit: fill;
+    width: 100%;   
+  }
+
+  &--link {
+    padding-bottom: 6rem;
+    position: relative;  
+    
+    a {
+      text-decoration: none;   
+    }
+
+    &:hover {
+      box-shadow: 5px 6px 6px 2px $uol-black-400;    
+
+      img {
+        opacity: 0.8;
+      }
+
+    }
+
+  }
+
 }
 
 // Set margin-top to the first spotlight item to 0 in mobile view
@@ -33,15 +63,9 @@
   margin-top: $uol-mt-0;
 }
 
-.uol-spotlight-item img {
-  @extend %width-100;
-  object-fit: fill;
-}
 
-.uol-spotlight-item--link {
-  position: relative;
-  padding-bottom: 6rem;
-}
+
+
 
 .uol-spotlight-item-frame h3 {
   font-size: 2.2rem;
@@ -55,18 +79,10 @@
 }
 
 
-.uol-spotlight-item--link a {
-  text-decoration: none;   
-}
 
-.uol-spotlight-item--link:hover {
-    box-shadow: 5px 6px 6px 2px $uol-black-400;
-    /*transform: scale(1.2);*/       
-}
 
-.uol-spotlight-item--link:hover img {
-  opacity: 0.8;
-}
+
+
 
 .uol-spotlight-item--link a div {
   height: 100%;

@@ -1,58 +1,61 @@
 .uol-pullquote_copy-course-usp {
-  text-align: left;
   display: $uol-display-flex-imp;
-  max-width: 100%;  
   flex-wrap: wrap;
+  max-width: 100%;
+  text-align: left;
+  
+  div {
+    margin-bottom: $uol-mb-1;
+    padding-right: $uol-mr-1;   
+  } 
+
+  &__title {
+    text-align: center;
+    width: 100%;   
+  }
+
+  &__item {
+    display: $uol-display-flex-imp;
+
+    &__icon {
+      padding-right: $uol-pr-5;
+      width: 10%;
+    }
+
+    p {
+      align-items: center;
+      display: $uol-display-flex-imp;
+    }
+
+  }
+
+  hr {
+    @include horizLineMargin( 0, 0.6rem, auto,  50%);
+  }
+  
 }
-
-
-.uol-pullquote_copy-course-usp div {
-  margin-bottom: $uol-mb-1;
-  padding-right: $uol-mr-1;
-  width: 100%;
-}
-
-.uol-pullquote_copy-course-usp .uol-course-usp-title {
-  @extend %width-100;
-  text-align: center;
-}
-
-.uol-pullquote_copy-course-usp .uol-course-usp-item {
-  display: $uol-display-flex-imp;
-}
-
-.uol-pullquote_copy-course-usp .uol-course-usp-item p {
-  align-items: center;
-  display: $uol-display-flex-imp;
-}
-
-.uol-pullquote_copy-course-usp .uol-course-usp-item-icon {
-  padding-right: $uol-pr-5;
-  width: 10%;
-}
-
-
-.uol-pullquote_copy-course-usp hr {
-  @include horizLineMargin( 0, 0.6rem, auto,  50%);
-}
-
 
 
 
 
 @media (min-width: $uol-breakpoint-sm) {
 
-  .uol-pullquote_copy-course-usp .uol-course-usp-title {
-    text-align: left;
+  .uol-pullquote_copy-course-usp {
+
+    & div:not(&__title) {
+      width: 50%;
+    }
+
+    &__title {
+      text-align: left;
+    }
+
+    hr {
+      @include horizLineMargin( 0, 0.6rem, 0,  50%);
+    }
+
   }
   
-  .uol-pullquote_copy-course-usp hr {
-    @include horizLineMargin( 0, 0.6rem, 0,  50%);
-  }
-
-  .uol-pullquote_copy-course-usp div {
-    width: 50%;
-  }
 }
 
 

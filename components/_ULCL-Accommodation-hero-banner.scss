@@ -1,5 +1,3 @@
-// ============== 
-// START ULCL - ACCOMMODATION HERO BANNER 
 #uol-accomm-hero-banner-full-width img { 
   height: auto;  
 }
@@ -34,9 +32,8 @@
   }
 }
 
-.uol-accomm-hero-banner-title--primary { background-color: $uol-primary; }
-.uol-accomm-hero-banner-title--secondary { background-color: $uol-secondary; }
-.uol-accomm-hero-banner-title--accent-primary { background-color: $uol-accent-primary; }
-.uol-accomm-hero-banner-title--accent-secondary { background-color: $uol-accent-secondary; }
-// END ULCL - ACCOMMODATION HERO BANNER 
-// ==============
+@each $key, $val in  $uol-bg-main-colours {
+  .uol-accomm-hero-banner-title--#{$key} {
+    background-color: $val;
+  }    
+}

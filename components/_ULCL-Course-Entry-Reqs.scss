@@ -1,0 +1,71 @@
+.uol-course-entry-reqs {
+
+  @each $key, $val in  $uol-bg-main-colours {
+    &--#{$key} {
+
+      ul.nav-tabs,
+      .tab-pane {
+        background-color: $val;
+      }
+
+      ul.nav-tabs li a:hover {
+        color: $uol-font-color-secondary;
+      }
+
+    }
+  }
+
+
+  .nav-tabs>li.active>a {
+    background-color: $bg-color-accent-primary;
+    color: $uol-white-font-default;
+
+    &:focus,
+    &:hover {
+      background-color: $bg-color-accent-primary;
+      color: $uol-white-font-default;
+    }
+  }
+ 
+  .tab-pane,
+  .uol-course-entry-reqs-common {
+    padding: 1.5rem;
+  }
+  
+  .tab-pane h3 {
+    margin-top: 0;
+  }
+  
+  p,
+  h3,
+  ul.nav-tabs li a,
+  .tab-pane a,
+  .uol-course-entry-reqs-common a { 
+    color: $uol-white-font-default;
+  }
+  
+  ul.nav-tabs li a {
+    border-radius: 0;
+  }
+  
+  
+  .tab-pane a,
+  .uol-course-entry-reqs-common a {
+    text-decoration: underline;
+    word-wrap: break-word;
+  }
+  
+  
+  .uol-course-entry-reqs-common {
+    border-top: 1px solid #fff;
+    background-color: $bg-color-accent-secondary;
+  }
+
+}
+
+
+
+
+
+
+

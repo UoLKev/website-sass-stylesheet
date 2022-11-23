@@ -35,7 +35,7 @@
 
   .uol-billboard_textContainer .uol-h1 {
     color: var(--uol-black-100);
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
   }
 
   .uol-billboard_textContainer .uol-t2 {
@@ -48,6 +48,8 @@
 
 
 
+
+  
 
   @media (min-width: $uol-breakpoint-sm) {
     .uol-billboard {
@@ -120,10 +122,8 @@
       );
     }
     .uol-billboard--sub-level .uol-billboard_textContainer .uol-h1,
-    .uol-billboard--sub-level .uol-billboard_textContainer .uol-h2 {
-      color: var(--uol-white-default);
-    }
+    .uol-billboard--sub-level .uol-billboard_textContainer .uol-h2,
     .uol-billboard--sub-level .uol-billboard_textContainer .uol-t2 {
-      color: var(--uol-white-default);
+      color: $uol-white-font-default;
     }
   }

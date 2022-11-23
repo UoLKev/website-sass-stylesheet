@@ -6,18 +6,33 @@
 
 //Uni Blue (Dark Blue)
 $uol-uni-blue: #002147;
+$uol-uni-blue-10-opacity: rgba(0,33,71,.1);
+$uol-uni-blue-20-opacity: rgba(0,33,71,.2);
+$uol-uni-blue-30-opacity: rgba(0,33,71,.3);
+$uol-uni-blue-40-opacity: rgba(0,33,71,.4);
+$uol-uni-blue-50-opacity: rgba(0,33,71,.5);
 $uol-uni-blue-hover: #002b5c;
 $uol-uni-blue-gradiant-1: #5a6d98; // Blue Grey 
 $uol-uni-blue-gradiant-2: #a7b0Cb; // Ice Blue 
 
 // Uni Grey
 $uol-cool-grey: #747678;
+$uol-cool-grey-10-opacity: rgba(116,118,120,.1);
+$uol-cool-grey-20-opacity: rgba(116,118,120,.2);
+$uol-cool-grey-30-opacity: rgba(116,118,120,.3);
+$uol-cool-grey-40-opacity: rgba(116,118,120,.4);
+$uol-cool-grey-50-opacity: rgba(116,118,120,.5);
 $uol-cool-grey-hover: #595c5f;
 $uol-cool-grey-gradiant-1: #929394;
 $uol-cool-grey-gradiant-2: #c4c4c5;
 
 //Uni Teal
 $uol-teal: #047e8b; 
+$uol-teal-10-opacity: rgba($uol-teal, 10%);
+$uol-teal-20-opacity: rgba($uol-teal, 20%);
+$uol-teal-30-opacity: rgba($uol-teal, 30%);
+$uol-teal-40-opacity: rgba($uol-teal, 40%);
+$uol-teal-50-opacity: rgba($uol-teal, 50%);
 $uol-teal-link: #047986; // Added as #047e8b failed contrast checks on light grey background 
 $uol-teal-hover: #036873; 
 $uol-teal-gradiant-1: #7fc0c0;
@@ -25,6 +40,11 @@ $uol-teal-gradiant-2: #a9d2d3; //Aqua
 
 // Uni Magenta
 $uol-magenta: #db1a72;
+$uol-magenta-10-opacity: rgba($uol-magenta, 10%);
+$uol-magenta-20-opacity: rgba($uol-magenta, 20%);
+$uol-magenta-30-opacity: rgba($uol-magenta, 30%);
+$uol-magenta-40-opacity: rgba($uol-magenta, 40%);
+$uol-magenta-50-opacity: rgba($uol-magenta, 50%);
 $uol-magenta-hover: #ad1459;
 $uol-magenta-visited: #ae1459;
 $uol-magenta-gradiant-1: #e04089;

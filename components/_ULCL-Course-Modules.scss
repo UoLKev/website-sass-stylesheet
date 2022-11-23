@@ -1,14 +1,101 @@
-.uol-course-module ul.nav-tabs li a { 
-  color: $uol-white-default;
+.uol-course-module {
+
+  .module-pill-wrapper {
+    max-height: 30rem; 
+    overflow-y: scroll;
+  }
+
+  ul.nav-tabs {
+    li {
+      a { 
+        border-radius: 0;
+      }
+    }
+  }
+
+  ul.nav-pills {
+    li.active a { 
+      background-color: $bg-color-white-default;
+    }
+  }
+
+  p,
+  h3,
+  ul.nav-tabs li a,
+  li a { 
+    color: $uol-white-font-default;
+  }
+
+
+  .nav-tabs>li.active>a, 
+  .nav-tabs>li.active>a:focus, 
+  .nav-tabs>li.active>a:hover {
+    background-color: $bg-color-accent-primary;
+    color: $uol-white-font-default;
+  }
+
+
 }
 
-// Set the background colour class for the module
-@each $backgroundColour in $backgroundColourSettings {
-  .uol-course-module--#{$backgroundColour} ul.nav-tabs { @extend %bg-color-#{$backgroundColour}; }
 
-  .uol-course-module--#{$backgroundColour} ul.nav-tabs li a:hover  {
-    @extend %uol-font-color-secondary;
+
+
+
+
+
+.uol-course-module ul.nav-pills li a:hover:not(.uol-course-module ul.nav-pills li.active a) {
+  background-color: $bg-color-accent-primary;
+}
+
+.uol-course-module ul.nav-pills,
+.uol-course-module .tab-pane
+ {
+  padding: 0 1.5rem;
+}
+
+.uol-course-module .module-content-container {
+  border-top: 1px solid $uol-white-default;
+}
+
+.uol-course-module .modulesUgDisclaimer {
+  background-color: $bg-color-accent-secondary;
+  font-size: 1.4rem;
+  padding: 1.5rem;
+}
+
+
+
+// Set the background colour class for the module
+@each $key, $val in  $uol-bg-main-colours {
+
+  .uol-course-module--#{$key} ul.nav-tabs,
+  .uol-course-module--#{$key} .tab-pane {
+    background-color: $val;
+  }
+
+  .uol-course-module--#{$key} ul.nav-tabs li a:hover,
+  .uol-course-module--#{$key} ul.nav-pills li.active a {
+    color: $uol-font-color-secondary;
   }
 
 }
+
+
+
+
+
+@media (min-width: $uol-breakpoint-l) {
+  .uol-course-module {
+
+    .module-content-container {
+      border-top: none;
+    }
+    
+  }
+}
+
+
+
+
+
 

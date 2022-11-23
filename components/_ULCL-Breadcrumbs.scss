@@ -1,28 +1,46 @@
 //============== 
 //START ULCL - BREADCRUMBS
 
-#uol-breadcrumbs {
-  @extend %uol-white-font-default;
+#uol-breadcrumbs .breadcrumbs {
+  margin: 1rem 0;
 }
 
-#uol-breadcrumbs a { 
-  @extend %uol-white-font-default;
+#uol-breadcrumbs,
+#uol-breadcrumbs a {
+  color: $uol-white-font-default;
 }
+
 
 #uol-breadcrumbs a:hover { 
-  @extend %uol-white-font-default-hover; 
+  color: $uol-white-font-default-hover; 
 }
 
 
-@each $backgroundColourSetting in  $backgroundColourSettings {
-  .uol-breadcrumbs--#{$backgroundColourSetting} {
-    @extend %bg-color-#{$backgroundColourSetting};
+@each $key, $val in  $uol-bg-main-colours {
+  .uol-breadcrumbs--#{$key} {
+    background-color: $val;
   }
 }
 
-.breadcrumbs {
-  margin: 1rem 0;
+
+
+#uol-breadcrumbs .breadcrumb-list ul {
+  list-style: none;
+  padding-inline-start: 0;
 }
+
+#uol-breadcrumbs .breadcrumb-list ul li {display: inline;}
+        
+#uol-breadcrumbs .breadcrumbs .breadcrumb-list a:hover {
+ text-decoration: underline;
+}
+        
+/* Add a slash symbol (/) before/behind each list item */
+#uol-breadcrumbs .breadcrumb-list ul li+li:before {
+    padding: .8rem;
+    font-size: 1.2rem;
+    content: "\003E";
+  }
 
 //END ULCL - BREADCRUMBS 
 //============== 

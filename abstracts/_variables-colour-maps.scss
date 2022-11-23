@@ -1,0 +1,34 @@
+  
+  // Main colour map (for stuff like background colour @each loops
+  $uol-bg-main-colours: (
+    primary: $bg-color-primary ,
+    secondary: $bg-color-secondary ,
+    accent-primary: $bg-color-accent-primary,
+    accent-secondary: $bg-color-accent-secondary
+  );
+
+  // Colour map for background hover colours (for stuff like background colour @each loops
+  $uol-bg-hover-colours: (
+    primary: $bg-color-primary-hover,
+    secondary: $bg-color-secondary-hover,
+    accent-primary: $bg-color-accent-primary-hover,
+    accent-secondary: $bg-color-accent-secondary-hover
+  );
+
+
+  $uol-btn-colors :
+    primary $bg-color-primary-btn $bg-color-primary-btn-hover,
+    secondary $bg-color-secondary-btn $bg-color-secondary-btn-hover,
+    accent-primary $bg-color-accent-primary-btn $bg-color-accent-primary-btn-hover,
+    accent-secondary $bg-color-accent-secondary-btn $bg-color-accent-secondary-btn-hover; 
+
+
+  $uol-bg-main-colours: (
+    primary: $uol-primary ,
+    secondary: $uol-secondary ,
+    accent-primary: $uol-accent-primary,
+    accent-secondary: $uol-accent-secondary
+  );
+
+
+  $backgroundColourSettings: ( 'primary', 'secondary', 'accent-primary', 'accent-secondary');

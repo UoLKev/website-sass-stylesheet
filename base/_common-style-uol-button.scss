@@ -1,8 +1,9 @@
-.uol-btn,
-.uol-button {
+$uol-btn-rounded-corners: true;
+
+%uol-btn-style {
   background-image: none; 
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: if($uol-btn-rounded-corners, .4rem, null);
   color: $uol-white-100;
   cursor: pointer;
   display: inline-block; 
@@ -17,15 +18,33 @@
   touch-action: manipulation;
   transition: background-color 0.3s ease; 
   vertical-align: middle;
-  white-space: nowrap;  
+  white-space: nowrap; 
 }
 
-.uol-btn:hover,
-.uol-button:hover {
-  @extend %bg-color-primary-hover;
-  color: $uol-white-100;
-  transition: background-color 0.3s ease;
+
+
+
+.uol-btn {
+  @extend %uol-btn-style;
+
+  &:hover {
+    background-color: $bg-color-primary-hover;
+    color: $uol-white-100;
+    transition: background-color 0.3s ease;
+  }
+
 }
+
+.uol-button {
+  @extend %uol-btn-style;
+
+  &:hover {
+    background-color: $bg-color-primary-hover;
+    color: $uol-white-100;
+    transition: background-color 0.3s ease;
+  }
+}
+
 
 $btnTypes: ( 'primary', 'secondary', 'accent-primary', 'accent-secondary');
 

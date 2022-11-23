@@ -1,21 +1,29 @@
 .tile {
   background-color:#f6f6f6;
   box-shadow:0 2px 4px 0 rgba(0,0,0,.094);
-  cursor:pointer;
   margin-bottom:4px;
   max-width:100%;
   width: 25.5rem;
   position:relative;
   z-index:0; 
+
+
+  &:nth-last-child(n+4),
+  &:nth-last-child(n+4)~.tile {
+    margin-bottom:.4rem;
+    width: 27.3rem;
+  }
+
+  &:nth-last-child(n+5),
+  &:nth-last-child(n+5)~.tile{
+    width: 25.5rem;
+  }
+
+
 }
 
-.tile:nth-last-child(n+4),.tile:nth-last-child(n+4)~.tile{
-  margin-bottom:.4rem;
-  width: 27.3rem;
-}
-.tile:nth-last-child(n+5),.tile:nth-last-child(n+5)~.tile{
-  width: 25.5rem;
-}
+
+
 
 .tile .tile_cnt,
 .tile .video_cnt, 
@@ -55,18 +63,24 @@
 
 
 
-@media (min-width: $uol-breakpoint-sm){
+@media (min-width: $uol-breakpoint-sm) {
+
   .tile {
     max-width:100%;
   }
+
 }
 
 @media (min-width: $uol-breakpoint-m){
-  .tile:nth-last-child(n+5),.tile:nth-last-child(n+5)~.tile{
+ 
+  .tile {
+    scroll-snap-align:start;
+    width: 25.5rem;
+
+    &:nth-last-child(n+5),.tile:nth-last-child(n+5)~.tile {
       margin-bottom: .4rem;
+    }
+
   }
-  .tile{
-      scroll-snap-align:start;
-      width: 25.5rem;
-  }
+  
 }

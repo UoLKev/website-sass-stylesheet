@@ -1,64 +1,55 @@
-// ============== 
-// START ULCL - ACCOMMODATION HERO STRAPLINE 
-
 .uol-strapline-message { 
+  @extend %uol-white-font-default;
   margin-top: 0;
   padding: 0;
-}
 
-.uol-strapline-message p {
-  font-size: 1.6rem;
-  margin: 1.5rem 0;
-  text-align: center; 
-}
+  p {
+    @extend %uol-white-font-default;
+    font-size: 1.6rem;
+    margin: 1.5rem 0;
+    text-align: center; 
 
-.uol-strapline-message {
-  @extend %uol-white-font-default;
-}
-.uol-strapline-message p {
-  @extend %uol-white-font-default;
-}
-.uol-strapline-message p a {
-  @extend %uol-white-font-default;
-}
+    a {
+      @extend %uol-white-font-default;
 
-.uol-strapline-message p a:hover { 
-  color: $uol-white-400; 
-}
-
-.uol-strapline-message--primary { 
-  background-color: $uol-primary; 
-}
-.uol-strapline-message--secondary { 
-  background-color: $uol-secondary; 
-}
-.uol-strapline-message--accent-primary { 
-  background-color: $uol-accent-primary; 
-}
-.uol-strapline-message--accent-secondary {
-   background-color: $uol-accent-secondary; 
+      &hover {
+        color: $uol-white-400; 
+      }
+    }
   }
 
-.uol-strapline-message-text-light {
-  @extend %uol-white-font-default;
-}
 
-.uol-strapline-message-text-light p {
-  @extend %uol-white-font-default;
-} 
+  @each $key, $val in  $uol-bg-main-colours {
+    &--#{$key} {
+      background-color: $val;
+    }    
+  }
 
-.uol-strapline-message-text-light p a { 
-  @extend %uol-white-font-default;
-}
+  &-text-light {
+    @extend %uol-white-font-default;
 
-.uol-strapline-message-text-dark {
-  @extend %uol-dark-font-default;
+    p {
+      @extend %uol-white-font-default;
+
+      a {
+        @extend %uol-white-font-default;
+      }
+
+    }
+  }
+
+  &-text-dark {
+    @extend %uol-dark-font-default;
+
+    p {
+      @extend %uol-dark-font-default;
+
+      a {
+        @extend %uol-dark-font-default;
+      }
+
+    }
+  }
+
+  
 }
-.uol-strapline-message-text-dark p {
-  @extend %uol-dark-font-default;
-}
-.uol-strapline-message-text-dark p a { 
-  @extend %uol-dark-font-default; 
-}
-// END ULCL - ACCOMMODATION HERO STRAPLINE
-// ============== 

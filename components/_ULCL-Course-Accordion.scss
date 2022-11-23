@@ -1,0 +1,22 @@
+.uol-course-accordion {
+
+  .uol-accordion_content {
+    background-color: $bg-color-accent-secondary;
+    color: $uol-white-font-default;
+
+    a {
+      color: $uol-white-font-default;
+      text-decoration: underline;
+      word-wrap: break-word;
+
+      &.uol-btn--white,
+      &.uol-button--white {
+        color: $uol-dark-font-default;
+        text-decoration: none;
+      }
+
+    }
+
+  }
+
+}

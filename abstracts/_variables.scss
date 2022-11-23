@@ -2,9 +2,12 @@
 
   @import "variables-breakpoints";
   @import "variables-colours";
+  @import "variables-background-colour";
+  @import "variables-font-colour";
   @import "variables-flex";
   @import "variables-margins";
   @import "variables-padding";
+  @import "variables-colour-maps";
   
   //Fonts
   $uol-font-primary: Verdana, Arial, sans-serif;
@@ -29,10 +32,10 @@
 
   // Main colour map (for stuff like background colour @each loops
   $uol-main-colours: (
-    primary: $uol-primary,
-    secondary: $uol-secondary,
-    accent-primary: $uol-accent-primary,
-    accent-secondary: $uol-accent-secondary
+    primary: $bg-color-primary ,
+    secondary: $bg-color-secondary ,
+    accent-primary: $bg-color-accent-primary,
+    accent-secondary: $bg-color-accent-secondary
   );
 
-  $backgroundColourSettings: ( 'primary', 'secondary', 'accent-primary', 'accent-secondary');
+  

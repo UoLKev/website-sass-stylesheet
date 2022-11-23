@@ -1,187 +1,209 @@
-#uol-course-header {
+.uol-course-header {
   align-items: stretch;
   display: $uol-display-flex-imp;
   flex-direction: column;
   position: relative;
   margin: 0 auto;
   width: 100%; 
-}
 
-
-.uol-course-header-container {
-  position: absolute;
-  top: 1.5rem;
-  width: 100%;
-  z-index: 11;
-}
-
-.uol-course-header-container h1 {  
-  color: $uol-white-default;
-  font-family: $uol-font-primary;
-  letter-spacing: -0.3rem;
-  text-align: center;
-  width: 100%; 
-}
-
-.uol-course-header-container-inner {
-  display: $uol-display-flex-imp;
-  flex-flow: column;
-  height: 52.5rem;
-}
-
-
-// Start CTA Buttons
-
-.uol-course-header-container-inner-btn {
-  margin-top: auto;
-  margin-bottom: 12rem;
-  text-align: center;
-}
-
-.uol-course-header-container-inner-btn > a {
-  background: 0 0;
-  border: .4rem solid $uol-white-default;
-  color: $uol-white-default;
-  display: inline-block;
-  font-weight: 600;
-  padding: 1.1rem 2.2rem;
-  letter-spacing: 0.04em;
-  margin-top: $uol-mt-0;
-  min-width: 22.5rem;
-  text-align: center;
-  text-decoration: none;
-  transition: background 0.3s ease-in-out 50ms, color 0.3s ease-in-out;
-   
-}
-
-
-
-
-@each $backgroundColourSetting in  $backgroundColourSettings {
-
-  .uol-course-header-container-inner-btn--#{$backgroundColourSetting} > a:hover {
-    color: $uol-white-default;
-    @extend %bg-color-#{$backgroundColourSetting}-btn;
-  }
-
-
-  .uol-course-header-container-inner-btn--#{$backgroundColourSetting} > a:nth-of-type(1) {
-    @extend %bg-color-#{$backgroundColourSetting}-btn;
-  }
-
-  .uol-course-header-container-inner-btn--#{$backgroundColourSetting} > a:nth-of-type(1):hover {
-    color: $uol-white-default;
-    @extend %uol-font-color-#{$backgroundColourSetting};
-  }
-
-}
-
-// EndCTA Buttons
-
-
-
-
-#uol-course-header picture,
-  #uol-course-header img {
-    display: block;
+  &__container {
+    position: absolute;
+    top: 1.5rem;
     width: 100%;
-    max-width: 100%;
-    height: 52.5rem;
-  }
+    z-index: 11;
+
+    h1 {
+      color: $uol-white-default;
+      font-family: $uol-font-primary;
+      letter-spacing: -0.2rem;
+      text-align: center;
+      width: 100%;
+    }
+
+    &__inner {
+      display: $uol-display-flex-imp;
+      flex-flow: column;
+      height: 52.5rem;
+
+      // Start CTA Buttons
+      &__btn {
+        margin-top: auto;
+        margin-bottom: 12rem;
+        text-align: center;
+
+        > a {
+          background: 0 0;
+          border: .4rem solid $uol-white-default;
+          color: $uol-white-default;
+          display: inline-block;
+          font-weight: 600;
+          padding: 1.1rem 2.2rem;
+          letter-spacing: 0.04em;
+          margin-top: $uol-mt-1;
+          min-width: 22.5rem;
+          text-align: center;
+          text-decoration: none;
+          transition: background 0.3s ease-in-out 50ms, color 0.3s ease-in-out;    
+                   
+        }
+
+        @each $key, $btn, $btnHover in  $uol-btn-colors {
+          &--#{$key} {
+
+            > a:hover {
+              background-color: $btn;
+              color: $uol-white-default;
+            }
+
+            > a:nth-of-type(1) {
+              background-color: $btn;
+
+              &:hover {
+                background-color: $bg-color-white-default;
+                color:  $btnHover;
+              }
+
+            }
+            
+      
+          }
+        }// End each loop
+
+      } //End &__btn
+
+    } // End __inner
+
+  }// End __Container
+
+
+
+  &__banner {
+    padding: 0;
+
+    &__overlay {
+      @extend %overlay;
+      height: 52.5rem;
+
+      &--light {
+        background: $uol-overlay-light;
+      }
+      
+      &--medium {
+        background: $uol-overlay-medium;
+      }
+      
+      &--dark {
+        background: $uol-overlay-dark;
+      }
+
+    }// End __overlay
+
+    picture,
+    img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: 52.5rem;
+    }
+
+    img {
+      object-fit: cover;
+      object-position: top center;
+    }
+
+  }// End __banner
+
+
+  &__key-info {
+    background-color: $uol-accent-primary;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+    color: $uol-white-default;
+    display: $uol-display-flex-imp;
+    flex-flow: column;
+    margin: -9rem auto 0;
+    padding: 0 0 2.5rem;;
+    position: relative;
+    text-align: center; 
+    width: 80%;
+    z-index: 12;
+
+    h2,
+    h3 { 
+      @extend %uol-font-family-primary;
+      color: $uol-white-default;
+    }
+    
+    p {
+      color: $uol-white-default;
+    }
+
+    a {
+      color: $uol-white-default;
+      text-decoration: underline;
+    }
+    
+    
+
+    &__frame {
+      background-color: $uol-secondary;
+      min-height: 40rem;
+    }// End __frame
+
+    &__title {
+      background-color: #047e8b;
+      padding: 0 1.5rem;
+    }// End __title
+
+    &__year {
+      background-color: #047e8b;
+      padding: 0 1.5rem;
+
+      &__cnt {
+        display: $uol-display-flex-imp;
+        flex-direction:  row;
+        flex-wrap: wrap;
+
+        &__key-info {
+          text-align: center;
+          width: 100%;
+          padding: 1rem 2rem 0;
+
+          .h4 {
+            @extend %uol-font-family-primary;
+            font-weight: 700;
+          }
+
+        }// End key-info
+
+      }// End __cnt
+
+
+    }// End __year 
+
+    hr {
+      @include horizLineMargin( 0, 0.6rem, auto, 50% );
+    }
+
+  }// End key-info
+
+} // End .uol-course-header
+
+
+
+
+
+
+
   
-  #uol-course-header img {
-  object-fit: cover;
-  object-position: top center;
-}
+  
 
 
-#uol-course-banner {
-  padding: 0;
-}
 
 
-.uol-course-banner-overlay {
-  @extend %overlay;
-  height: 52.5rem;
-}
-
-.uol-course-banner-overlay--light {
-  @extend .uol-course-banner-overlay;
-  background: $uol-overlay-light;
-}
-
-.uol-course-banner-overlay--medium {
-  @extend .uol-course-banner-overlay;
-  background: $uol-overlay-medium;
-}
-
-.uol-course-banner-overlay--dark {
-  @extend .uol-course-banner-overlay;
-  background: $uol-overlay-dark;
-}
 
 
-#uol-course-key-info {
-  background-color: $uol-accent-primary;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
-  color: $uol-white-default;
-  display: $uol-display-flex-imp;
-  flex-flow: column;
-  margin: -9rem auto 0;
-  padding: 0 0 2.5rem;;
-  position: relative;
-  text-align: center; 
-  width: 80%;
-  z-index: 12;
-}
-
-#uol-course-key-info-frame {
-  background-color: $uol-secondary;
-  min-height: 40rem;
-}
-
-#uol-course-key-info .course-key-information-title,
-  #uol-course-key-info .course-key-information
-  {
-  	background-color: #047e8b;
-    padding: 0 1.5rem;
-  }
-
-#uol-course-key-info hr {
-  @include horizLineMargin( 0, 0.6rem, auto, 50% );
-}
-
-#uol-course-key-info .key-info {
-  text-align: center;
-  width: 100%;
-  padding: 1rem 2rem 0;
-}
-
-#uol-course-key-info h2 { 
-  @extend %uol-font-family-primary;
-  color: $uol-white-default;
-}
-
-#uol-course-key-info h3 {
-  @extend %uol-font-family-primary;
-  color: $uol-white-default;
-}
-
-#uol-course-key-info p {
-  color: $uol-white-default;
-}
-
-#uol-course-key-info .key-info .h4 {
-  @extend %uol-font-family-primary;
-  font-weight: 700;
-}
 
 
-.key-info-container {
-  display: $uol-display-flex-imp;
-  flex-direction:  row;
-  flex-wrap: wrap;
-}
 
 
 // Start Course Academic Year Select 
@@ -276,76 +298,113 @@
 
 
 
-
-
-
-
 @media (min-width: $uol-breakpoint-sm) {
-  #uol-course-key-info .key-info {
-    text-align: left;
-    width: 50%;
+
+  .uol-course-header {
+
+    &__container {
+
+      &__inner {
+        &__btn {
+          > a {
+            margin-top: $uol-mt-0;
+          }
+        }
+      }
+    }
+
+    &__key-info {
+      height: 57rem;    
+      padding-bottom: 0;
+      text-align: left;
+
+      hr {
+        @include horizLineMargin( 0, 0.6rem, 0, 50% );
+      }
+      
+      &__year {
+
+        &__cnt {
+          &__key-info {
+            text-align: left;
+            width: 50%;
+          }
+
+
+        }
+
+      }
+
+    }
   }
 
-  #uol-course-key-info {   
-    height: 57rem;
-    
-    padding-bottom: 0;
-    text-align: left;
-  }
-
-  #uol-course-key-info hr {
-    @include horizLineMargin( 0, 0.6rem, 0, 50% );
-  }
 
   #uol-course-year-select {
     padding-bottom: 5.5rem;
     text-align: left;
   }
+
 }
 
 
+
+
 @media (min-width: $uol-breakpoint-l) {
-  #uol-course-header {
+  .uol-course-header {
     flex-direction: row;
-  }
 
-  .uol-course-header-container {
-    align-self: auto;
-  }
-       
-  .uol-course-header-container-inner {
-    padding-right: 35rem;
-  }
+    &__container {
+      align-self: auto;
 
-  .uol-course-header-container-inner-btn {
-    margin-bottom: 4rem;
-    text-align: left;
-  }
+      h1 {
+        font-size: 5rem;
+        letter-spacing: -0.3rem;
+        line-height: 5.9rem;
+        overflow: visible;
+        text-align: left;
+        width: 90%; 
+      }
 
-  .uol-course-header-container h1 {
-    font-size: 5rem;
-    line-height: 5.9rem;
-    text-align: left;
-    width: 90%; 
-  }
+      &__inner {
+        padding-right: 35rem;
 
-  #uol-course-banner {
-    width: 70%;
-  }
+        &__btn {
+          margin-bottom: 4rem;
+          text-align: left;
+        }// End __btn
 
-  #uol-course-key-info {   
-    margin-top: 0;
-    width: 30%;
-  }
+      }// End __inner
+
+    }// End __container
+
+
+    &__banner {
+      width: 70%;
+
+    }// End __banner
+
+
+    &__key-info {
+      margin-top: 0;
+      width: 30%;
+
+    }// End __key-info
+
+  }// End .uol-course-header
+
 }
 
 
 @media (min-width: $uol-breakpoint-xl) {
-  #uol-course-banner {
-    width: 74%;
+  .uol-course-header {
+
+    &__banner {
+      width: 74%;
+    }
+
+    &__key-info {
+      width: 26%;
+    }
   }
 
-  #uol-course-key-info {   
-    width: 26%;
-  }
 }

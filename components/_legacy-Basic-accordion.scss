@@ -2,50 +2,54 @@
   display: block;
   margin: 1.5rem 0;
   text-decoration: none !important;
-}
 
-.basic-accordion .panel {
-  margin: 1rem 0;
-  padding: 0;
-}
+  .panel {
+    margin: 1rem 0;
+    padding: 0;
 
-.basic-accordion .panel:first-child {
-  border-top: 1px solid #b8b8b8;
-  padding-top: 1rem;
-  margin-top: 0; 
-}
+    &:first-child {
+      border-top: 1px solid #b8b8b8;
+      margin-top: 0;
+      padding-top: 1rem;       
+    }
 
-.basic-accordion .panel .panel-heading {
-  border-bottom: 1px solid #b8b8b8;
-  padding: 0 0 2rem 2rem;
-}
+    .panel-heading {
+      border-bottom: 1px solid #b8b8b8;
+      padding: 0 0 2rem 2rem;
 
-.basic-accordion .panel .panel-heading .panel-title {
-  font-size: 2rem;
-}
+      .panel-title {
+        font-size: 2rem;
 
-.basic-accordion .panel .panel-heading .panel-title a {
-  position: relative;
-  font-family: Georgia, Times, "Times New Roman", serif;
-}
+        a {
+          position: relative;
+          font-family: Georgia, Times, "Times New Roman", serif;
 
-.basic-accordion .panel .panel-heading .panel-title a:hover, 
-.basic-accordion .panel .panel-heading .panel-title a:active, 
-.basic-accordion .panel .panel-heading .panel-title a:focus, 
-.basic-accordion .panel .panel-heading .panel-title a:visited {
-  text-decoration: none;
-  outline: none;
-}
+          &:hover,
+          &.active,
+          &:focus,
+          &:visited {
+            text-decoration: none;
+            outline: none;
+          }
 
-.basic-accordion .panel .panel-heading .panel-title .glyphicon {
-  margin-right: 1rem;
-  margin-left: -1rem;
-}
+        }
 
-.basic-accordion .panel .panel-body {
-  padding: 1.5rem;
-}
+        .glyphicon {
+          margin-right: 1rem;
+          margin-left: -1rem;
+        }
 
+      }
+
+    }
+
+    .panel-body {
+      padding: 1.5rem;
+    }
+
+  }
+
+}
 
 
 
@@ -56,20 +60,27 @@
 }
 
 @media screen and (min-width: $uol-breakpoint-m) {
-  .basic-accordion .panel {
-    margin-right: 5rem;
+  .basic-accordion {
+    .panel {
+      margin-right: 5rem;
+    }
   }
 }
+
 @media screen and (min-width: $uol-breakpoint-l) {
-  .basic-accordion .panel {
-    margin-right: 8rem;
+  .basic-accordion {
+    .panel {
+      margin-right: 8rem;
+
+      .panel-heading {
+        padding: 0 8rem 2rem 8rem;
+      }
+
+      .panel-body {
+        padding: 1.5rem 1.5rem 1.5rem 8rem;
+      }
+
+    }
   }
 
-  .basic-accordion .panel .panel-heading {
-    padding: 0 8rem 2rem 8rem;
-  }
-
-  .basic-accordion .panel .panel-body {
-    padding: 1.5rem 1.5rem 1.5rem 8rem;
-  }
 }
