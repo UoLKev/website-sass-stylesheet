@@ -14,10 +14,21 @@
 
     h1 {
       color: $uol-white-default;
-      font-family: $uol-font-primary;
+      font: {
+        family: $uol-font-primary;
+        weight: 700;
+      }
+      display: flex;
+      flex-direction: column;
       letter-spacing: -0.2rem;
+      line-height: normal;
       text-align: center;
       width: 100%;
+
+      span {
+        width: 100%;
+      }
+      
     }
 
     &__inner {
@@ -31,7 +42,7 @@
         margin-bottom: 12rem;
         text-align: center;
 
-        > a {
+        a {
           background: 0 0;
           border: .4rem solid $uol-white-default;
           color: $uol-white-default;
@@ -43,27 +54,26 @@
           min-width: 22.5rem;
           text-align: center;
           text-decoration: none;
-          transition: background 0.3s ease-in-out 50ms, color 0.3s ease-in-out;    
-                   
+          transition: background 0.3s ease-in-out 50ms, color 0.3s ease-in-out;                      
         }
 
         @each $key, $btn, $btnHover in  $uol-btn-colors {
-          &--#{$key} {
+        &--#{$key} {
 
-            > a:hover {
-              background-color: $btn;
-              color: $uol-white-default;
+          a:hover {
+            background-color: $btn;
+            color: $uol-white-default;
+          }
+
+          a:nth-of-type(1) {
+            background-color: $btn;
+
+            &:hover {
+              background-color: $bg-color-white-default;
+              color:  $btnHover;
             }
 
-            > a:nth-of-type(1) {
-              background-color: $btn;
-
-              &:hover {
-                background-color: $bg-color-white-default;
-                color:  $btnHover;
-              }
-
-            }
+          }
             
       
           }
@@ -81,8 +91,13 @@
     padding: 0;
 
     &__overlay {
-      @extend %overlay;
-      height: 52.5rem;
+
+      &--light,
+      &--medium,
+      &--dark {
+        @extend %overlay;
+        height: 52.5rem;
+      }
 
       &--light {
         background: $uol-overlay-light;
@@ -97,6 +112,7 @@
       }
 
     }// End __overlay
+
 
     picture,
     img {
@@ -306,8 +322,13 @@
 
       &__inner {
         &__btn {
-          > a {
+          a {
             margin-top: $uol-mt-0;
+
+            &:nth-of-type(1) {
+              margin-right: 1rem;
+            }
+
           }
         }
       }
@@ -339,6 +360,9 @@
   }
 
 
+
+
+
   #uol-course-year-select {
     padding-bottom: 5.5rem;
     text-align: left;
@@ -359,7 +383,7 @@
       h1 {
         font-size: 5rem;
         letter-spacing: -0.3rem;
-        line-height: 5.9rem;
+        //line-height: 5.9rem;
         overflow: visible;
         text-align: left;
         width: 90%; 

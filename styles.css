@@ -334,11 +334,23 @@ h3, .h3, .uol-h3, h2, .h2, .uol-h2, h1, .h1, .uol-h1 {
 
 .skip-link:focus, .js-menu-open [aria-controls], .uol-carousel_caption .uol-body, .uol-carousel_caption .uol-h2, .uol-spotlight-item-frame .uol-h3,
 .uol-spotlight-item-frame h3,
-.uol-spotlight-item-frame p, .uol-basic-video #iframe-video #play-video:before, .bg-image-only, .spotlight-wrapper .spotlight-item p, #sdgGroupContent .whiteText, #sdgGroupContentTitle, .mockButton .hoverOverlay span, .mockButton .hoverOverlay, blockquote p, blockquote, .uol-btn--accent-secondary,
-.uol-button--accent-secondary, .uol-btn--accent-primary,
-.uol-button--accent-primary, .uol-btn--secondary,
-.uol-button--secondary, .uol-btn--primary,
-.uol-button--primary, .uol-section--accent-secondary .uol-t2, .uol-section--accent-secondary .uol-t1, .uol-section--accent-secondary .uol-label, .uol-section--accent-secondary .uol-h2, .uol-section--accent-secondary .uol-h1, .uol-section--accent-primary .uol-t2, .uol-section--accent-primary .uol-t1, .uol-section--accent-primary .uol-label, .uol-section--accent-primary .uol-h2, .uol-section--accent-primary .uol-h1, .uol-section--secondary .uol-t2, .uol-section--secondary .uol-t1, .uol-section--secondary .uol-label, .uol-section--secondary .uol-h2, .uol-section--secondary .uol-h1, .uol-section--primary .uol-t2, .uol-section--primary .uol-t1, .uol-section--primary .uol-label, .uol-section--primary .uol-h2, .uol-section--primary .uol-h1 {
+.uol-spotlight-item-frame p, .uol-basic-video #iframe-video #play-video:before, .bg-image-only, .spotlight-wrapper .spotlight-item p, #sdgGroupContent .whiteText, #sdgGroupContentTitle, .mockButton .hoverOverlay span, .mockButton .hoverOverlay, blockquote p, blockquote, .uol-section--accent-secondary .uol-h1,
+.uol-section--accent-secondary .uol-h2,
+.uol-section--accent-secondary .uol-label,
+.uol-section--accent-secondary .uol-t1,
+.uol-section--accent-secondary .uol-t2, .uol-section--accent-primary .uol-h1,
+.uol-section--accent-primary .uol-h2,
+.uol-section--accent-primary .uol-label,
+.uol-section--accent-primary .uol-t1,
+.uol-section--accent-primary .uol-t2, .uol-section--secondary .uol-h1,
+.uol-section--secondary .uol-h2,
+.uol-section--secondary .uol-label,
+.uol-section--secondary .uol-t1,
+.uol-section--secondary .uol-t2, .uol-section--primary .uol-h1,
+.uol-section--primary .uol-h2,
+.uol-section--primary .uol-label,
+.uol-section--primary .uol-t1,
+.uol-section--primary .uol-t2 {
   color: #fff;
 }
 
@@ -346,7 +358,7 @@ h3, .h3, .uol-h3, h2, .h2, .uol-h2, h1, .h1, .uol-h1 {
   color: #002147;
 }
 
-.uol-spotlight-wrapper--primary .uol-spotlight-item, .uol-section--primary {
+.uol-spotlight-wrapper--primary .uol-spotlight-item {
   background-color: #002147;
 }
 
@@ -354,21 +366,22 @@ h3, .h3, .uol-h3, h2, .h2, .uol-h2, h1, .h1, .uol-h1 {
   background-color: #002b5c;
 }
 
-.btn-primary, .uol-btn--primary,
-.uol-button--primary {
+.btn-primary {
   background-color: #047e8b;
 }
 
 .btn-primary:focus,
 .btn-primary.focus,
 .btn-primary:hover,
+.btn-primary.hover,
 .btn-primary:active,
-.btn-primary.active, .uol-btn--primary:hover,
-.uol-button--primary:hover {
+.btn-primary.active,
+.btn-primary.visited,
+.btn-primary:visited {
   background-color: #036873;
 }
 
-.skip-link:focus, .js-menu-open, .uol-radio-btn-container input:checked ~ .checkmark:after, .uol-radio-btn-container--horiz input:checked ~ .checkmark:after, .uol-radio-btn-container--vert input:checked ~ .checkmark:after, .uol-spotlight-wrapper--secondary .uol-spotlight-item, .uol-section--secondary {
+.skip-link:focus, .js-menu-open, .uol-radio-btn-container input:checked ~ .checkmark:after, .uol-radio-btn-container--horiz input:checked ~ .checkmark:after, .uol-radio-btn-container--vert input:checked ~ .checkmark:after, .uol-spotlight-wrapper--secondary .uol-spotlight-item {
   background-color: #047e8b;
 }
 
@@ -376,21 +389,22 @@ h3, .h3, .uol-h3, h2, .h2, .uol-h2, h1, .h1, .uol-h1 {
   background-color: #036873;
 }
 
-.btn-secondary, .uol-btn--secondary,
-.uol-button--secondary {
+.btn-secondary {
   background-color: #002147;
 }
 
 .btn-secondary:focus,
 .btn-secondary.focus,
 .btn-secondary:hover,
+.btn-secondary.hover,
 .btn-secondary:active,
-.btn-secondary.active, .uol-btn--secondary:hover,
-.uol-button--secondary:hover {
+.btn-secondary.active,
+.btn-secondary.visited,
+.btn-secondary:visited {
   background-color: #002b5c;
 }
 
-.uol-spotlight-wrapper--accent-primary .uol-spotlight-item, .uol-section--accent-primary {
+.uol-spotlight-wrapper--accent-primary .uol-spotlight-item {
   background-color: #db1a72;
 }
 
@@ -398,21 +412,22 @@ h3, .h3, .uol-h3, h2, .h2, .uol-h2, h1, .h1, .uol-h1 {
   background-color: #ad1459;
 }
 
-.btn-accent-primary, .uol-btn--accent-primary,
-.uol-button--accent-primary {
+.btn-accent-primary {
   background-color: #db1a72;
 }
 
 .btn-accent-primary:focus,
 .btn-accent-primary.focus,
 .btn-accent-primary:hover,
+.btn-accent-primary.hover,
 .btn-accent-primary:active,
-.btn-accent-primary.active, .uol-btn--accent-primary:hover,
-.uol-button--accent-primary:hover {
+.btn-accent-primary.active,
+.btn-accent-primary.visited,
+.btn-accent-primary:visited {
   background-color: #ad1459;
 }
 
-.uol-spotlight-wrapper--accent-secondary .uol-spotlight-item, .uol-section--accent-secondary {
+.uol-spotlight-wrapper--accent-secondary .uol-spotlight-item {
   background-color: #747678;
 }
 
@@ -420,32 +435,23 @@ h3, .h3, .uol-h3, h2, .h2, .uol-h2, h1, .h1, .uol-h1 {
   background-color: #595c5f;
 }
 
-.btn-accent-secondary, .uol-btn--accent-secondary,
-.uol-button--accent-secondary {
+.btn-accent-secondary {
   background-color: #747678;
 }
 
 .btn-accent-secondary:focus,
 .btn-accent-secondary.focus,
 .btn-accent-secondary:hover,
+.btn-accent-secondary.hover,
 .btn-accent-secondary:active,
-.btn-accent-secondary.active, .uol-btn--accent-secondary:hover,
-.uol-button--accent-secondary:hover {
+.btn-accent-secondary.active,
+.btn-accent-secondary.visited,
+.btn-accent-secondary:visited {
   background-color: #595c5f;
 }
 
 .uol-radio-btn-container input:checked ~ .checkmark, .uol-radio-btn-container--horiz input:checked ~ .checkmark, .uol-radio-btn-container--vert input:checked ~ .checkmark {
   background-color: #fff;
-}
-
-.uol-btn--white,
-.uol-button--white {
-  background-color: #fafafa;
-}
-
-.uol-btn--white:hover,
-.uol-button--white:hover {
-  background-color: #e5e5e5;
 }
 
 .uol-basic-video #iframe-video iframe#video {
@@ -497,7 +503,7 @@ h3, .h3, .uol-h3, h2, .h2, .uol-h2, h1, .h1, .uol-h1 {
   background-repeat: no-repeat;
 }
 
-.uol-course-header__banner__overlay {
+.uol-course-header__banner__overlay--light, .uol-course-header__banner__overlay--medium, .uol-course-header__banner__overlay--dark {
   height: 100%;
   position: absolute;
   bottom: 0;
@@ -507,12 +513,12 @@ h3, .h3, .uol-h3, h2, .h2, .uol-h2, h1, .h1, .uol-h1 {
   z-index: 0;
 }
 
-.uol-pullquote_copy:after {
+.uol-pullquote .uol-pullquote_copy:after {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
 }
 
-.uol-pullquote--reversed .uol-pullquote_copy:after {
+.uol-pullquote .uol-pullquote_copy--reversed .uol-pullquote_copy :after {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
@@ -602,21 +608,21 @@ hr.margin {
 }
 
 .uol-section--primary {
+  background-color: #002147;
   padding: 2rem 0;
 }
-
 .uol-section--secondary {
+  background-color: #047e8b;
   padding: 2rem 0;
 }
-
 .uol-section--accent-primary {
+  background-color: #db1a72;
   padding: 2rem 0;
 }
-
 .uol-section--accent-secondary {
+  background-color: #747678;
   padding: 2rem 0;
 }
-
 .uol-section--grey {
   background-color: #efefef;
   padding: 2rem 0;
@@ -684,10 +690,11 @@ hr.margin {
     margin-bottom: 0.4rem;
   }
 }
-.uol-button, .uol-btn {
+.btn, .uol-btn,
+.uol-button {
   background-image: none;
   border: 1px solid transparent;
-  border-radius: 0.4rem;
+  border-radius: 0;
   color: #fafafa;
   cursor: pointer;
   display: inline-block;
@@ -704,46 +711,63 @@ hr.margin {
   vertical-align: middle;
   white-space: nowrap;
 }
-
-.uol-btn:hover {
-  background-color: #002b5c;
-  color: #fafafa;
-  transition: background-color 0.3s ease;
-}
-
+.btn:hover, .uol-btn:hover,
 .uol-button:hover {
   background-color: #002b5c;
   color: #fafafa;
   transition: background-color 0.3s ease;
 }
 
-.uol-btn--primary:hover,
-.uol-button--primary:hover {
+.uol-btn--primary,
+.uol-button--primary {
+  background-color: #047e8b;
+  color: #fff;
+}
+.uol-btn :hover,
+.uol-button :hover {
+  background-color: #036873;
   transition: background-color 0.3s ease;
 }
-
-.uol-btn--secondary:hover,
-.uol-button--secondary:hover {
+.uol-btn--secondary,
+.uol-button--secondary {
+  background-color: #002147;
+  color: #fff;
+}
+.uol-btn :hover,
+.uol-button :hover {
+  background-color: #002b5c;
   transition: background-color 0.3s ease;
 }
-
-.uol-btn--accent-primary:hover,
-.uol-button--accent-primary:hover {
+.uol-btn--accent-primary,
+.uol-button--accent-primary {
+  background-color: #db1a72;
+  color: #fff;
+}
+.uol-btn :hover,
+.uol-button :hover {
+  background-color: #ad1459;
   transition: background-color 0.3s ease;
 }
-
-.uol-btn--accent-secondary:hover,
-.uol-button--accent-secondary:hover {
+.uol-btn--accent-secondary,
+.uol-button--accent-secondary {
+  background-color: #747678;
+  color: #fff;
+}
+.uol-btn :hover,
+.uol-button :hover {
+  background-color: #595c5f;
   transition: background-color 0.3s ease;
 }
 
 .uol-btn--white,
 .uol-button--white {
+  background-color: #fafafa;
   color: currentcolor;
 }
 
 .uol-btn--white:hover,
 .uol-button--white:hover {
+  background-color: #e5e5e5;
   color: #171717;
   transition: background-color 0.3s ease;
 }
@@ -7156,8 +7180,15 @@ a .event .info p .link:hover {
 .uol-course-header__container h1 {
   color: #fff;
   font-family: Verdana, Arial, sans-serif;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
   letter-spacing: -0.2rem;
+  line-height: normal;
   text-align: center;
+  width: 100%;
+}
+.uol-course-header__container h1 span {
   width: 100%;
 }
 .uol-course-header__container__inner {
@@ -7170,7 +7201,7 @@ a .event .info p .link:hover {
   margin-bottom: 12rem;
   text-align: center;
 }
-.uol-course-header__container__inner__btn > a {
+.uol-course-header__container__inner__btn a {
   background: 0 0;
   border: 0.4rem solid #fff;
   color: #fff;
@@ -7184,54 +7215,54 @@ a .event .info p .link:hover {
   text-decoration: none;
   transition: background 0.3s ease-in-out 50ms, color 0.3s ease-in-out;
 }
-.uol-course-header__container__inner__btn--primary > a:hover {
+.uol-course-header__container__inner__btn--primary a:hover {
   background-color: #047e8b;
   color: #fff;
 }
-.uol-course-header__container__inner__btn--primary > a:nth-of-type(1) {
+.uol-course-header__container__inner__btn--primary a:nth-of-type(1) {
   background-color: #047e8b;
 }
-.uol-course-header__container__inner__btn--primary > a:nth-of-type(1):hover {
+.uol-course-header__container__inner__btn--primary a:nth-of-type(1):hover {
   background-color: #fff;
   color: #036873;
 }
-.uol-course-header__container__inner__btn--secondary > a:hover {
+.uol-course-header__container__inner__btn--secondary a:hover {
   background-color: #002147;
   color: #fff;
 }
-.uol-course-header__container__inner__btn--secondary > a:nth-of-type(1) {
+.uol-course-header__container__inner__btn--secondary a:nth-of-type(1) {
   background-color: #002147;
 }
-.uol-course-header__container__inner__btn--secondary > a:nth-of-type(1):hover {
+.uol-course-header__container__inner__btn--secondary a:nth-of-type(1):hover {
   background-color: #fff;
   color: #002b5c;
 }
-.uol-course-header__container__inner__btn--accent-primary > a:hover {
+.uol-course-header__container__inner__btn--accent-primary a:hover {
   background-color: #db1a72;
   color: #fff;
 }
-.uol-course-header__container__inner__btn--accent-primary > a:nth-of-type(1) {
+.uol-course-header__container__inner__btn--accent-primary a:nth-of-type(1) {
   background-color: #db1a72;
 }
-.uol-course-header__container__inner__btn--accent-primary > a:nth-of-type(1):hover {
+.uol-course-header__container__inner__btn--accent-primary a:nth-of-type(1):hover {
   background-color: #fff;
   color: #ad1459;
 }
-.uol-course-header__container__inner__btn--accent-secondary > a:hover {
+.uol-course-header__container__inner__btn--accent-secondary a:hover {
   background-color: #747678;
   color: #fff;
 }
-.uol-course-header__container__inner__btn--accent-secondary > a:nth-of-type(1) {
+.uol-course-header__container__inner__btn--accent-secondary a:nth-of-type(1) {
   background-color: #747678;
 }
-.uol-course-header__container__inner__btn--accent-secondary > a:nth-of-type(1):hover {
+.uol-course-header__container__inner__btn--accent-secondary a:nth-of-type(1):hover {
   background-color: #fff;
   color: #595c5f;
 }
 .uol-course-header__banner {
   padding: 0;
 }
-.uol-course-header__banner__overlay {
+.uol-course-header__banner__overlay--light, .uol-course-header__banner__overlay--medium, .uol-course-header__banner__overlay--dark {
   height: 52.5rem;
 }
 .uol-course-header__banner__overlay--light {
@@ -7387,8 +7418,11 @@ a .event .info p .link:hover {
 }
 
 @media (min-width: 768px) {
-  .uol-course-header__container__inner__btn > a {
+  .uol-course-header__container__inner__btn a {
     margin-top: 0;
+  }
+  .uol-course-header__container__inner__btn a:nth-of-type(1) {
+    margin-right: 1rem;
   }
   .uol-course-header__key-info {
     height: 57rem;
@@ -7418,7 +7452,6 @@ a .event .info p .link:hover {
   .uol-course-header__container h1 {
     font-size: 5rem;
     letter-spacing: -0.3rem;
-    line-height: 5.9rem;
     overflow: visible;
     text-align: left;
     width: 90%;
@@ -7832,11 +7865,14 @@ a .event .info p .link:hover {
     font-size: 1.7rem;
   }
 }
-@media (min-width: 991px) {
-  .uol-homepage-hero_content-container-inner h1 {
+@media (min-width: 992px) {
+  .uol-homepage-hero {
+    height: calc(100vh - 116px);
+  }
+  .uol-homepage-hero_content-container-inner-inner h1 {
     font-size: 6rem;
   }
-  .uol-homepage-hero_content-container-inner .tag {
+  .uol-homepage-hero_content-container-inner-inner .tag {
     font-size: 1.875rem;
   }
 }
@@ -7921,86 +7957,48 @@ a .event .info p .link:hover {
   margin: 0 auto;
   width: 100%;
 }
-.uol-pullquote .uol-h2 {
-  margin: 0 0 1rem;
-}
-.uol-pullquote .uol-h2:not(.uol-pullquote .uol-h2:last-of-type) {
-  font-style: italic;
-  margin-bottom: 2rem;
-}
-.uol-pullquote .uol-h2:last-of-type {
-  margin-bottom: 0;
-  padding-bottom: 2rem;
-}
-.uol-pullquote picture,
-.uol-pullquote img {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-}
-.uol-pullquote img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top center;
-     object-position: top center;
-}
-.uol-pullquote .uol-pullquote_img {
-  max-width: 100%;
-  position: relative;
-  z-index: 0;
-}
-
-.uol-pullquote_copy {
+.uol-pullquote .uol-pullquote_copy {
   max-width: 100%;
   padding: 2rem 2rem 5rem;
   position: relative;
   z-index: 1;
-  /*
-  &--primary {
-    @extend .uol-pullquote_copy;
-  } 
-  */
-  /*
-  &--secondary {
-    @extend .uol-pullquote_copy;
-  } 
-  */
-  /*
-  &--accent-primary {
-    @extend .uol-pullquote_copy;
-  } 
-  */
-  /*
-  &--accent-secondary {
-    @extend .uol-pullquote_copy;
-  } 
-  */
 }
-.uol-pullquote_copy--primary:after {
+.uol-pullquote .uol-pullquote_copy .uol-h2 {
+  margin: 0 0 1rem;
+}
+.uol-pullquote .uol-pullquote_copy .uol-h2:not(.uol-pullquote .uol-pullquote_copy .uol-h2:last-of-type) {
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+.uol-pullquote .uol-pullquote_copy .uol-h2:last-of-type {
+  margin-bottom: 0;
+  padding-bottom: 2rem;
+}
+.uol-pullquote .uol-pullquote_copy--primary:after {
   background-color: #002147;
 }
-.uol-pullquote_copy--primary .uol-h2, .uol-pullquote_copy--primary .uol-standfirst, .uol-pullquote_copy--primary .uol-t2 {
+.uol-pullquote .uol-pullquote_copy--primary .uol-h2, .uol-pullquote .uol-pullquote_copy--primary .uol-standfirst, .uol-pullquote .uol-pullquote_copy--primary .uol-t2 {
   color: #fff;
 }
-.uol-pullquote_copy--secondary:after {
+.uol-pullquote .uol-pullquote_copy--secondary:after {
   background-color: #047e8b;
 }
-.uol-pullquote_copy--secondary .uol-h2, .uol-pullquote_copy--secondary .uol-standfirst, .uol-pullquote_copy--secondary .uol-t2 {
+.uol-pullquote .uol-pullquote_copy--secondary .uol-h2, .uol-pullquote .uol-pullquote_copy--secondary .uol-standfirst, .uol-pullquote .uol-pullquote_copy--secondary .uol-t2 {
   color: #fff;
 }
-.uol-pullquote_copy--accent-primary:after {
+.uol-pullquote .uol-pullquote_copy--accent-primary:after {
   background-color: #db1a72;
 }
-.uol-pullquote_copy--accent-primary .uol-h2, .uol-pullquote_copy--accent-primary .uol-standfirst, .uol-pullquote_copy--accent-primary .uol-t2 {
+.uol-pullquote .uol-pullquote_copy--accent-primary .uol-h2, .uol-pullquote .uol-pullquote_copy--accent-primary .uol-standfirst, .uol-pullquote .uol-pullquote_copy--accent-primary .uol-t2 {
   color: #fff;
 }
-.uol-pullquote_copy--accent-secondary:after {
+.uol-pullquote .uol-pullquote_copy--accent-secondary:after {
   background-color: #747678;
 }
-.uol-pullquote_copy--accent-secondary .uol-h2, .uol-pullquote_copy--accent-secondary .uol-standfirst, .uol-pullquote_copy--accent-secondary .uol-t2 {
+.uol-pullquote .uol-pullquote_copy--accent-secondary .uol-h2, .uol-pullquote .uol-pullquote_copy--accent-secondary .uol-standfirst, .uol-pullquote .uol-pullquote_copy--accent-secondary .uol-t2 {
   color: #fff;
 }
-.uol-pullquote_copy:after {
+.uol-pullquote .uol-pullquote_copy:after {
   content: "";
   position: absolute;
   top: 0;
@@ -8013,6 +8011,23 @@ a .event .info p .link:hover {
   display: block;
   left: 0;
 }
+.uol-pullquote .uol-pullquote_img {
+  max-width: 100%;
+  position: relative;
+  z-index: 0;
+}
+.uol-pullquote .uol-pullquote_img picture,
+.uol-pullquote .uol-pullquote_img img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+.uol-pullquote .uol-pullquote_img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top center;
+     object-position: top center;
+}
 
 @media (min-width: 1200px) {
   .uol-pullquote {
@@ -8022,33 +8037,33 @@ a .event .info p .link:hover {
     max-width: 100%;
     position: relative;
   }
-  .uol-pullquote--reversed .uol-pullquote_img {
-    transform: translateX(0px);
-    max-width: calc(50% + 45px);
-  }
-  .uol-pullquote_copy {
+  .uol-pullquote .uol-pullquote_copy {
     margin: 0;
     transform: translateX(0);
     max-width: calc(50% + 45px);
     left: 0;
     position: absolute;
   }
-  .uol-pullquote_img picture,
-.uol-pullquote_img img {
+  .uol-pullquote .uol-pullquote_img {
+    max-width: 50%;
+  }
+  .uol-pullquote .uol-pullquote_img picture,
+.uol-pullquote .uol-pullquote_img img {
     min-height: 42.6rem;
     max-height: 42.6rem;
+  }
+  .uol-pullquote--reversed {
+    flex-direction: row-reverse;
+    justify-content: start;
   }
   .uol-pullquote--reversed .uol-pullquote_copy {
     position: absolute;
     left: calc(50% - 45px);
     max-width: calc(50% + 45px);
   }
-  .uol-pullquote--reversed {
-    flex-direction: row-reverse;
-    justify-content: start;
-  }
-  .uol-pullquote_img {
-    max-width: 50%;
+  .uol-pullquote--reversed .uol-pullquote_img {
+    transform: translateX(0px);
+    max-width: calc(50% + 45px);
   }
 }
 /* Highlight when the menu is open */

@@ -11,57 +11,26 @@
   grid-auto-flow: row;
 }
 
-// Start Primary
-.uol-section--primary {
-  @extend %uol-padding-y-default;
-  @extend %bg-color-primary;
-  padding: $uol-py-2 0;
+
+
+@each $key, $val in $uol-bg-main-colours {
+
+  .uol-section--#{$key} {
+    @extend %uol-padding-y-default;
+    background-color: $val;
+    padding: $uol-py-2 0;
+
+    .uol-h1,
+    .uol-h2,
+    .uol-label,
+    .uol-t1,
+    .uol-t2 {
+      @extend %uol-white-font-default;
+    }
+
+  }
+
 }
-
-.uol-section--primary .uol-h1 { @extend %uol-white-font-default; }
-.uol-section--primary .uol-h2 { @extend %uol-white-font-default; }
-.uol-section--primary .uol-label { @extend %uol-white-font-default; }
-.uol-section--primary .uol-t1 { @extend %uol-white-font-default; }
-.uol-section--primary .uol-t2 { @extend %uol-white-font-default; }
-
-// Start Secondary
-.uol-section--secondary {
-  @extend %uol-padding-y-default;
-  @extend %bg-color-secondary;
-  padding: $uol-py-2 0;
-}
-
-.uol-section--secondary .uol-h1 { @extend %uol-white-font-default; }
-.uol-section--secondary .uol-h2 { @extend %uol-white-font-default; }
-.uol-section--secondary .uol-label { @extend %uol-white-font-default; }
-.uol-section--secondary .uol-t1 { @extend %uol-white-font-default; }
-.uol-section--secondary .uol-t2 { @extend %uol-white-font-default; }
-
-// Start Accent Primary
-.uol-section--accent-primary {
-  @extend %uol-padding-y-default;
-  @extend %bg-color-accent-primary;
-  padding: $uol-py-2 0;
-}
-
-.uol-section--accent-primary .uol-h1 { @extend %uol-white-font-default; }
-.uol-section--accent-primary .uol-h2 { @extend %uol-white-font-default; }
-.uol-section--accent-primary .uol-label { @extend %uol-white-font-default; }
-.uol-section--accent-primary .uol-t1 { @extend %uol-white-font-default; }
-.uol-section--accent-primary .uol-t2 { @extend %uol-white-font-default; }
-
-// Start Accent Secondary
-.uol-section--accent-secondary {
-  @extend %uol-padding-y-default;
-  @extend %bg-color-accent-secondary;
-  padding: $uol-py-2 0;
-}
-
-.uol-section--accent-secondary .uol-h1 { @extend %uol-white-font-default; }
-.uol-section--accent-secondary .uol-h2 { @extend %uol-white-font-default; }
-.uol-section--accent-secondary .uol-label { @extend %uol-white-font-default; }
-.uol-section--accent-secondary .uol-t1 { @extend %uol-white-font-default; }
-.uol-section--accent-secondary .uol-t2 { @extend %uol-white-font-default; }
 
 
 // Start light Grey

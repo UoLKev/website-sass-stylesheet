@@ -1,9 +1,10 @@
-$uol-btn-rounded-corners: true;
+$uol-btn-rounded-corners: false;
+$uol-btn-transition: background-color 0.3s ease;
 
 %uol-btn-style {
   background-image: none; 
   border: 1px solid transparent;
-  border-radius: if($uol-btn-rounded-corners, .4rem, null);
+  border-radius: if($uol-btn-rounded-corners, .4rem, 0);
   color: $uol-white-100;
   cursor: pointer;
   display: inline-block; 
@@ -19,13 +20,6 @@ $uol-btn-rounded-corners: true;
   transition: background-color 0.3s ease; 
   vertical-align: middle;
   white-space: nowrap; 
-}
-
-
-
-
-.uol-btn {
-  @extend %uol-btn-style;
 
   &:hover {
     background-color: $bg-color-primary-hover;
@@ -35,32 +29,49 @@ $uol-btn-rounded-corners: true;
 
 }
 
+
+
+.uol-btn,
 .uol-button {
   @extend %uol-btn-style;
 
-  &:hover {
-    background-color: $bg-color-primary-hover;
-    color: $uol-white-100;
-    transition: background-color 0.3s ease;
+  @each $key, $btn, $btnHover in  $uol-btn-colors {
+    &--#{$key} {
+      background-color: $btn;
+      color: $uol-white-default;
+    }
+
+    :hover {
+      background-color: $btnHover;
+      transition: $uol-btn-transition;
+    }
+
   }
+
 }
+
+
+//Bootstrap override for primary and secondary
+.btn {
+  @extend %uol-btn-style;
+
+}
+
+
+
+
+
+
+
+
+
+
 
 
 $btnTypes: ( 'primary', 'secondary', 'accent-primary', 'accent-secondary');
 
 @each $btnType in $btnTypes {
   // Uol Buttons
-  .uol-btn--#{$btnType},
-  .uol-button--#{$btnType} {
-    @extend %bg-color-#{$btnType}-btn;
-    @extend %uol-white-font-default;
-  }
-
-  .uol-btn--#{$btnType}:hover,
-  .uol-button--#{$btnType}:hover {
-    @extend %bg-color-#{$btnType}-btn-hover;
-    transition: background-color 0.3s ease;
-  }
 
   // Start Bootstrap Button Overrides
   .btn-#{$btnType} {
@@ -70,8 +81,11 @@ $btnTypes: ( 'primary', 'secondary', 'accent-primary', 'accent-secondary');
   .btn-#{$btnType}:focus,
   .btn-#{$btnType}.focus,
   .btn-#{$btnType}:hover,
+  .btn-#{$btnType}.hover,
   .btn-#{$btnType}:active,
-  .btn-#{$btnType}.active {
+  .btn-#{$btnType}.active,
+  .btn-#{$btnType}.visited,
+  .btn-#{$btnType}:visited{
     @extend %bg-color-#{$btnType}-btn-hover;
   }
   // End Bootstrap Button Overrides
@@ -80,13 +94,13 @@ $btnTypes: ( 'primary', 'secondary', 'accent-primary', 'accent-secondary');
 
 .uol-btn--white,
 .uol-button--white {
-  @extend %bg-color-white-100;
+  background-color: $uol-white-100; 
   color: currentcolor;
 }
 
 .uol-btn--white:hover,
 .uol-button--white:hover {
-  @extend %bg-color-white-300;
+  background-color: $uol-white-300;
   color: $uol-black-100;
   transition: background-color 0.3s ease;
 }

@@ -134,36 +134,67 @@
 
 
 
-@media (min-width: 350px) {
+@media (min-width: $uol-breakpoint-xs) {
+
   .uol-homepage-hero {
     height: calc(100vh - 165px);
   }
+
 }
 
-@media (min-width: 768px) {
+@media (min-width: $uol-breakpoint-sm) {
+
   .uol-homepage-hero {
     height: calc(100vh - 116px);
+
+    &_content-container {
+
+      &-inner {
+
+        h1 {
+          font-size: 5rem;
+          margin-bottom: 10px;
+        }
+  
+        .tag {
+          font-size: 1.7rem;
+        }
+      }
+
+    }
+
   }
 
-  .uol-homepage-hero_content-container-inner h1 {
-    font-size: 5rem;
-    margin-bottom: 10px;
-  }
-
-  .uol-homepage-hero_content-container-inner .tag {
-    font-size: 1.7rem;
-  }
 }
 
-@media (min-width: 991px) {
-  .uol-homepage-hero_content-container-inner h1 {
-    font-size: 6rem;
-  }
 
-  .uol-homepage-hero_content-container-inner .tag {
-    font-size: 1.875rem;
+
+@media (min-width: $uol-breakpoint-m) {
+
+  .uol-homepage-hero {
+    height: calc(100vh - 116px);
+
+    &_content-container-inner {
+
+      &-inner {
+
+        h1 {
+          font-size: 6rem;
+        }
+
+        .tag {
+          font-size: 1.875rem;
+        }
+
+      }
+
+    }
+
   }
+  
 }
+
+
 
 @media (min-width: 1025px) {
   .uol-homepage-hero {

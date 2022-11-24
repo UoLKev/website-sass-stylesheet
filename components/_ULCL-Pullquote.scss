@@ -6,102 +6,97 @@
   width: 100%; 
 
 
-  .uol-h2 {
-    margin: 0 0 1rem;
 
-    &:not(&:last-of-type) {
-      font-style: italic;
-      margin-bottom: 2rem;
-    }
 
-    &:last-of-type {
-      margin-bottom: 0;
-      padding-bottom: 2rem;
-    }
-
-  }
-
-  picture,
-  img {
-    display: block;
-    width: 100%;
+  .uol-pullquote_copy {
     max-width: 100%;
+    padding: 2rem 2rem 5rem;
+    position: relative;
+    z-index: 1;
+
+    .uol-h2 {
+      margin: 0 0 1rem;
+  
+      &:not(&:last-of-type) {
+        font-style: italic;
+        margin-bottom: 2rem;
+      }
+  
+      &:last-of-type {
+        margin-bottom: 0;
+        padding-bottom: 2rem;
+      }
+  
+    }
+
+    @each $key, $val in  $uol-bg-main-colours {
+
+      &--#{$key}:after {
+        background-color: $val;
+      }
+    
+      &--#{$key} .uol-h2,
+      &--#{$key} .uol-standfirst,
+      &--#{$key} .uol-t2 {
+        color: $uol-white-default;
+      }
+    
+    }
+
+    &:after {
+      @extend %clip-path;  
+      content: "";
+      position: absolute;
+      top: 0;
+      z-index: -1;
+      height: 100%;
+      min-height: max-content;
+      width: 100%;
+      display: block;
+      left: 0;
+    }
+
+    &--reversed {
+      .uol-pullquote_copy {
+        :after {
+          @extend %clip-path--reversed;
+        }
+      }
+    }
   }
 
-  img {
-    object-fit: cover;
-    object-position: top center;
-  }
+
+
 
   .uol-pullquote_img {
     max-width: 100%;
     position: relative;
     z-index: 0;
-  }
 
-}
-
-
-
-
-// Start Pullquote Copy 
-.uol-pullquote_copy {
-  max-width: 100%;
-  padding: 2rem 2rem 5rem;
-  position: relative;
-  z-index: 1;
-
-
-  @each $key, $val in  $uol-bg-main-colours {
-    /*
-    &--#{$key} {
-      @extend .uol-pullquote_copy;
-    } 
-    */
-
-    &--#{$key}:after {
-      background-color: $val;
+    picture,
+    img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
     }
-  
-    &--#{$key} .uol-h2,
-    &--#{$key} .uol-standfirst,
-    &--#{$key} .uol-t2 {
-      color: $uol-white-default;
+
+    img {
+      object-fit: cover;
+      object-position: top center;
     }
+
+  }
   
-  }
+  
 
-  &:after {
-    @extend %clip-path;  
-    content: "";
-    position: absolute;
-    top: 0;
-    z-index: -1;
-    height: 100%;
-    min-height: max-content;
-    width: 100%;
-    display: block;
-    left: 0;
-  }
 
 }
 
 
 
 
-// End Pullquote Copy 
 
-
-
-
-
-
-
-
-
-.uol-pullquote--reversed .uol-pullquote_copy:after {
-  @extend %clip-path--reversed;
-}
+  
 
 
 @media (min-width: $uol-breakpoint-l) {
@@ -112,40 +107,51 @@
     justify-content: end;
     max-width: 100%;
     position: relative;
-  }
 
-  .uol-pullquote--reversed .uol-pullquote_img {
-    transform: translateX(0px);
-    max-width: calc(50% + 45px);
-  }
 
-  .uol-pullquote_copy {
-    margin: 0;
-    transform: translateX(0);
-    max-width: calc(50% + 45px);
-    left: 0;
-    position: absolute;
-  }
-
-  .uol-pullquote_img picture,
-  .uol-pullquote_img img {
-    min-height: 42.6rem;
-    max-height: 42.6rem;
-  }
-
-  .uol-pullquote--reversed .uol-pullquote_copy {
-    position: absolute;
-    left: calc(50% - 45px);
-    max-width: calc(50% + 45px);
-  }
-
+    .uol-pullquote_copy {
+      margin: 0;
+      transform: translateX(0);
+      max-width: calc(50% + 45px);
+      left: 0;
+      position: absolute;
+    }
   
-  .uol-pullquote--reversed {
-    flex-direction: row-reverse;
-    justify-content: start;
+
+
+    .uol-pullquote_img {
+      max-width: 50%;
+
+      picture,
+      img {
+        min-height: 42.6rem;
+        max-height: 42.6rem;
+      }
+    }
+
+
+
+    &--reversed {
+      flex-direction: row-reverse;
+      justify-content: start;
+
+      .uol-pullquote_copy {
+        position: absolute;
+        left: calc(50% - 45px);
+        max-width: calc(50% + 45px);
+      }
+
+      .uol-pullquote_img {
+        transform: translateX(0px);
+        max-width: calc(50% + 45px);
+      }     
+    }
+
+
+
+
   }
-  .uol-pullquote_img {
-    max-width: 50%;
-  }
+
+
 }
-// END ULCL Pull-Quote 
+ 
