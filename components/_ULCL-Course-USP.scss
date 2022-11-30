@@ -1,4 +1,4 @@
-.uol-pullquote_copy-course-usp {
+.uol-pullquote__copy-course-usp {
   display: $uol-display-flex-imp;
   flex-wrap: wrap;
   max-width: 100%;
@@ -40,7 +40,7 @@
 
 @media (min-width: $uol-breakpoint-sm) {
 
-  .uol-pullquote_copy-course-usp {
+  .uol-pullquote__copy-course-usp {
 
     & div:not(&__title) {
       width: 50%;
@@ -61,7 +61,7 @@
 
 @media (min-width: $uol-breakpoint-l) {
 
-  .uol-pullquote_copy-course-usp {
+  .uol-pullquote__copy-course-usp {
     max-width: calc(50% + 150px) !important;
   }
 

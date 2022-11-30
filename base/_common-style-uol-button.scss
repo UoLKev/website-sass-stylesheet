@@ -1,21 +1,32 @@
 $uol-btn-rounded-corners: false;
 $uol-btn-transition: background-color 0.3s ease;
 
-%uol-btn-style {
-  background-image: none; 
-  border: 1px solid transparent;
-  border-radius: if($uol-btn-rounded-corners, .4rem, 0);
-  color: $uol-white-100;
+
+%uol-btn-style-common {
+  color: $uol-white-default;
   cursor: pointer;
   display: inline-block; 
-  font-family: $uol-font-primary;
-  font-size: 1.6rem;
-  font-weight: normal;
+  text: {
+    align: center;
+    decoration: none;
+  }
+}
+
+
+// Placeholder for standard and bootstrap overrides
+%uol-btn-style-standard {
+  @extend %uol-btn-style-common;
+  background-image: none; 
+  border: 1px solid transparent;
+  border-radius: if($uol-btn-rounded-corners, .4rem, 0); 
+  font: {
+    family: $uol-font-primary;
+    size: 1.6rem;
+    weight: normal;
+  } 
   line-height: 2.4rem;
   margin-bottom: 0;
   padding: .4rem .8rem;
-  text-align: center;
-  text-decoration: none;
   touch-action: manipulation;
   transition: background-color 0.3s ease; 
   vertical-align: middle;
@@ -30,10 +41,24 @@ $uol-btn-transition: background-color 0.3s ease;
 }
 
 
+// Placeholder for common styles for headers (e.g. homepage and courses)
+%uol-common-btn-style-header {
+  @extend %uol-btn-style-common;
+  background: 0 0;
+  border: .4rem solid $uol-white-default;
+  color: $uol-white-default;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  transition: background 0.3s ease-in-out 50ms, color 0.3s ease-in-out;
+}
 
+
+
+
+// Start Standard UoL Buttons
 .uol-btn,
 .uol-button {
-  @extend %uol-btn-style;
+  @extend %uol-btn-style-standard;
 
   @each $key, $btn, $btnHover in  $uol-btn-colors {
     &--#{$key} {
@@ -45,16 +70,110 @@ $uol-btn-transition: background-color 0.3s ease;
       background-color: $btnHover;
       transition: $uol-btn-transition;
     }
+  }
+}
+// End Standard UoL Buttons
 
+
+// Start Course page headers 
+.uol-btn-courseHeader {
+  @extend %uol-common-btn-style-header;
+  padding: 1.1rem 2.2rem;
+  margin : $uol-mt-1 $uol-mt-1 0;
+  min-width: 22.5rem;
+
+  @each $key, $btn, $btnHover in  $uol-btn-colors {
+    &--#{$key} {
+
+      &:hover {
+        background-color: $btn;
+        color: $uol-white-default;
+      }
+
+      &:nth-of-type(1) {
+        background-color: $btn;
+
+        &:hover {
+          background-color: $bg-color-white-default;
+          color:  $btnHover;
+        }
+      }      
+    }
+  }// End each loop
+}
+
+@media (min-width: $uol-breakpoint-sm) {
+
+  .uol-btn-courseHeader {
+    margin-top: $uol-mt-0;
+
+    &:nth-of-type(1) {
+      margin-left: 0;
+    }
+  }
+  
+}
+
+// End Course page header buttons
+
+
+
+
+// Start Homepage page header buttons
+
+.uol-btn-homepageHeader {
+  @extend %uol-common-btn-style-header;
+  display: block;
+  padding: 11px 22px;
+  pointer-events: auto;
+  margin-top: 20px;
+  min-width: 215px;
+
+  &:nth-of-type(1) {
+    margin-top: 0;
   }
 
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  @each $key, $btn, $btnHover in  $uol-btn-colors {
+    &--#{$key} {
+
+      &:nth-of-type(1),
+      &:hover {
+        background: $btn;
+        border-color: $btn;
+        color: $uol-white-font-default;
+      }
+
+      &:nth-of-type(1) {
+        &:hover {
+          background: $bg-color-white-default;
+          color: $btn;
+        }
+      }       
+    }
+  }// End each loop
 }
+
+@media (min-width: $uol-breakpoint-sm) {
+  .uol-btn-homepageHeader {
+    display: inline-block;
+    margin: 0 1rem 0 0;
+  }
+}
+// End Homepage page header buttons
+
+
+
+
+
 
 
 //Bootstrap override for primary and secondary
 .btn {
-  @extend %uol-btn-style;
-
+  @extend %uol-btn-style-standard;
 }
 
 
@@ -95,7 +214,7 @@ $btnTypes: ( 'primary', 'secondary', 'accent-primary', 'accent-secondary');
 .uol-btn--white,
 .uol-button--white {
   background-color: $uol-white-100; 
-  color: currentcolor;
+  color: $uol-black-100;
 }
 
 .uol-btn--white:hover,

@@ -1,15 +1,21 @@
 .uol-section {
   @include componantMarginPadding-y( $uol-componant-margin-top-default, $uol-componant-margin-bottom-default, 0 );
-  margin-left: 1.2rem;
-  margin-right: 1.2rem;
+  margin: {
+    left: 1.2rem;
+    right: 1.2rem;
+  }
+  
+  & [data-type="results"] {
+    display: none;
+
+    .grid {
+      grid-auto-flow: row;
+    }
+  }
+
 }
 
-.uol-section[data-type="results"] {
-  display: none;
-}
-.uol-section[data-type="results"] .grid {
-  grid-auto-flow: row;
-}
+
 
 
 

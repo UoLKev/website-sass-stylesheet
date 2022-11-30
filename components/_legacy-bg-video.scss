@@ -1,12 +1,13 @@
 .bg-video {
   background-position: right center;
   margin-bottom: 3rem;
+
+  .no-gutters {
+    padding: 0;
+    margin-left: auto;
+  }
 }
 
-.bg-video .no-gutters {
-  padding: 0;
-  margin-left: auto;
-}
 
 .bg-video #iframe-video {
   position: relative;

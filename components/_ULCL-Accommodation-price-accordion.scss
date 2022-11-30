@@ -5,25 +5,18 @@
 
 .uol-accordion {
   margin-top: 0;
-  max-width: var(--constraint);
+  max-width: $uol-container-constraint;
+  
 }
 
-.uol-accordion-accommodation--primary { 
-  @extend %bg-color-primary;
-}
 
-.uol-accordion-accommodation--secondary { 
-  @extend %bg-color-secondary;
-}
-
-.uol-accordion-accommodation--accent-primary { 
-  @extend %bg-color-accent-primary;
-}
-
-.uol-accordion-accommodation--accent-secondary { 
-  @extend %bg-color-accent-secondary;
+@each $key, $val in  $uol-bg-main-colours {
+  .uol-accordion-accommodation--#{$key} {
+    background-color: $val;
+  }   
 }
  
+
 .uol-accordion-accommodation-title-light { 
   @extend %uol-white-font-default;
 }
@@ -40,17 +33,21 @@
     @extend %uol-white-font-default;
   }
 
+
+  
 .uol-accommodation-price-table {
   @extend %bg-color-accent-secondary;
+
+  th {
+    @extend %bg-color-primary;
+  }
+
+  td:first-child {
+    @extend %bg-color-primary;
+  }
+
 }
 
-.uol-accommodation-price-table td:first-child {
-  @extend %bg-color-primary;
-}
-
-.uol-accommodation-price-table th {
-  @extend %bg-color-primary;
-}
 
 .uol-accommodation-price-table-header { display: none; }
 

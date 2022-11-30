@@ -6,17 +6,20 @@
   width: 100%; 
 
 
-
-
-  .uol-pullquote_copy {
+  &__copy {
     max-width: 100%;
     padding: 2rem 2rem 5rem;
     position: relative;
     z-index: 1;
 
-    .uol-h2 {
+    h2,
+    p {
+      color: $uol-white-default;
+    }
+
+    h2 {
       margin: 0 0 1rem;
-  
+
       &:not(&:last-of-type) {
         font-style: italic;
         margin-bottom: 2rem;
@@ -26,22 +29,18 @@
         margin-bottom: 0;
         padding-bottom: 2rem;
       }
-  
-    }
+
+    }// End h2
 
     @each $key, $val in  $uol-bg-main-colours {
 
-      &--#{$key}:after {
-        background-color: $val;
-      }
-    
-      &--#{$key} .uol-h2,
-      &--#{$key} .uol-standfirst,
-      &--#{$key} .uol-t2 {
-        color: $uol-white-default;
-      }
-    
-    }
+      &--#{$key} {
+        &:after {
+          background-color: $val;
+        }
+      }    
+    }// End @each
+
 
     &:after {
       @extend %clip-path;  
@@ -56,19 +55,9 @@
       left: 0;
     }
 
-    &--reversed {
-      .uol-pullquote_copy {
-        :after {
-          @extend %clip-path--reversed;
-        }
-      }
-    }
-  }
+  }// End &__copy
 
-
-
-
-  .uol-pullquote_img {
+  &__img {
     max-width: 100%;
     position: relative;
     z-index: 0;
@@ -85,10 +74,20 @@
       object-position: top center;
     }
 
+    .video_btn {
+      @extend %uol-video-button
+    }
+    
+  
   }
-  
-  
 
+  &--reversed {
+    .uol-pullquote__copy {
+      &:after {
+        @extend %clip-path--reversed;
+      }
+    }
+  }
 
 }
 
@@ -109,7 +108,7 @@
     position: relative;
 
 
-    .uol-pullquote_copy {
+    &__copy {
       margin: 0;
       transform: translateX(0);
       max-width: calc(50% + 45px);
@@ -118,8 +117,7 @@
     }
   
 
-
-    .uol-pullquote_img {
+    &__img {
       max-width: 50%;
 
       picture,
@@ -130,28 +128,23 @@
     }
 
 
-
     &--reversed {
       flex-direction: row-reverse;
       justify-content: start;
 
-      .uol-pullquote_copy {
+      .uol-pullquote__copy {
         position: absolute;
         left: calc(50% - 45px);
         max-width: calc(50% + 45px);
       }
 
-      .uol-pullquote_img {
+      .uol-pullquote__img {
         transform: translateX(0px);
         max-width: calc(50% + 45px);
       }     
     }
 
-
-
-
   }
-
 
 }
  

@@ -59,12 +59,22 @@ p {
 
 a { 
   color: #047986;
+  text-decoration: underline;
+
+  &[class*="btn"],
+  &[class*="button"] {
+    text-decoration: none;
+  }
+
+
+  &:hover,
+  &:focus {
+    color: #036873;
+  }
+
 }
 
-a:hover,
-a:focus {
-  color: #036873;
-}
+
 
 .uol-t2 {
   @extend %bg-font-size-default;

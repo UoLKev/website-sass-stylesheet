@@ -1,11 +1,45 @@
+
+/* Had to redefine the variables for my test case - also not in the current style-local css file */
+:root {
+  --uol-primary: #002147;
+  --uol-primary-hover: #002b5c;
+  --uol-secondary: #047e8b;
+  --uol-secondary-hover: #036873;
+  --uol-accent-primary: #db1a72;
+  --uol-accent-primary-hover: #ad1459;
+  --uol-accent-secondary: #747678;
+  --uol-link-colour: #047986; /* was #047e8b which failed contrast checks on light grey background */
+  --uol-link-hover: #036873;
+  --uol-link-visited: #ae1459;
+  --uol-focus-yellow: #ffdd00;
+  --uol-focus-black: #0b0c0c;
+  --uol-black-default: #333;
+  --uol-black-100: #171717;
+  --uol-black-200: #404040;
+  --uol-black-300: #5e5e5e;
+  --uol-black-400: #d4d4d4;
+  --uol-white-default: #ffffff;
+  --uol-white-100: #fafafa;
+  --uol-white-200: #f5f5f5;
+  --uol-white-300: #e5e5e5;
+  --uol-white-400: var(--uol-black-400);
+  --bs-primary: var(--uol-primary);
+  --uol-headingFonts: Georgia, serif;
+  --uol-headingWeight: normal;
+  --uol-textFonts: Verdana, Arial, sans-serif;
+  --constraint: 1170px;
+}
 /* Highlight when the menu is open */
 .js-menu-open {
-  @extend %bg-color-secondary;
+  background-color: var(--uol-primary);
 }
 /* Style the button colour when the menu is open */
 .js-menu-open [aria-controls] {
-  @extend %uol-white-font-default;
+  color: var(--uol-white-default);
 }
+
+
+
 
 
 /* Style links that appear when user tabs at the start of the page to help */
@@ -13,30 +47,30 @@
   list-style: none;
   padding: 0;
 }
-
 .skip-link {
-  left: 0;
   position: fixed;
-  top: -4.5rem;  
+  top: -45px;
+  left: 0;
 
   &:focus {
-    @extend %uol-white-font-default;
-    @extend %bg-color-secondary;
     position: fixed;
     top: 0;
     left: 0;
-    padding: 1rem;
+    padding: 10px;
     visibility: visible;
-    font-size: 1.6rem;
-    line-height: 2.5rem;
+    font-size: 16px;
+    line-height: 25px;
     vertical-align: middle;
     display: inline-block;
     outline: 0;
+    background-color: var(--uol-secondary);
+    color: var(--uol-white-default);
     z-index: 2;
   }
+
+
+
 }
-
-
 
 /* If the user has no reduced motion set for animations etc */
 @media (prefers-reduced-motion: no-preference) {
@@ -44,7 +78,6 @@
     transition: top 0.3s ease;
   }
 }
-
 /* 
 The rest of the styles are either resets, or unique styling for buttons.
 
@@ -52,38 +85,102 @@ In these case it's usually scenarios where the styles were applied to anchors by
 
 The reason why it wasn't just bolted onto existing styling is so certain parts weren't modified or leaking through from the current styling.
 */
-.uol-nav .main-nav .mega-me a span {
-  display: inline-block;
-  outline: 0;
+
+.uol-nav {
+
+
+  .main-nav {
+
+    .mega-me {
+      a {
+        
+        span {
+          display: inline-block;
+          outline: 0;
+        }
+
+        &:focus {
+          outline: 0;
+          text-decoration: none;
+
+          span {
+            color: var(--uol-focus-black) !important;
+            text {
+              decoration: underline;
+            }
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 4px;
+          }
+
+        }
+
+      }
+    }
+
+  }
+
+  .main-nav.navbar-nav {
+    li {
+      ul {
+        li.menu-heading {
+          ul {
+            li {
+              a {
+                &:hover {
+                  color: var(--uol-black-100) !important;
+
+                  span {
+                    text-decoration: underline;
+                  }
+
+                }
+              }
+            }
+          }
+
+          .pre-duplicate {
+            &:focus,
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
 }
 
-.uol-nav .main-nav .mega-me a:focus {
-  outline: 0;
-  text-decoration: none;
-}
 
-.uol-nav .main-nav.navbar-nav li ul li.menu-heading ul li a:hover {
-  color: $uol-black-100 !important;
-}
 
-.uol-nav .main-nav.navbar-nav li ul li.menu-heading ul li a:hover span {
-  text-decoration: underline;
+@media screen and (min-width: 1200px) {
+  .uol-nav .nav ul#main-nav {
+    margin-top: .5rem;
+    padding-right: 2.75rem;
+  }
 }
-.uol-nav .main-nav .mega-me a:focus span {
-  color: $uol-focus-black !important;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 4px;
-}
-
 .uol-nav .navbar-default .navbar-nav > li > button[aria-expanded] span {
   border-bottom: 1px solid transparent;
   padding-bottom: 2px;
   display: block;
   transition: border-bottom-color .3s ease;
 }
-
-.uol-nav .main-nav > li > button:after {
+@media (min-width: 992px) {
+  .uol-nav .navbar-default .navbar-nav > li > button[aria-expanded]:hover:not(button[aria-expanded].kb) span {
+    border-bottom-color: var(--uol-black-200);
+    background-color: initial;
+    transition: border-bottom-color .3s ease;
+  }
+  .uol-nav .navbar-default .navbar-nav > li > button[aria-expanded].click span  {
+    border-bottom-color: var(--uol-black-200);
+  }
+  .uol-nav .navbar-default .navbar-nav > li > button[aria-expanded].click:focus {
+    background-color: transparent;
+  }
+}
+  .uol-nav .main-nav > li > button:after {
   content: "";
   display: block;
   margin: auto;
@@ -91,6 +188,12 @@ The reason why it wasn't just bolted onto existing styling is so certain parts w
   width: 0px;
   background: transparent;
   transition: width 0.5s ease, background-color 0.5s ease;
+}
+@media (min-width: 992px) {
+  .uol-nav .main-nav > li > button:hover:after {
+    width: 100%;
+    background: var(--uol-white-300);
+  }
 }
 
 .uol-nav .nav > li > a,
@@ -102,7 +205,7 @@ The reason why it wasn't just bolted onto existing styling is so certain parts w
 .uol-nav .nav > li > button:hover,
 .uol-nav .nav > li > button:focus {
   text-decoration: none;
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 .uol-nav .navbar-default .navbar-nav > li > button {
   color: #777;
@@ -110,11 +213,11 @@ The reason why it wasn't just bolted onto existing styling is so certain parts w
   text-align: left;
 }
 .uol-nav .navbar-default .navbar-nav > li > button[aria-expanded^="true"] {
-  background-color: $uol-primary !important;
-  color: #fff !important;
+  background-color: #002147 !important;
+  color: #ffffff !important;
 }
 .uol-nav .navbar-default .navbar-nav button[aria-expanded^="true"] + .glyphicon {
-  color: #fff !important;
+  color: #ffffff !important;
 }
 .uol-nav .navbar-default .navbar-nav > li > button:hover {
   color: #333;
@@ -128,11 +231,17 @@ The reason why it wasn't just bolted onto existing styling is so certain parts w
   color: #fff !important;
 }
 .uol-nav .navbar-nav > li > button {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  line-height: 2rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 20px;
 }
 
+@media (min-width: 768px) {
+  .uol-nav .navbar-nav > li > button {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
 .uol-nav .main-nav {
   min-width: 100vw;
   position: absolute;
@@ -140,27 +249,54 @@ The reason why it wasn't just bolted onto existing styling is so certain parts w
   background-color: #fff;
   left: 0;
 }
-
+@media screen and (min-width: 768px) {
+  .uol-nav .main-nav {
+    min-width: 400%;
+    max-width: 400%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .uol-nav .main-nav {
+    /*min-width: auto;/*  /* Replaced with min-width: 0 as auto not working with safari (KT - 05 Feb 18) */
+    min-width: 0;
+    max-width: auto;
+    position: static;
+    margin-top: 0;
+  }
+}
+@media all and (min-width: 992px) {
+  .uol-nav .main-nav.no-js li > ul {
+    display: none;
+  }
+  .uol-nav .main-nav.no-js li:last-of-type {
+    display: none;
+  }
+}
 .uol-nav .main-nav li {
   padding: 0 2rem;
   float: none;
 }
+@media screen and (min-width: 992px) {
+  .uol-nav .main-nav li {
+    float: left;
+    min-height: 7rem;
+    padding: 0;
+  }
 
+}
 .uol-nav .main-nav li button,
 .uol-nav .main-nav li a {
   display: block;
 }
 .uol-nav .main-nav li button {
-  /*
   -webkit-appearance: none;
   -moz-appearance: none;
-  */
   text-transform: uppercase;
   background-color: transparent;
   border: 0;
   outline: 0;
   color: #072249 !important;
-  font-size: 1.6rem;
+  font-size: 16px;
   vertical-align: middle;
   display: inline-block;
 }
@@ -180,65 +316,7 @@ The reason why it wasn't just bolted onto existing styling is so certain parts w
   position: relative;
 }
 
-
-@media screen and (min-width: $uol-breakpoint-sm) {
-
-  .uol-nav .navbar-nav > li > button {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
-  
-  .uol-nav .main-nav {
-    min-width: 400%;
-    max-width: 400%;
-  }
-
-}
-
-
-
-@media screen and (min-width: $uol-breakpoint-m) {
-
-  .uol-nav .navbar-default .navbar-nav > li > button[aria-expanded]:hover:not(button[aria-expanded].kb) span {
-    border-bottom-color: var(--uol-black-200);
-    background-color: initial;
-    transition: border-bottom-color .3s ease;
-  }
-
-  .uol-nav .navbar-default .navbar-nav > li > button[aria-expanded].click span  {
-    border-bottom-color: var(--uol-black-200);
-  }
-
-  .uol-nav .navbar-default .navbar-nav > li > button[aria-expanded].click:focus {
-    background-color: transparent;
-  }
-
-  .uol-nav .main-nav > li > button:hover:after {
-    width: 100%;
-    background: var(--uol-white-300);
-  }
-
-  .uol-nav .main-nav {
-    /*min-width: auto;/*  /* Replaced with min-width: 0 as auto not working with safari (KT - 05 Feb 18) */
-    min-width: 0;
-    max-width: auto;
-    position: static;
-    margin-top: 0;
-  }
-
-  .uol-nav .main-nav.no-js li > ul {
-    display: none;
-  }
-  .uol-nav .main-nav.no-js li:last-of-type {
-    display: none;
-  }
-
-  .uol-nav .main-nav li {
-    float: left;
-    min-height: 7rem;
-    padding: 0;
-  }
-
+@media screen and (min-width: 992px) {
   .uol-nav .main-nav .mega-me {
     position: absolute;
   }
@@ -253,23 +331,17 @@ The reason why it wasn't just bolted onto existing styling is so certain parts w
     color: #072249;
     font-size: 1.12rem;
   }
-
-  .main-nav > li:hover .mega-me:not(.uol-nav .mega-me) {
-    display: block !important;
-  }
-
 }
 
-@media screen and (min-width: $uol-breakpoint-l) {
-    
-  .uol-nav .nav ul#main-nav {
-    margin-top: .5rem;
-    padding-right: 2.75rem;
-  }
-
+@media (min-width: 1200px) {
   .navbar-default .navbar-nav > li > button {
     color: #072249;
     font-size: 1.4rem;
   }
-
 }
+@media screen and (min-width: 992px) {
+  .main-nav > li:hover .mega-me:not(.uol-nav .mega-me) {
+    display: block !important;
+  }
+}
+

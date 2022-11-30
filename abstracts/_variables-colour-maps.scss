@@ -16,11 +16,8 @@
   );
 
 
-  $uol-btn-colors :
-    primary $bg-color-primary-btn $bg-color-primary-btn-hover,
-    secondary $bg-color-secondary-btn $bg-color-secondary-btn-hover,
-    accent-primary $bg-color-accent-primary-btn $bg-color-accent-primary-btn-hover,
-    accent-secondary $bg-color-accent-secondary-btn $bg-color-accent-secondary-btn-hover; 
+  
+
 
 
   $uol-bg-main-colours: (
@@ -32,3 +29,35 @@
 
 
   $backgroundColourSettings: ( 'primary', 'secondary', 'accent-primary', 'accent-secondary');
+
+
+// Below are newer maps to hopefully replace the ones above (slow day type of job!)
+
+  $uol-btn-colors :
+    primary $bg-color-primary-btn $bg-color-primary-btn-hover,
+    secondary $bg-color-secondary-btn $bg-color-secondary-btn-hover,
+    accent-primary $bg-color-accent-primary-btn $bg-color-accent-primary-btn-hover,
+    accent-secondary $bg-color-accent-secondary-btn $bg-color-accent-secondary-btn-hover; 
+
+
+  $uol-colors :
+    primary $bg-color-primary $bg-color-primary-hover $uol-font-color-primary,
+    secondary $bg-color-secondary $bg-color-secondary-hover $uol-font-color-secondary,
+    accent-primary $bg-color-accent-primary $bg-color-accent-primary-hover $uol-font-color-accent-primary,
+    accent-secondary $bg-color-accent-secondary  $bg-color-accent-secondary-hover $uol-font-color-accent-secondary;
+
+  $uol-sm-colors:
+    facebook $uol-bg-facebook,
+    twitter $uol-bg-twitter,
+    linkedin $uol-bg-linkedin,
+    youtube $uol-bg-youtube,
+    googlePlus $uol-bg-googlePlus,
+    instagram $uol-bg-instagram,
+    flickr $uol-bg-flickr,
+    vine $uol-bg-vine,
+    weibo $uol-bg-weibo,
+    pinterest $uol-bg-pinterest,
+    blogger $uol-bg-blogger,
+    wordpress $uol-bg-wordpress,
+    vimeo $uol-bg-vimeo,
+    globe $uol-bg-globe;

@@ -1,39 +1,53 @@
-#uol-accomm-hero-banner-full-width img { 
-  height: auto;  
-}
+.uol-accomm-hero-banner {
+  position: relative;
 
-#uol-accomm-hero-banner-title {
-  opacity: 1;
-  position: static;                
-}
+  img { 
+    height: auto;  
+    width: 100%;
+  }
 
-#uol-accomm-hero-banner-title h1 {
-  color: $uol-white-default;
-  margin: 10px 0;
-  text-align: center;
-}
+  &__title {
+    opacity: 1;
+    position: static;
+    width: 100%;
 
-#uol-accomm-hero-banner-full-width img,
-#uol-accomm-hero-banner-title,
-#uol-accomm-hero-banner-title h1 {
-  width: 100%;
+    &:before,
+    &:after {
+      content: " ";
+      display: table;
+    }
+
+    h1 {
+      color: $uol-white-default;
+      margin: 1rem 0;
+      text-align: center;
+      width: 100%;
+    }
+
+    @each $key, $val in  $uol-bg-main-colours {
+      &--#{$key} {
+        background-color: $val;
+      }    
+    }
+
+  }
+
+  
+
+
 }
 
 @media (min-width: $uol-breakpoint-l) {
-  #uol-accomm-hero-banner-title {
-    position: absolute;
-    opacity: 0.9;
-    /*top: 0;*/
-    bottom: 0;
-  }
+  .uol-accomm-hero-banner {
+    &__title {
+      position: absolute;
+      opacity: 0.9;
+      bottom: 0;
 
-  #uol-accomm-hero-banner-title h1 {
-    margin: 20px 0;
-  }
+      h1 {
+        margin: 2rem 0;
+      }
+    }
+  } 
 }
 
-@each $key, $val in  $uol-bg-main-colours {
-  .uol-accomm-hero-banner-title--#{$key} {
-    background-color: $val;
-  }    
-}

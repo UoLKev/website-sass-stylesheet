@@ -1,9 +1,9 @@
 .uol-blockquote {
   padding: 3rem 2rem;
 
-  @each $key, $val in  $uol-bg-main-colours {
+  @each $key, $bgCol, $bgHoverCol, $fontCol  in  $uol-colors {
     &--#{$key}{
-      background-color: $val;
+      background-color: $bgCol;
     }
   }
 

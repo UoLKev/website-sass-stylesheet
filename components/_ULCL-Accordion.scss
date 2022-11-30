@@ -1,32 +1,53 @@
 .uol-accordion {
-  max-width: $uol-container-constraint;
-  //margin: 0 1.2rem;
-  box-sizing: border-box;
-  margin-top: 3rem;
-  margin-bottom: 5rem;
-  border: 0;
-  //border-top: 1px solid var(--uol-white-400);
   background: $bg-color-white-default;
-}
+  border: 0;
+  box-sizing: border-box;
+  max-width: $uol-container-constraint; 
+  margin: {
+    top: 3rem;
+    bottom: 5rem;
+  } 
 
-.uol-accordion_title {
-  border-bottom: 1px solid $uol-white-default;
-  font-size: 2rem;
-  line-height: 2.4rem;
-  outline: none;
-  transition: color 0.2s ease;
-    padding: 1.2rem 1.2rem 1.2rem 5.12rem;
-    display: block;
+  &__title {
+    border-bottom: .1rem solid $uol-white-default;
     color: $uol-dark-font-default;
-    position: relative;
     cursor: pointer;
-    font-family: $uol-font-headings;
-    font-weight: normal;
+    display: block;
+    font: {
+      family: $uol-font-headings;
+      size: 2rem;
+      weight: normal;
+    }
+    line-height: 2.4rem;
+    outline: none;   
+    padding: 1.2rem 1.2rem 1.2rem 5.12rem;
+    position: relative;
+    transition: color 0.2s ease;   
+    
+    &--light {
+      color: $uol-white-font-default;
+    }
+    
+  }
+
+  &__content {
+    border-top: none;
+    padding: 2.4rem 1.2rem;
+
+    p {
+      :last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &--light {
+      background-color: $bg-color-white-default;
+    }
+
+  }
+
 }
 
-.uol-accordion-content-light {
-  background-color: $bg-color-white-default;
-}
 
 
 /*Accordion colour styles - added 12 Apr 22 - KT */
@@ -34,9 +55,13 @@
 
 // Set the background colour class for the module
 @each $key, $val in  $uol-bg-main-colours {
-  .uol-accordion--#{$key}  .uol-accordion_title {
-    background-color: $val;
-  } 
+  .uol-accordion--#{$key} {
+
+    .uol-accordion__title {
+      background-color: $val;
+    } 
+
+  }
 
   .uol-accordion--#{$key}  .uol-svg-cnt--small,
   .uol-accordion[open] .uol-accordion--#{$key}  .uol-svg-cnt--small {
@@ -44,16 +69,17 @@
     color: $val;
   }
 
-  .uol-accordion[open] .uol-accordion--#{$key} .uol-svg-cnt--small,
-  .uol-accordion[open] .uol-accordion--#{$key} .uol-svg-cnt--small svg {   
+  .uol-accordion[open] .uol-accordion--#{$key} {
     color: $val;
+    .uol-svg-cnt--small {
+      svg {
+        color: $val;
+      }
+    }
   }
-
 }
 
-.uol-accordion-title-light {
-  color: $uol-white-font-default;
-}
+
 
 .uol-accordion + .uol-accordion {
   margin-top: -5rem;
@@ -68,7 +94,7 @@
 }
 
 
-.uol-accordion .uol-accordion_title::-webkit-details-marker {
+.uol-accordion .uol-accordion__title::-webkit-details-marker {
   display: none;
 }
 
@@ -89,15 +115,15 @@
   
   
   
-  .uol-accordion_title:focus-visible {
+  .uol-accordion__title:focus-visible {
     color: var(--uol-focus-black);
     background-color: var(--uol-focus-yellow);
   }
-  .uol-accordion_title:focus-visible .uol-svg-cnt--small {
+  .uol-accordion__title:focus-visible .uol-svg-cnt--small {
     border-color: var(--uol-focus-black);
     background-color: var(--uol-focus-black);
   }
-  .uol-accordion_title:focus-visible .uol-svg-cnt--small svg {
+  .uol-accordion__title:focus-visible .uol-svg-cnt--small svg {
     color: var(--uol-focus-yellow);
   }
   
@@ -107,7 +133,7 @@
   /* Add open states for variants - 21 Apr 22 - MF */
 
   @each $key, $val in  $uol-bg-hover-colours {
-    .uol-accordion[open].uol-accordion--#{$key} > .uol-accordion_title {
+    .uol-accordion[open].uol-accordion--#{$key} > .uol-accordion__title {
       background-color: #{$val};
       color: $uol-white-font-default;
     }
@@ -142,7 +168,7 @@
     color: var(--uol-black-100);
   }
   */
-  .uol-accordion[open] > .uol-accordion_title {
+  .uol-accordion[open] > .uol-accordion__title {
     //color: var(--uol-secondary);
     background-color: var(--uol-white-default);
     transition: color 0.2s ease;
@@ -153,7 +179,7 @@
     border-color: var(--uol-secondary);
   }
 */  
-  .uol-accordion[open] > .uol-accordion_title .uol-svg-cnt--small svg {
+  .uol-accordion[open] > .uol-accordion__title .uol-svg-cnt--small svg {
     transform: rotate(180deg);
  
   }
@@ -167,15 +193,7 @@
     transition: 0.3s transform ease;
   }
   
-  .uol-accordion_content {
-    border-top: none;
-    padding: 2.4rem 1.2rem;
-    border-top: none;
-  }
   
-  .uol-accordion_content p:last-child {
-    margin-bottom: 0;
-  }
   
   [class^="uol-svg-expand"] {
     display: block;

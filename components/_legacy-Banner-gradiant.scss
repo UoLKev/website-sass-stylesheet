@@ -1,21 +1,31 @@
 .banner-gradient {
   background: #072249;
-}
-.banner-gradient:before, 
-.banner-gradient:after {
-  content: " ";
-  display: table;
-}
-.banner-gradient:after {
-  clear: both;
-}
-.banner-gradient .blue-gradient {
-  position: relative;
+
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+
+  .blue-gradient {
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+    
+  }
+
+
 }
 
-.banner-gradient .blue-gradient img {
-  width: 100%;
-}
+
+
+.banner-gradient .blue-gradient img 
 .banner-gradient .quote-container {
   padding: 1rem;
   text-align: left;
