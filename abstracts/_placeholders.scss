@@ -79,23 +79,28 @@
 
   // Video Button
   %uol-video-button {
-    border: 0;
-    -moz-appearance: none;
     background: 0 0;
-    fill: #fff;
-    position: absolute;
-    z-index: 4;
+    background-color: $uol-accent-secondary-10-opacity;
+    border: 0;
+    cursor: pointer;
+    display: block; 
+    height: 100%;
+    fill: $bg-color-white-default;
     left: 50%;
+    opacity: 1;
+    padding: 0;
+    position: absolute;  
+    transition: opacity .3s ease;
     top: 50%;
     transform: translate(-50%,-50%);
     width: 100%;
-    height: 100%;
-    display: block;
-    opacity: 1;
-    padding: 0;
-    cursor: pointer;
-    background-color: rgba(0,33,71,.4);
-    transition: opacity .3s ease;
+    z-index: 4;
+    -moz-appearance: none;
+
+    &:hover {
+      background-color: $uol-accent-secondary-30-opacity;
+    }
+
   }
 
 

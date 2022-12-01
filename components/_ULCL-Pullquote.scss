@@ -32,11 +32,10 @@
 
     }// End h2
 
-    @each $key, $val in  $uol-bg-main-colours {
-
+    @each $key, $bgCol, $bgHoverCol, $fontCol  in  $uol-colors {
       &--#{$key} {
         &:after {
-          background-color: $val;
+          background-color: $bgCol;
         }
       }    
     }// End @each
@@ -45,17 +44,18 @@
     &:after {
       @extend %clip-path;  
       content: "";
+      display: block;
+      height: 100%;
+      left: 0;
+      min-height: max-content;
       position: absolute;
       top: 0;
-      z-index: -1;
-      height: 100%;
-      min-height: max-content;
       width: 100%;
-      display: block;
-      left: 0;
+      z-index: -1;     
     }
 
   }// End &__copy
+
 
   &__img {
     max-width: 100%;
@@ -64,18 +64,36 @@
 
     picture,
     img {
-      display: block;
-      width: 100%;
+      display: block;     
       max-width: 100%;
+      width: 100%;
     }
 
     img {
-      object-fit: cover;
-      object-position: top center;
+      object: {
+        fit: cover;
+        position: top center;
+      }     
     }
 
-    .video_btn {
-      @extend %uol-video-button
+    .uol-pullquote-video_btn {
+      @extend %uol-video-button;
+
+      svg {
+        fill: none;
+        height: 6rem;
+        width: 6rem;
+
+        path {
+          fill: $bg-color-white-default;
+        }
+
+        circle {
+          stroke:$bg-color-white-default;
+          stroke-width:.4rem;
+        }
+      }
+
     }
     
   
@@ -107,7 +125,6 @@
     max-width: 100%;
     position: relative;
 
-
     &__copy {
       margin: 0;
       transform: translateX(0);
@@ -116,7 +133,6 @@
       position: absolute;
     }
   
-
     &__img {
       max-width: 50%;
 
@@ -126,7 +142,6 @@
         max-height: 42.6rem;
       }
     }
-
 
     &--reversed {
       flex-direction: row-reverse;
