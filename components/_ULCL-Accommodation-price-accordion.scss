@@ -18,7 +18,7 @@
  
 
 .uol-accordion-accommodation-title-light { 
-  @extend %uol-white-font-default;
+  color: $uol-white-default;
 }
 
 .uol-accordion-accommodation-content-light {
@@ -29,27 +29,30 @@
 .uol-accommodation-price-table > thead > tr > th,
 .uol-accommodation-price-table > tbody > tr > td { 
   border: 2px solid;
+  color: $uol-white-default;
     text-align: center;
-    @extend %uol-white-font-default;
+    
   }
 
 
   
 .uol-accommodation-price-table {
-  @extend %bg-color-accent-secondary;
+  background-color: $bg-color-accent-secondary;
 
   th {
-    @extend %bg-color-primary;
+    background-color: $bg-color-primary;
   }
 
   td:first-child {
-    @extend %bg-color-primary;
+    background-color: $bg-color-primary;
   }
 
 }
 
 
-.uol-accommodation-price-table-header { display: none; }
+.uol-accommodation-price-table-header { 
+  display: none; 
+}
 
 .uol-accordion-full-width-frame + .uol-accordion-full-width-frame .uol-accordion{
   margin-top: -5rem;
@@ -57,6 +60,10 @@
 
 .uol-acommodation-prices-section--fullWidth-colour,  
 .uol-acommodation-prices-section--fullWidth-colour details,
-.uol-acommodation-prices-section--fullWidth-colour .uol-accordion[open] > .uol-accordion_title { background-color: #f1f1f1; }
+.uol-acommodation-prices-section--fullWidth-colour .uol-accordion[open] > .uol-accordion_title { 
+  background-color: #f1f1f1; 
+}
 
-.uol-acommodation-prices-section--fullWidth-colour:not(div.uol-acommodation-prices-section--fullWidth-colour:last-child) .uol-accordion_title { border-bottom: none;} 
+.uol-acommodation-prices-section--fullWidth-colour:not(div.uol-acommodation-prices-section--fullWidth-colour:last-child) .uol-accordion_title { 
+  border-bottom: none;
+} 

@@ -8,6 +8,68 @@
     bottom: 5rem;
   } 
 
+  //Accordion colour styles - added 12 Apr 22 - KT 
+  // Amended colours so that they only style the title bit because it looks jaunty with how WAAPI works with height - 21 Apr 22 - MF */
+
+  //@each $key, $val in  $uol-bg-main-colours {
+  @each $key, $bgCol, $bgHoverCol, $fontCol  in  $uol-colors {   
+    &--#{$key} {
+      //color: $fontCol;
+
+      .uol-accordion__title {
+        background-color: $bgCol;
+
+        .uol-svg-cnt {
+          &--small {
+            border-color: $bgCol;
+            color: $fontCol;
+            svg {
+              color: $fontCol;
+            }
+          }
+        }
+      } 
+    }
+
+    &--#{$key}[open] {
+      .uol-accordion__title {
+        background-color: $bgHoverCol !important;
+      }
+    }
+  }// end @each
+
+
+  &[open] {
+    > .uol-accordion__title {
+      background-color: $bg-color-white-default;
+      transition: color 0.2s ease;
+      .uol-svg-cnt {
+        &--small {
+          svg {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+
+
+  &-full-width-frame {
+    &--fullWidth-colour,
+    &--fullWidth-colour details,
+    &--fullWidth-colour .uol-accordion[open] > .uol-accordion_title {
+      background-color: $uol-light-grey;
+    }
+    + .uol-accordion-full-width-frame {
+      .uol-accordion {
+        margin-top: -4.8rem;
+      }
+    }
+    .uol-accordion__title {    
+        border-bottom: .1rem solid $bg-color-accent-secondary;    
+    }
+  }
+
   &__title {
     border-bottom: .1rem solid $uol-white-default;
     color: $uol-dark-font-default;
@@ -28,7 +90,42 @@
       color: $uol-white-font-default;
     }
     
-  }
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &:focus-visible {
+      color: var(--uol-focus-black);
+      background-color: var(--uol-focus-yellow);
+    }
+
+    .uol-svg-cnt {
+      &--small {
+        position: absolute;
+        top: 50%;
+        left: 1.2rem;
+        transform: translateY(-50%);
+        //color: var(--uol-primary);
+        background-color: $bg-color-white-default;
+        border-color: $bg-color-primary;
+        width: 1.2em;
+        min-width: 1.2em;
+        height: 1.2em;
+        min-height: 1.2em;
+        svg {
+          transform-origin: center center;
+          transition: 0.3s transform ease;
+        }
+      }
+    }
+    
+    .uol-svg-expand {
+      &--small {
+        stroke-width: 2.4;
+      }
+    }
+
+  }// end __title
 
   &__content {
     border-top: none;
@@ -44,47 +141,44 @@
       background-color: $bg-color-white-default;
     }
 
+  }// end __content
+
+
+  + .uol-accordion {
+    margin-top: -5rem;
+    border-top: 0;
   }
 
 }
 
+[class^="uol-svg-expand"] {
+  display: block;
+  stroke-width: 1.2;
+  width: 2rem;
+  height: 2.1rem;
+  padding: .4rem;
+  pointer-events: none;
+  stroke-linecap: square;
+  stroke: currentColor;
+  transition: transform 0.5s ease-out;
+}
 
-
-/*Accordion colour styles - added 12 Apr 22 - KT */
-/* Amended colours so that they only style the title bit because it looks jaunty with how WAAPI works with height - 21 Apr 22 - MF */
-
-// Set the background colour class for the module
-@each $key, $val in  $uol-bg-main-colours {
-  .uol-accordion--#{$key} {
-
-    .uol-accordion__title {
-      background-color: $val;
-    } 
-
-  }
-
-  .uol-accordion--#{$key}  .uol-svg-cnt--small,
-  .uol-accordion[open] .uol-accordion--#{$key}  .uol-svg-cnt--small {
-    border-color: $val;
-    color: $val;
-  }
-
-  .uol-accordion[open] .uol-accordion--#{$key} {
-    color: $val;
-    .uol-svg-cnt--small {
-      svg {
-        color: $val;
-      }
-    }
-  }
+[class^="uol-svg-cnt"] {
+  display: block;
+  width: 2.5rem;
+  min-width: 2.5rem;
+  height: 2.5rem;
+  min-height: 2.5rem;
+  pointer-events: none;
+  margin-left: auto;
+  border-radius: 100%;
+  border: 0.2rem solid currentColor;
+  transition: box-shadow 0.3s ease-out;
 }
 
 
 
-.uol-accordion + .uol-accordion {
-  margin-top: -5rem;
-  border-top: 0;
-}
+
 
 
 @media (min-width: $uol-breakpoint-l) {
@@ -94,9 +188,6 @@
 }
 
 
-.uol-accordion .uol-accordion__title::-webkit-details-marker {
-  display: none;
-}
 
 
 
@@ -104,161 +195,4 @@
 
 
 
-  /* ULCL Accordion */
-
   
-
-  
-  
-  
-
-  
-  
-  
-  .uol-accordion__title:focus-visible {
-    color: var(--uol-focus-black);
-    background-color: var(--uol-focus-yellow);
-  }
-  .uol-accordion__title:focus-visible .uol-svg-cnt--small {
-    border-color: var(--uol-focus-black);
-    background-color: var(--uol-focus-black);
-  }
-  .uol-accordion__title:focus-visible .uol-svg-cnt--small svg {
-    color: var(--uol-focus-yellow);
-  }
-  
-
-
-
-  /* Add open states for variants - 21 Apr 22 - MF */
-
-  @each $key, $val in  $uol-bg-hover-colours {
-    .uol-accordion[open].uol-accordion--#{$key} > .uol-accordion__title {
-      background-color: #{$val};
-      color: $uol-white-font-default;
-    }
-  }
-  
-  
-  .uol-accordion[open] .uol-accordion_title:focus-visible {
-    color: var(--uol-focus-black);
-    background-color: var(--uol-focus-yellow);
-  }
-  .uol-accordion[open] .uol-accordion_title:focus-visible .uol-svg-cnt--small {
-    background-color: var(--uol-focus-black);
-    border-color: var(--uol-focus-black);
-  }
-  .uol-accordion[open]
-    .uol-accordion_title:focus-visible
-    .uol-svg-cnt--small
-    svg {
-    color: var(--uol-focus-yellow);
-  }
-  /*
-  .uol-accordion[open][class*="uol-accordion--"]
-    > .uol-accordion_title
-    .uol-svg-cnt--small {
-    border-color: var(--uol-black-100);
-  }
-  
-  .uol-accordion[open][class*="uol-accordion--"]
-    > .uol-accordion_title
-    .uol-svg-cnt--small
-    svg {
-    color: var(--uol-black-100);
-  }
-  */
-  .uol-accordion[open] > .uol-accordion__title {
-    //color: var(--uol-secondary);
-    background-color: var(--uol-white-default);
-    transition: color 0.2s ease;
-  }
-
-  /*
-  .uol-accordion[open] > .uol-accordion_title > .uol-svg-cnt--small {
-    border-color: var(--uol-secondary);
-  }
-*/  
-  .uol-accordion[open] > .uol-accordion__title .uol-svg-cnt--small svg {
-    transform: rotate(180deg);
- 
-  }
-
-
-
-
-  
-  .uol-accordion_title .uol-svg-cnt--small svg {
-    transform-origin: center center;
-    transition: 0.3s transform ease;
-  }
-  
-  
-  
-  [class^="uol-svg-expand"] {
-    display: block;
-    stroke-width: 1.2;
-    width: 2rem;
-    height: 2.1rem;
-    padding: .4rem;
-    pointer-events: none;
-    stroke-linecap: square;
-    stroke: currentColor;
-    transition: transform 0.5s ease-out;
-  }
-  
-  [class^="uol-svg-cnt"] {
-    display: block;
-    width: 2.5rem;
-    min-width: 2.5rem;
-    height: 2.5rem;
-    min-height: 2.5rem;
-    pointer-events: none;
-    margin-left: auto;
-    border-radius: 100%;
-    border: 0.2rem solid currentColor;
-    transition: box-shadow 0.3s ease-out;
-  }
-  
-  .uol-svg-cnt--small {
-    position: absolute;
-    top: 50%;
-    left: 1.2rem;
-    transform: translateY(-50%);
-    //color: var(--uol-primary);
-    background-color: var(--uol-white-100);
-    border-color: var(--uol-primary);
-    width: 1.2em;
-    min-width: 1.2em;
-    height: 1.2em;
-    min-height: 1.2em;
-  }
-  
-  .uol-svg-expand-small {
-    stroke-width: 2.4;
-  }
-  
-
-  
-  .uol-accordion-title-light {
-    color: var(--uol-white-default);
-  }
-  .uol-accordion-content-light {
-    background-color: var(--uol-white-default);
-  }
-  
-  .uol-accordion-full-width-frame
-    + .uol-accordion-full-width-frame
-    .uol-accordion {
-    margin-top: -4.8rem;
-  }
-  
-  .uol-accordion-full-width-frame--fullWidth-colour,
-  .uol-accordion-full-width-frame--fullWidth-colour details,
-  .uol-accordion-full-width-frame--fullWidth-colour
-    .uol-accordion[open]
-    > .uol-accordion_title {
-    background-color: #f1f1f1;
-  }
-  
-  /*End Accordion colour styles - added 12 Apr 22 - KT */

@@ -1,9 +1,5 @@
   //Placeholders 
 
-  @import "placeholders-font";
-  @import "placeholders-font-colour";
-  @import "placeholders-background-colour";
-  @import "placeholders-border-colour";
   @import "placeholders-widths";
 
   %uol-padding-y-default { padding: $uol-componant-padding-default 0; }
@@ -22,11 +18,16 @@
     padding: 0 1.5rem;
   }
 
-  %uol-large-heading-common {
-    @extend %uol-font-family-headings;
-    color: $uol-black-default;   
+  %uol-large-heading-common {    
+    color: $uol-black-default;
+    font-family: $uol-font-headings;  
     font-weight: 400;
     margin-bottom: 1.2rem;
+  }
+
+  %centre {
+    margin: 0 auto;
+    text-align: center;
   }
 
   %hoverState {

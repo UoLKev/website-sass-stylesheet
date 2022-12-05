@@ -1,12 +1,9 @@
-// ============== 
-// START ULCL - ACCOMMODATION INTRO/USP 
-
 .uol-accomm-intro-title {
   margin-bottom: 2rem;
 }
 
 .uol-accomm-usp {
-  @extend %uol-white-font-default;
+  color: $uol-white-default;
   height: 100%;
   margin-top: 1rem;
   padding: 1.5rem;
@@ -16,7 +13,7 @@
     height: 4em;
 
     p {
-      @extend %uol-white-font-default;
+      color: $uol-white-default;
     }
 
     p,
@@ -63,5 +60,3 @@
   }
   
 }
-// END ULCL - ACCOMMODATION INTRO/USP 
-// ============== 

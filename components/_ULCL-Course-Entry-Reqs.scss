@@ -1,86 +1,38 @@
 .uol-course-entry-reqs {
 
-  @each $key, $bgCol, $bgHoverCol, $fontCol  in  $uol-colors {
-
-    &--#{$key} {
-
-      > ul,
-      > div:not(:last-child) {
-        background-color: $bgCol;
-      }
-
-      > div:last-child {
-        background-color: if($key != 'accent-secondary', $bg-color-accent-secondary, $bg-color-secondary);
-      }
-
-      > ul[class*="uol-course-entry-reqs__tabs"] {  
-        > li {
-          > a {
-            text-decoration: none;
-            
-            &:hover {
-              color: $fontCol;
-              text-decoration: underline;
-            }
-          }
-
-          &.active {
-            a {
-              background-color: if($key != 'accent-primary', $bg-color-accent-primary, $bg-color-secondary);
-    
-              &:focus {              
-                background-color: if($key != 'accent-primary', $bg-color-accent-primary, $bg-color-secondary);
-              }
-
-              &:hover {
-                background-color: $bg-color-white-default;
-              }
-            }
-          }                   
-        }      
-      }
-    }
-  }// End @each
-
   p,
   h3
   { 
     color: $uol-white-font-default;
   }
   
-
-  &__tabs {
-    
+  &__tabs {   
     > li {
-
       &.active {
         a {
-          color: $uol-white-font-default;
-
+          color: $uol-white-font-default;        
           &:focus,
           &:hover {
             color: $uol-white-font-default;
           }
         }
       }         
-
+          
       > a {
         border-radius: 0;
         color: $uol-white-font-default;
-
+        text-decoration: none;
         &:hover {
           background-color: $bg-color-white-default;
+          text-decoration: underline;
         }
-
       }
     }
-  }
-
-
+  } // end &__tabs
 
   &__tab-panes {
     > div {
-      padding: 1.5rem;
+        padding: 1.5rem;
       h3 {
         margin-top: 0;
       }
@@ -89,7 +41,7 @@
         word-wrap: break-word;
       }
     }
-  }
+  }// end &__tab-panes
  
 
   &__common {
@@ -100,6 +52,49 @@
       color: $uol-white-font-default;
       word-wrap: break-word;
     }
-  }
+  }// end &__common
 
 }
+
+
+
+// START COLOURS
+
+@each $key, $bgCol, $bgHoverCol, $fontCol  in  $uol-colors {
+
+  .uol-course-entry-reqs--#{$key} {
+    @extend .uol-course-entry-reqs;
+
+    > ul,
+    > div:not(:last-child) {
+      background-color: $bgCol;
+    }
+
+    > div:last-child {
+      background-color: if($key != 'accent-secondary', $bg-color-accent-secondary, $bg-color-secondary);
+    }
+
+    > ul[class*="uol-course-entry-reqs__tabs"] {  
+      > li {
+        > a {       
+          &:hover {
+            color: $fontCol;
+          }
+        }// end > a
+        &.active {
+          a {
+            background-color: if($key != 'accent-primary', $bg-color-accent-primary, $bg-color-secondary);
+            &:focus {              
+              background-color: if($key != 'accent-primary', $bg-color-accent-primary, $bg-color-secondary);
+            }
+            &:hover {
+              background-color: $bg-color-white-default;
+            }
+          }
+        }// end &.active                         
+      }      
+    }
+  }
+}// End @each
+
+// END COLOURS

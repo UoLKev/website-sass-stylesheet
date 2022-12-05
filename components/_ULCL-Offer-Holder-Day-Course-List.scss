@@ -1,0 +1,37 @@
+.uol-ohd-course-list {
+  padding: 2rem 0;
+
+  &__form {
+    @extend %centre;
+    label {
+      color: $uol-white-font-default;
+      display: block;
+    }
+    input {
+      font-size: 2rem;
+    }
+  }
+
+  &__num-returned-courses {
+    @extend %centre;
+    p,
+    a  {
+      color: $uol-white-font-default;
+    }
+  }
+}
+
+
+
+// START COLOURS 
+
+@each $key, $bgCol, $bgHoverCol, $fontCol  in  $uol-colors {
+  
+  .uol-ohd-course-list--#{$key} {
+    @extend .uol-ohd-course-list;
+    background-color: $bgCol;
+  }   
+  
+}
+
+// END COLOURS

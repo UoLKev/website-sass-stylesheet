@@ -5,7 +5,6 @@
   margin: 0 auto;
   width: 100%; 
 
-
   &__copy {
     max-width: 100%;
     padding: 2rem 2rem 5rem;
@@ -19,27 +18,22 @@
 
     h2 {
       margin: 0 0 1rem;
-
       &:not(&:last-of-type) {
         font-style: italic;
         margin-bottom: 2rem;
-      }
-  
+      } 
       &:last-of-type {
         margin-bottom: 0;
-        padding-bottom: 2rem;
+        padding-bottom: 1rem;
       }
-
     }// End h2
 
-    @each $key, $bgCol, $bgHoverCol, $fontCol  in  $uol-colors {
-      &--#{$key} {
-        &:after {
-          background-color: $bgCol;
-        }
-      }    
-    }// End @each
-
+    p {
+      &:first-of-type{
+        margin-top: -1rem;
+        margin-bottom: 2rem;
+      }
+    }
 
     &:after {
       @extend %clip-path;  
@@ -78,26 +72,21 @@
 
     .uol-pullquote-video_btn {
       @extend %uol-video-button;
-
       svg {
         fill: none;
         height: 6rem;
         width: 6rem;
-
         path {
           fill: $bg-color-white-default;
         }
-
         circle {
-          stroke:$bg-color-white-default;
-          stroke-width:.4rem;
+          stroke: bg-color-white-default;
+          stroke-width: .4rem;
         }
       }
-
     }
-    
-  
-  }
+     
+  }// end __img
 
   &--reversed {
     .uol-pullquote__copy {
@@ -111,10 +100,7 @@
 
 
 
-
-
-  
-
+// START BREAKPOINTS
 
 @media (min-width: $uol-breakpoint-l) {
 
@@ -128,14 +114,14 @@
     &__copy {
       margin: 0;
       transform: translateX(0);
-      max-width: calc(50% + 45px);
+      //max-width: calc(50% + 45px);
+      width: calc(50% + 45px);
       left: 0;
       position: absolute;
     }
   
     &__img {
       max-width: 50%;
-
       picture,
       img {
         min-height: 42.6rem;
@@ -162,4 +148,20 @@
   }
 
 }
+
+// END BREAKPOINTS
+
+
+// START COLOURS
+
+@each $key, $bgCol, $bgHoverCol, $fontCol  in  $uol-colors {
+  .uol-pullquote__copy--#{$key} {
+    @extend .uol-pullquote__copy;
+    &:after {
+      background-color: $bgCol;
+    }
+  }    
+}// End @each
+
+// END COLOURS
  

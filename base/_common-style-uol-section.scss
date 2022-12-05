@@ -31,7 +31,7 @@
     .uol-label,
     .uol-t1,
     .uol-t2 {
-      @extend %uol-white-font-default;
+      color: $uol-white-default;
     }
 
   }

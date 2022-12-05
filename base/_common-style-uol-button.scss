@@ -189,28 +189,29 @@ $uol-btn-transition: background-color 0.3s ease;
 
 $btnTypes: ( 'primary', 'secondary', 'accent-primary', 'accent-secondary');
 
-@each $btnType in $btnTypes {
+@each $key, $btn, $btnHover in  $uol-btn-colors {
   // Uol Buttons
 
   // Start Bootstrap Button Overrides
-  .btn-#{$btnType} {
-    @extend %bg-color-#{$btnType}-btn;
-  }
-
-  .btn-#{$btnType}:focus,
-  .btn-#{$btnType}.focus,
-  .btn-#{$btnType}:hover,
-  .btn-#{$btnType}.hover,
-  .btn-#{$btnType}:active,
-  .btn-#{$btnType}.active,
-  .btn-#{$btnType}.visited,
-  .btn-#{$btnType}:visited{
-    @extend %bg-color-#{$btnType}-btn-hover;
-  }
+  //.btn-#{$key} {
+   // @extend %bg-color-#{$btnType}-btn;
+ // }
+/*
+ // .btn-#{$key}:focus,
+ // .btn-#{$key}.focus,
+ // .btn-#{$key}:hover,
+//  .btn-#{$key}.hover,
+ // .btn-#{$key}:active,
+ // .btn-#{$key}.active,
+ // .btn-#{$key}.visited,
+ // .btn-#{$key}:visited{
+    //background-color: $btnHover;
+ // }
   // End Bootstrap Button Overrides
 
-}
 
+*/
+}
 .uol-btn--white,
 .uol-button--white {
   background-color: $uol-white-100; 

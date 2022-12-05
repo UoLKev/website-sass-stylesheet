@@ -110,9 +110,9 @@
     z-index: 12;
 
     h2,
-    h3 { 
-      @extend %uol-font-family-primary;
+    h3 {
       color: $uol-white-default;
+      font-family: $uol-font-primary;
     }
     
     p {
@@ -151,7 +151,7 @@
           padding: 1rem 2rem 0;
 
           .h4 {
-            @extend %uol-font-family-primary;
+            font-family: $uol-font-primary;
             font-weight: 700;
           }
 
@@ -214,12 +214,12 @@
       &:checked {
         // When the radio button is checked, add a background colour
         ~ .checkmark {
-          @extend %bg-color-white-default;
+          background-color: $bg-color-white-default;
 
           //Show the indicator (dot/circle) when checked
           &:after {
             display: block;
-            @extend %bg-color-secondary;
+            background-color: $bg-color-secondary;
           }
 
         }

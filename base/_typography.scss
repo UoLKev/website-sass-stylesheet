@@ -40,7 +40,7 @@ h3, .h3, .uol-h3 {
 }
 
 h4, .h4, .uol-h4 {
-  @extend %bg-font-size-default;
+   font-size: $uol-font-size-default;
 }
 
 h5, .h5, .uol-h5 {
@@ -52,7 +52,7 @@ h6, .h6, .uol-h6 {
 
 //Copy
 p {
-  @extend %bg-font-size-default;
+  font-size: $uol-font-size-default;
   line-height: 2.5rem;
 }
 
@@ -77,7 +77,7 @@ a {
 
 
 .uol-t2 {
-  @extend %bg-font-size-default;
+  font-size: $uol-font-size-default;
   line-height: 2.5rem;
 }
 
