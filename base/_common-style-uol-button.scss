@@ -214,14 +214,14 @@ $btnTypes: ( 'primary', 'secondary', 'accent-primary', 'accent-secondary');
 }
 .uol-btn--white,
 .uol-button--white {
-  background-color: $uol-white-100; 
-  color: $uol-black-100;
+  background-color: $uol-white-default;
+  color: $uol-dark-font-default !important;
 }
 
 .uol-btn--white:hover,
 .uol-button--white:hover {
   background-color: $uol-white-300;
-  color: $uol-black-100;
+  color: $uol-dark-font-default !important;
   transition: background-color 0.3s ease;
 }
 

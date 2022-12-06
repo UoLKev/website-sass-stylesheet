@@ -335,7 +335,7 @@ h3, .h3, .uol-h3, h2, .h2, .uol-h2, h1, .h1, .uol-h1 {
   margin-bottom: 1.2rem;
 }
 
-.uol-ohd-course-list__num-returned-courses, .uol-ohd-course-list__form {
+.uol-ohd-course-list__site-maint-msg, .uol-ohd-course-list__num-returned-courses, .uol-ohd-course-list__form {
   margin: 0 auto;
   text-align: center;
 }
@@ -874,14 +874,14 @@ hr.margin {
 */
 .uol-btn--white,
 .uol-button--white {
-  background-color: #fafafa;
-  color: #171717;
+  background-color: #fff;
+  color: #333 !important;
 }
 
 .uol-btn--white:hover,
 .uol-button--white:hover {
   background-color: #e5e5e5;
-  color: #171717;
+  color: #333 !important;
   transition: background-color 0.3s ease;
 }
 
@@ -975,6 +975,56 @@ hr.margin {
     max-width: 100%;
   }
 }
+.uol-loader-container, .uol-loader-container--accent-secondary, .uol-loader-container--accent-primary, .uol-loader-container--secondary, .uol-loader-container--primary {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.uol-loader-container .spinner, .uol-loader-container--accent-secondary .spinner, .uol-loader-container--accent-primary .spinner, .uol-loader-container--secondary .spinner, .uol-loader-container--primary .spinner {
+  -webkit-animation: spin-anim 1.2s linear infinite;
+          animation: spin-anim 1.2s linear infinite;
+  border: 0.8rem solid;
+  border-color: #fff transparent #fff transparent;
+  border-radius: 50%;
+  height: 6.4rem;
+  width: 6.4rem;
+}
+
+@-webkit-keyframes spin-anim {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-anim {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.uol-loader-container--primary .spinner {
+  border-color: #002147 transparent #002147 transparent;
+}
+
+.uol-loader-container--secondary .spinner {
+  border-color: #047e8b transparent #047e8b transparent;
+}
+
+.uol-loader-container--accent-primary .spinner {
+  border-color: #db1a72 transparent #db1a72 transparent;
+}
+
+.uol-loader-container--accent-secondary .spinner {
+  border-color: #747678 transparent #747678 transparent;
+}
+
 /*
 This file is used to contain all component imports.
 Files inside this folder should contain all styles relating to a reusable component.
@@ -2827,30 +2877,6 @@ a[href="javascript:void(0)"] {
   flex-wrap: wrap;
 }
 
-.uol-spotlight__wrapper--primary .uol-spotlight__item-frame > div {
-  background-color: #002147;
-}
-.uol-spotlight__wrapper--primary .uol-spotlight__item-frame > div--link:hover {
-  background-color: #002b5c;
-}
-.uol-spotlight__wrapper--secondary .uol-spotlight__item-frame > div {
-  background-color: #047e8b;
-}
-.uol-spotlight__wrapper--secondary .uol-spotlight__item-frame > div--link:hover {
-  background-color: #036873;
-}
-.uol-spotlight__wrapper--accent-primary .uol-spotlight__item-frame > div {
-  background-color: #db1a72;
-}
-.uol-spotlight__wrapper--accent-primary .uol-spotlight__item-frame > div--link:hover {
-  background-color: #ad1459;
-}
-.uol-spotlight__wrapper--accent-secondary .uol-spotlight__item-frame > div {
-  background-color: #747678;
-}
-.uol-spotlight__wrapper--accent-secondary .uol-spotlight__item-frame > div--link:hover {
-  background-color: #595c5f;
-}
 .uol-spotlight__item-frame {
   display: flex !important;
 }
@@ -2915,24 +2941,41 @@ a[href="javascript:void(0)"] {
   }
 }
 @media (min-width: 992px) {
-  .uol-spotlight {
-    /*
-        &__item-frame {
-          &:nth-child(-n+3) {
-            .uol-spotlight-item {
-              margin-top: $uol-mt-0;
-            }
-          }  
-        }
-    */
-  }
   .uol-spotlight__wrapper--twos > .uol-spotlight__item-frame {
     width: 50% !important;
+  }
+  .uol-spotlight__wrapper:not(.uol-spotlight__wrapper--twos) > .uol-spotlight__item-frame:nth-child(-n+3) > div {
+    margin-top: 0;
   }
   .uol-spotlight__wrapper:not(.uol-spotlight__wrapper--twos) > .uol-spotlight__item-frame:last-child {
     margin: 0;
   }
 }
+.uol-spotlight__wrapper--primary .uol-spotlight__item-frame > div {
+  background-color: #002147;
+}
+.uol-spotlight__wrapper--primary .uol-spotlight__item-frame > div--link:hover {
+  background-color: #002b5c;
+}
+.uol-spotlight__wrapper--secondary .uol-spotlight__item-frame > div {
+  background-color: #047e8b;
+}
+.uol-spotlight__wrapper--secondary .uol-spotlight__item-frame > div--link:hover {
+  background-color: #036873;
+}
+.uol-spotlight__wrapper--accent-primary .uol-spotlight__item-frame > div {
+  background-color: #db1a72;
+}
+.uol-spotlight__wrapper--accent-primary .uol-spotlight__item-frame > div--link:hover {
+  background-color: #ad1459;
+}
+.uol-spotlight__wrapper--accent-secondary .uol-spotlight__item-frame > div {
+  background-color: #747678;
+}
+.uol-spotlight__wrapper--accent-secondary .uol-spotlight__item-frame > div--link:hover {
+  background-color: #595c5f;
+}
+
 .uol-blockquote {
   padding: 3rem 2rem;
 }
@@ -4176,7 +4219,17 @@ a[href="javascript:void(0)"] {
   }
 }
 .uol-ohd-course-list, .uol-ohd-course-list--accent-secondary, .uol-ohd-course-list--accent-primary, .uol-ohd-course-list--secondary, .uol-ohd-course-list--primary {
+  display: flex;
+  min-height: 20rem;
   padding: 2rem 0;
+}
+.uol-ohd-course-list p, .uol-ohd-course-list--accent-secondary p, .uol-ohd-course-list--accent-primary p, .uol-ohd-course-list--secondary p, .uol-ohd-course-list--primary p,
+.uol-ohd-course-list a,
+.uol-ohd-course-list--accent-secondary a,
+.uol-ohd-course-list--accent-primary a,
+.uol-ohd-course-list--secondary a,
+.uol-ohd-course-list--primary a {
+  color: #fff;
 }
 .uol-ohd-course-list__form label {
   color: #fff;
@@ -4185,11 +4238,18 @@ a[href="javascript:void(0)"] {
 .uol-ohd-course-list__form input {
   font-size: 2rem;
 }
-.uol-ohd-course-list__num-returned-courses p,
-.uol-ohd-course-list__num-returned-courses a {
-  color: #fff;
+.uol-ohd-course-list__site-maint-msg {
+  padding: 1rem;
+}
+.uol-ohd-course-list__site-maint-msg a {
+  width: 80%;
 }
 
+@media (min-width: 992px) {
+  .uol-ohd-course-list__site-maint-msg a {
+    width: 50%;
+  }
+}
 .uol-ohd-course-list--primary {
   background-color: #002147;
 }

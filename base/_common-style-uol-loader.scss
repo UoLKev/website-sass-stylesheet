@@ -1,0 +1,38 @@
+.uol-loader-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  .spinner {
+    animation: spin-anim 1.2s linear infinite;
+    border: .8rem solid;
+    border-color: $bg-color-white-default transparent $bg-color-white-default transparent;
+    border-radius: 50%;
+    height: 6.4rem;
+    width: 6.4rem;
+  }
+}
+
+@keyframes spin-anim {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+
+// START COLOURS
+@each $key, $bgCol, $bgHoverCol, $fontCol  in  $uol-colors {
+  .uol-loader-container { 
+    &--#{$key} {
+      @extend .uol-loader-container;
+      .spinner {
+        border-color: $bgCol transparent $bgCol transparent;
+      }     
+    }
+  }
+}
+// END COLOURS

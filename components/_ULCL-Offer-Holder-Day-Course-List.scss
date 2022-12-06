@@ -1,5 +1,12 @@
 .uol-ohd-course-list {
+  display: flex;
+  min-height: 20rem;
   padding: 2rem 0;
+
+  p,
+  a  {
+    color: $uol-white-font-default;
+  }
 
   &__form {
     @extend %centre;
@@ -14,24 +21,40 @@
 
   &__num-returned-courses {
     @extend %centre;
-    p,
-    a  {
-      color: $uol-white-font-default;
+  }
+
+  &__site-maint-msg {
+    @extend %centre;
+    padding: 1rem;
+    a {
+      width: 80%;
     }
   }
 }
 
+// START BREAKPOINTS
+@media (min-width: $uol-breakpoint-m) {
+  .uol-ohd-course-list {
+    &__site-maint-msg {
+      a {
+        width: 50%;
+      }
+    }
+  }
+}
+// END BREAKPOINTS
 
 
 // START COLOURS 
 
 @each $key, $bgCol, $bgHoverCol, $fontCol  in  $uol-colors {
   
-  .uol-ohd-course-list--#{$key} {
-    @extend .uol-ohd-course-list;
-    background-color: $bgCol;
-  }   
-  
+  .uol-ohd-course-list {
+    &--#{$key} {
+      @extend .uol-ohd-course-list;
+      background-color: $bgCol;
+    }   
+  }
 }
 
 // END COLOURS
