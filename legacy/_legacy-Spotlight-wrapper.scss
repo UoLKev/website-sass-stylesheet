@@ -1,0 +1,61 @@
+.spotlight-wrapper {
+  padding: 3rem 0;
+}
+.spotlight-wrapper .h1 {
+  display: block;
+  text-align: center;
+  font-size: 2.4rem;
+}
+
+.spotlight-wrapper .h4 {
+  display: block;
+  text-align: left;
+  font-size: 1.4rem;
+}
+
+.spotlight-wrapper .spotlight-item {
+  text-align: left;
+}
+.spotlight-wrapper .spotlight-item img {
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.spotlight-wrapper .spotlight-item p {
+  @extend %uol-white-font-default;
+}
+.spotlight-wrapper .spotlight-item p strong {
+  font-size: 1.5rem;
+}
+
+
+@media screen and (min-width: $uol-breakpoint-sm) {
+  .spotlight-wrapper .spotlight-item img {
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+
+  .spotlight-wrapper .spotlight-item p {
+    font-size: 1.3rem;
+  }
+}
+
+
+@media screen and (min-width: $uol-breakpoint-m) {
+  .spotlight-wrapper .h1 {
+    font-size: 3.4rem;
+  }
+
+  .spotlight-wrapper .h4 {
+    font-size: 1.6rem;
+    margin: 2rem 14rem;
+  }
+
+  .spotlight-wrapper .spotlight-item p strong {
+    font-size: 1.6rem;
+  }
+
+  .spotlight-wrapper .spotlight-item p {
+    font-size: 1.4rem;
+  }
+}

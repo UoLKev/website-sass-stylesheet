@@ -1,0 +1,55 @@
+.uol-strapline-message { 
+  @extend %uol-white-font-default;
+  margin-top: 0;
+  padding: 0;
+
+  p {
+    @extend %uol-white-font-default;
+    font-size: 1.6rem;
+    margin: 1.5rem 0;
+    text-align: center; 
+
+    a {
+      @extend %uol-white-font-default;
+
+      &hover {
+        color: $uol-white-400; 
+      }
+    }
+  }
+
+
+  @each $key, $val in  $uol-bg-main-colours {
+    &--#{$key} {
+      background-color: $val;
+    }    
+  }
+
+  &-text-light {
+    @extend %uol-white-font-default;
+
+    p {
+      @extend %uol-white-font-default;
+
+      a {
+        @extend %uol-white-font-default;
+      }
+
+    }
+  }
+
+  &-text-dark {
+    @extend %uol-dark-font-default;
+
+    p {
+      @extend %uol-dark-font-default;
+
+      a {
+        @extend %uol-dark-font-default;
+      }
+
+    }
+  }
+
+  
+}

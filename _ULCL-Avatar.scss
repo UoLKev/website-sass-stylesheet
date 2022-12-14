@@ -1,0 +1,71 @@
+// Avatar currently used with Blockquote
+
+.uol-avatar {
+  align-items: center;
+  display: grid;
+  gap: 2rem;
+  grid-template-rows: 10rem auto;
+  margin: 0 auto 2rem;  
+  padding: 1rem 2rem;
+
+  &:not( &.has-image ) {
+    grid-template-rows: auto;
+  }
+
+  &__image {
+    background-color: $bg-color-white-300;
+    border-radius: 5rem;
+    display: block;
+    height: 10rem;
+    max: {
+      width: 10rem;
+      height: 10rem;
+    } 
+    object-fit: cover;
+    object-position: center;  
+    width: 10rem;    
+  }
+
+  &__copy {
+    max-width: 48rem;
+    text-align: left;   
+  }
+
+
+  .uol-body {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    margin: 0 0 1rem;
+    font-family: var(--#{$prefix}body-font-family);
+    color: $uol-black-200;
+
+    &.uol-body-prominent {
+      font-family: $headings-font-family;
+      font-size: 2rem;
+      line-height: 2.5rem;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+  }
+
+}
+
+
+
+
+@media (min-width: $uol-breakpoint-md) {
+  .uol-avatar {
+    //margin-left: 2.5rem;
+    grid-template-columns: 10rem auto;
+
+    &:not( &.has-image ) {
+      grid-template-columns: auto;
+    }
+  } 
+}
+
+
+

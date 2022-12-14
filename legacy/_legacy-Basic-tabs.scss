@@ -1,0 +1,45 @@
+.basic-tabs {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+.basic-tabs .nav-pills {
+  margin-top: -1.5rem;
+  border-bottom: 1px solid #b8b8b8;
+}
+.basic-tabs .nav-pills li.tab-item {
+  margin-left: 0;
+}
+.basic-tabs .nav-pills li.tab-item.active {
+  border-right: 1px solid #b8b8b8;
+  margin-bottom: -1px;
+  border-bottom: 2px solid #fff;
+}
+.basic-tabs .nav-pills li.tab-item.active a {
+  background-color: #fff;
+  font-weight: bold;
+  color: #777;
+}
+.basic-tabs .nav-pills li.tab-item.active a:hover, .basic-tabs .nav-pills li.tab-item.active a:active, .basic-tabs .nav-pills li.tab-item.active a:focus, .basic-tabs .nav-pills li.tab-item.active a:visited {
+  background-color: #fff;
+  color: #777;
+}
+.basic-tabs .nav-pills li.tab-item a {
+  background-color: #fff;
+  color: #b8b8b8;
+  border-radius: 0;
+  padding: 1rem;
+}
+.basic-tabs .nav-pills li.tab-item a:hover, .basic-tabs .nav-pills li.tab-item a:active, .basic-tabs .nav-pills li.tab-item a:focus, .basic-tabs .nav-pills li.tab-item a:visited {
+  background-color: #fff;
+  color: #b8b8b8;
+}
+.basic-tabs .nav-pills li.tab-item:first-child {
+  border-right: 1px solid #b8b8b8;
+}
+.basic-tabs .nav-pills li.tab-item:last-child {
+  border-left: 1px solid #b8b8b8;
+}
+.basic-tabs .tab-content {
+  margin-top: 2.5rem;
+}

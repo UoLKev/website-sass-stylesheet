@@ -1,0 +1,199 @@
+.uol-accordion {
+  background: $white;
+  border: 0;
+  box-sizing: border-box;
+  max-width: $uol-container-constraint; 
+  margin: {
+    top: 3rem;
+    bottom: 5rem;
+  } 
+
+  //Accordion colour styles - added 12 Apr 22 - KT 
+  // Amended colours so that they only style the title bit because it looks jaunty with how WAAPI works with height - 21 Apr 22 - MF */
+
+  //@each $key, $val in  $uol-bg-main-colours {
+  @each $key, $bgCol, $bgHoverCol, $fontCol  in  $uol-colors-multi {   
+    &--#{$key} {
+      //color: $fontCol;
+
+      .uol-accordion__title {
+        background-color: $bgCol;
+
+        .uol-svg-cnt {
+          &--small {
+            border-color: $bgCol;
+            color: $fontCol;
+            svg {
+              color: $fontCol;
+            }
+          }
+        }
+      } 
+    }
+
+    &--#{$key}[open] {
+      .uol-accordion__title {
+        background-color: $bgHoverCol !important;
+      }
+    }
+  }// end @each
+
+
+  &[open] {
+    > .uol-accordion__title {
+      background-color: $bg-color-white-default;
+      transition: color 0.2s ease;
+      .uol-svg-cnt {
+        &--small {
+          svg {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+
+
+  &-full-width-frame {
+    &--fullWidth-colour,
+    &--fullWidth-colour details,
+    &--fullWidth-colour .uol-accordion[open] > .uol-accordion_title {
+      background-color: $uol-light-grey;
+    }
+    + .uol-accordion-full-width-frame {
+      .uol-accordion {
+        //margin-top: -4.8rem;
+        margin-top: 0;
+      }
+    }
+    .uol-accordion__title {    
+        border-bottom: .1rem solid $bg-color-accent-secondary;    
+    }
+  }
+
+  &__title {
+    border-bottom: .1rem solid $uol-white-default;
+    color: $uol-dark-font-default;
+    cursor: pointer;
+    display: block;
+    font: {
+      family: $headings-font-family;
+      size: 2rem;
+      weight: normal;
+    }
+    line-height: 2.4rem;
+    outline: none;   
+    padding: 1.2rem 1.2rem 1.2rem 5.12rem;
+    position: relative;
+    transition: color 0.2s ease;   
+    
+    &--light {
+      color: $uol-white-font-default;
+    }
+    
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &:focus-visible {
+      color: var(--uol-focus-black);
+      background-color: var(--uol-focus-yellow);
+    }
+
+    .uol-svg-cnt {
+      &--small {
+        position: absolute;
+        top: 50%;
+        left: 1.2rem;
+        transform: translateY(-50%);
+        //color: var(--uol-primary);
+        background-color: $bg-color-white-default;
+        border-color: $bg-color-primary;
+        width: 1.2em;
+        min-width: 1.2em;
+        height: 1.2em;
+        min-height: 1.2em;
+        svg {
+          transform-origin: center center;
+          transition: 0.3s transform ease;
+        }
+      }
+    }
+    
+    .uol-svg-expand {
+      &--small {
+        stroke-width: 2.4;
+      }
+    }
+
+  }// end __title
+
+  &__content {
+    border-top: none;
+    padding: 2.4rem 1.2rem;
+
+    p {
+      :last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &--light {
+      background-color: $bg-color-white-default;
+    }
+
+  }// end __content
+
+
+  + .uol-accordion {
+    //margin-top: -5rem;
+    border-top: 0;
+  }
+
+}
+
+[class^="uol-svg-expand"] {
+  display: block;
+  stroke-width: 1.2;
+  width: 2rem;
+  height: 2.1rem;
+  padding: .4rem;
+  pointer-events: none;
+  stroke-linecap: square;
+  stroke: currentColor;
+  transition: transform 0.5s ease-out;
+}
+
+[class^="uol-svg-cnt"] {
+  display: block;
+  width: 2.5rem;
+  min-width: 2.5rem;
+  height: 2.5rem;
+  min-height: 2.5rem;
+  pointer-events: none;
+  margin-left: auto;
+  border-radius: 100%;
+  border: 0.2rem solid currentColor;
+  transition: box-shadow 0.3s ease-out;
+}
+
+
+
+
+
+
+@media (min-width: $uol-breakpoint-xl) {
+  .uol-accordion {
+    margin: 3rem auto 5rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+  

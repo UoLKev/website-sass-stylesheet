@@ -1,16 +1,156 @@
 @charset 'utf-8';
 
+
+
+//@import "mixins/banner";
+//@include bsBanner("");
+
 //Vendor
 @import "vendor/__vendor-dir";
+
+// START CONFIGURATION
+
+
+// Functions
+@import "bootstrap5/functions";
+//@import "functions";
+
+// Default variable overrides
+@import "variables";
+@import "reboot";
+@import "mixins";
+
+// Include remainder of required Bootstrap stylesheets
+@import "bootstrap5/variables";
+
+// additional uol variables
+//Variables
+@import "variables/variables-breakpoints";
+@import "variables/variables-colours";
+@import "variables/variables-background-colour";
+@import "variables/variables-fonts";
+@import "variables/variables-flex";
+@import "variables/variables-margins";
+@import "variables/variables-padding";
+@import "variables/variables-colour-maps";
+
+// Include any default map overrides here
+@import "maps";
+
+// Include remainder of required parts
+@import "bootstrap5/maps";
+@import "bootstrap5/mixins";
+@import "bootstrap5/root";
+
+
+//Optionally include any other parts as needed
+@import "bootstrap5/utilities";
+@import "bootstrap5/reboot";
+@import "bootstrap5/type";
+// @import "bootstrap5/images";
+// @import "bootstrap5/containers";
+// @import "bootstrap5/grid";
+// @import "bootstrap5/tables";
+// @import "bootstrap5/forms";
+//@import "bootstrap5/buttons";
+// @import "bootstrap5/transitions";
+// @import "bootstrap5/dropdown";
+// @import "bootstrap5/button-group";
+// @import "bootstrap5/nav";
+// @import "bootstrap5/navbar";
+// @import "bootstrap5/card";
+// @import "bootstrap5/accordion";
+// @import "bootstrap5/breadcrumb";
+// @import "bootstrap5/pagination";
+// @import "bootstrap5/badge";
+// @import "bootstrap5/alert";
+// @import "bootstrap5/progress";
+// @import "bootstrap5/list-group";
+// @import "bootstrap5/close";
+// @import "bootstrap5/toasts";
+// @import "bootstrap5/modal";
+// @import "bootstrap5/tooltip";
+// @import "bootstrap5/popover";
+// @import "bootstrap5/carousel";
+// @import "bootstrap5/spinners";
+// @import "bootstrap5/offcanvas";
+// @import "bootstrap5/placeholders";
+
+@import "bootstrap5/helpers";
+
+//Optionally include utilities API last to generate classes based on the Sass map in `_util
+//@import "bootstrap5//utilities/api";
+
+//@import "legacy/legacy-Blockquote";
+//@import "legacy/legacy-News";
+//@import "legacy/legacy-Spotlight";
+@import "legacy/legacy-Footer";
+//@import "legacy/legacy-Course-banner";
+//@import "legacy/legacy-Full-width-banner-row";
+//@import "legacy/legacy-Pastel-tables";
+//@import "legacy/legacy-Sustainable-Development-Goals";
+@import "legacy/legacy-Hero-image";
+@import "legacy/legacy-Social-media";
+//@import "legacy/legacy-Research-theme-colours";
+//@import "legacy/legacy-Home-slider";
+//@import "legacy/legacy-Quote-slider";
+//@import "legacy/legacy-Full-width-quote";
+//@import "legacy/legacy-Spotlight-wrapper";
+//@import "legacy/legacy-Graduation-wrapper";
+//@import "legacy/legacy-Col-two-three-col";
+//@import "legacy/legacy-mfp";
+//@import "legacy/legacy-Homepage-video";
+//@import "legacy/legacy-Gen-content";
+//@import "legacy/legacy-Showcase-slider";
+//@import "legacy/legacy-Facilities-slider";
+//@import "legacy/legacy-Course-search";
+@import "legacy/legacy-Top-links-search";
+//@import "legacy/legacy-bg-image";
+//@import "legacy/legacy-bg-video";
+//@import "legacy/legacy-Sidebar";
+//@import "legacy/legacy-Basic-accordion";
+//@import "legacy/legacy-Basic-tabs";
+//@import "legacy/legacy-Banner-gradiant";
+//@import "legacy/legacy-Image-video-link";
+//@import "legacy/legacy-Home-cta";
+//@import "legacy/legacy-Facilities-link";
+@import "legacy/legacy-leftover-code";
+//@import "legacy/legacy-course-description";
+//@import "legacy/legacy-Button-overrides";
+//@import "legacy/legacy-Event-anchors";
+
+
+@import "buttons";
+@import "ULCL-Accommodation";
+@import "ULCL-Accordion";
+@import "ULCL-Avatar";
+@import "ULCL-Basic-video";
+@import "ULCL-Spotlight";
+@import "ULCL-Blockquote";
+@import "ULCL-Breadcrumbs";
+@import "ULCL-Carousel-Card";
+@import "ULCL-Callout";
+@import "ULCL-Carousel";
+@import "ULCL-Course";
+@import "ULCL-Billboard";
+@import "ULCL-Homepage-Hero-Banner";
+@import "ULCL-Offer-Holder-Day-Course-List";
+@import "ULCL-Pullquote";
+@import "ULCL-Accessible-nav";
+//@import "ULCL-Funnelback";
+
+
+
+
 
 //Abstracts
 @import "abstracts/__abstracts-dir";
 
+//Layout
+@import "layouts/__layouts-dir";
+
 //Base Styles
 @import "base/__base-dir";
 
-//Components
-@import "components/__components-dir";
 
-//Layout
-@import "layouts/__layouts-dir";
+

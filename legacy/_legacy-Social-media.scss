@@ -1,0 +1,126 @@
+.social-media {
+  padding: 1rem 0 2rem 0;
+
+  .icon-list {
+    display: table;
+    margin: 0 auto;
+
+    ul {
+      min-width: 100%;
+      list-style: none;
+      text-align: center;
+      display: block;
+      margin-left: -1rem;
+
+      li {
+        float: left;
+        padding: 1rem;
+
+        a {
+          display: block;
+          width: 5rem;
+          margin: 0 auto;
+          text-decoration: none;
+      
+          img {
+            height: 5rem;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+@media screen and (min-width: 450px) {
+  .social-media .icon-list ul {
+    margin-left: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .social-media .icon-list ul {
+    margin-left: -2rem;
+  }
+}
+
+
+
+
+.social-media-wrapper {
+  text-align: left;
+
+  .h2 {
+    text-align: center;
+  }
+
+  ul {
+    display: inline-block;
+    list-style: none;
+    width: 100%;
+    padding: 0;
+
+    li {
+      float: left;
+      width: 100%;
+      margin: 0 0.5rem 0.5rem 0;
+      border-radius: 0.3rem;
+      padding: 0.5rem 0.5rem;
+
+      &:hover {
+        background-color: $uol-cool-grey !important;
+      }
+
+      a {
+        display: inline-block;
+        color: $uol-white-font-default;
+        width: 100%;
+        font-size: 1.7rem;
+        text-decoration: none;
+        vertical-align: middle;
+
+        span.fa {
+          font-size: 3rem;
+          color: $uol-white-font-default;
+          margin: 0 1rem;
+        }
+        
+      }
+
+      // Set the sm background colours
+      @each $key, $bgCol in $uol-sm-colors {
+        &.#{$key} {
+          background-color: $bgCol;
+        }
+      }// End @each
+
+    }// End li
+
+  }
+
+}
+
+
+@media screen and (min-width:  $uol-breakpoint-md) {
+  .social-media-wrapper {
+    ul {
+      li {
+        width: 49%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width:  $uol-breakpoint-lg) {
+  .social-media-wrapper {
+    ul {
+      li {
+        width: 32.5%;
+      }
+    }
+  }
+}

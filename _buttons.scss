@@ -1,0 +1,341 @@
+// START BOOTSTRAP OVERRIDES
+
+//
+// Base styles
+//
+
+
+
+.btn {
+  // scss-docs-start btn-css-vars
+  --#{$prefix}btn-padding-x: #{$btn-padding-x};
+  --#{$prefix}btn-padding-y: #{$btn-padding-y};
+  --#{$prefix}btn-font-family: #{$btn-font-family};
+  @include rfs($btn-font-size, --#{$prefix}btn-font-size);
+  --#{$prefix}btn-font-weight: #{$btn-font-weight};
+  --#{$prefix}btn-line-height: #{$btn-line-height};
+  --#{$prefix}btn-color: #{$body-color};
+  --#{$prefix}btn-bg: transparent;
+  --#{$prefix}btn-border-width: #{$btn-border-width};
+  --#{$prefix}btn-border-color: transparent;
+  --#{$prefix}btn-border-radius: if($enable-button-border-radius, #{$btn-border-radius}, 0);
+  --#{$prefix}btn-hover-border-color: transparent;
+  --#{$prefix}btn-box-shadow: #{$btn-box-shadow};
+  --#{$prefix}btn-disabled-opacity: #{$btn-disabled-opacity};
+  --#{$prefix}btn-focus-box-shadow: 0 0 0 #{$btn-focus-width} rgba(var(--#{$prefix}btn-focus-shadow-rgb), .5);
+  // scss-docs-end btn-css-vars
+
+  display: inline-block;
+  padding: var(--#{$prefix}btn-padding-y) var(--#{$prefix}btn-padding-x);
+  font-family: var(--#{$prefix}btn-font-family);
+  @include font-size(var(--#{$prefix}btn-font-size));
+  font-weight: var(--#{$prefix}btn-font-weight);
+  line-height: var(--#{$prefix}btn-line-height);
+  color: var(--#{$prefix}btn-color);
+  text-align: center;
+  text-decoration: if($link-decoration == none, null, none);
+  white-space: $btn-white-space;
+  vertical-align: middle;
+  cursor: if($enable-button-pointers, pointer, null);
+  user-select: none;
+  border: var(--#{$prefix}btn-border-width) solid var(--#{$prefix}btn-border-color);
+  @include border-radius(var(--#{$prefix}btn-border-radius));
+  @include gradient-bg(var(--#{$prefix}btn-bg));
+  @include box-shadow(var(--#{$prefix}btn-box-shadow));
+  @include transition($btn-transition);
+
+  &:hover {
+    color: var(--#{$prefix}btn-hover-color);
+    text-decoration: if($link-hover-decoration == underline, none, null);
+    background-color: var(--#{$prefix}btn-hover-bg);
+    border-color: var(--#{$prefix}btn-hover-border-color);
+  }
+
+  .btn-check + &:hover {
+    // override for the checkbox/radio buttons
+    color: var(--#{$prefix}btn-color);
+    background-color: var(--#{$prefix}btn-bg);
+    border-color: var(--#{$prefix}btn-border-color);
+  }
+
+  &:focus-visible {
+    color: var(--#{$prefix}btn-hover-color);
+    @include gradient-bg(var(--#{$prefix}btn-hover-bg));
+    border-color: var(--#{$prefix}btn-hover-border-color);
+    outline: 0;
+    // Avoid using mixin so we can pass custom focus shadow properly
+    @if $enable-shadows {
+      box-shadow: var(--#{$prefix}btn-box-shadow), var(--#{$prefix}btn-focus-box-shadow);
+    } @else {
+      box-shadow: var(--#{$prefix}btn-focus-box-shadow);
+    }
+  }
+
+  .btn-check:focus-visible + & {
+    border-color: var(--#{$prefix}btn-hover-border-color);
+    outline: 0;
+    // Avoid using mixin so we can pass custom focus shadow properly
+    @if $enable-shadows {
+      box-shadow: var(--#{$prefix}btn-box-shadow), var(--#{$prefix}btn-focus-box-shadow);
+    } @else {
+      box-shadow: var(--#{$prefix}btn-focus-box-shadow);
+    }
+  }
+
+  .btn-check:checked + &,
+  :not(.btn-check) + &:active,
+  &:first-child:active,
+  &.active,
+  &.show {
+    color: var(--#{$prefix}btn-active-color);
+    background-color: var(--#{$prefix}btn-active-bg);
+    // Remove CSS gradients if they're enabled
+    background-image: if($enable-gradients, none, null);
+    border-color: var(--#{$prefix}btn-active-border-color);
+    @include box-shadow(var(--#{$prefix}btn-active-shadow));
+
+    &:focus-visible {
+      // Avoid using mixin so we can pass custom focus shadow properly
+      @if $enable-shadows {
+        box-shadow: var(--#{$prefix}btn-active-shadow), var(--#{$prefix}btn-focus-box-shadow);
+      } @else {
+        box-shadow: var(--#{$prefix}btn-focus-box-shadow);
+      }
+    }
+  }
+
+  &:disabled,
+  &.disabled,
+  fieldset:disabled & {
+    color: var(--#{$prefix}btn-disabled-color);
+    pointer-events: none;
+    background-color: var(--#{$prefix}btn-disabled-bg);
+    background-image: if($enable-gradients, none, null);
+    border-color: var(--#{$prefix}btn-disabled-border-color);
+    opacity: var(--#{$prefix}btn-disabled-opacity);
+    @include box-shadow(none);
+  }
+}
+
+
+
+//
+// Alternate buttons
+//
+
+// scss-docs-start btn-variant-loops
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    @if $color == "light" {
+      @include button-variant(
+        $value,
+        $value,
+        $hover-background: shade-color($value, $btn-hover-bg-shade-amount),
+        $hover-border: shade-color($value, $btn-hover-border-shade-amount),
+        $active-background: shade-color($value, $btn-active-bg-shade-amount),
+        $active-border: shade-color($value, $btn-active-border-shade-amount)
+      );
+    } @else if $color == "dark" {
+      @include button-variant(
+        $value,
+        $value,
+        $hover-background: tint-color($value, $btn-hover-bg-tint-amount),
+        $hover-border: tint-color($value, $btn-hover-border-tint-amount),
+        $active-background: tint-color($value, $btn-active-bg-tint-amount),
+        $active-border: tint-color($value, $btn-active-border-tint-amount)
+      );
+    } @else {
+      // We are switching primary/secondary colours as we want secondary teal as the primary btn colour
+      @if $color == "primary" { 
+        @include button-variant($uol-secondary, $uol-secondary);
+      } @else if $color == "secondary" {
+        @include button-variant($uol-primary, $uol-primary);
+      } @else {
+        @include button-variant($value, $value);
+      }
+    }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    // We are switching primary/secondary colours as we want secondary teal as the primary btn colour
+    @if $color == "primary" { 
+      @include button-outline-variant($uol-secondary);
+    } @else if $color == "secondary" {
+      @include button-outline-variant($uol-primary);
+    } @else {
+      @include button-outline-variant($value);
+    }
+    
+  }
+}
+// scss-docs-end btn-variant-loops
+
+
+//
+// Link buttons
+//
+
+// Make a button look and behave like a link
+.btn-link {
+  --#{$prefix}btn-font-weight: #{$font-weight-normal};
+  --#{$prefix}btn-color: #{$btn-link-color};
+  --#{$prefix}btn-bg: transparent;
+  --#{$prefix}btn-border-color: transparent;
+  --#{$prefix}btn-hover-color: #{$btn-link-hover-color};
+  --#{$prefix}btn-hover-border-color: transparent;
+  --#{$prefix}btn-active-color: #{$btn-link-hover-color};
+  --#{$prefix}btn-active-border-color: transparent;
+  --#{$prefix}btn-disabled-color: #{$btn-link-disabled-color};
+  --#{$prefix}btn-disabled-border-color: transparent;
+  --#{$prefix}btn-box-shadow: none;
+  --#{$prefix}btn-focus-shadow-rgb: #{to-rgb(mix(color-contrast($primary), $primary, 15%))};
+
+  text-decoration: $link-decoration;
+  @if $enable-gradients {
+    background-image: none;
+  }
+
+  &:hover,
+  &:focus-visible {
+    text-decoration: $link-hover-decoration;
+  }
+
+  &:focus-visible {
+    color: var(--#{$prefix}btn-color);
+  }
+
+  &:hover {
+    color: var(--#{$prefix}btn-hover-color);
+  }
+
+  // No need for an active state here
+}
+
+
+//
+// Button Sizes
+//
+
+.btn-lg {
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-border-radius-lg);
+}
+
+.btn-sm {
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm);
+}
+
+
+
+// END BOOTSTRAP OVERRIDES
+
+
+
+
+
+
+
+
+.uol-btn {
+  @extend .btn;
+}
+
+
+// Placeholder for common styles for headers (e.g. homepage and courses)
+%uol-common-btn-style-header {
+  background: 0 0;
+  border: .4rem solid $white;
+  color: $white;
+  cursor: pointer;
+  display: inline-block; 
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text: {
+    align: center;
+    decoration: none;
+  }
+  transition: background 0.3s ease-in-out 50ms, color 0.3s ease-in-out;
+}
+
+// Start Course page headers 
+.uol-btn-courseHeader {
+  @extend %uol-common-btn-style-header;
+  padding: 1.1rem 2.2rem;
+  margin : $uol-mt-1 $uol-mt-1 0;
+  min-width: 22.5rem;
+
+  @each $key, $btn, $btnHover in  $uol-btn-colors {
+    &--#{$key} {
+      &:hover {
+        background-color: $btn;
+        color: $white;
+      }
+      &:nth-of-type(1) {
+        background-color: $btn;
+        &:hover {
+          background-color: $white;
+          color:  $btnHover;
+        }
+      }      
+    }
+  }// End each loop
+}
+
+@media (min-width: $uol-breakpoint-md) {
+
+  .uol-btn-courseHeader {
+    margin-top: $uol-mt-0;
+    &:nth-of-type(1) {
+      margin-left: 0;
+    }
+  }
+  
+}
+
+// End Course page header buttons
+
+// Start Homepage page header buttons
+.uol-btn-homepageHeader {
+  @extend %uol-common-btn-style-header;
+  display: block;
+  padding: 1.1rem 2.2rem;
+  pointer-events: auto;
+  margin-top: 2rem;
+  min-width: 21.5rem;
+
+  &:nth-of-type(1) {
+    margin-top: 0;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  @each $key, $btn, $btnHover in  $uol-btn-colors {
+    &--#{$key} {
+
+      &:nth-of-type(1),
+      &:hover {
+        background: $btn;
+        border-color: $btn;
+        color: $white;
+      }
+
+      &:nth-of-type(1) {
+        &:hover {
+          background: $white;
+          color: $btn;
+        }
+      }       
+    }
+  }// End each loop
+}
+
+@media (min-width: $uol-breakpoint-md) {
+  .uol-btn-homepageHeader {
+    display: inline-block;
+    margin: 0 1rem 0 0;
+  }
+}
+// End Homepage page header buttons

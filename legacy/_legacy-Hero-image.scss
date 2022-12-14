@@ -1,0 +1,90 @@
+.hero-image {
+  max-width: 160rem; /* Dave larkin - was removed*/
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 1;
+
+  img {
+    width: 100%;
+    height: auto;
+  }// End img
+
+  header {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      color: $uol-font-color-primary;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+    &.bottom {
+      top: auto;
+      bottom: 2rem;
+    }
+    &.middle {
+      top: 40%;
+      bottom: 40%;
+    }
+    &.left {
+      h1 {
+        text-align: left;
+      }
+    } 
+    &.right {
+      h1 {
+        text-align: right;
+      }
+    } 
+  }// End Header
+}// End .hero-image
+
+
+// START BREAKPOINTS
+
+@media screen and (min-width: $uol-breakpoint-md) {
+  .hero-image {
+    header {
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: $uol-breakpoint-md;
+      h1 {
+        font-size: 4.4rem;
+        text-shadow: .1rem .1rem 3rem black;
+        color: white;
+      }
+      &.dark-text {
+        h1 {
+          color: $uol-font-color-primary;
+          text-shadow: .1rem .1rem 3rem white;
+        }
+      } 
+    }
+  } 
+}
+
+@media screen and (min-width: $uol-breakpoint-lg) {
+  .hero-image {
+    header {
+      width: $uol-breakpoint-lg;
+    }
+  } 
+}
+
+@media screen and (min-width: $uol-breakpoint-xl) {
+  .hero-image {
+    header {
+      width: $uol-breakpoint-xl;
+    }
+  } 
+}
+
+// END BREAKPOINTS

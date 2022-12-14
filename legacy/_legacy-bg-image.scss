@@ -1,0 +1,788 @@
+.bg-image-only {
+  @extend %uol-white-font-default;
+  background-position: -28rem center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  min-height: 31rem;
+  width: 100%;
+}
+@media screen and (min-width: 992px) {
+  .bg-image-only {
+    background-position: center center;
+  }
+}
+.bg-image-only.header-banner {
+  min-height: 24rem;
+  background-position: center;
+}
+@media screen and (min-width: 768px) {
+  .bg-image-only.header-banner {
+    min-height: 30rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .bg-image-only.header-banner {
+    min-height: 34rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .bg-image-only.header-banner {
+    min-height: 42rem;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .bg-image-only.header-banner {
+    min-height: 48rem;
+  }
+}
+
+
+.bg-image-overlay, .bg-image-overlay-no-min-width  {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;  
+}
+
+
+@media screen and (min-width: 992px) {
+  .bg-image-overlay {
+    /* Added to ensure that testimonials are the same height*/
+  	min-height: 25em;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .bg-image-overlay, .bg-image-overlay-no-min-width  {
+    background-image: none !important;
+  }
+}
+
+
+.bg-image-overlay.left, .bg-image-overlay-no-min-width.left {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.bg-image-overlay.left img {
+  display: block;
+  position: relative;
+  /* width and margin-left adjusted to show more image in mobile - 22 Aug 19 - KT */
+  /*
+  width: 150%;
+  margin-left: -13rem;
+  */
+  width: 180%;
+  margin-left: -22rem;
+}
+
+.bg-image-overlay-no-min-width img {
+ display: block;
+  position: relative;
+  width: 150%;
+  margin-left: -25%;
+}
+
+
+@media screen and (min-width: 768px) {
+  .bg-image-overlay.left img, 
+	.bg-image-overlay-no-min-width.left img  {
+    width: 110%;
+    margin-left: -5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .bg-image-overlay.left img,
+	.bg-image-overlay-no-min-width.left img  {
+    display: none;
+  }
+}
+.bg-image-overlay-no-min-width.left  blockquote p,
+.bg-image-overlay-no-min-width.left  cite,
+.bg-image-overlay.left blockquote p,
+.bg-image-overlay.left cite {
+  color: #888;
+}
+@media screen and (min-width: 992px) {
+	.bg-image-overlay-no-min-width.left  blockquote p,
+	.bg-image-overlay-no-min-width.left  cite,
+  .bg-image-overlay.left blockquote p,
+  .bg-image-overlay.left cite {
+    color: #fff;
+  }
+}
+.bg-image-overlay-no-min-width.left .overlay-image,
+.bg-image-overlay.left .overlay-image {
+  position: relative;
+  text-align: center;
+}
+.bg-image-overlay-no-min-width.left .overlay-image .cta-box,
+.bg-image-overlay.left .overlay-image .cta-box {
+  margin-right: 0;
+  text-align: center;
+  padding: 0;
+}
+@media screen and (min-width: 992px) {
+	.bg-image-overlay-no-min-width.left .overlay-image .cta-box,
+  .bg-image-overlay.left .overlay-image .cta-box {
+    text-align: left;
+    padding: 2.5rem 0 1.5rem 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+	.bg-image-overlay-no-min-width.left .overlay-image .cta-box,
+  .bg-image-overlay.left .overlay-image .cta-box {
+    padding: 5rem 0 2rem 0;
+  }
+}
+.bg-image-overlay-no-min-width.left .overlay-image .cta-box.padded,
+.bg-image-overlay.left .overlay-image .cta-box.padded {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+@media screen and (min-width: 992px) {
+	.bg-image-overlay-no-min-width.left .overlay-image .cta-box.padded,
+  .bg-image-overlay.left .overlay-image .cta-box.padded {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+	.bg-image-overlay-no-min-width.left .overlay-image .cta-box.padded,
+  .bg-image-overlay.left .overlay-image .cta-box.padded {
+    padding: 0.5rem 0 0.5rem 0;
+  }
+}
+@media screen and (min-width: 1500px) {
+	.bg-image-overlay-no-min-width.left .overlay-image .cta-box.padded,
+  .bg-image-overlay.left .overlay-image .cta-box.padded {
+    padding: 3.5rem 0 3.5rem 0;
+  }
+}
+.bg-image-overlay-no-min-width.left .overlay-image .light,
+.bg-image-overlay.left .overlay-image .light {
+  	padding-left: 0;
+  	text-align: left;
+	/*Following added 22 Aug 19 to give text a background color in mobile - KT */
+	background-color: #efefef;
+	padding-bottom: 1em;
+}
+
+@media screen and (min-width: 768px) {
+	.bg-image-overlay-no-min-width.left .overlay-image .light,
+  .bg-image-overlay.left .overlay-image .light {
+		/*Following added 22 Aug 19 to remiove text background color in mobile - KT */
+		background-color: transparent;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.bg-image-overlay-no-min-width.left .overlay-image .light,
+	.bg-image-overlay.left .overlay-image .light {
+		padding-left: 1rem;
+	}
+}
+
+.bg-image-overlay-no-min-width.left .overlay-image .light .cta-header,
+.bg-image-overlay.left .overlay-image .light .cta-header {
+  font-size: 2.2rem;
+  color: #888;
+  text-align: center;
+  filter: none;
+}
+@media screen and (min-width: 992px) {
+	.bg-image-overlay-no-min-width.left .overlay-image .light .cta-header,
+  .bg-image-overlay.left .overlay-image .light .cta-header {
+    position: relative;
+    font-size: 3.4rem;
+    z-index: 2;
+    text-align: left;
+    color: #fff;
+  }
+  .bg-image-overlay.left .overlay-image .light .cta-header::before {
+    content: '';
+    position: absolute;
+    top: -2rem;
+    right: -2rem;
+    bottom: -2rem;
+    left: -2rem;
+    border-radius: 1rem;
+    z-index: -1;
+    -webkit-filter: blur(40px);
+    -moz-filter: blur(40px);
+    -o-filter: blur(40px);
+    -ms-filter: blur(40px);
+    filter: blur(40px);
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+.bg-image-overlay-no-min-width.left .overlay-image .light .cta-intro,
+.bg-image-overlay.left .overlay-image .light .cta-intro {
+  filter: none;
+}
+@media screen and (min-width: 992px) {
+	.bg-image-overlay-no-min-width.left .overlay-image .light .cta-intro,
+  .bg-image-overlay.left .overlay-image .light .cta-intro {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+  }
+  .bg-image-overlay.left .overlay-image .light .cta-intro::before {
+    content: '';
+    position: absolute;
+    top: -2rem;
+    right: -2rem;
+    bottom: -2rem;
+    left: -2rem;
+    border-radius: 1rem;
+    z-index: -1;
+    -webkit-filter: blur(40px);
+    -moz-filter: blur(40px);
+    -o-filter: blur(40px);
+    -ms-filter: blur(40px);
+    filter: blur(40px);
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+.bg-image-overlay-no-min-width.left .overlay-image .light .btn-info,
+.bg-image-overlay.left .overlay-image .light .btn-info {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 992px) {
+	.bg-image-overlay-no-min-width.left .overlay-image .light .btn-info,
+  .bg-image-overlay.left .overlay-image .light .btn-info {
+    margin-bottom: 2rem;
+  }
+}
+.bg-image-overlay-no-min-width.left .overlay-image .light .quote-box,
+.bg-image-overlay.left .overlay-image .light .quote-box {
+  margin-right: 0;
+}
+@media screen and (min-width: 992px) {
+	.bg-image-overlay-no-min-width.left .overlay-image .light .quote-box,
+  .bg-image-overlay.left .overlay-image .light .quote-box {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+	.bg-image-overlay-no-min-width.left .overlay-image .light .quote-box,
+  .bg-image-overlay.left .overlay-image .light .quote-box {
+    padding: 6rem 0;
+  }
+}
+.bg-image-overlay-no-min-width.left .overlay-image .light blockquote,
+.bg-image-overlay.left .overlay-image .light blockquote {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.5rem;
+  padding-right: 0;
+}
+@media screen and (min-width: 992px) {
+	.bg-image-overlay-no-min-width.left .overlay-image .light blockquote,
+  .bg-image-overlay.left .overlay-image .light blockquote {
+    padding-right: 1rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+	.bg-image-overlay-no-min-width.left .overlay-image .light blockquote,
+  .bg-image-overlay.left .overlay-image .light blockquote {
+    line-height: 2rem;
+  }
+}
+.bg-image-overlay-no-min-width.left .overlay-image .light blockquote p,
+.bg-image-overlay.left .overlay-image .light blockquote p {
+  color: #888;
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 992px) {
+	.bg-image-overlay-no-min-width.left .overlay-image .light blockquote p,
+  .bg-image-overlay.left .overlay-image .light blockquote p {
+    color: #fff;
+    font-size: 1.6rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+	.bg-image-overlay-no-min-width.left .overlay-image .light blockquote p,
+  .bg-image-overlay.left .overlay-image .light blockquote p {
+    color: #fff;
+    font-size: 1.8rem;
+  }
+}
+.bg-image-overlay-no-min-width.left .overlay-image .light blockquote p em,
+.bg-image-overlay.left .overlay-image .light blockquote p em {
+  display: block;
+  padding: 0 2rem;
+  text-align: center;
+}
+@media screen and (min-width: 992px) {
+	.bg-image-overlay-no-min-width.left .overlay-image .light blockquote p em,
+  .bg-image-overlay.left .overlay-image .light blockquote p em {
+    text-align: left;
+  }
+}
+
+.bg-image-overlay-no-min-width.left .overlay-image .light cite,
+.bg-image-overlay.left .overlay-image .light cite {
+  color: #888;
+  display: block;
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 992px) {
+	.bg-image-overlay-no-min-width.left .overlay-image .light cite,
+  .bg-image-overlay.left .overlay-image .light cite {
+    color: #fff;
+    text-align: left;
+    font-size: 1.5rem;
+    padding-left: 2rem;
+  }
+}
+.bg-image-overlay.right {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.bg-image-overlay.right img {
+  display: block;
+  position: relative;
+  width: 150%;
+  margin-left: -13rem;
+}
+@media screen and (min-width: 768px) {
+  .bg-image-overlay.right img {
+    width: 110%;
+    margin-left: -5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .bg-image-overlay.right img {
+    display: none;
+  }
+}
+.bg-image-overlay.right .overlay-image {
+  position: relative;
+}
+.bg-image-overlay.right .overlay-image .quote-box {
+  margin-right: 0;
+}
+@media screen and (min-width: 992px) {
+  .bg-image-overlay.right .overlay-image .quote-box {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .bg-image-overlay.right .overlay-image .quote-box {
+    padding: 6rem 0;
+  }
+}
+.bg-image-overlay.right .overlay-image .quote-box.light blockquote,
+.bg-image-overlay.right .overlay-image .quote-box.light cite,
+.bg-image-overlay.right .overlay-image .quote-box.light p,
+.bg-image-overlay.right .overlay-image .quote-box.light em {
+  color: #333;
+}
+.bg-image-overlay.right .overlay-image blockquote {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.5rem;
+}
+@media screen and (min-width: 1200px) {
+  .bg-image-overlay.right .overlay-image blockquote {
+    line-height: 2rem;
+  }
+}
+.bg-image-overlay.right .overlay-image blockquote p {
+  color: #888;
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 992px) {
+  .bg-image-overlay.right .overlay-image blockquote p {
+    color: #fff;
+    font-size: 1.6rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .bg-image-overlay.right .overlay-image blockquote p {
+    color: #fff;
+    font-size: 1.8rem;
+  }
+}
+.bg-image-overlay.right .overlay-image blockquote p em {
+  display: block;
+  padding: 0 2rem;
+  text-align: center;
+}
+@media screen and (min-width: 992px) {
+  .bg-image-overlay.right .overlay-image blockquote p em {
+    color: #fff;
+    font-size: 1.5rem;
+    padding-left: 2rem;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 992px) {
+  .bg-image-overlay.right .overlay-image blockquote p:before {
+    left: -4.5rem;
+  }
+}
+.bg-image-overlay.right .overlay-image cite {
+  color: #888;
+  display: block;
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 992px) {
+  .bg-image-overlay.right .overlay-image cite {
+    color: #fff;
+    font-size: 1.5rem;
+    padding-left: 2rem;
+    text-align: left;
+  }
+}
+.bg-image-overlay.left-right {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.bg-image-overlay.left-right img {
+  position: relative;
+  width: 150%;
+  margin-left: -10rem;
+}
+@media screen and (min-width: 768px) {
+  .bg-image-overlay.left-right img {
+    width: 110%;
+    margin-left: -5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .bg-image-overlay.left-right img {
+    height: 100%;
+    width: auto;
+    margin: auto;
+    position: absolute;
+    top: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+    right: -9999px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .bg-image-overlay.left-right img {
+    height: 100%;
+    width: auto;
+  }
+}
+.bg-image-overlay.left-right .overlay-image {
+  position: relative;
+  text-align: center;
+}
+.bg-image-overlay.left-right .overlay-image .quote-box {
+  margin-right: 0;
+}
+@media screen and (min-width: 992px) {
+  .bg-image-overlay.left-right .overlay-image .quote-box {
+    padding-top: 2rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .bg-image-overlay.left-right .overlay-image .quote-box {
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+  }
+}
+.bg-image-overlay.left-right .overlay-image .cta-box {
+  margin-right: 0;
+}
+@media screen and (min-width: 992px) {
+  .bg-image-overlay.left-right .overlay-image .cta-box {
+    text-align: left;
+    padding-top: 2rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .bg-image-overlay.left-right .overlay-image .cta-box {
+    padding-top: 4rem;
+  }
+}
+.bg-image-overlay.left-right .overlay-image .cta-box.padded {
+  padding: 0 1.5rem;
+}
+@media screen and (min-width: 1200px) {
+  .bg-image-overlay.left-right .overlay-image .cta-box.padded {
+    padding-left: 7rem;
+  }
+}
+.bg-image-overlay.left-right .overlay-image .btn-info {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 992px) {
+  .bg-image-overlay.left-right .overlay-image .btn-info {
+    margin-bottom: 2rem;
+  }
+}
+.bg-image-overlay.left-right .overlay-image .cta-header {
+  font-size: 2.2rem;
+  color: #888;
+}
+@media screen and (min-width: 992px) {
+  .bg-image-overlay.left-right .overlay-image .cta-header {
+    font-size: 3.4rem;
+    color: #fff;
+  }
+}
+.bg-image-overlay.left-right .overlay-image blockquote {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.5rem;
+  padding-right: 0;
+}
+@media screen and (min-width: 992px) {
+  .bg-image-overlay.left-right .overlay-image blockquote {
+    padding-right: 1rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .bg-image-overlay.left-right .overlay-image blockquote {
+    line-height: 2rem;
+  }
+}
+.bg-image-overlay.left-right .overlay-image blockquote p {
+  color: #888;
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 992px) {
+  .bg-image-overlay.left-right .overlay-image blockquote p {
+    color: #fff;
+    font-size: 1.6rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .bg-image-overlay.left-right .overlay-image blockquote p {
+    color: #fff;
+    font-size: 1.8rem;
+  }
+}
+.bg-image-overlay.left-right .overlay-image blockquote p em {
+  display: block;
+  padding: 0 2rem;
+  text-align: center;
+}
+@media screen and (min-width: 992px) {
+  .bg-image-overlay.left-right .overlay-image blockquote p em {
+    text-align: left;
+  }
+}
+.bg-image-overlay.left-right .overlay-image cite {
+  color: #888;
+  display: block;
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 992px) {
+  .bg-image-overlay.left-right .overlay-image cite {
+    color: #fff;
+    text-align: left;
+    font-size: 1.5rem;
+    padding-left: 2rem;
+  }
+}
+
+@media all and (-ms-high-contrast: none) {
+  .left.bg-image-overlay .overlay-image .light .cta-header::before,
+  .left.bg-image-overlay .overlay-image .light .cta-intro::before {
+    position: relative !important;
+  }
+
+  /* IE10 */
+  .left.bg-image-overlay .overlay-image .light .cta-header,
+  .left.bg-image-overlay .overlay-image .light .cta-intro {
+    /*text-shadow: 40px 1px 30px black;*/
+	text-shadow: 0 1px 35px black;
+  }
+
+  *::-ms-backdrop,
+  .left.bg-image-overlay .overlay-image .light .cta-header::before,
+  .left.bg-image-overlay .overlay-image .light .cta-intro::before {
+    position: relative !important;
+  }
+
+  /* IE11 */
+  *::-ms-backdrop,
+  .left.bg-image-overlay .overlay-image .light .cta-header,
+  .left.bg-image-overlay .overlay-image .light .cta-intro {
+    /*text-shadow: 40px 1px 30px black;*/
+	text-shadow: 0 1px 35px black;
+  }
+}
+
+
+
+.bg-image-banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.bg-image-banner .container .no-gutters {
+  margin-right: 0;
+}
+.bg-image-banner .grey-6 {
+  padding: 0;
+}
+@media screen and (min-width: 992px) {
+  .bg-image-banner .grey-6 {
+    background-color: transparent;
+  }
+}
+.bg-image-banner img {
+  position: relative;
+  width: 160%;
+  margin-top: -6rem;
+}
+@media screen and (min-width: 768px) {
+  .bg-image-banner img {
+    width: 110%;
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  .bg-image-banner img {
+    width: 100%;
+    position: absolute;
+    left: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .bg-image-banner img {
+    margin-top: -7rem;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .bg-image-banner img {
+    margin-top: -12rem;
+  }
+}
+.bg-image-banner .banner-content {
+  margin-left: 0;
+}
+.bg-image-banner .banner-content .banner-text.grey-6 {
+  padding: 0 1.5rem;
+}
+@media screen and (min-width: 992px) {
+  .bg-image-banner .banner-content {
+    text-align: left;
+    margin-left: 6rem;
+  }
+}
+.bg-image-banner .banner-content .h1 {
+  display: block;
+  color: #888;
+  margin-top: 1rem;
+  font-size: 2.6rem;
+}
+@media screen and (min-width: 992px) {
+  .bg-image-banner .banner-content .h1 {
+    margin-top: 1.8rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .bg-image-banner .banner-content .h1 {
+    font-size: 3.4rem;
+    margin-top: 3.5rem;
+  }
+}
+.bg-image-banner .banner-content blockquote {
+  line-height: 1.5;
+  margin: 1rem 0;
+}
+@media screen and (min-width: 1200px) {
+  .bg-image-banner .banner-content blockquote {
+    line-height: 1.3;
+    margin: 2rem 0 1rem 0;
+  }
+}
+.bg-image-banner .banner-content blockquote p {
+  padding-left: 1rem;
+  color: #777;
+  font-size: 1.4rem;
+}
+@media screen and (min-width: 992px) {
+  .bg-image-banner .banner-content blockquote p {
+    padding-left: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .bg-image-banner .banner-content blockquote p {
+    font-size: 1.8rem;
+  }
+}
+.bg-image-banner .banner-content blockquote p:before {
+  top: -2.5rem;
+}
+.bg-image-banner .banner-content cite {
+  color: #777;
+  font-size: 1.3rem;
+  padding-left: 0;
+}
+@media screen and (min-width: 992px) {
+  .bg-image-banner .banner-content cite {
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .bg-image-banner .banner-content cite {
+    font-size: 1.5rem;
+  }
+}
+.bg-image-banner .banner-content .cta-buttons {
+  display: block;
+  padding: 2rem 3rem;
+  margin-bottom: 0;
+}
+@media screen and (min-width: 992px) {
+  .bg-image-banner .banner-content .cta-buttons.white {
+    background-color: transparent;
+  }
+}
+@media screen and (min-width: 480px) {
+  .bg-image-banner .banner-content .cta-buttons {
+    padding: 2rem 8rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .bg-image-banner .banner-content .cta-buttons {
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .bg-image-banner .banner-content .cta-buttons {
+    padding: 0 1.5rem;
+  }
+}
+.bg-image-banner .banner-content .cta-buttons .h3 {
+  font-size: 1.6rem;
+}
+.bg-image-banner .banner-content .cta-buttons .btn-info {
+  display: block;
+  word-wrap: break-word;
+  height: auto;
+  width: 100%;
+  margin: 1rem 0;
+  white-space: pre-wrap;
+  font-size: 1.4rem;
+}
+@media screen and (min-width: 992px) {
+  .bg-image-banner .banner-content .cta-buttons .btn-info {
+    display: inline-block;
+    width: auto;
+
+    font-size: 1.3rem;
+    margin: 0.5rem 0;
+  }
+}

@@ -1,0 +1,53 @@
+.uol-accomm-hero-banner {
+  position: relative;
+
+  img { 
+    height: auto;  
+    width: 100%;
+  }
+
+  &__title {
+    opacity: 1;
+    position: static;
+    width: 100%;
+
+    &:before,
+    &:after {
+      content: " ";
+      display: table;
+    }
+
+    h1 {
+      color: $uol-white-default;
+      margin: 1rem 0;
+      text-align: center;
+      width: 100%;
+    }
+
+    @each $key, $val in  $uol-bg-main-colours {
+      &--#{$key} {
+        background-color: $val;
+      }    
+    }
+
+  }
+
+  
+
+
+}
+
+@media (min-width: $uol-breakpoint-xl) {
+  .uol-accomm-hero-banner {
+    &__title {
+      position: absolute;
+      opacity: 0.9;
+      bottom: 0;
+
+      h1 {
+        margin: 2rem 0;
+      }
+    }
+  } 
+}
+

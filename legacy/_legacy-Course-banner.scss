@@ -1,0 +1,160 @@
+.course-banner {
+  position: relative;
+  background-color: #efefef;
+  text-align: center;
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 992px) {
+  .course-banner {
+    background-color: #fff;
+    text-align: left;
+    color: #fff;
+    margin-bottom: 1.5rem;
+  }
+}
+.course-banner .breadcrumbs {
+	color: #333;
+}
+.course-banner .row-flex {
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-box-orient: vertical;
+  -webkit-box-orient: vertical;
+  -webkit-flex-flow: column;
+  flex-flow: column;
+}
+@media screen and (min-width: 992px) {
+  .course-banner .row-flex {
+    -moz-box-orient: horizontal;
+    -webkit-box-orient: horizontal;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+  }
+}
+.course-banner .row-flex .flex-item-1 {
+  -moz-box-ordinal-group: 2;
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
+}
+@media screen and (min-width: 992px) {
+  .course-banner .row-flex .flex-item-1 {
+    order: 1;
+  }
+}
+.course-banner .row-flex .flex-item-2 {
+
+  -moz-box-ordinal-group: 3;
+  -webkit-box-ordinal-group: 3;
+  -webkit-order: 3;
+  -ms-flex-order: 3;
+  order: 3;
+}
+@media screen and (min-width: 992px) {
+  .course-banner .row-flex .flex-item-2 {
+    order: 2;
+  }
+}
+.course-banner .row-flex .flex-item-3 {
+  -moz-box-ordinal-group: 1;
+  -webkit-box-ordinal-group: 1;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+}
+@media screen and (min-width: 992px) {
+  .course-banner .row-flex .flex-item-3 {
+    order: 3;
+  }
+}
+.course-banner .course-banner-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 20rem;
+  width: 100%;
+  max-width: 1600px; /* Dave Larkin - was removed*/
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 992px) {
+  .course-banner .course-banner-img {
+    min-height: 28rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .course-banner .course-banner-img {
+    min-height: 40rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .course-banner .breadcrumbs {
+    padding: 0;
+  }
+}
+.course-banner .breadcrumbs .breadcrumb-list,
+.banner-bc .breadcrumbs .breadcrumb-list {
+  margin: 1rem 0;
+}
+.breadcrumbs .breadcrumb-list span a {
+  font-size: 1.3rem;
+  color: #333;
+}
+.breadcrumbs .breadcrumb-list span a:hover {
+  text-decoration: underline;
+}
+.course-banner .course-title {
+  position: relative;
+}
+.course-banner .course-title h1 {
+  font-size: 2.8rem;
+  color: #333;
+  margin: 0;
+}
+@media screen and (min-width: 992px) {
+  .course-banner .course-title h1 {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 40px 1px 30px black;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .course-banner .course-title h1 {
+    font-size: 3.4rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .course-banner .course-title {
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    left: 0;
+    text-align: center;
+  }
+}
+.course-banner span.blue {
+  display: block;
+  padding: 1.25rem;
+}
+@media screen and (min-width: 992px) {
+  .course-banner span.blue {
+    font-size: 1.6rem;
+    padding-right: 4rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .course-banner span.blue {
+    font-size: 1.9rem;
+    padding: 1.25rem 7rem;
+  }
+}

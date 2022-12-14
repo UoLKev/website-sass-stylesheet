@@ -1,0 +1,69 @@
+#uol-acommodation-prices-section {
+  margin-bottom: 5rem; 
+  padding: 0 0 2.5rem;
+}
+
+.uol-accordion {
+  margin-top: 0;
+  max-width: $uol-container-constraint;
+  
+}
+
+
+@each $key, $val in  $uol-bg-main-colours {
+  .uol-accordion-accommodation--#{$key} {
+    background-color: $val;
+  }   
+}
+ 
+
+.uol-accordion-accommodation-title-light { 
+  color: $uol-white-default;
+}
+
+.uol-accordion-accommodation-content-light {
+  background-color: $uol-white-default;
+}
+
+.uol-accommodation-price-table,
+.uol-accommodation-price-table > thead > tr > th,
+.uol-accommodation-price-table > tbody > tr > td { 
+  border: 2px solid;
+  color: $uol-white-default;
+    text-align: center;
+    
+  }
+
+
+  
+.uol-accommodation-price-table {
+  background-color: $bg-color-accent-secondary;
+
+  th {
+    background-color: $bg-color-primary;
+  }
+
+  td:first-child {
+    background-color: $bg-color-primary;
+  }
+
+}
+
+
+.uol-accommodation-price-table-header { 
+  display: none; 
+}
+
+.uol-accordion-full-width-frame + .uol-accordion-full-width-frame .uol-accordion{
+  margin-top: -5rem;
+}
+
+.uol-acommodation-prices-section--fullWidth-colour,  
+.uol-acommodation-prices-section--fullWidth-colour details,
+.uol-acommodation-prices-section--fullWidth-colour .uol-accordion[open] > .uol-accordion_title { 
+  background-color: #f1f1f1; 
+}
+
+.uol-acommodation-prices-section--fullWidth-colour:not(div.uol-acommodation-prices-section--fullWidth-colour:last-child) .uol-accordion_title { 
+  border-bottom: none;
+} 

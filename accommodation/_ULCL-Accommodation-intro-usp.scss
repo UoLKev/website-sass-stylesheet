@@ -1,0 +1,62 @@
+.uol-accomm-intro-title {
+  margin-bottom: 2rem;
+}
+
+.uol-accomm-usp {
+  color: $uol-white-default;
+  height: 100%;
+  margin-top: 1rem;
+  padding: 1.5rem;
+
+  div[class^="col-"] {
+    display: table;   
+    height: 4em;
+
+    p {
+      color: $uol-white-default;
+    }
+
+    p,
+    i {
+      display: table-cell; 
+      vertical-align: middle;
+    }
+  }
+
+  &__btn {
+    display: block;
+    white-space: normal;
+    width: 100%;
+  }
+
+
+  @each $key, $val in  $uol-bg-main-colours {
+    &--#{$key} {
+      background-color: $val;
+    }   
+  }
+
+}
+
+/*
+.uol-accommodation-aligned-row {
+  display: flex;
+  flex-flow: row wrap;
+
+  &::before {
+      display: block;
+  }
+}
+*/
+
+
+
+
+@media (min-width: $uol-breakpoint-xl) {
+        
+  .uol-accommodation-usp {
+    margin-top: 0;
+    padding: 3rem;
+  }
+  
+}

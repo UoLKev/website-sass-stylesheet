@@ -1,0 +1,7 @@
+// Merge with BS5 colors map
+$colors: map-merge($colors, $uol-colors);
+
+// Remove defauult Primary/Secondary
+$theme-colors: map-remove($theme-colors, "primary", "secondary");
+// Merge the theme colours
+$theme-colors: map-merge($theme-colors, $uol-theme-colors);

@@ -1,0 +1,64 @@
+.lincoln-on-demand {
+  padding-bottom: 5rem;
+  background-color:#f6f6f6;
+
+  .uol-body,
+  .uol-h1,
+  .uol-h1,
+  .uol-h3,
+  .uol-standfirst {
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto
+  }
+
+
+  &.centered {
+
+    .uol-billboard .uol-body,
+    .uol-billboard .uol-h3 {
+      text-align:left;
+    }
+  
+    .grid {
+      justify-content: center;
+    }
+
+    .btn-group{
+      float:none;
+      margin:5px;
+    }
+  
+  }
+
+
+}
+
+
+
+@media (max-width:620px){
+  .lincoln-on-demand .embed-responsive-21by9{
+      padding-bottom:100%
+  }
+  .lincoln-on-demand.centered .btn-group,.lincoln-on-demand.centered .btn-group a{
+      width:100%
+  }
+}
+
+
+.lincoln-on-demand .tile{
+  background-color:#fff
+}
+
+.lincoln-on-demand .uol-section{
+  margin-bottom:0
+}
+
+.lincoln-on-demand .video_caption{
+  box-shadow:none
+}
+
+/*
+END ULCL - LINCOLN ON DEMAND
+============== 
+*/

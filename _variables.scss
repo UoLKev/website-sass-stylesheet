@@ -1,0 +1,249 @@
+// Colour System
+
+// Brand colours
+$uol-uni-blue: #002147 !default;
+$uol-teal: #047e8b !default; 
+$uol-magenta: #db1a72 !default;
+$uol-cool-grey: #747678 !default;
+
+// uol-colors map
+$uol-colors: (
+  "uni-blue":   $uol-uni-blue,
+  "teal":       $uol-teal,
+  "magenta":    $uol-magenta,
+  "cool-grey":  $uol-cool-grey
+) !default;
+
+$uol-uni-blue-100: tint-color($uol-uni-blue, 80%) !default;
+$uol-uni-blue-200: tint-color($uol-uni-blue, 60%) !default;
+$uol-uni-blue-300: tint-color($uol-uni-blue, 40%) !default;
+$uol-uni-blue-400: tint-color($uol-uni-blue, 20%) !default;
+$uol-uni-blue-500: $uol-uni-blue !default;
+$uol-uni-blue-600: shade-color($uol-uni-blue, 20%) !default;
+$uol-uni-blue-700: shade-color($uol-uni-blue, 40%) !default;
+$uol-uni-blue-800: shade-color($uol-uni-blue, 60%) !default;
+$uol-uni-blue-900: shade-color($uol-uni-blue, 80%) !default;
+
+$uol-teal-100: tint-color($uol-teal, 80%) !default;
+$uol-teal-200: tint-color($uol-teal, 60%) !default;
+$uol-teal-300: tint-color($uol-teal, 40%) !default;
+$uol-teal-400: tint-color($uol-teal, 20%) !default;
+$uol-teal-500: $uol-teal !default;
+$uol-teal-600: shade-color($uol-teal, 20%) !default;
+$uol-teal-700: shade-color($uol-teal, 40%) !default;
+$uol-teal-800: shade-color($uol-teal, 60%) !default;
+$uol-teal-900: shade-color($uol-teal, 80%) !default;
+
+$uol-magenta-100: tint-color($uol-magenta, 80%) !default;
+$uol-magenta-200: tint-color($uol-magenta, 60%) !default;
+$uol-magenta-300: tint-color($uol-magenta, 40%) !default;
+$uol-magenta-400: tint-color($uol-magenta, 20%) !default;
+$uol-magenta-500: $uol-magenta !default;
+$uol-magenta-600: shade-color($uol-magenta, 20%) !default;
+$uol-magenta-700: shade-color($uol-magenta, 40%) !default;
+$uol-magenta-800: shade-color($uol-magenta, 60%) !default;
+$uol-magenta-900: shade-color($uol-magenta, 80%) !default;
+
+$uol-cool-grey-100: tint-color($uol-cool-grey, 80%) !default;
+$uol-cool-grey-200: tint-color($uol-cool-grey, 60%) !default;
+$uol-cool-grey-300: tint-color($uol-cool-grey, 40%) !default;
+$uol-cool-grey-400: tint-color($uol-cool-grey, 20%) !default;
+$uol-cool-grey-500: $uol-cool-grey !default;
+$uol-cool-grey-600: shade-color($uol-cool-grey, 20%) !default;
+$uol-cool-grey-700: shade-color($uol-cool-grey, 40%) !default;
+$uol-cool-grey-800: shade-color($uol-cool-grey, 60%) !default;
+$uol-cool-grey-900: shade-color($uol-cool-grey, 80%) !default;
+
+// Brand Colours
+$uol-uni-blues: (
+  "uol-uni-blue-100": $uol-uni-blue-100,
+  "uol-uni-blue-200": $uol-uni-blue-200,
+  "uol-uni-blue-300": $uol-uni-blue-300,
+  "uol-uni-blue-400": $uol-uni-blue-400,
+  "uol-uni-blue-500": $uol-uni-blue-500,
+  "uol-uni-blue-600": $uol-uni-blue-600,
+  "uol-uni-blue-700": $uol-uni-blue-700,
+  "uol-uni-blue-800": $uol-uni-blue-800,
+  "uol-uni-blue-900": $uol-uni-blue-900
+) !default;
+
+$uol-teals: (
+  "uol-teal-100": $uol-teal-100,
+  "uol-teal-200": $uol-teal-200,
+  "uol-teal-300": $uol-teal-300,
+  "uol-teal-400": $uol-teal-400,
+  "uol-teal-500": $uol-teal-500,
+  "uol-teal-600": $uol-teal-600,
+  "uol-teal-700": $uol-teal-700,
+  "uol-teal-800": $uol-teal-800,
+  "uol-teal-900": $uol-teal-900
+) !default;
+
+
+$uol-magentas: (
+  "uol-magenta-100": $uol-magenta-100,
+  "uol-magenta-200": $uol-magenta-200,
+  "uol-magenta-300": $uol-magenta-300,
+  "uol-magenta-400": $uol-magenta-400,
+  "uol-magenta-500": $uol-magenta-500,
+  "uol-magenta-600": $uol-magenta-600,
+  "uol-magenta-700": $uol-magenta-700,
+  "uol-magenta-800": $uol-magenta-800,
+  "uol-magenta-900": $uol-magenta-900
+) !default;
+
+
+$uol-cool-greys: (
+  "uol-cool-grey-100": $uol-cool-grey-100,
+  "uol-cool-grey-200": $uol-cool-grey-200,
+  "uol-cool-grey-300": $uol-cool-grey-300,
+  "uol-cool-grey-400": $uol-cool-grey-400,
+  "uol-cool-grey-500": $uol-cool-grey-500,
+  "uol-cool-grey-600": $uol-cool-grey-600,
+  "uol-cool-grey-700": $uol-cool-grey-700,
+  "uol-cool-grey-800": $uol-cool-grey-800,
+  "uol-cool-grey-900": $uol-cool-grey-900
+) !default;
+
+// Theme Colours
+
+// Brand Colours
+$uol-primary:           $uol-uni-blue !default; 
+$uol-secondary:         $uol-teal !default;
+$uol-accent-primary:    $uol-magenta !default;
+$uol-accent-secondary:  $uol-cool-grey !default;
+
+$uol-theme-colors: (
+  "primary":            $uol-primary,
+  "secondary":          $uol-secondary,
+  "accent-primary":     $uol-accent-primary,
+  "accent-secondary":   $uol-accent-secondary
+);
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+$enable-caret:                true ;
+$enable-rounded:              true ;
+$enable-shadows:              false ;
+$enable-gradients:            false ;
+$enable-transitions:          true ;
+$enable-reduced-motion:       true ;
+$enable-smooth-scroll:        true ;
+$enable-grid-classes:         true ;
+$enable-container-classes:    true ;
+$enable-cssgrid:              false;
+$enable-button-pointers:      true;
+$enable-rfs:                  true;
+$enable-validation-icons:     true;
+$enable-negative-margins:     false;
+$enable-deprecation-messages: true;
+$enable-important-utilities:  true;
+// CDM optional features
+$enable-button-border-radius: false;
+
+
+// Prefix for :root CSS variables
+$prefix: uol-;
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+// scss-docs-start spacer-variables-maps
+$spacer: 1.6rem;
+// scss-docs-end spacer-variables-maps
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// scss-docs-start font-variables
+// stylelint-disable value-keyword-case
+$font-family-sans-serif:      Verdana, Arial, sans-serif;
+// stylelint-enable value-keyword-case
+$font-family-base:            var(--#{$prefix}font-sans-serif);
+
+// $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
+// $font-size-base affects the font size of the body text
+$font-size-root:              10px;
+$font-size-base:              1.6rem; // Assumes the browser default, typically `16px`
+$font-size-sm:                $font-size-base * .875;
+$font-size-lg:                $font-size-base * 1.25;
+
+
+// headings-variables
+$headings-font-family:        Georgia, Times, "Times New Roman", serif;
+
+// start display-headings
+// end display-headings
+
+// start type-variables
+// end type-variables
+
+
+
+// Buttons + Forms
+//
+//input-btn-variables
+$input-btn-padding-y:         .875rem;
+$input-btn-padding-x:         1.25rem;
+$input-btn-font-size:         $font-size-base;
+
+$input-btn-focus-width:         .75rem;
+
+$input-btn-padding-y-lg:      1rem;
+$input-btn-padding-x-lg:      1.5rem;
+$input-btn-font-size-lg:      $font-size-lg;
+
+// Buttons
+//
+
+$btn-padding-y:               $input-btn-padding-y;
+$btn-padding-x:               $input-btn-padding-x;
+
+$btn-padding-y-lg:            $input-btn-padding-y-lg;
+$btn-padding-x-lg:            $input-btn-padding-x-lg;
+$btn-font-size-lg:            $input-btn-font-size-lg;
+
+$btn-font-size:               $input-btn-font-size;
+
+$btn-focus-width:             $input-btn-focus-width;
+
+
+
+
+
+
+
+
+
+
+
+  //Type Scale 
+
+  $uol-font-size-xs: 2rem;
+  $uol-font-size-sm: 2.2rem;
+  $uol-font-size-l: 2.6rem;
+  $uol-font-size-xl: 3.2rem;
+  $uol-font-size-xxl: 4rem; 
+ 
+  //Container Constraint
+  $uol-container-constraint: 117rem;
+
+  //Overlays
+  $uol-overlay-light: rgba(0, 0, 0, 0.2);
+  $uol-overlay-medium: rgba(0, 0, 0, 0.3);
+  $uol-overlay-dark: rgba(0, 0, 0, 0.4);
+
+  // Main colour map (for stuff like background colour @each loops
+  $uol-main-colours: (
+    primary: $uol-primary ,
+    secondary: $uol-secondary ,
+    accent-primary: $uol-accent-primary,
+    accent-secondary: $uol-accent-secondary
+  );
+
+  

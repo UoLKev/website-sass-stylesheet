@@ -1,0 +1,113 @@
+.uol-blockquote {
+  padding: 3rem 2rem;
+
+  p {
+    &:before,
+    &:after {
+      content: none;
+      display: none;
+    }
+  }
+
+  &__inner {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__text {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    font-family: $headings-font-family;
+    margin-bottom: 1rem;;
+    color: $uol-dark-font-default;
+  }
+
+  &__quote {
+    position: relative;
+    margin-bottom: 1rem;
+  }
+
+  &__mark {
+    color: $uol-primary; 
+    display: block;
+    max-width: 2.5rem;  
+    opacity: 0.25;   
+    &:first-of-type {   
+      margin-right: auto;
+      margin-bottom: 1rem;
+    }
+    &:last-of-type {
+      margin-left: auto;
+    }
+  }
+  
+
+}// End .uol-blockquote
+
+
+
+
+// START BREAKPOINTS
+@media (min-width: $uol-breakpoint-md) {
+  .uol-blockquote {
+    &__inner {
+      max-width: 75rem;
+    }
+
+    &__text {
+      margin: 0 2.5rem;
+      font-size: 2.8rem;
+      line-height: 3.2rem;
+    }
+  }  
+}
+
+
+@media (min-width: $uol-breakpoint-lg) {
+  .uol-blockquote {
+    &__inner {
+      max-width: 97rem;
+    }
+  }  
+}
+
+
+@media (min-width: $uol-breakpoint-xl) {
+  .uol-blockquote {
+    &__inner {
+      max-width: $uol-container-constraint;
+    }
+  }  
+}
+
+// END BREAKPOINTS
+
+// START COLOURS
+
+.uol-blockquote {
+
+  @each $key, $bgCol, $bgHoverCol, $fontCol  in  $uol-colors-multi {
+    &--#{$key}{
+      background-color: $bgCol;
+      border-left: none;
+    }
+  }// End @Each
+
+  &[class*="uol-blockquote--"] {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+    padding-bottom: 5rem;
+
+    .uol-body,
+    .uol-body-prominent,
+    .uol-blockquote__text,
+    .uol-blockquote__mark  {
+      color: $white;
+    }
+
+    .uol-blockquote__mark {
+      opacity: 0.5;
+    }
+  }
+}
+
+// END COLOURS

@@ -1,0 +1,16 @@
+/* START Pastel tables */
+.uol-table-pastel-light > thead > tr > th,
+.uol-table-pastel-dark > thead > tr > th,
+.uol-table-pastel-light > tbody > tr > td,
+.uol-table-pastel-dark > tbody > tr > td { 
+  border: 2px solid white;
+}
+
+.uol-table-pastel-light td {
+  background-color: #e1f2f6;
+}
+
+.uol-table-pastel-dark td {
+  background-color: #d6dce9;
+} 
+/* END Pastel tables */

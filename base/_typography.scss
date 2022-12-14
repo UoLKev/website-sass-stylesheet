@@ -1,23 +1,4 @@
 
-html {
-  font-size: $uol-font-size-html !important;
-}           
-
-body {
-  font-size: $uol-font-size-default !important;
-  font-family: $uol-font-primary !important;
-}
-
-
-@font-face {
-  font-family: Glyphicons Halflings;
-  src: 	url('<t4 type="media" id="49745" formatter="path/*"/>');
-  src: 	url('<t4 type="media" id="49745" formatter="path/*"/>?#iefix') format("embedded-opentype"), 
-		/*url('<t4 type="media" id="49741" formatter="path/*"/>') format("woff2"),*/
-		url('<t4 type="media" id="49742" formatter="path/*"/>') format("woff"), 
-		url('<t4 type="media" id="49743" formatter="path/*"/>') format("truetype"), 
-		url('<t4 type="media" id="49744" formatter="path/*"/>#glyphicons_halflingsregular') format("svg");
-}
 
 // Headings
 
@@ -40,7 +21,7 @@ h3, .h3, .uol-h3 {
 }
 
 h4, .h4, .uol-h4 {
-   font-size: $uol-font-size-default;
+   font-size: var(--#{$prefix}body-font-size);
 }
 
 h5, .h5, .uol-h5 {
@@ -50,11 +31,7 @@ h6, .h6, .uol-h6 {
   font-size: $uol-font-size-xs;
 }
 
-//Copy
-p {
-  font-size: $uol-font-size-default;
-  line-height: 2.5rem;
-}
+
 
 
 a { 
@@ -77,7 +54,7 @@ a {
 
 
 .uol-t2 {
-  font-size: $uol-font-size-default;
+  font-size: var(--#{$prefix}body-font-size);
   line-height: 2.5rem;
 }
 

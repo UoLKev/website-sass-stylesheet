@@ -1,0 +1,365 @@
+.uol-course-header {
+  align-items: stretch;
+  display: $uol-display-flex-imp;
+  flex-direction: column;
+  position: relative;
+  margin: 0 auto;
+  width: 100%; 
+  
+  > div:first-child {
+    position: absolute;
+    top: 1.5rem;
+    width: 100%;
+    z-index: 11;
+
+    .uol-wrapper {
+      display: $uol-display-flex-imp;
+      flex-flow: column;
+      height: 52.5rem;
+    }
+
+  }
+
+  &__title {
+
+    h1 {
+      color: $uol-white-default;
+      font: {
+        family: var(--#{$prefix}body-font-family);
+        weight: 700;
+      }
+      display: flex;
+      flex-direction: column;
+      letter-spacing: -0.2rem;
+      line-height: normal;
+      text-align: center;
+      width: 100%;
+
+      span {
+        width: 100%;
+      }
+      
+    }
+
+  }// End &__title
+
+
+  &__ctaBtnContainer {
+    margin-top: auto;
+    margin-bottom: 12rem;
+    text-align: center;
+  }// End &__ctaBtnContainer
+
+
+
+
+  &__banner {
+    padding: 0;
+
+    &__overlay {
+
+      &--light,
+      &--medium,
+      &--dark {
+        @extend %overlay;
+        height: 52.5rem !important;
+      }
+
+      &--light {
+        background: $uol-overlay-light;
+      }
+      
+      &--medium {
+        background: $uol-overlay-medium;
+      }
+      
+      &--dark {
+        background: $uol-overlay-dark;
+      }
+
+    }// End __overlay
+
+
+    picture,
+    img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: 52.5rem;
+    }
+
+    img {
+      object-fit: cover;
+      object-position: top center;
+    }
+
+  }// End __banner
+
+
+  &__key-info {
+    background-color: $uol-accent-primary;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+    color: $uol-white-default;
+    display: $uol-display-flex-imp;
+    flex-flow: column;
+    margin: -9rem auto 0;
+    padding: 0 0 2.5rem;;
+    position: relative;
+    text-align: center; 
+    width: 80%;
+    z-index: 12;
+
+    h2,
+    h3 {
+      color: $uol-white-default;
+      font-family: var(--#{$prefix}body-font-family);
+    }
+    
+    p {
+      color: $white;
+    }
+
+    a {
+      color: $white;
+      text-decoration: underline;
+    }
+    
+    
+
+    &__frame {
+      background-color: $uol-secondary;
+      min-height: 40rem;
+    }// End __frame
+
+    &__title {
+      background-color: #047e8b;
+      padding: 0 1.5rem;
+    }// End __title
+
+    &__year {
+      background-color: #047e8b;
+      padding: 0 1.5rem;
+      &__cnt {
+        display: $uol-display-flex-imp;
+        flex-direction:  row;
+        flex-wrap: wrap;
+        &__key-info {
+          text-align: center;
+          width: 100%;
+          padding: 1rem 2rem 0;
+          .h4 {
+            font-family: var(--#{$prefix}body-font-family);
+            font-weight: 700;
+          }
+        }// End key-info
+      }// End __cnt
+    }// End __year 
+
+    hr {
+      @include horizLineMargin( 0, 0.6rem, auto, 50% );
+    }
+
+  }// End key-info
+
+} // End .uol-course-header
+
+
+
+
+
+// Start Course Academic Year Select 
+#uol-course-year-select {
+  margin-top: auto;
+  width: 100%;
+  padding: .5rem 1.5rem;
+  text-align: center;
+
+   .uol-radio-btn-container {
+      position: relative;
+      padding-left: 3.5rem;
+      margin-bottom: 1.2rem;
+      cursor: pointer;
+      font-size: 1.8rem;
+      font-weight: normal;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      margin-right: 1rem;
+
+    &--horiz {
+      @extend .uol-radio-btn-container;
+      display: inline-block;
+    }
+
+    &--vert {
+      @extend .uol-radio-btn-container;
+      display: block;
+    }
+
+
+    // Hide the browser's default radio button 
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    
+      &:checked {
+        // When the radio button is checked, add a background colour
+        ~ .checkmark {
+          background-color: $bg-color-white-default;
+
+          //Show the indicator (dot/circle) when checked
+          &:after {
+            display: block;
+            background-color: $bg-color-secondary;
+          }
+
+        }
+         
+      }
+
+    }
+
+
+    // Create a custom radio button 
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 2.5rem;
+      width: 2.5rem;
+      background-color: #eee;
+      border-radius: 50%;
+
+      // Create the indicator (the dot/circle - hidden when not checked) 
+      &:after {
+        content: "";
+        position: absolute;
+        display: none; 
+        // Style the indicator (dot/circle) 
+        top: .9rem;
+        left: .9rem;
+        width: .8rem;
+        height: .8rem;
+        border-radius: 50%;
+        background: white;
+      }
+
+    }
+
+    &:hover {
+      // On mouse-over, add a grey background color 
+      input ~ .checkmark {
+        background-color: #ccc;
+      }
+    }
+
+  }// End .uol-radio-btn-container
+
+} // End Course Academic Year Select 
+   
+
+
+
+
+@media (min-width: $uol-breakpoint-md) {
+
+  .uol-course-header {
+
+    &__key-info {
+      height: 57rem;    
+      padding-bottom: 0;
+      text-align: left;
+
+      hr {
+        @include horizLineMargin( 0, 0.6rem, 0, 50% );
+      }
+      
+      &__year {
+
+        &__cnt {
+
+          &__key-info {
+            text-align: left;
+            width: 50%;
+          }
+
+        }
+      }
+    }
+  }
+
+
+  #uol-course-year-select {
+    padding-bottom: 5.5rem;
+    text-align: left;
+  }
+
+}
+
+
+@media (min-width: $uol-breakpoint-xl) {
+  .uol-course-header {
+    flex-direction: row;
+
+    div:first-child { 
+      align-self: auto;
+
+      .uol-wrapper {
+        padding-right: 35rem;
+      }
+
+    }
+
+    &__title {
+
+      h1 {
+        font-size: 5rem;
+        letter-spacing: -0.3rem;
+        //line-height: 5.9rem;
+        overflow: visible;
+        text-align: left;
+        width: 90%; 
+      }
+
+    }
+
+    &__ctaBtnContainer {
+      margin-bottom: 4rem;
+      text-align: left;
+    }
+
+    &__banner {
+      width: 70%;
+
+    }// End __banner
+
+    &__key-info {
+      margin-top: 0;
+      width: 30%;
+
+    }// End __key-info
+
+  }// End .uol-course-header
+
+}
+
+
+
+
+@media (min-width: $uol-breakpoint-xxl) {
+
+  .uol-course-header {
+
+    &__banner {
+      width: 74%;
+    }
+
+    &__key-info {
+      width: 26%;
+    }
+
+  }
+
+}

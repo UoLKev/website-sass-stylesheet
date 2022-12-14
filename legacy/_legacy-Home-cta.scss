@@ -1,0 +1,67 @@
+.home-cta {
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+  border-bottom: 1px solid #efefef;
+}
+.home-cta:before, .home-cta:after {
+  content: " ";
+  display: table;
+}
+.home-cta:after {
+  clear: both;
+}
+@media screen and (min-width: 768px) {
+  .home-cta {
+    margin-top: 1.5rem;
+    border-bottom: none;
+
+  }
+}
+.home-cta p {
+  display: block;
+  position: relative;
+  font-size: 1.6rem;
+  padding: 0 1rem 1rem;
+  margin-bottom: 0;
+  right: 0;
+  left: 0;
+}
+@media screen and (min-width: 768px) {
+  .home-cta p {
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    position: absolute;
+    bottom: 6rem;
+  }
+}
+.home-cta span {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 12rem;
+}
+@media screen and (min-width: 768px) {
+  .home-cta span {
+    margin-top: 5.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .home-cta {
+    margin-top: 4rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .home-cta {
+    margin-top: 3rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .home-cta {
+    margin-top: 2rem;
+  }
+}

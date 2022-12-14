@@ -17,10 +17,10 @@ $uol-btn-transition: background-color 0.3s ease;
 %uol-btn-style-standard {
   @extend %uol-btn-style-common;
   background-image: none; 
-  border: 1px solid transparent;
-  border-radius: if($uol-btn-rounded-corners, .4rem, 0); 
+  border: .1rem solid transparent;
+  border-radius: if( $uol-btn-rounded-corners, .4rem, 0 ); 
   font: {
-    family: $uol-font-primary;
+    family: var(--#{$prefix}font-family);
     size: 1.6rem;
     weight: normal;
   } 
@@ -64,12 +64,11 @@ $uol-btn-transition: background-color 0.3s ease;
     &--#{$key} {
       background-color: $btn;
       color: $uol-white-default;
-    }
-
-    :hover {
-      background-color: $btnHover;
-      transition: $uol-btn-transition;
-    }
+      &:hover {
+        background-color: $btnHover;
+        transition: $uol-btn-transition;
+      }
+    }    
   }
 }
 // End Standard UoL Buttons
@@ -84,15 +83,12 @@ $uol-btn-transition: background-color 0.3s ease;
 
   @each $key, $btn, $btnHover in  $uol-btn-colors {
     &--#{$key} {
-
       &:hover {
         background-color: $btn;
         color: $uol-white-default;
       }
-
       &:nth-of-type(1) {
         background-color: $btn;
-
         &:hover {
           background-color: $bg-color-white-default;
           color:  $btnHover;
@@ -102,11 +98,10 @@ $uol-btn-transition: background-color 0.3s ease;
   }// End each loop
 }
 
-@media (min-width: $uol-breakpoint-sm) {
+@media (min-width: $uol-breakpoint-md) {
 
   .uol-btn-courseHeader {
     margin-top: $uol-mt-0;
-
     &:nth-of-type(1) {
       margin-left: 0;
     }
@@ -120,14 +115,13 @@ $uol-btn-transition: background-color 0.3s ease;
 
 
 // Start Homepage page header buttons
-
 .uol-btn-homepageHeader {
   @extend %uol-common-btn-style-header;
   display: block;
-  padding: 11px 22px;
+  padding: 1.1rem 2,2rem;
   pointer-events: auto;
-  margin-top: 20px;
-  min-width: 215px;
+  margin-top: 2rem;
+  min-width: 21.5rem;
 
   &:nth-of-type(1) {
     margin-top: 0;
@@ -157,7 +151,7 @@ $uol-btn-transition: background-color 0.3s ease;
   }// End each loop
 }
 
-@media (min-width: $uol-breakpoint-sm) {
+@media (min-width: $uol-breakpoint-md) {
   .uol-btn-homepageHeader {
     display: inline-block;
     margin: 0 1rem 0 0;
@@ -169,49 +163,38 @@ $uol-btn-transition: background-color 0.3s ease;
 
 
 
+// START BOOTSTRAP OVERRIDES
 
+//Bootstrap overrides for primary and secondary
+//.btn {
+//  @extend %uol-btn-style-standard;
+//}
 
-//Bootstrap override for primary and secondary
-.btn {
-  @extend %uol-btn-style-standard;
-}
+//$btnBootstrapOverrides: 
+ // 'primary' $bg-color-primary-btn $bg-color-primary-btn-hover,
+//  'secondary' $bg-color-secondary-btn $bg-color-secondary-btn-hover;
 
-
-
-
-
-
-
-
-
-
-
-
-$btnTypes: ( 'primary', 'secondary', 'accent-primary', 'accent-secondary');
-
-@each $key, $btn, $btnHover in  $uol-btn-colors {
+//@each $key, $bgBtn, $bgBtnhover in  $btnBootstrapOverrides {
   // Uol Buttons
+  
+ // .btn-#{$key} {
+ //   background-color: $bgBtn;
+ //   &:focus,
+//    &.focus,
+//    &:hover,
+ //   &.hover,
+ //   &:active,
+ //   &.active,
+//    &.visited,
+//    &:visited{
+//      background-color: $bgBtnhover;
+//    }
+//  }
+//}
 
-  // Start Bootstrap Button Overrides
-  //.btn-#{$key} {
-   // @extend %bg-color-#{$btnType}-btn;
- // }
-/*
- // .btn-#{$key}:focus,
- // .btn-#{$key}.focus,
- // .btn-#{$key}:hover,
-//  .btn-#{$key}.hover,
- // .btn-#{$key}:active,
- // .btn-#{$key}.active,
- // .btn-#{$key}.visited,
- // .btn-#{$key}:visited{
-    //background-color: $btnHover;
- // }
-  // End Bootstrap Button Overrides
+// END BOOTSTRAP OVERRIDES
 
 
-*/
-}
 .uol-btn--white,
 .uol-button--white {
   background-color: $uol-white-default;

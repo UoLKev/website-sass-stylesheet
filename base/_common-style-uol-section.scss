@@ -1,5 +1,6 @@
 .uol-section {
-  @include componantMarginPadding-y( $uol-componant-margin-top-default, $uol-componant-margin-bottom-default, 0 );
+  //@include componantMarginPadding-y( $uol-componant-margin-top-default, $uol-componant-margin-bottom-default, 0 );
+  @include componantMarginPadding-y( $uol-componant-margin-top-default, 0, 0 );
   margin: {
     left: 1.2rem;
     right: 1.2rem;

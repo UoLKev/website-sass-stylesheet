@@ -12,13 +12,13 @@
   justify-content:start;
 }
 
-@media (min-width:$uol-breakpoint-sm){
+@media (min-width:$uol-breakpoint-md){
   .grid{
     grid-template-columns:1fr 1fr;
   } 
 }
 
-@media (min-width:$uol-breakpoint-m){
+@media (min-width:$uol-breakpoint-lg){
   .grid{
     grid-template-columns:repeat(4,min-content);
   }

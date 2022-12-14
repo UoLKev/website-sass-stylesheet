@@ -1,0 +1,85 @@
+
+  @import "colours";
+
+
+
+  // START ACCESSIBILITY COLOURS
+  
+  // The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
+  // See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
+  //$min-contrast-ratio:   4.5 !default;
+
+  // Customize the light and dark text colors for use in our color contrast function.
+  //$uol-color-contrast-dark:      $black !default;
+  //$uol-color-contrast-light:     $white !default;
+
+  // Generate colour swatches from uol-theme-colours map
+  //@each $key, $value in $uol-theme-colours {
+  //  .uol-swatch-#{$key} {
+  //    color: color-contrast($value);
+  //  }
+  //}
+
+
+  // END ACCESSIBILITY COLOURS
+
+
+
+
+
+  $uol-primary: $uol-uni-blue; 
+  $uol-primary-10-opacity: $uol-uni-blue-10-opacity;
+  $uol-primary-20-opacity: $uol-uni-blue-20-opacity;
+  $uol-primary-30-opacity: $uol-uni-blue-30-opacity;
+  $uol-primary-40-opacity: $uol-uni-blue-40-opacity;
+  $uol-primary-50-opacity: $uol-uni-blue-50-opacity;
+  $uol-primary-hover: $uol-uni-blue-hover; 
+  $uol-primary-gradiant-1: $uol-uni-blue-gradiant-1;
+  $uol-primary-gradiant-2: $uol-uni-blue-gradiant-2;
+  $uol-primary-btn: $uol-teal;
+  $uol-primary-btn-hover: $uol-teal-hover;
+
+  $uol-secondary: $uol-teal;
+  $uol-secondary-10-opacity: $uol-teal-10-opacity;
+  $uol-secondary-20-opacity: $uol-teal-20-opacity;
+  $uol-secondary-30-opacity: $uol-teal-30-opacity;
+  $uol-secondary-40-opacity: $uol-teal-40-opacity;
+  $uol-secondary-50-opacity: $uol-teal-50-opacity;
+  $uol-secondary-link: $uol-teal-link;
+  $uol-secondary-hover: $uol-teal-hover;
+  $uol-secondary-gradiant-1: $uol-teal-gradiant-1;
+  $uol-secondary-gradiant-2: $uol-teal-gradiant-2;
+  $uol-secondary-btn: $uol-uni-blue;
+  $uol-secondary-btn-hover: $uol-uni-blue-hover;
+  
+  $uol-accent-primary: $uol-magenta;
+  $uol-accent-primary-10-opacity: $uol-magenta-10-opacity;
+  $uol-accent-primary-20-opacity: $uol-magenta-20-opacity;
+  $uol-accent-primary-30-opacity: $uol-magenta-30-opacity;
+  $uol-accent-primary-40-opacity: $uol-magenta-40-opacity;
+  $uol-accent-primary-50-opacity: $uol-magenta-50-opacity;
+  $uol-accent-primary-hover: $uol-magenta-hover;
+  $uol-accent-primary-visited: $uol-magenta-visited;
+  $uol-accent-primary-gradiant-1: $uol-magenta-gradiant-1;
+  $uol-accent-primary-gradiant-2: $uol-magenta-gradiant-2;
+  $uol-accent-primary-btn: $uol-magenta;
+  $uol-accent-primary-btn-hover: $uol-magenta-hover;
+
+  $uol-accent-secondary: $uol-cool-grey;
+  $uol-accent-secondary-10-opacity: $uol-cool-grey-10-opacity;
+  $uol-accent-secondary-20-opacity: $uol-cool-grey-20-opacity;
+  $uol-accent-secondary-30-opacity: $uol-cool-grey-30-opacity;
+  $uol-accent-secondary-40-opacity: $uol-cool-grey-40-opacity;
+  $uol-accent-secondary-50-opacity: $uol-cool-grey-50-opacity;
+  $uol-accent-secondary-hover: $uol-cool-grey-hover;
+  $uol-accent-secondary-gradiant-1: $uol-cool-grey-gradiant-1;
+  $uol-accent-secondary-gradiant-2: $uol-cool-grey-gradiant-2;
+  $uol-accent-secondary-btn: $uol-cool-grey;
+  $uol-accent-secondary-btn-hover: $uol-cool-grey-hover;
+
+  // Set Link Colours 
+  $uol-link-colour: $uol-secondary-link;
+  $uol-link-hover: $uol-secondary-hover;
+  $uol-link-visited: $uol-accent-primary-visited;
+
+  

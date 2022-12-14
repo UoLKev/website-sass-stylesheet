@@ -25,7 +25,7 @@
 
 
 // START COLOURS
-@each $key, $bgCol, $bgHoverCol, $fontCol  in  $uol-colors {
+@each $key, $bgCol, $bgHoverCol, $fontCol  in  $uol-colors-multi {
   .uol-loader-container { 
     &--#{$key} {
       @extend .uol-loader-container;

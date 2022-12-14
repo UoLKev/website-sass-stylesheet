@@ -1,0 +1,88 @@
+.uol-blockquote {
+  border-left: 1rem solid gray;
+  border-radius: 0 3rem 3rem 0;
+  padding: 3rem 2rem;
+
+  .blockquote {
+    border-left: none;
+  }
+
+  .blockquote-footer {
+    &::before {
+      content: "";
+    }
+  }
+
+  .uol-blockquote__mark {
+    color: $uol-primary; 
+    display: block;
+    max-width: 2.5rem;  
+    opacity: 0.25;   
+    &:first-of-type {   
+      margin-right: auto;
+      margin-bottom: 1rem;
+    }
+    &:last-of-type {
+      margin-left: auto;
+    }
+  }
+
+}
+
+// Alternates
+@each $state, $value in $theme-colors {
+  //$blockquote-background: shift-color($value, -80%);
+  //$blockquote-border: shift-color($value, -70%);
+  //$blockquote-color: shift-color($value, 40%);
+
+  $blockquote-background: shift-color($value, 0%);
+  $blockquote-border: shift-color($value, -40%);
+  $blockquote-color: $white;
+
+   
+
+  @if (contrast-ratio($blockquote-background, $blockquote-color) < $min-contrast-ratio) {
+    $blockquote-color: mix($value, color-contrast($blockquote-background), abs(40%));
+  }
+
+  .uol-blockquote--#{$state} {
+    @extend .uol-blockquote;
+
+    //@include alert-variant($alert-background, $alert-border, $alert-color);
+    --#{$prefix}blockquote-color: #{$blockquote-color};
+  --#{$prefix}blockquote-bg: #{$blockquote-background};
+  --#{$prefix}blockquote-border-color: #{$blockquote-border};
+
+    background-color: var(--#{$prefix}blockquote-bg);
+    color: var(--#{$prefix}blockquote-color);
+    border-left: 1rem solid var(--#{$prefix}blockquote-border-color);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+    padding-bottom: 5rem;
+
+    // comment out if we go to pastels and want the footer color to rever to variable $blockquote-footer-color
+    .blockquote-footer,
+    .uol-body,
+    .uol-body-prominent,
+    .uol-blockquote__mark {
+      color: $white;
+    }
+
+    .uol-blockquote__mark {
+      opacity: 0.5;
+    }
+  }
+
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+

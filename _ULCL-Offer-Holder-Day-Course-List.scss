@@ -1,0 +1,138 @@
+.uol-ohd-course-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 20rem;
+  padding: 2rem 0 0;
+
+  p,
+  a  {
+    color: $uol-white-font-default;
+  }
+
+  &__form,
+  &__num-returned-courses,
+  &__site-maint-msg {
+    padding: 0 1rem;
+  }
+
+  &__form {
+    //@extend %centre;
+    label {
+      color: $uol-white-font-default;
+      display: block;
+    }
+    input {
+      font-size: 2rem;
+      width: 100%;     
+    }
+  }
+
+  &__num-returned-courses {
+    //@extend %centre;
+    button {
+      margin-top: $uol-mt-1;
+    }
+  }
+
+  &__site-maint-msg {
+    @extend %centre;
+    padding: 1rem;
+    a {
+      width: 80%;
+    }
+  }
+
+  &__courses {
+    margin-top: 2rem;
+    .courseLink {
+      background-color: $bg-color-white-default;
+      border: none;
+      border-bottom: .1rem solid $bg-color-white-default;
+      display: block;
+      padding: 0 1rem;
+      text-align: left;
+      width: 100%;
+
+      p {
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+        margin: 0;
+        padding: 1rem 0;
+      }
+     
+    }
+  }
+}
+
+#ohdModal {
+  .modal-dialog {
+    .modal-content {
+      .modal-header {
+        background-color: $bg-color-secondary;
+        color: $uol-white-font-default;
+        .close {
+          color: $uol-white-font-default; 
+          opacity: 1;
+        }
+      }
+      .modal-body {
+        row {
+          col {
+            #interviewText {
+              p {
+                color: $uol-dark-font-default;
+                a {
+                  color: $uol-dark-font-default;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// START BREAKPOINTS
+@media (min-width: $uol-breakpoint-lg) {
+  .uol-ohd-course-list {
+
+    &__form {
+      input {
+        width: 50%;     
+      }
+    }
+
+    &__site-maint-msg {
+      a {
+        width: 50%;
+      }
+    }
+  }
+}
+// END BREAKPOINTS
+
+
+// START COLOURS 
+
+@each $key, $bgCol, $bgHoverCol, $fontCol  in  $uol-colors-multi { 
+  .uol-ohd-course-list {
+    &--#{$key} {
+      @extend .uol-ohd-course-list;
+      background-color: $bgCol;  
+      
+      .uol-ohd-course-list__courses {    
+        .courseLink {
+          background-color: $bgHoverCol;     
+          &:hover {
+            background-color: if($key != 'accent-primary', $bg-color-accent-primary-hover, $bg-color-secondary-hover);
+          }  
+        }     
+      }     
+    }      
+  }
+}
+
+// END COLOURS

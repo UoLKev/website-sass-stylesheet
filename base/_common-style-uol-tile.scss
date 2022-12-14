@@ -63,7 +63,7 @@
 
 
 
-@media (min-width: $uol-breakpoint-sm) {
+@media (min-width: $uol-breakpoint-md) {
 
   .tile {
     max-width:100%;
@@ -71,7 +71,7 @@
 
 }
 
-@media (min-width: $uol-breakpoint-m){
+@media (min-width: $uol-breakpoint-lg){
  
   .tile {
     scroll-snap-align:start;

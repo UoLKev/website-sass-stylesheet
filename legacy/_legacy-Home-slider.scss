@@ -1,0 +1,133 @@
+.home-slider {
+  margin: 0;
+  background: #072249;
+}
+
+.home-slider .home-slide {
+  display: block;
+  background-color: #072249;
+  text-decoration: none;
+}
+.home-slider .home-slide .slide-image {
+  background-size: cover;
+  background-position: center;
+  min-height: 20rem;
+}
+@media screen and (min-width: 768px) {
+  .home-slider .home-slide .slide-image {
+    min-height: 30rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .home-slider .home-slide .slide-image {
+    min-height: 35rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .home-slider .home-slide .slide-image {
+    min-height: 45rem;
+  }
+}
+.home-slider .home-slide .slide-caption {
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+  text-align: center;
+	position: relative;
+}
+@media screen and (min-width: 768px) {
+  .home-slider .home-slide .slide-caption {
+    margin-top: 2rem;
+  }
+}
+.home-slider .home-slide .slide-caption .h1 {
+  color: #fff;
+  display: block;
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+@media screen and (min-width: 768px) {
+  .home-slider .home-slide .slide-caption .h1 {
+    font-size: 3.2rem;
+    margin: 1.5rem 0;
+  }
+}
+.home-slider .home-slide .slide-caption p {
+  color: #fff;
+  font-size: 1.4rem;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .home-slider .home-slide .slide-caption p {
+    display: block;
+  }
+}
+@media screen and (min-width: 992px) {
+  .home-slider .home-slide .slide-caption p {
+    font-size: 1.6rem;
+  }
+}
+.home-slider .home-slide .slide-caption blockquote {
+  display: none;
+  margin-top: 1rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .home-slider .home-slide .slide-caption blockquote {
+    display: block;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+.home-slider .home-slide .slide-caption blockquote p {
+  font-size: 1.4rem;
+  padding: 0 1.3rem;
+}
+.home-slider .home-slide .slide-caption blockquote p p:before,
+.home-slider .home-slide .slide-caption blockquote p p:after {
+  font-size: 3rem;
+}
+@media screen and (min-width: 992px) {
+  .home-slider .home-slide .slide-caption blockquote p {
+    font-size: 1.6rem;
+  }
+}
+.home-slider .home-slide .slide-caption blockquote p em {
+  padding: 0 1rem;
+}
+.home-slider .home-slide .slide-caption cite {
+  display: none;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+@media screen and (min-width: 768px) {
+  .home-slider .home-slide .slide-caption cite {
+    display: block;
+    font-size: 1.6rem;
+  }
+}
+.home-slider .home-slide .slide-caption p.slide-link {
+  display: inline-block;
+}
+.home-slider .home-slide .slide-caption .link {
+  color: #317deb;
+  position: relative;
+}
+.home-slider .home-slide .slide-caption .link:after {
+  content: '';
+  width: 70%;
+  height: 2px;
+  background: #1463d5;
+  opacity: .5;
+  position: absolute;
+  left: 15%;
+  bottom: -5px;
+  transition: width 200ms linear, left 200ms linear;
+}
+.home-slider .home-slide a:hover {
+  text-decoration: none;
+}
+.home-slider .home-slide a:hover .link:after {
+  left: 0;
+  width: 100%;
+}

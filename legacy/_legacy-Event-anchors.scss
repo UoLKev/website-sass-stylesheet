@@ -1,0 +1,93 @@
+a .event {
+  display: flex;
+  min-height: auto;
+  margin: 2rem 0;
+}
+@media screen and (min-width: 992px) {
+  a .event {
+	  /* Changed to 15rem from 14 rem as the event tiles weren't stacking properly (03 May 19 - KT)*/
+    min-height: 15rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  a .event {
+    min-height: 15rem;
+  }
+}
+a .event .col-md-2,
+a .event .col-md-10 {
+  padding: 0;
+}
+a .event:hover {
+  text-decoration: none;
+}
+a .event .date {
+  min-height: 9rem;
+  background-color: #072249;
+  text-align: center;
+  color: #fff;
+  padding-top: 3rem;
+  width: 30%;
+}
+@media screen and (min-width: 768px) {
+  a .event .date {
+    padding-top: 1rem;
+  }
+}
+a .event .date .day {
+  font-size: 2.5rem;
+}
+@media screen and (min-width: 768px) {
+  a .event .date .day {
+    font-size: 4.5rem;
+  }
+}
+a .event .date .month {
+  font-size: 1.6rem;
+  display: block;
+  margin-top: -1rem;
+}
+@media screen and (min-width: 768px) {
+  a .event .date .month {
+    font-size: 2rem;
+  }
+}
+a .event .info {
+  background-color: #fff;
+  min-height: 9rem;
+  padding-right: 1rem;
+  width: 100%;
+}
+a .event .info h4 {
+  margin-top: 0;
+  margin-left: 3rem;
+  padding-top: 2rem;
+  color: #333;
+  font-size: 2rem;
+  letter-spacing: -0.05rem;
+	line-height: 2.7rem;
+}
+@media screen and (min-width: 768px) {
+  a .event .info h4 {
+    margin-top: 2rem;
+    padding-top: 0;
+  }
+}
+a .event .info p {
+  margin-left: 3rem;
+}
+a .event .info p em {
+  margin-right: 2rem;
+	color:#777;
+}
+a .event .info p em.glyphicon {
+  margin-right: 0;
+}
+a .event .info p .link {
+  display: block;
+  margin-top: 1rem;
+  color: #317deb;
+}
+a .event .info p .link:hover {
+  text-decoration: underline;
+}

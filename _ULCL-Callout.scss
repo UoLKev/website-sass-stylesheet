@@ -1,0 +1,50 @@
+.uol-callout {
+  border-left: 1rem solid gray;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+  margin-top: 1.25rem;
+
+  p {
+    margin-bottom: 0 !important;
+  }
+
+}
+
+// Alternates
+@each $state, $value in $theme-colors {
+  $callout-background: shift-color($value, -80%);
+  $callout-border: shift-color($value, 0%);
+  $callout-color: shift-color($value, 40%);
+
+  
+  @if (contrast-ratio($callout-background, $callout-color) < $min-contrast-ratio) {
+    $callout-color: mix($value, color-contrast($callout-background), abs(40%));
+  }
+
+  .uol-callout--#{$state} {
+    @extend .uol-callout;
+
+    //@include alert-variant($alert-background, $alert-border, $alert-color);
+    --#{$prefix}callout-color: #{$callout-color};
+  --#{$prefix}callout-bg: #{$callout-background};
+  --#{$prefix}callout-border-color: #{$callout-border};
+
+    background-color: var(--#{$prefix}callout-bg);
+    color: var(--#{$prefix}callout-color);
+    border-left: 0.5rem solid var(--#{$prefix}callout-border-color);
+  }
+
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+

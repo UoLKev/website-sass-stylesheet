@@ -1,0 +1,90 @@
+a {
+  .btn-info {
+    background-color: #b8b8b8;
+    color: #333;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 5rem;
+    position: relative;
+    z-index: 3;
+
+    &:hover, 
+    &:focus, 
+    &:active, 
+    &:active:hover {
+      text-decoration: underline;
+      background-color: #b8b8b8;
+      color: #fff;
+      border: none;
+    }
+
+  }
+}
+
+
+button {
+  .btn-info {
+    background-color: #b8b8b8;
+    color: #333;
+    border: none;
+    border-radius: 0;
+    margin: 2rem 0 0 0;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:active:hover {
+      text-decoration: underline;
+      background-color: #919191;
+      color: #fff;
+      border: none;
+    }
+  }
+}
+
+span {
+
+  .btn-primary {
+    margin: 2rem 0 0 0;
+    z-index: 3;
+  } 
+
+  .btn-info {
+    background-color: #b8b8b8;
+    color: #333;
+    border: none;
+    border-radius: 0;
+    margin: 2rem 0 0 0;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:active:hover {
+      text-decoration: underline;
+      background-color: #919191;
+      color: #fff;
+      border: none;
+    }
+  }
+}
+
+@media screen and (min-width: $uol-breakpoint-sm) {
+  a {
+    .btn-info {
+      margin-bottom: 0;
+    }
+  }
+
+  button {
+    .btn-info {
+      margin-bottom: 0;
+    }
+  }
+
+  span {
+    .btn-info {
+      margin-bottom: 0;
+    }
+  }
+
+}

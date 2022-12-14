@@ -19,8 +19,8 @@
   }
 
   %uol-large-heading-common {    
-    color: $uol-black-default;
-    font-family: $uol-font-headings;  
+    color: $black;
+    font-family: $headings-font-family;  
     font-weight: 400;
     margin-bottom: 1.2rem;
   }
@@ -86,7 +86,7 @@
     cursor: pointer;
     display: block; 
     height: 100%;
-    fill: $bg-color-white-default;
+    fill: $white;
     left: 50%;
     opacity: 1;
     padding: 0;

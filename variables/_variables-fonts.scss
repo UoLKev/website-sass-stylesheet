@@ -1,0 +1,24 @@
+// $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
+// $font-size-base affects the font size of the body text
+
+
+
+// Font Colours
+$uol-white-font-default : $white; 
+$uol-white-font-default-hover : $uol-white-400; 
+$uol-white-font-100: $uol-white-100;
+$uol-white-font-200: $uol-white-200;
+$uol-white-font-300: $uol-white-300;
+$uol-white-font-400: $uol-black-400;
+
+$uol-dark-font-default : $black; 
+$uol-dark-font-default-hover : $uol-black-100; 
+$uol-dark-font-100: $uol-black-100;
+$uol-dark-font-200: $uol-black-200;
+$uol-dark-font-300: $uol-black-300;
+$uol-dark-font-400: $uol-black-400;
+
+$uol-font-color-primary : $uol-primary; 
+$uol-font-color-secondary : $uol-secondary; 
+$uol-font-color-accent-primary : $uol-accent-primary; 
+$uol-font-color-accent-secondary : $uol-accent-secondary; 

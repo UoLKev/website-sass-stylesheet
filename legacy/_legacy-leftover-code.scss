@@ -1,0 +1,555 @@
+
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+body {
+  overflow-y: scroll;
+  /*-webkit-overflow-scrolling: touch; - Commented out 11 Aug as it looks like it's affecting button visibility on apple devices and it's not a supported propery rule - KT */
+}
+
+
+/*
+h1, .h1 {
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 3.2rem;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+}
+
+h2, .h2 {
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+}
+
+h3, .h3 {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 2rem;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+}
+
+h4, .h4 {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+}
+
+p {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 1.3rem;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  color: #333;
+}
+@media screen and (min-width: 480px) {
+  p {
+    font-size: 1.4rem;
+  }
+}
+*/
+
+pre {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 1.3rem;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 18.5714px;
+}
+
+ul, li {
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+
+cite {
+  font-size: 1.6rem;
+  font-style: normal;
+  color: #fff;
+  display: block;
+  margin-bottom: 3rem;
+}
+
+.grey-6 {
+  background-color: #f1f1f1;
+  padding: 1rem 0 2rem 0;
+}
+.grey-6 h2, .grey-6 .h2 {
+  display: block;
+  text-align: center;
+}
+
+.white {
+  background-color: #fff;
+  padding: 1rem 0 2rem 0;
+}
+
+
+
+@media screen and (min-width: 992px) {
+  .hidden-desktop {
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+@media (min-width: 768px) {
+  .col-sm-15 {
+    width: 20%;
+    float: left;
+  }
+}
+@media (min-width: 992px) {
+  .col-md-15 {
+    width: 20%;
+    float: left;
+  }
+}
+@media (min-width: 1200px) {
+  .col-lg-15 {
+    width: 20%;
+    float: left;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar-collapse.collapse {
+    display: none !important;
+  }
+
+  .navbar-collapse.collapse.in {
+    display: block !important;
+  }
+
+  .navbar-header .collapse, .navbar-toggle {
+    display: block !important;
+  }
+
+  .navbar-header {
+    float: none;
+  }
+}
+.blue {
+  color: #072249;
+}
+
+.blue-bg {
+  color: #fff;
+  background-color: #072249;
+}
+
+
+
+.row-flex:before, .row-flex:after {
+  content: normal !important;
+}
+
+.db {
+  display: block;
+}
+
+.tac {
+  text-align: center;
+}
+
+
+
+
+
+.slider {
+  max-height: 104rem;
+}
+
+.primary-background {
+  background-color: #072249;
+}
+
+
+
+
+
+
+.two-col-basic {
+  padding: 0 1.5rem;
+}
+.two-col-basic .tef-image {
+  margin-bottom: 2rem;
+}
+.two-col-basic .h1.tef-text {
+  display: block;
+  text-align: center;
+  color: #919191;
+  margin: 1rem 0;
+}
+@media screen and (min-width: 768px) {
+  .two-col-basic .h1.tef-text {
+    margin-top: 3rem;
+    text-align: left;
+  }
+}
+
+
+.line {
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .line:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    border-right: 1.5px solid #efefef;
+    top: 5%;
+    bottom: 5%;
+  }
+}
+
+p {
+  border-bottom: none;
+}
+
+.no-gutters a:hover {
+  text-decoration: none;
+}
+
+
+.gradient {
+  position: absolute;
+  display: inline-block;
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.65)), color-stop(100%, rgba(0, 0, 0, 0)));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+  /* W3C */
+  height: 30rem;
+  z-index: 10101;
+}
+
+
+a:hover {
+  text-decoration: none;
+}
+a .cta-small {
+  padding: 0 2rem;
+}
+a .cta-small:hover {
+  text-decoration: none;
+}
+a .cta-small .cta-header {
+  margin-top: 3rem;
+  color: #777;
+}
+@media screen and (min-width: 992px) {
+  a .cta-small .cta-header {
+    margin-top: 9rem;
+  }
+}
+a .cta-small p {
+  padding-right: 4rem;
+}
+
+.page {
+  padding: 1.5rem 0 0;
+}
+
+.bmd-modalButton {
+  display: block;
+  margin: 1.5rem auto;
+  padding: .5rem 1.5rem;
+}
+
+.close-button {
+  overflow: hidden;
+}
+
+.bmd-modalContent {
+  box-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.bmd-modalContent .close {
+  font-size: 3rem;
+  line-height: 3rem;
+  padding: .7rem .4rem .7rem 1.3rem;
+  text-shadow: none;
+  opacity: .7;
+  color: #fff;
+}
+.bmd-modalContent .close:hover, .bmd-modalContent .close:focus {
+  opacity: 1;
+  outline: none;
+}
+.bmd-modalContent .close span {
+  display: block;
+}
+.bmd-modalContent iframe {
+  display: block;
+  margin: 0 auto;
+}
+
+.basic-popup {
+  position: relative;
+  background: #efefef;
+  padding: 2rem;
+  width: auto;
+  width: 80%;
+  margin: 2rem auto;
+}
+@media screen and (min-width: 992px) {
+  .basic-popup {
+    width: 50%;
+  }
+}
+.basic-popup .h4 {
+  display: block;
+  margin: 2rem 0;
+  font-weight: bold;
+  width: 100%;
+  border-bottom: 2px solid #072249;
+  padding-bottom: 1rem;
+}
+
+
+
+
+
+.grey-6 .h3 {
+  text-align: center;
+  display: block;
+  margin: 2rem auto;
+}
+.grey-6 .btn-info {
+  display: inline-block;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+.blue-bg {
+  padding-bottom: 3rem;
+}
+.blue-bg .btn-info {
+  display: block;
+  width: 15rem;
+  margin: 0 auto;
+}
+.blue-bg .spotlight-wrapper {
+  padding-top: 0;
+}
+
+
+
+
+
+.center {
+  text-align: center;
+}
+.center .h1 {
+  display: block;
+  font-size: 2.4rem;
+  margin: 1rem 0;
+}
+@media screen and (min-width: 992px) {
+  .center .h1 {
+    font-size: 3.4rem;
+    margin: 2rem 0;
+  }
+}
+.center p {
+  display: block;
+  padding: 0;
+}
+@media screen and (min-width: 992px) {
+  .center p {
+    padding: 0 10rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .center p {
+    padding: 0 15rem;
+  }
+}
+.center .link {
+  display: block;
+  margin: 1rem 0;
+  font-size: 1.4rem;
+  text-decoration: underline;
+}
+@media screen and (min-width: 992px) {
+  .center .link {
+    font-size: 1.6rem;
+    margin: 2rem 0;
+  }
+}
+
+/*Hero Banner - Output White Text*/
+.banner-text.light .h1,
+.banner-text.light blockquote p,
+.banner-text.light blockquote p:before,
+.banner-text.light blockquote p:after,
+.banner-text.light cite {
+  color: #777;
+}
+
+@media screen and (min-width: 992px) {
+  .banner-text.light .h1,
+  .banner-text.light blockquote p,
+  .banner-text.light blockquote p:before,
+  .banner-text.light blockquote p:after,
+  .banner-text.light cite {
+    color: #fff;
+  }
+}
+.one-two-thirds .sidebar ul li a {
+  text-decoration: none;
+}
+  
+  
+/* Generic Banners */
+  section[aria-label=full-width-maps-testimonial] .bg-image-overlay {background-position: 71% 36%}
+  section[aria-label=full-width-open-days-testimonial] .bg-image-overlay {background-position: 60% 24%}
+  section[aria-label=full-width-open-days-testimonial] .bg-image-overlay .btn-info, section[aria-label=full-width-continue-adventure-testimonial] .bg-image-overlay .btn-info {color: #fff; background-color: #337ab7; border-color: #2e6da4; position:relative; z-index:3;}
+  section[aria-label=full-width-open-days-testimonial] .bg-image-overlay .btn-info:hover, section[aria-label=full-width-continue-adventure-testimonial] .bg-image-overlay .btn-info:hover {color: #fff; background-color: #286090; border-color: #204d74;}
+  a[href="javascript:void(0)"]{cursor:default}
+  
+  /*for jsvoid above*/
+  .news-wrapper .preventHover.news-item:hover {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+  
+  
+/* Print Styles */
+@media print {
+  .panel div {    
+    display: block;
+  }
+  html, body {    
+    height: auto;    
+    overflow: auto;
+  }
+  
+  .bg-video,
+  .slick-slider {
+      display: none;
+  }
+}
+
+ 
+
+ 
+
+    .late-app-banner {
+        position: fixed;
+        bottom: 20px;
+        left: 0;
+        width: 100%;
+        z-index: 9999;
+        padding: 20px 0;
+        background-color: #072249;
+        position: fixed;
+        width: 100%;
+        bottom: 20px;
+        left: 0;
+        z-index: 9999;
+        background: url("https://www.toptal.com/designers/subtlepatterns/patterns/light_checkered_tiles.png");
+    }
+    
+    .late-app-banner .container { 
+    	text-align:center;
+    }
+
+    .late-app-banner:after { 
+        content: '';
+        top: 0; 
+        left: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: rgba(7, 34, 73, 1);
+    }
+    
+  	#close-deadline-banner { 
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: white;
+      border: none;
+      background: transparent;
+      z-index: 1;
+      border: 1px solid white;
+    }
+    
+    .square-border-button {
+        font-size: 14px;
+        text-align: center;
+        box-sizing: border-box;
+        background-color: transparent;
+        text-decoration: none;
+        transition: .2s all;
+        border: 1px solid #fff;
+        padding: 10px 20px;
+        display: inline-block;
+        color: #fff;
+        text-shadow: none;
+        z-index: 1;
+        position: relative;
+    }
+    
+    .square-border-button:hover { 
+		background-color: #fff;
+        color: #072249;
+    }
+
+  .virtual-classroom-homepage-entry img { 
+      margin: 0!important;
+  }
+
+ 
+
+.js-menu-open {
+  background-color: #002147;
+}
+.js-menu-open [aria-controls] {
+  color: #fff;
+}
+.test-mf .main-nav > li > a:after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 2px;
+  width: 0px;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+.test-mf .main-nav > li > a:hover:after {
+  width: 100%;
+  background: #efefef;
+}

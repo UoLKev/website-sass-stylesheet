@@ -4,13 +4,13 @@
 .no-gutters .col-xs-6 {
   margin-left: 0;
 }
-@media screen and (min-width: $uol-breakpoint-sm) {
+@media screen and (min-width: $uol-breakpoint-md) {
   .no-gutters .col-xs-6 {
     margin-left: -3rem;
   }
 
 }
-@media screen and (min-width: $uol-breakpoint-m) {
+@media screen and (min-width: $uol-breakpoint-lg) {
   .no-gutters .col-xs-6 {
     margin-left: 0;
   }

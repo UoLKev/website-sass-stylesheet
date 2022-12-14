@@ -1,0 +1,48 @@
+.fullwidth-quote {
+  text-align: center;
+}
+.fullwidth-quote blockquote {
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+.fullwidth-quote blockquote p {
+  font-family: Georgia, Times, "Times New Roman", serif;
+  color: #888;
+  padding: 0 3rem;
+}
+@media screen and (min-width: 768px) {
+  .fullwidth-quote blockquote p {
+    padding: 0 2.8rem;
+  }
+}
+.fullwidth-quote blockquote p em {
+  font-style: normal;
+}
+.fullwidth-quote blockquote p:before {
+  top: -2rem;
+  left: 0;
+}
+@media screen and (min-width: 992px) {
+  .fullwidth-quote blockquote p:before {
+    left: -5.5rem;
+  }
+}
+.fullwidth-quote blockquote p:after {
+  bottom: 4rem;
+  right: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .fullwidth-quote blockquote p:after {
+    right: -1.5rem;
+  }
+}
+.fullwidth-quote cite {
+  color: #888;
+  margin-bottom: 2rem;
+  font-size: 1.3rem;
+}
+@media screen and (min-width: 768px) {
+  .fullwidth-quote cite {
+    font-size: 1.6rem;
+  }
+}
