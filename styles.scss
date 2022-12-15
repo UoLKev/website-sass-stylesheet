@@ -52,7 +52,7 @@
 // @import "bootstrap5/grid";
 // @import "bootstrap5/tables";
 // @import "bootstrap5/forms";
-//@import "bootstrap5/buttons";
+// @import "bootstrap5/buttons";
 // @import "bootstrap5/transitions";
 // @import "bootstrap5/dropdown";
 // @import "bootstrap5/button-group";
@@ -140,7 +140,11 @@
 //@import "ULCL-Funnelback";
 
 
+// Helpers
+@import "bootstrap5/helpers";
 
+// Utilities
+@import "bootstrap5/utilities/api";
 
 
 //Abstracts

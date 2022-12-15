@@ -18,11 +18,14 @@
   --#{$prefix}btn-bg: transparent;
   --#{$prefix}btn-border-width: #{$btn-border-width};
   --#{$prefix}btn-border-color: transparent;
-  --#{$prefix}btn-border-radius: if($enable-button-border-radius, #{$btn-border-radius}, 0);
+  --#{$prefix}btn-border-radius: #{$btn-border-radius};
   --#{$prefix}btn-hover-border-color: transparent;
   --#{$prefix}btn-box-shadow: #{$btn-box-shadow};
   --#{$prefix}btn-disabled-opacity: #{$btn-disabled-opacity};
   --#{$prefix}btn-focus-box-shadow: 0 0 0 #{$btn-focus-width} rgba(var(--#{$prefix}btn-focus-shadow-rgb), .5);
+  
+  --#{$prefix}btn-margin-x: #{$btn-margin-x};
+  --#{$prefix}btn-margin-y: #{$btn-margin-y};
   // scss-docs-end btn-css-vars
 
   display: inline-block;
@@ -32,6 +35,7 @@
   font-weight: var(--#{$prefix}btn-font-weight);
   line-height: var(--#{$prefix}btn-line-height);
   color: var(--#{$prefix}btn-color);
+  margin: var(--#{$prefix}btn-margin-y) var(--#{$prefix}btn-margin-x);
   text-align: center;
   text-decoration: if($link-decoration == none, null, none);
   white-space: $btn-white-space;
@@ -43,6 +47,7 @@
   @include gradient-bg(var(--#{$prefix}btn-bg));
   @include box-shadow(var(--#{$prefix}btn-box-shadow));
   @include transition($btn-transition);
+
 
   &:hover {
     color: var(--#{$prefix}btn-hover-color);
