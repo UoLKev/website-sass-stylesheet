@@ -170,8 +170,7 @@ $font-family-base:            var(--#{$prefix}font-sans-serif);
 // $font-size-base affects the font size of the body text
 $font-size-root:              10px;
 $font-size-base:              1.6rem; // Assumes the browser default, typically `16px`
-$font-size-sm:                $font-size-base * .875;
-$font-size-lg:                $font-size-base * 1.25;
+
 
 
 // headings-variables
@@ -188,30 +187,30 @@ $headings-font-family:        Georgia, Times, "Times New Roman", serif;
 // Buttons + Forms
 //
 //input-btn-variables
-$input-btn-padding-y:         .875rem;
-$input-btn-padding-x:         1.25rem;
-$input-btn-font-size:         $font-size-base;
+//$input-btn-padding-y:         .875rem;
+//$input-btn-padding-x:         1.25rem;
+//$input-btn-font-size:         $font-size-base;
 
 $input-btn-focus-width:         .75rem;
 
-$input-btn-padding-y-lg:      1rem;
-$input-btn-padding-x-lg:      1.5rem;
-$input-btn-font-size-lg:      $font-size-lg;
+//$input-btn-padding-y-lg:      1rem;
+//$input-btn-padding-x-lg:      1.5rem;
+//$input-btn-font-size-lg:      $font-size-lg;
 
 // Buttons
 //
 // Start btn-variables
 
-$btn-padding-y:               $input-btn-padding-y;
-$btn-padding-x:               $input-btn-padding-x;
+//$btn-padding-y:               $input-btn-padding-y;
+//$btn-padding-x:               $input-btn-padding-x;
 
-$btn-padding-y-lg:            $input-btn-padding-y-lg;
-$btn-padding-x-lg:            $input-btn-padding-x-lg;
-$btn-font-size-lg:            $input-btn-font-size-lg;
+//$btn-padding-y-lg:            $input-btn-padding-y-lg;
+//$btn-padding-x-lg:            $input-btn-padding-x-lg;
+//$btn-font-size-lg:            $input-btn-font-size-lg;
 
-$btn-font-size:               $input-btn-font-size;
+//$btn-font-size:               $input-btn-font-size;
 
-$btn-focus-width:             $input-btn-focus-width;
+//$btn-focus-width:             $input-btn-focus-width;
 
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius:           if($enable-button-border-radius, #{$btn-border-radius}, 0);
@@ -224,6 +223,10 @@ $btn-margin-x:                0;
 
 
 
+$uol-accordion-hover-bg-shade-amount:       15% !default;
+$uol-accordion-hover-bg-tint-amount:        15% !default;
+$uol-accordion-active-bg-shade-amount:      30% !default;
+$uol-accordion-active-bg-tint-amount:       30% !default;
 
 
 

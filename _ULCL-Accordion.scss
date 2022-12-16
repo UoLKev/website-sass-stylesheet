@@ -1,4 +1,8 @@
 .uol-accordion {
+  --#{$prefix}accordion-bg: transparent;
+  --#{$prefix}accordion-color: #{$body-color};
+
+
   background: $white;
   border: 0;
   box-sizing: border-box;
@@ -7,37 +11,6 @@
     top: 3rem;
     bottom: 5rem;
   } 
-
-  //Accordion colour styles - added 12 Apr 22 - KT 
-  // Amended colours so that they only style the title bit because it looks jaunty with how WAAPI works with height - 21 Apr 22 - MF */
-
-  //@each $key, $val in  $uol-bg-main-colours {
-  @each $key, $bgCol, $bgHoverCol, $fontCol  in  $uol-colors-multi {   
-    &--#{$key} {
-      //color: $fontCol;
-
-      .uol-accordion__title {
-        background-color: $bgCol;
-
-        .uol-svg-cnt {
-          &--small {
-            border-color: $bgCol;
-            color: $fontCol;
-            svg {
-              color: $fontCol;
-            }
-          }
-        }
-      } 
-    }
-
-    &--#{$key}[open] {
-      .uol-accordion__title {
-        background-color: $bgHoverCol !important;
-      }
-    }
-  }// end @each
-
 
   &[open] {
     > .uol-accordion__title {
@@ -73,7 +46,7 @@
 
   &__title {
     border-bottom: .1rem solid $uol-white-default;
-    color: $uol-dark-font-default;
+    color: var(--#{$prefix}accordion-color);
     cursor: pointer;
     display: block;
     font: {
@@ -87,9 +60,9 @@
     position: relative;
     transition: color 0.2s ease;   
     
-    &--light {
-      color: $uol-white-font-default;
-    }
+    // &--light {
+    //   color: $uol-white-font-default;
+    // }
     
     &::-webkit-details-marker {
       display: none;
@@ -151,6 +124,76 @@
   }
 
 }
+
+
+
+//Accordion colour styles - added 12 Apr 22 - KT 
+  // Amended colours so that they only style the title bit because it looks jaunty with how WAAPI works with height - 21 Apr 22 - MF */
+
+//@each $key, $val in  $uol-bg-main-colours {
+//@each $key, $bgCol, $bgHoverCol, $fontCol  in  $uol-colors-multi {  
+
+@each $color, $value in $theme-colors { 
+  .uol-accordion--#{$color} {
+    @if $color == "light" {
+      @include uol-accordion-variant(
+        $value,
+        $value,
+        $hover-background: shade-color($value,  $uol-accordion-hover-bg-shade-amount),        
+        $active-background: shade-color($value, $uol-accordion-active-bg-shade-amount)
+      );
+    } @else if $color == "dark" {
+      @include uol-accordion-variant(
+        $value,
+        $value,
+        $hover-background: tint-color($value, $uol-accordion-hover-bg-tint-amount),
+        $active-background: tint-color($value, $uol-accordion-active-bg-tint-amount)
+      );
+    } @else {
+      @include uol-accordion-variant($value, $value);
+    }
+
+    //color: $fontCol;
+
+    .uol-accordion__title {
+      background-color: var(--#{$prefix}accordion-bg);
+      color: var(--#{$prefix}accordion-color);
+
+      .uol-svg-cnt {
+        &--small {
+          border-color: var(--#{$prefix}accordion-bg);
+          color: var(--#{$prefix}accordion-color);
+          svg {
+            color: var(--#{$prefix}accordion-bg);
+          }
+        }
+      }
+
+      &:hover {
+        background-color: var(--#{$prefix}accordion-hover-bg) ;
+        color: var(--#{$prefix}accordion-hover-color) ;
+      }
+
+    } 
+
+    &[open] {
+      .uol-accordion__title {
+        background-color: var(--#{$prefix}accordion-active-bg);
+        color: var(--#{$prefix}accordion-active-color);
+
+      
+      }
+    }
+  }
+
+}// end @each
+
+
+
+
+
+
+
 
 [class^="uol-svg-expand"] {
   display: block;

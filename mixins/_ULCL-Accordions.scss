@@ -1,0 +1,23 @@
+// Accordion variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+
+// accordion-variant-mixin
+@mixin uol-accordion-variant(
+  $background,
+  $border,
+  $color: color-contrast($background),
+  $hover-background: if($color == $color-contrast-light, shade-color($background, $uol-accordion-hover-bg-shade-amount), tint-color($background, $uol-accordion-hover-bg-tint-amount)),
+  $hover-color: color-contrast($hover-background),
+  $active-background: if($color == $color-contrast-light, shade-color($background, $uol-accordion-active-bg-shade-amount), tint-color($background, $uol-accordion-active-bg-tint-amount)),
+  $active-color: color-contrast($active-background)
+) {
+  --#{$prefix}accordion-color: #{$color};
+  --#{$prefix}accordion-bg: #{$background};
+  --#{$prefix}accordion-hover-color: #{$hover-color};
+  --#{$prefix}accordion-hover-bg: #{$hover-background};
+  --#{$prefix}accordion-active-color: #{$active-color};
+  --#{$prefix}accordion-active-bg: #{$active-background};
+}
+// end accordion-variant-mixin
