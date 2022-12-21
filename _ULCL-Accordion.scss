@@ -14,7 +14,7 @@
 
   &[open] {
     > .uol-accordion__title {
-      background-color: $bg-color-white-default;
+      background-color: $white;
       transition: color 0.2s ease;
       .uol-svg-cnt {
         &--small {
@@ -79,8 +79,7 @@
         top: 50%;
         left: 1.2rem;
         transform: translateY(-50%);
-        //color: var(--uol-primary);
-        background-color: $bg-color-white-default;
+        background-color: $white;
         border-color: $bg-color-primary;
         width: 1.2em;
         min-width: 1.2em;
@@ -112,7 +111,7 @@
     }
 
     &--light {
-      background-color: $bg-color-white-default;
+      background-color: $white;
     }
 
   }// end __content
@@ -129,9 +128,6 @@
 
 //Accordion colour styles - added 12 Apr 22 - KT 
   // Amended colours so that they only style the title bit because it looks jaunty with how WAAPI works with height - 21 Apr 22 - MF */
-
-//@each $key, $val in  $uol-bg-main-colours {
-//@each $key, $bgCol, $bgHoverCol, $fontCol  in  $uol-colors-multi {  
 
 @each $color, $value in $theme-colors { 
   .uol-accordion--#{$color} {
@@ -152,8 +148,6 @@
     } @else {
       @include uol-accordion-variant($value, $value);
     }
-
-    //color: $fontCol;
 
     .uol-accordion__title {
       background-color: var(--#{$prefix}accordion-bg);
@@ -179,9 +173,7 @@
     &[open] {
       .uol-accordion__title {
         background-color: var(--#{$prefix}accordion-active-bg);
-        color: var(--#{$prefix}accordion-active-color);
-
-      
+        color: var(--#{$prefix}accordion-active-color);    
       }
     }
   }
@@ -190,30 +182,28 @@
 
 
 
-
-
-
-
-
-[class^="uol-svg-expand"] {
+[class^="uol-svg-expand"],
+[class^="uol-svg-cnt"] {
   display: block;
+  pointer-events: none;
+}
+
+
+[class^="uol-svg-expand"] { 
   stroke-width: 1.2;
   width: 2rem;
   height: 2.1rem;
   padding: .4rem;
-  pointer-events: none;
   stroke-linecap: square;
   stroke: currentColor;
   transition: transform 0.5s ease-out;
 }
 
 [class^="uol-svg-cnt"] {
-  display: block;
   width: 2.5rem;
   min-width: 2.5rem;
   height: 2.5rem;
   min-height: 2.5rem;
-  pointer-events: none;
   margin-left: auto;
   border-radius: 100%;
   border: 0.2rem solid currentColor;

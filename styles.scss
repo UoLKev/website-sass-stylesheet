@@ -17,7 +17,7 @@
 
 // Default variable overrides
 @import "variables";
-@import "reboot";
+//@import "reboot";
 @import "mixins";
 
 // Include remainder of required Bootstrap stylesheets
@@ -45,7 +45,8 @@
 
 //Optionally include any other parts as needed
 @import "bootstrap5/utilities";
-@import "bootstrap5/reboot";
+//@import "bootstrap5/reboot";
+@import "reboot";
 @import "bootstrap5/type";
 // @import "bootstrap5/images";
 // @import "bootstrap5/containers";
@@ -56,8 +57,8 @@
 // @import "bootstrap5/transitions";
 // @import "bootstrap5/dropdown";
 // @import "bootstrap5/button-group";
-// @import "bootstrap5/nav";
-// @import "bootstrap5/navbar";
+//@import "bootstrap5/nav";
+//@import "bootstrap5/navbar";
 // @import "bootstrap5/card";
 // @import "bootstrap5/accordion";
 // @import "bootstrap5/breadcrumb";
@@ -127,10 +128,12 @@
 @import "ULCL-Basic-video";
 @import "ULCL-Spotlight";
 @import "ULCL-Blockquote";
-@import "ULCL-Breadcrumbs";
+//@import "ULCL-Breadcrumbs";
+@import "ULCL-Breadcrumbs-orig";
 @import "ULCL-Carousel-Card";
 @import "ULCL-Callout";
-@import "ULCL-Carousel";
+//@import "ULCL-Carousel";
+@import "ULCL-Carousel - orig";
 @import "ULCL-Course";
 @import "ULCL-Billboard";
 @import "ULCL-Homepage-Hero-Banner";

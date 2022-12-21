@@ -1,10 +1,49 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
 // Colour System
+
+// scss-docs-start gray-color-variables
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000;
+// scss-docs-end gray-color-variables
+
+
+
+// scss-docs-start gray-colors-map
+  // No overrides
+// scss-docs-end gray-colors-map
+
+
+
+// scss-docs-start color-variables
+
+// No overrides to Bootstrap colours
 
 // Brand colours
 $uol-uni-blue: #002147 !default;
 $uol-teal: #047e8b !default; 
 $uol-magenta: #db1a72 !default;
 $uol-cool-grey: #747678 !default;
+
+// scss-docs-end color-variables
+
+
+
+// scss-docs-start colors-map
+
+// No overrides to Bootstrap map
 
 // uol-colors map
 $uol-colors: (
@@ -14,6 +53,21 @@ $uol-colors: (
   "cool-grey":  $uol-cool-grey
 ) !default;
 
+// scss-docs-end colors-map
+
+
+
+// The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
+// See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
+
+// No override to min-contrast-ratio
+
+// Customize the light and dark text colors for use in our color contrast function.
+// No override to dark and light contrast colours
+
+// No override to Bootstrap colour tints and shades
+
+// Brand tints and shades
 $uol-uni-blue-100: tint-color($uol-uni-blue, 80%) !default;
 $uol-uni-blue-200: tint-color($uol-uni-blue, 60%) !default;
 $uol-uni-blue-300: tint-color($uol-uni-blue, 40%) !default;
@@ -105,7 +159,8 @@ $uol-cool-greys: (
   "uol-cool-grey-900": $uol-cool-grey-900
 ) !default;
 
-// Theme Colours
+
+// scss-docs-start theme-color-variables
 
 // Brand Colours
 $uol-primary:           $uol-uni-blue !default; 
@@ -113,38 +168,47 @@ $uol-secondary:         $uol-teal !default;
 $uol-accent-primary:    $uol-magenta !default;
 $uol-accent-secondary:  $uol-cool-grey !default;
 
+// scss-docs-end theme-color-variables
+
+// scss-docs-start theme-colors-map
 $uol-theme-colors: (
   "primary":            $uol-primary,
   "secondary":          $uol-secondary,
   "accent-primary":     $uol-accent-primary,
   "accent-secondary":   $uol-accent-secondary
 );
+// scss-docs-end theme-colors-map
+
+// Characters which are escaped by the escape-svg function
+// No override to Bootstrap characters
 
 // Options
 //
 // Quickly modify global styling by enabling or disabling optional features.
-$enable-caret:                true ;
-$enable-rounded:              true ;
-$enable-shadows:              false ;
-$enable-gradients:            false ;
-$enable-transitions:          true ;
-$enable-reduced-motion:       true ;
-$enable-smooth-scroll:        true ;
-$enable-grid-classes:         true ;
-$enable-container-classes:    true ;
-$enable-cssgrid:              false;
-$enable-button-pointers:      true;
-$enable-rfs:                  true;
-$enable-validation-icons:     true;
-$enable-negative-margins:     false;
-$enable-deprecation-messages: true;
-$enable-important-utilities:  true;
+
+// No overrides to Bootstrap options
+
 // CDM optional features
 $enable-button-border-radius: false;
 
 
 // Prefix for :root CSS variables
 $prefix: uol-;
+
+// Gradient
+//
+// The gradient which is added to components if `$enable-gradients` is `true`
+// This gradient is also added to elements with `.bg-gradient`
+// scss-docs-start variable-gradient
+
+// No override to Bootstrap
+
+// scss-docs-end variable-gradient
+
+
+
+
+
 
 // Spacing
 //
@@ -155,6 +219,96 @@ $prefix: uol-;
 // scss-docs-start spacer-variables-maps
 $spacer: 1.6rem;
 // scss-docs-end spacer-variables-maps
+
+
+
+// Position
+//
+// Define the edge positioning anchors of the position utilities.
+
+// scss-docs-start position-map
+// No overrides to Bootstrap variables
+// scss-docs-end position-map
+
+
+
+// Body
+//
+// Settings for the `<body>` element.
+// No overrides to Bootstrap variables
+
+
+
+// Links
+//
+// Style anchor elements.
+$link-color:  $uol-secondary;
+
+
+
+// Paragraphs
+//
+// Style p element.
+// No overrides to Bootstrap variables
+
+
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+// scss-docs-start grid-breakpoints
+// scss-docs-end grid-breakpoints
+
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+// scss-docs-start container-max-widths
+// scss-docs-end container-max-widths
+
+
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+
+// Container padding
+
+
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+// scss-docs-start border-variables
+// scss-docs-end border-variables
+
+// scss-docs-start border-radius-variables
+// scss-docs-end border-radius-variables
+
+// scss-docs-start box-shadow-variables
+// scss-docs-end box-shadow-variables
+
+// scss-docs-start caret-variables
+// scss-docs-end caret-variables
+
+// scss-docs-start collapse-transition
+// scss-docs-end collapse-transition
+
+// stylelint-disable function-disallowed-list
+// scss-docs-start aspect-ratios
+// scss-docs-end aspect-ratios
+
+
+
+
+
+
 
 // Typography
 //
@@ -172,15 +326,36 @@ $font-size-root:              10px;
 $font-size-base:              1.6rem; // Assumes the browser default, typically `16px`
 
 
+$h2-font-size:                $font-size-base * 1.88;
+$h3-font-size:                $font-size-base * 1.65;
+$h4-font-size:                $font-size-base * 1.4;
+$h5-font-size:                $font-size-base * 1.15;
 
 // headings-variables
 $headings-font-family:        Georgia, Times, "Times New Roman", serif;
+$headings-small-font-family:  $font-family-base;
 
 // start display-headings
 // end display-headings
 
 // start type-variables
 // end type-variables
+
+
+
+
+
+
+// Tables
+//
+// Customizes the `.table` component with basic values, each used across all table variations.
+
+// scss-docs-start table-variables
+// scss-docs-end table-variables
+
+// scss-docs-start table-loop
+// scss-docs-end table-loop
+
 
 
 
@@ -221,12 +396,211 @@ $btn-margin-y:                .25rem;
 $btn-margin-x:                0;
 
 
+// Forms
+
+// scss-docs-start form-text-variables
+// scss-docs-end form-text-variables
+
+// scss-docs-start form-label-variables
+// scss-docs-end form-label-variables
+
+// scss-docs-start form-input-variables
+// scss-docs-end form-input-variables
+
+// scss-docs-start form-check-variables
+// scss-docs-end form-check-variables
+
+// scss-docs-start form-switch-variables
+// scss-docs-end form-switch-variables
+
+// scss-docs-start input-group-variables
+// scss-docs-end input-group-variables
+
+// scss-docs-start form-select-variables
+// scss-docs-end form-select-variables
+
+// scss-docs-start form-range-variables
+// scss-docs-end form-range-variables
+
+// scss-docs-start form-file-variables
+// scss-docs-end form-file-variables
+
+// scss-docs-start form-floating-variables
+// scss-docs-end form-floating-variables
 
 
+// Form validation
+
+// scss-docs-start form-feedback-variables
+// scss-docs-end form-validation-states
+
+
+// Z-index master list
+//
+// Warning: Avoid customizing these values. They're used for a bird's eye view
+// of components dependent on the z-axis and are designed to all work together.
+
+// scss-docs-start zindex-stack
+// scss-docs-end zindex-stack
+
+
+// Navbar
+
+// scss-docs-start navbar-variables
+// scss-docs-end navbar-variables
+
+// scss-docs-start navbar-dark-variables
+// scss-docs-end navbar-dark-variables
+
+
+
+
+
+
+// Dropdowns
+//
+// Dropdown menu container and contents.
+
+// scss-docs-start dropdown-variables
+// scss-docs-end dropdown-variables
+
+
+// Pagination
+
+// scss-docs-start pagination-variables
+// scss-docs-end pagination-variables
+
+
+// Placeholders
+
+// scss-docs-start placeholders
+// scss-docs-end placeholders
+
+
+// Cards
+
+// scss-docs-start card-variables
+// scss-docs-end card-variables
+
+
+// Accordion
+
+// scss-docs-start accordion-variables
+
+
+// UoL Accordion variables
 $uol-accordion-hover-bg-shade-amount:       15% !default;
 $uol-accordion-hover-bg-tint-amount:        15% !default;
 $uol-accordion-active-bg-shade-amount:      30% !default;
 $uol-accordion-active-bg-tint-amount:       30% !default;
+
+// scss-docs-end accordion-variables
+
+
+
+// Tooltips
+
+// scss-docs-start tooltip-variables
+// scss-docs-end tooltip-variables
+
+// Popovers
+
+// scss-docs-start popover-variables
+// scss-docs-end popover-variables
+
+// Toasts
+
+// scss-docs-start toast-variables
+// scss-docs-end toast-variables
+
+// Badges
+
+// scss-docs-start badge-variables
+// scss-docs-end badge-variables
+
+// Modals
+
+// scss-docs-start modal-variables
+// scss-docs-end modal-variables
+
+// Alerts
+//
+// Define alert colors, border radius, and padding.
+
+// scss-docs-start alert-variables
+// scss-docs-end alert-variables
+
+
+// Progress bars
+
+// scss-docs-start progress-variables
+// scss-docs-end progress-variables
+
+// List group
+
+// scss-docs-start list-group-variables
+// scss-docs-end list-group-variables
+
+// Image thumbnails
+// scss-docs-start thumbnail-variables
+// scss-docs-end thumbnail-variables
+
+
+// Figures
+
+// scss-docs-start figure-variables
+// scss-docs-end figure-variables
+
+
+// Breadcrumbs
+
+// scss-docs-start breadcrumb-variables
+$breadcrumb-padding-y:              .5rem;
+$breadcrumb-margin-bottom:          0;
+$breadcrumb-divider-color:          $white;
+$breadcrumb-active-color:           $gray-300;
+$breadcrumb-divider:                quote(">");
+
+$uol-breadcrumb-bg:                 $uol-primary;
+$uol-breadcrumb-link-color:         $white;
+$uol-breadcrumb-link-color-hover:   $gray-300;
+
+// scss-docs-end breadcrumb-variables
+
+
+// Carousel
+
+// scss-docs-start carousel-variables
+$carousel-control-icon-width:        5rem !default;
+
+// scss-docs-end carousel-variables
+
+// scss-docs-start carousel-dark-variables
+// scss-docs-end carousel-dark-variables
+
+// Spinners
+
+// scss-docs-start spinner-variables
+// scss-docs-end spinner-variables
+
+// Close
+
+// scss-docs-start close-variables
+// scss-docs-end close-variables
+
+// Offcanvas
+
+// scss-docs-start offcanvas-variables
+// scss-docs-end offcanvas-variables
+
+// Code
+
+
+
+
+
+
+
 
 
 

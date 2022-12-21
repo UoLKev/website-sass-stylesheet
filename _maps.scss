@@ -1,7 +1,8 @@
 // Merge with BS5 colors map
-$colors: map-merge($colors, $uol-colors);
+$colors: map-merge( $colors, $uol-colors );
 
-// Remove defauult Primary/Secondary
-$theme-colors: map-remove($theme-colors, "primary", "secondary");
-// Merge the theme colours
-$theme-colors: map-merge($theme-colors, $uol-theme-colors);
+// Remove default Bootstrap Primary/Secondary
+$theme-colors: map-remove( $theme-colors, "primary", "secondary" );
+
+// Merge the theme colours (Bootstrap and UoL brand)
+$theme-colors: map-merge( $theme-colors, $uol-theme-colors );
