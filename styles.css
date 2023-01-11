@@ -5386,8 +5386,8 @@ a[href="javascript:void(0)"] {
 #ohdModal .modal-dialog .modal-content .modal-body row col #interviewText p a {
   color: #000;
 }
-#ohdModal .modal-dialog .modal-content .modal-body row col .od_event a,
-#ohdModal .modal-dialog .modal-content .modal-body row col .od_event a span {
+#ohdModal .modal-dialog .modal-content .modal-body row .od_event a,
+#ohdModal .modal-dialog .modal-content .modal-body row .od_event a span {
   display: block;
 }
 
