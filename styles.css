@@ -4688,9 +4688,6 @@ a[href="javascript:void(0)"] {
   text-align: center;
   width: 100%;
 }
-.uol-course-header__title h1 span, .uol-course-header__title .h1 span {
-  width: 100%;
-}
 .uol-course-header__ctaBtnContainer {
   margin-top: auto;
   margin-bottom: 12rem;
@@ -4753,7 +4750,7 @@ a[href="javascript:void(0)"] {
 }
 .uol-course-header__key-info__frame {
   background-color: #047e8b;
-  min-height: 40rem;
+  min-height: 35rem;
 }
 .uol-course-header__key-info__title {
   background-color: #047e8b;
@@ -5389,6 +5386,10 @@ a[href="javascript:void(0)"] {
 #ohdModal .modal-dialog .modal-content .modal-body row col #interviewText p a {
   color: #000;
 }
+#ohdModal .modal-dialog .modal-content .modal-body row col .od_event a,
+#ohdModal .modal-dialog .modal-content .modal-body row col .od_event a span {
+  display: block;
+}
 
 @media (min-width: 992px) {
   .uol-ohd-course-list__form input {
@@ -5470,7 +5471,7 @@ a[href="javascript:void(0)"] {
   margin-bottom: 0;
   padding-bottom: 1rem;
 }
-.uol-pullquote__copy p:first-of-type, .uol-pullquote__copy--accent-secondary p:first-of-type, .uol-pullquote__copy--accent-primary p:first-of-type, .uol-pullquote__copy--secondary p:first-of-type, .uol-pullquote__copy--primary p:first-of-type {
+.uol-pullquote__copy-supplementary {
   margin-top: -1rem;
   margin-bottom: 2rem;
 }

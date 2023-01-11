@@ -28,12 +28,12 @@
       }
     }// End h2
 
-    p {
-      &:first-of-type{
+    
+    &-supplementary {
         margin-top: -1rem;
         margin-bottom: 2rem;
-      }
     }
+    
 
     &:after {
       @extend %clip-path;  

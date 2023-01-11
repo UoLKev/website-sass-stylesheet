@@ -7,7 +7,7 @@
 
   p,
   a  {
-    color: $uol-white-font-default;
+    color: $white;
   }
 
   &__form,
@@ -19,7 +19,7 @@
   &__form {
     //@extend %centre;
     label {
-      color: $uol-white-font-default;
+      color: $white;
       display: block;
     }
     input {
@@ -70,9 +70,9 @@
     .modal-content {
       .modal-header {
         background-color: $bg-color-secondary;
-        color: $uol-white-font-default;
+        color: $white;
         .close {
-          color: $uol-white-font-default; 
+          color: $white; 
           opacity: 1;
         }
       }
@@ -85,6 +85,12 @@
                 a {
                   color: $uol-dark-font-default;
                 }
+              }
+            }
+            .od_event {
+              a,
+              a span {
+                display: block;
               }
             }
           }
